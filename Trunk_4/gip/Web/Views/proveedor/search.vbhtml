@@ -145,7 +145,7 @@ Else
                         <br />
 
                         @Html.ActionLink(h.traducir("Adjuntos"), "listadjunto", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
-                        @If Not IsNothing(ViewData("user")) AndAlso (ViewData("user").n2.tolower.contains("sis") OrElse ViewData("user").idTrabajador = 3164) Then
+                        @If Not IsNothing(ViewData("user")) AndAlso ((Not IsNothing(ViewData("user").n2) AndAlso Not IsDBNull(ViewData("user").n2) AndAlso ViewData("user").n2.ToString().ToLower().Contains("sis")) OrElse (Not IsNothing(ViewData("user").idTrabajador) AndAlso Not IsDBNull(ViewData("user").idTrabajador) AndAlso IsNumeric(ViewData("user").idTrabajador) AndAlso CInt(ViewData("user").idTrabajador) = 3164)) Then
                             @Html.Encode(" | ")
                             @Html.ActionLink(h.Traducir("Exportar a plantas sistemas"), "exportsistemas", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                         End If
