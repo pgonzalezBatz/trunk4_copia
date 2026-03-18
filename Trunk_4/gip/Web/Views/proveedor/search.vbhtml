@@ -8,39 +8,40 @@ End section
 End Section
 
 <form action="" method="get">
-        @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editar) Then
-            @<div Class="row">
-                <div Class="col-sm-12">
-                    <h4>@Html.ActionLink(h.Traducir("Crear Nuevo proveedor"), "Create")</h4>
-                </div>
-            </div>
-        End If
-
-        <div class="row">
-            <div class="col-sm-12">
-                <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.standard), True) @h.traducir("Buscar CIF, Código de proveedor y Nombre")</label>
-                <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.direccion)) @h.traducir("Dirección")</label>
-                <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.codigoPostal)) @h.traducir("Código postal")</label>
-                <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.localidad)) @h.traducir("Localidad")</label>
-                <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.provincia)) @h.traducir("Provincia")</label>
-                <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.pais)) @h.traducir("Pais")</label>
-            </div>
-
-        </div>
-        <div class="row">
-
-            <div class="col-sm-9">
-                <div class="input-group">
-                    @Html.TextBox("q", Nothing, New With {.autofocus = "", .class = "form-control"})
-                    <div class="input-group-btn">
-                        <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                @Html.DropDownList("idplanta", Nothing, New With {.class = "form-control"})
+    @Html.ValidationSummary()
+    @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editar) Then
+        @<div Class="row">
+            <div Class="col-sm-12">
+                <h4>@Html.ActionLink(h.Traducir("Crear Nuevo proveedor"), "Create")</h4>
             </div>
         </div>
+    End If
+
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.standard), True) @h.traducir("Buscar CIF, Código de proveedor y Nombre")</label>
+            <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.direccion)) @h.traducir("Dirección")</label>
+            <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.codigoPostal)) @h.traducir("Código postal")</label>
+            <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.localidad)) @h.traducir("Localidad")</label>
+            <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.provincia)) @h.traducir("Provincia")</label>
+            <label class="radio-inline">@Html.RadioButton("st", CInt(proveedorController.searchtype.pais)) @h.traducir("Pais")</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-sm-9">
+            <div class="input-group">
+                @Html.TextBox("q", Nothing, New With {.autofocus = "", .class = "form-control"})
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            @Html.DropDownList("idplanta", Nothing, New With {.class = "form-control"})
+        </div>
+    </div>
 </form>
 <br />
 @If Model Is Nothing Then
@@ -133,23 +134,23 @@ Else
                         @If Not proveedorAdok Then
                             @Html.ActionLink(h.traducir("Detalle"), "Details", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
 
-                            @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editar) Then
+                            @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editar) AndAlso Request.QueryString("idPlanta") <> "47" Then
                                 @Html.Encode(" | ")
-                                @Html.ActionLink(h.traducir("Editar"), "Edit", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
+                                @Html.ActionLink(h.Traducir("Editar"), "Edit", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                             End If
                         Else
-                            @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editar) Then
-                                @Html.ActionLink(h.traducir("Asignar numero"), "EditAdok", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
+                            @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editar) AndAlso Request.QueryString("idPlanta") <> "47" Then
+                                @Html.ActionLink(h.Traducir("Asignar numero"), "EditAdok", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                             End If
                         End If
                         <br />
 
                         @Html.ActionLink(h.traducir("Adjuntos"), "listadjunto", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
-                        @If Not IsNothing(ViewData("user")) AndAlso ((Not IsDBNull(ViewData("user").n2) AndAlso ViewData("user").n2.ToString.ToLower.Contains("sis")) OrElse (Not IsDBNull(ViewData("user").idTrabajador) AndAlso CInt(ViewData("user").idTrabajador) = 3164)) Then
+                        @If Request.QueryString("idPlanta") <> "47" AndAlso (Not IsNothing(ViewData("user")) AndAlso (ViewData("user").n2.tolower.contains("sis") OrElse ViewData("user").idTrabajador = 3164)) Then
                             @Html.Encode(" | ")
                             @Html.ActionLink(h.Traducir("Exportar a plantas sistemas"), "exportsistemas", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                         End If
-                        @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editarRecursos) Then
+                        @If SimpleRoleProvider.IsUserAuthorised(Web.roles.editarRecursos) AndAlso currentItem.email <> String.Empty Then
                             @Html.Encode(" | ")
                             @Html.ActionLink(h.Traducir("Recursos"), "listrecursos", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                         End If
@@ -157,11 +158,11 @@ Else
                             @Html.Encode(" | ")
                             @Html.ActionLink(h.Traducir("Logs"), "listlogs", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                             @Html.Encode(" | ")
-                            @Html.ActionLink(h.traducir("Usuarios"), "listusuarios", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
+                            @Html.ActionLink(h.Traducir("Usuarios"), "listusuarios", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                         End If
-                        @If SimpleRoleProvider.IsUserAuthorised(Web.roles.AdministrarPotencialesYCapacidades) Then
+                        @If SimpleRoleProvider.IsUserAuthorised(Web.roles.AdministrarPotencialesYCapacidades) AndAlso Request.QueryString("idPlanta") <> "47" Then
                             @Html.Encode(" | ")
-                            @Html.ActionLink(h.traducir("Capacidades"), "listcapacidades", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id, .codpro = currentItem.codpro}))
+                            @Html.ActionLink(h.Traducir("Capacidades"), "listcapacidades", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id, .codpro = currentItem.codpro}))
                         End If
                     </td>
                 </tr>
