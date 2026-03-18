@@ -1,0 +1,41 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="IntranetMVC" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="<%=url.Content("~/Content/reset.css") %>" rel="stylesheet" type="text/css" />
+    <link href="//intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+    <link href="<%=url.Content("~/Content/Site.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <a href="/HomeIntranet" title="@h.traducir(" ir a la página principal de la intranet")" class="cabApp"></a>  
+    <div id="menu1">
+        <ul>      
+            <%For Each e In db.GetListOfEstado(ConfigurationManager.ConnectionStrings("segipe").ConnectionString)%>
+            <li>
+               
+                <a href="<%=Url.Action("listcabecera", "pedido", h.ToRouteValues(Request.QueryString, New With {.idestado = e.id})) %>"  style="<%= if(e.id=request("idestado"),"background-color:#9bd19b;","")%>"><%=h.traducir(e.nombre)%></a>
+            </li>
+            <%Next%>
+            <li><a href="<%=Url.Content("~/help.htm") %>" target="_blank">Ayuda</a></li>
+        </ul>
+    </div>
+    <div id="menu2"></div>
+    <div id="contenido1">
+        <asp:ContentPlaceHolder ID="cphContenido1" runat="server"></asp:ContentPlaceHolder>
+        <div id="contenido2">
+            <asp:ContentPlaceHolder ID="cphContenido2" runat="server"></asp:ContentPlaceHolder>
+        </div>        
+    </div>  
+    <div id="pie">
+        <a href="mailto:diglesias@batz.es">
+            
+        </a>
+    </div>
+</body>
+</html>

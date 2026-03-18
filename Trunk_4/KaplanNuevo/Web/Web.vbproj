@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{05A36CE6-148B-4A7B-9412-D1CAAE37AC79}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KaplanNew</RootNamespace>
+    <AssemblyName>KaplanNew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Soluciones_VS2012\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>KaplanNew.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PrecompileBeforePublish>false</PrecompileBeforePublish>
+    <WDPMergeOption>DonotMerge</WDPMergeOption>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="SABLIVE-Implementación" Order="1">
+          <Destination Path="" />
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>KaplanNew.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\Assemblies\HtmlAgilityPack\UltimaVersion\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Assemblies\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="AdokLib" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Codigo_Compartido\App_Themes\Batz2013\estiloIntranet.css">
+      <Link>App_Themes\Batz\estiloIntranet.css</Link>
+    </Content>
+    <Content Include="App_Data\CaracteresBatzFont.ascx" />
+    <Content Include="App_Themes\Ayuda16.png" />
+    <Content Include="App_Themes\Batz\KaPlan.css" />
+    <Content Include="Listados.aspx" />
+    <Content Include="CalculoRef.aspx" />
+    <Content Include="CrearComponents.aspx" />
+    <Content Include="CrearCharacteristics.aspx" />
+    <Content Include="CrearResulting.aspx" />
+    <Content Include="CrearCausas.aspx" />
+    <Content Include="ControlP.aspx" />
+    <Content Include="OperacionesModRef.aspx" />
+    <Content Include="OperacionesRef.aspx" />
+    <Content Include="OperacionesMod.aspx" />
+    <Content Include="Operaciones.aspx" />
+    <Content Include="Calculo.aspx" />
+    <Content Include="Componente.aspx" />
+    <Content Include="Referencia.aspx" />
+    <Content Include="CrearStepsResulting.aspx" />
+    <Content Include="CrearStepsComponent.aspx" />
+    <Content Include="CrearStepsWorkParam.aspx" />
+    <Content Include="CrearProcess.aspx" />
+    <Content Include="CrearWorks.aspx" />
+    <Content Include="Kaplan_Plantas.Master" />
+    <Content Include="App_Themes\Batz\IconosAcciones\atencion1.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\bin.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\cerrar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\collapse_blue.jpg" />
+    <Content Include="App_Themes\Batz\IconosAcciones\dcto0.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\error.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\error1.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\expand_blue.jpg" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Guardar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\historico.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\lapiz.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\ok.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\ok1.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Plantilla.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\upload.gif" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="App_Themes\jquery.js" />
+    <Content Include="App_Themes\jquery.toastmessage.js" />
+    <Content Include="App_Themes\ToastNotification\close.gif" />
+    <Content Include="App_Themes\ToastNotification\error.png" />
+    <Content Include="App_Themes\ToastNotification\jquery.toastmessage.css" />
+    <Content Include="App_Themes\ToastNotification\notice.png" />
+    <Content Include="App_Themes\ToastNotification\success.png" />
+    <Content Include="App_Themes\ToastNotification\warning.png" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap-theme.css" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap-theme.min.css" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap.css" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\3.3.6\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootstrap\3.3.6\js\bootstrap.js" />
+    <Content Include="Bootstrap\3.3.6\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\3.3.6\js\npm.js" />
+    <Content Include="Bootstrap\bootstrap-datetimepicker.css" />
+    <Content Include="Bootstrap\bootstrap-datetimepicker.js" />
+    <Content Include="Bootstrap\bootstrap-select.min.css" />
+    <Content Include="Bootstrap\moment-with-locales.js" />
+    <Content Include="Bootstrap\moment.js" />
+    <Content Include="CrearStepsWork.aspx" />
+    <Content Include="CrearSteps.aspx" />
+    <Content Include="CrearRoles.aspx" />
+    <Content Include="PermisoDenegado2.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="jQuery\jquery-1.10.2.js" />
+    <Content Include="jQuery\jquery-1.11.2.min.js" />
+    <Content Include="jQuery\jquery-ui.css" />
+    <Content Include="jQuery\jquery-ui.js" />
+    <Content Include="PermisoDenegado.aspx" />
+    <Content Include="WS\adok_ws.asmx" />
+    <Content Include="App_Data\menu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Batz\AjaxControlToolKit.css" />
+    <Content Include="App_Themes\Batz\Froga.css" />
+    <Content Include="App_Themes\Batz\GridView.css" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFiltro.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFiltro16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFlitro24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Filtrar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Filtrar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Flitrar.png" />
+    <Content Include="App_Themes\Batz\MenuBatz.css" />
+    <Content Include="App_Themes\Batz\PanelCargandoDatos.css" />
+    <Content Include="App_Themes\Batz\style.css" />
+    <Content Include="Controles\AutocompleteGV.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\CaracteresBatzFont.ascx.designer.vb">
+      <DependentUpon>CaracteresBatzFont.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\CaracteresBatzFont.ascx.vb">
+      <DependentUpon>CaracteresBatzFont.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados.aspx.designer.vb">
+      <DependentUpon>Listados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados.aspx.vb">
+      <DependentUpon>Listados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CalculoRef.aspx.designer.vb">
+      <DependentUpon>CalculoRef.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalculoRef.aspx.vb">
+      <DependentUpon>CalculoRef.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CrearComponents.aspx.designer.vb">
+      <DependentUpon>CrearComponents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearComponents.aspx.vb">
+      <DependentUpon>CrearComponents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearCharacteristics.aspx.designer.vb">
+      <DependentUpon>CrearCharacteristics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCharacteristics.aspx.vb">
+      <DependentUpon>CrearCharacteristics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearResulting.aspx.designer.vb">
+      <DependentUpon>CrearResulting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearResulting.aspx.vb">
+      <DependentUpon>CrearResulting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearCausas.aspx.designer.vb">
+      <DependentUpon>CrearCausas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCausas.aspx.vb">
+      <DependentUpon>CrearCausas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlP.aspx.designer.vb">
+      <DependentUpon>ControlP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlP.aspx.vb">
+      <DependentUpon>ControlP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OperacionesModRef.aspx.designer.vb">
+      <DependentUpon>OperacionesModRef.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesModRef.aspx.vb">
+      <DependentUpon>OperacionesModRef.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OperacionesRef.aspx.designer.vb">
+      <DependentUpon>OperacionesRef.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesRef.aspx.vb">
+      <DependentUpon>OperacionesRef.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OperacionesMod.aspx.designer.vb">
+      <DependentUpon>OperacionesMod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesMod.aspx.vb">
+      <DependentUpon>OperacionesMod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operaciones.aspx.designer.vb">
+      <DependentUpon>Operaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones.aspx.vb">
+      <DependentUpon>Operaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calculo.aspx.designer.vb">
+      <DependentUpon>Calculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calculo.aspx.vb">
+      <DependentUpon>Calculo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Componente.aspx.designer.vb">
+      <DependentUpon>Componente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Componente.aspx.vb">
+      <DependentUpon>Componente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Referencia.aspx.designer.vb">
+      <DependentUpon>Referencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Referencia.aspx.vb">
+      <DependentUpon>Referencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CrearStepsResulting.aspx.designer.vb">
+      <DependentUpon>CrearStepsResulting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearStepsResulting.aspx.vb">
+      <DependentUpon>CrearStepsResulting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearStepsComponent.aspx.designer.vb">
+      <DependentUpon>CrearStepsComponent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearStepsComponent.aspx.vb">
+      <DependentUpon>CrearStepsComponent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearStepsWorkParam.aspx.designer.vb">
+      <DependentUpon>CrearStepsWorkParam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearStepsWorkParam.aspx.vb">
+      <DependentUpon>CrearStepsWorkParam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearProcess.aspx.designer.vb">
+      <DependentUpon>CrearProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearProcess.aspx.vb">
+      <DependentUpon>CrearProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearWorks.aspx.designer.vb">
+      <DependentUpon>CrearWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearWorks.aspx.vb">
+      <DependentUpon>CrearWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kaplan_Plantas.Master.designer.vb">
+      <DependentUpon>Kaplan_Plantas.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Kaplan_Plantas.Master.vb">
+      <DependentUpon>Kaplan_Plantas.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\PageBase2.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\PageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\AutocompleteGV.ascx.designer.vb">
+      <DependentUpon>AutocompleteGV.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\AutocompleteGV.ascx.vb">
+      <DependentUpon>AutocompleteGV.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearStepsWork.aspx.designer.vb">
+      <DependentUpon>CrearStepsWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearStepsWork.aspx.vb">
+      <DependentUpon>CrearStepsWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearSteps.aspx.designer.vb">
+      <DependentUpon>CrearSteps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearSteps.aspx.vb">
+      <DependentUpon>CrearSteps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearRoles.aspx.designer.vb">
+      <DependentUpon>CrearRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearRoles.aspx.vb">
+      <DependentUpon>CrearRoles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PermisoDenegado2.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado2.aspx.vb">
+      <DependentUpon>PermisoDenegado2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WS\adok_ws.asmx.vb">
+      <DependentUpon>adok_ws.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Icono EliminarFiltro.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Icono Filtrar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Iconos.url" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="App_Themes\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap-theme.css.map" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap-theme.min.css.map" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap.css.map" />
+    <Content Include="Bootstrap\3.3.6\css\bootstrap.min.css.map" />
+    <Content Include="Bootstrap\3.3.6\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\3.3.6\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootstrap\3.3.6\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Bootstrap\3.3.6\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_Data\log4netConfig.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\log4netConfig.Debug.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\log4netConfig.Release.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Batz_Font.TTF" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Legoaldi.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\Batz\ControlesWeb\" />
+    <Folder Include="App_Themes\Batz\EnlacesExternos\" />
+    <Folder Include="App_Themes\Tema1\IconosAcciones\" />
+    <Folder Include="App_Themes\Tema1\IconosBotones\" />
+    <Folder Include="Ficheros\Documentos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Localization\LocalizationLib\LocalizationLib 4.vbproj">
+      <Project>{92ff297a-519c-46fa-bf6b-cf73794b5f63}</Project>
+      <Name>LocalizationLib 4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KaplanLib\KaplanLib.vbproj">
+      <Project>{14e48678-818b-47bc-a2dd-b37b2969345d}</Project>
+      <Name>KaplanLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\.\packages\SlowCheetah.2.5.15\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32541</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:42783/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

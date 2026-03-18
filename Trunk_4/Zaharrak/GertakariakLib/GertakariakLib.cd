@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Las clases &quot;_DAL&quot; y &quot;_ELL&quot; quedan dentro del NameSpace &quot;Entidades&quot; para que al instanciar una clase &quot;gtk&quot; no se muestren sus miembros.">
+    <Position X="0.5" Y="0.5" Height="0.263" Width="7.47" />
+  </Comment>
+  <Class Name="GertakariakLib2.Deteccion_ELL">
+    <Position X="11.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAAAAgAAABEAAQAIAAAAAAAAAAEEAAAAAQ=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SabLib.ELL.Usuario" Collapsed="true">
+    <Position X="14" Y="9" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GertakariakLib2.Funciones">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Funciones.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkMatenimientoSist">
+    <Position X="0.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgBCAACACQQAAAAEhAAAAAABAAQAAQAAAEAABAEAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Gertakariak_ELL">
+    <Position X="5" Y="5.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAAEAAAAIBgAAEAACAAACBAAAEAACAAIlA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Prueba">
+    <Position X="8.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Responsables_Gertakariak_ELL">
+    <Position X="5.25" Y="10.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAAAAAAAABEAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkResponsable">
+    <Position X="0.5" Y="10.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Gertakariak_DAL">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Deteccion_DAL">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Responsables_Gertakariak_DAL">
+    <Position X="2.5" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Transaccion">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAABAAACAAAAAAAAAACAAAQAAAAAAAAAAAg=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkGCCILINDROS">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Estructura_ELL">
+    <Position X="4.25" Y="8.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAEAAEBAAAAAAAEAAAAAAAEAEA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Estructura_DAL">
+    <Position X="2.25" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkEstructura">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACgAAACAQAAAAEBAAAACAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Caracteristicas_ELL" Collapsed="true">
+    <Position X="4.25" Y="12.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Caracteristica_DAL" Collapsed="true">
+    <Position X="2.25" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkCaracteristica">
+    <Position X="0.5" Y="12.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Acciones_ELL">
+    <Position X="5" Y="14.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACCAgEAAAAAIABAAIAAAAABghAAAABEAAAAAAAkAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Acciones_DAL">
+    <Position X="2.75" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkAcciones">
+    <Position X="0.5" Y="14.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAACACAQAAAAEAAAAAAAAIAAAAQAAAEAABABAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Gertakariak_Acciones_ELL" Collapsed="true">
+    <Position X="5" Y="13.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAQAAAAAEAAAABAAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Gertakariak_Acciones_DAL" Collapsed="true">
+    <Position X="2.75" Y="13.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkGertakariak_Acciones" Collapsed="true">
+    <Position X="0.5" Y="13.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Entidades.GCCilindros_DAL">
+    <Position X="10" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="XBATLib.GCCilindros_ELL">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GertakariakLib2.Acciones_Usuario_ELL">
+    <Position X="7.5" Y="18" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAQAAAAAEAAQAAAAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Acciones_Usuarios_DAL">
+    <Position X="7.5" Y="16.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkAccionesUsuarios">
+    <Position X="7.5" Y="14.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkIstriku">
+    <Position X="4.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkFiltro">
+    <Position X="10" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="GertakariakLib2.gtkFiltro.EstadoIncidencia" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\Gertakariak_BLL.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIAAAGAAAAAAAAEAAIAAABBABAAQAAEAEAAAAAAAAg=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Acciones_Observaciones_ELL">
+    <Position X="5.25" Y="18.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAAAAEAAAAAAAABAAAQAAEEAEAAQAAEAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Acciones_Observaciones_DAL">
+    <Position X="2.75" Y="18.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkAccionesObservaciones">
+    <Position X="0.5" Y="18.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAQAAAAEAAAAAAAAAAAAAAAAABAEFAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Clasificacion_ELL" Collapsed="true">
+    <Position X="8.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAEAAABAAAAAAAEAAAAAAAEAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkTroqueleria">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <InheritanceLine Type="GertakariakLib2.Entidades.Gertakariak_DAL" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="5.75" />
+        <Point X="3.25" Y="3.358" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgBCAAAACAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Acciones_Ejecucion_ELL">
+    <Position X="10" Y="18" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAQAAAAAEAAQAAAAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Acciones_Ejecucion_DAL">
+    <Position X="10" Y="16.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkAccionesEjecucion">
+    <Position X="10" Y="14.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkGCBULONES">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Entidades.GCBulones_DAL">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="XBATLib.GCBulones_ELL">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GertakariakLib2.Actas_MS_ELL">
+    <Position X="4.5" Y="21" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAAAAEAAAABAAAAIAEQIAUAAEAAQABEAAA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.Entidades.Actas_MS_DAL">
+    <Position X="2.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Gertakariak_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkActas_MS">
+    <Position X="0.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib2.gtkFAPERSONAL">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Gertakariak_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Entidades.FaPersonal_DAL">
+    <Position X="15.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="XBATLib.FaPersonal_ELL">
+    <Position X="17" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Struct Name="GertakariakLib2.gtkGridView">
+    <Position X="13.75" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAACEAAABAAACAACAABAAAAAAAAE=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="GertakariakLib2.TipoIncidencia" Collapsed="true">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAQAQAAAAAAAAgAAAAAAQAAAAAAACA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GertakariakLib2.TipoAcciones" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAACAAAAAAAAQAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ELL\Gertakariak_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

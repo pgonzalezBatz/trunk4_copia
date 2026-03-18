@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26638D41-3358-4504-BDA9-09E509C6B3F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GertakariakLib</RootNamespace>
+    <AssemblyName>GertakariakLib</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Atxerre|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Atxerre\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Migrated rules for GertakariakLib.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Istriku_Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Istriku_Debug\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\GertakariakLib.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Istriku_Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Istriku_Release\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\GertakariakLib.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GertakariakMS|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\GertakariakMS\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\GertakariakLib.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Extranet|AnyCPU'">
+    <OutputPath>bin\Release_Extranet\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Extranet|AnyCPU'">
+    <OutputPath>bin\Debug_Extranet\</OutputPath>
+    <DocumentationFile>GertakariakLib.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=AnyCPU">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assemblies\BatzException\BatzException.vb" />
+    <Compile Include="BLL\DataReaderAdaterBatz.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\GertakariakComponent.vb" />
+    <Compile Include="BLL\gtkFamiliaRepetitiva.vb" />
+    <Compile Include="BLL\gtkIrudiakComponent.vb" />
+    <Compile Include="BLL\gtkTipoRepitiva.vb" />
+    <Compile Include="BLL\IGertakariakComponent.vb" />
+    <Compile Include="BLL\Utils.vb" />
+    <Compile Include="DAL\AccesoDB.vb" />
+    <Compile Include="DAL\Generado\ACCIONES_EJECUCION.vb" />
+    <Compile Include="DAL\Generado\AVISOSEMAIL.vb" />
+    <Compile Include="DAL\Generado\CAPACIDADES.vb" />
+    <Compile Include="DAL\Generado\CAUSASNC.vb" />
+    <Compile Include="DAL\Generado\CAUSASNCKUKTURA.vb" />
+    <Compile Include="DAL\Generado\CAUSASNCPROC.vb" />
+    <Compile Include="DAL\Generado\CLASIFICACIONREPETITIVA.vb" />
+    <Compile Include="DAL\Generado\CLASIFICACIONREPKULTURA.vb" />
+    <Compile Include="DAL\Generado\DETECCION.vb" />
+    <Compile Include="DAL\Generado\EMPRESAS.vb" />
+    <Compile Include="DAL\Generado\EMPRESAS_CAPACIDADES.vb" />
+    <Compile Include="DAL\Generado\GCALBARA.vb" />
+    <Compile Include="DAL\Generado\GCARTICU.vb" />
+    <Compile Include="DAL\Generado\GCCABALB.vb" />
+    <Compile Include="DAL\Generado\GCCABCOM.vb" />
+    <Compile Include="DAL\Generado\GCCABPED.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Generado\GCHISMOV.vb" />
+    <Compile Include="DAL\Generado\GCLINPED.vb" />
+    <Compile Include="DAL\Generado\GERTAKARIAK.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Generado\GERTAKARIAK_CAUSASNC.vb" />
+    <Compile Include="DAL\Generado\GRUPOSADMINISTRACION.vb" />
+    <Compile Include="DAL\Generado\LINEASCOSTE.vb" />
+    <Compile Include="DAL\Generado\OFMARCA.vb" />
+    <Compile Include="DAL\Generado\OTROS_DEPARTAMENTOS.vb" />
+    <Compile Include="DAL\Generado\RESPONSABLES_GERTAKARIAK.vb" />
+    <Compile Include="DAL\Generado\USUARIOS.vb" />
+    <Compile Include="DAL\Generado\W_COSTES.vb" />
+    <Compile Include="DAL\Generado\W_CPCABEC.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Generado\W_CPLANTEGI.vb" />
+    <Compile Include="DAL\Generado\W_CPLISMAT.vb" />
+    <Compile Include="DAL\Generado\W_CPSECCIO.vb" />
+    <Compile Include="DAL\Generado\W_GCLINPED.vb" />
+    <Compile Include="DAL\Generado\W_GCPROVEE.vb" />
+    <Compile Include="DAL\Generado\W_PROCESOS.vb" />
+    <Compile Include="DAL\Generado\W_SCPEDMAR.vb" />
+    <Compile Include="DAL\Personalizado\ACCIONES.vb" />
+    <Compile Include="DAL\Generado\ACCIONES.vb" />
+    <Compile Include="DAL\Generado\ACCIONES_USUARIOS.vb" />
+    <Compile Include="DAL\Generado\FAMILIAREPETITIVA.vb" />
+    <Compile Include="DAL\Generado\FAMILIAREPETITIVAKULTURA.vb" />
+    <Compile Include="DAL\Generado\GERTAKARIAK_ACCIONES.vb" />
+    <Compile Include="DAL\Generado\GERTAKARIAK_IRUDIAK.vb" />
+    <Compile Include="DAL\Generado\TIPOREPETITIVA.vb" />
+    <Compile Include="DAL\Generado\TIPOREPETITIVAKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\ACCIONES_EJECUCION.vb" />
+    <Compile Include="DAL\Personalizado\ACCIONES_USUARIOS.vb" />
+    <Compile Include="DAL\Personalizado\AVISOSEMAIL.vb" />
+    <Compile Include="DAL\Personalizado\CAPACIDADES.vb" />
+    <Compile Include="DAL\Personalizado\CAUSASNC.vb" />
+    <Compile Include="DAL\Personalizado\CAUSASNCKUKTURA.vb" />
+    <Compile Include="DAL\Personalizado\CAUSASNCPROC.vb" />
+    <Compile Include="DAL\Personalizado\CLASIFICACIONREPETITIVA.vb" />
+    <Compile Include="DAL\Personalizado\CLASIFICACIONREPKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\OTROS_DEPARTAMENTOS.vb" />
+    <Compile Include="DAL\Personalizado\W_SCPEDMAR.vb" />
+    <Compile Include="DAL\Personalizado\GCARTICU.vb" />
+    <Compile Include="DAL\Personalizado\GCCABCOM.vb" />
+    <Compile Include="DAL\Personalizado\W_CPLANTEGI.vb" />
+    <Compile Include="DAL\Personalizado\GERTAKARIAK_CAUSASNC.vb" />
+    <Compile Include="DAL\Personalizado\W_PROCESOS.vb" />
+    <Compile Include="DAL\Personalizado\DETECCION.vb" />
+    <Compile Include="DAL\Personalizado\EMPRESAS.vb" />
+    <Compile Include="DAL\Personalizado\EMPRESAS_CAPACIDADES.vb" />
+    <Compile Include="DAL\Personalizado\GCALBARA.vb" />
+    <Compile Include="DAL\Personalizado\GCCABALB.vb" />
+    <Compile Include="DAL\Personalizado\GCCABPED.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Personalizado\GCHISMOV.vb" />
+    <Compile Include="DAL\Personalizado\GCLINPED.vb" />
+    <Compile Include="DAL\Personalizado\GRUPOSADMINISTRACION.vb" />
+    <Compile Include="DAL\Personalizado\LINEASCOSTE.vb" />
+    <Compile Include="DAL\Personalizado\OFMARCA.vb" />
+    <Compile Include="DAL\Personalizado\RESPONSABLES_GERTAKARIAK.vb" />
+    <Compile Include="DAL\Personalizado\USUARIOS.vb" />
+    <Compile Include="DAL\Personalizado\W_COSTES.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Personalizado\W_GCPROVEE.vb" />
+    <Compile Include="DAL\Personalizado\W_GCLINPED.vb" />
+    <Compile Include="DAL\Personalizado\W_CPSECCIO.vb" />
+    <Compile Include="DAL\Personalizado\W_CPLISMAT.vb" />
+    <Compile Include="DAL\Personalizado\GERTAKARIAK_ACCIONES.vb" />
+    <Compile Include="DAL\Generado\EQUIPORESOLUCION.vb" />
+    <Compile Include="DAL\Generado\GERTAKARIAK_TIPONOCONFORMIDAD.vb" />
+    <Compile Include="DAL\Generado\TIPONOCONFORMIDAD.vb" />
+    <Compile Include="DAL\Generado\TIPONOCONFORMIDADKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\EQUIPORESOLUCION.vb" />
+    <Compile Include="DAL\Personalizado\FAMILIAREPETITIVA.vb" />
+    <Compile Include="DAL\Personalizado\FAMILIAREPETITIVAKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\GERTAKARIAK.vb" />
+    <Compile Include="DAL\Personalizado\GERTAKARIAK_IRUDIAK.vb" />
+    <Compile Include="DAL\Personalizado\GERTAKARIAK_TIPONOCONFORMIDAD.vb" />
+    <Compile Include="DAL\Personalizado\TIPONOCONFORMIDAD.vb" />
+    <Compile Include="DAL\Personalizado\TIPONOCONFORMIDADKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\TIPOREPETITIVA.vb" />
+    <Compile Include="DAL\Personalizado\TIPOREPETITIVAKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\W_CPCABEC.vb" />
+    <Compile Include="ELL\dsGertakariak.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGertakariak.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ELL\dsGertakariak.vb">
+      <DependentUpon>dsGertakariak.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ELL\Gertakariak.vb" />
+    <Compile Include="ELL\gtkIrudiak.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BLL\GertakariakComponent.cd" />
+    <None Include="DAL\DAL.cd" />
+    <None Include="ELL\dsGertakariak.xsc">
+      <DependentUpon>dsGertakariak.xsd</DependentUpon>
+    </None>
+    <None Include="ELL\dsGertakariak.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGertakariak.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ELL\dsGertakariak.xss">
+      <DependentUpon>dsGertakariak.xsd</DependentUpon>
+    </None>
+    <None Include="ELL\Gertakariak.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj">
+      <Project>{d8dfd338-036c-4472-8611-59566f4e37fb}</Project>
+      <Name>AccesoAutomaticoBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Memcached\Memcached.vbproj">
+      <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TraduccionesLib\TraduccionesLib.vbproj">
+      <Project>{c6bcb6d1-678b-4c12-99c3-df57c9c28cae}</Project>
+      <Name>TraduccionesLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

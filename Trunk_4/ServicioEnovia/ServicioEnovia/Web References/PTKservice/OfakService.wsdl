@@ -1,0 +1,4084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xsd="http://ptk.ws.batz.com/xsd" xmlns:ns0="http://ptk.wsutils.batz.com/xsd" xmlns:ns="http://ptk.ws.batz.com" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ptk.ws.batz.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>OfakService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns:ax21="http://ptk.wsutils.batz.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ptk.wsutils.batz.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="Ofak" type="ax21:Ofak" />
+      <xs:complexType name="Ofak">
+        <xs:sequence>
+          <xs:element name="client" nillable="true" type="xs:string" />
+          <xs:element name="customerIndex" nillable="true" type="xs:string" />
+          <xs:element name="department" nillable="true" type="xs:string" />
+          <xs:element name="descriptionpart" nillable="true" type="xs:string" />
+          <xs:element name="espChapa" nillable="true" type="xs:string" />
+          <xs:element name="internalIndex" nillable="true" type="xs:string" />
+          <xs:element name="matChapa" nillable="true" type="xs:string" />
+          <xs:element name="operations" nillable="true" type="xs:string" />
+          <xs:element name="project" nillable="true" type="xs:string" />
+          <xs:element name="status" nillable="true" type="xs:string" />
+          <xs:element name="pressLine" nillable="true" type="xs:string" />
+          <xs:element name="refCliente" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ptk.ws.batz.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="checkIfLaunchExistsFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="checkIfLaunchExistsFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchExists">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="launchName" nillable="true" type="xs:string" />
+            <xs:element name="launchType" nillable="true" type="xs:string" />
+            <xs:element name="launchReason" nillable="true" type="xs:string" />
+            <xs:element name="ccoIndex" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchExistsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchValidForExistsFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="checkIfLaunchValidForExistsFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchValidForExists">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="launchName" nillable="true" type="xs:string" />
+            <xs:element name="launchValidFor" nillable="true" type="xs:string" />
+            <xs:element name="ccoIndex" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchValidForExistsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfPTKUserExistsFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="checkIfPTKUserExistsFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfPTKUserExists">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="username" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfPTKUserExistsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfSimulationExistsFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="checkIfSimulationExistsFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfSimulationExists">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="simulName" nillable="true" type="xs:string" />
+            <xs:element name="simulRev" nillable="true" type="xs:string" />
+            <xs:element name="simulState" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfSimulationExistsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="connectObjects">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Relation" nillable="true" type="xs:string" />
+            <xs:element name="from" nillable="true" type="xs:boolean" />
+            <xs:element name="parentId" nillable="true" type="xs:string" />
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="connectObjectsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createPartFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="createPartFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createPart">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+            <xs:element name="valorOP" nillable="true" type="xs:string" />
+            <xs:element name="nombreMarca" nillable="true" type="xs:string" />
+            <xs:element name="descripcion" nillable="true" type="xs:string" />
+            <xs:element name="cantidad" nillable="true" type="xs:string" />
+            <xs:element name="material" nillable="true" type="xs:string" />
+            <xs:element name="dureza" nillable="true" type="xs:string" />
+            <xs:element name="codigo" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createPartResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="delBOFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="delBOFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="delBO">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="delBOResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteFilesFromBOFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="deleteFilesFromBOFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteFilesFromBO">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteFilesFromBOResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAttribFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="modifyAttribFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAttrib">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AttributeNameValue" nillable="true" type="xs:string" />
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modifyAttribResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="promoteFromStateToState">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+            <xs:element name="toState" nillable="true" type="xs:string" />
+            <xs:element name="signatureText" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="promoteFromStateToStateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setObjectDescriptionFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="setObjectDescriptionFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setObjectDescription">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Id" nillable="true" type="xs:string" />
+            <xs:element name="desc" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setObjectDescriptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="syncronizeEBOMwithERPFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="syncronizeEBOMwithERPFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="syncronizeEBOMwithERP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+            <xs:element name="valorOP" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="syncronizeEBOMwithERPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="syncronizeOPwithERPFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="syncronizeOPwithERPFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="syncronizeOPwithERP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="syncronizeOPwithERPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerOfak">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="of" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerOfakResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="ns0:Ofak" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getQuantityOflaunchesFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getQuantityOflaunchesFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getQuantityOflaunches">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OFName" nillable="true" type="xs:string" />
+            <xs:element name="OPName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getQuantityOflaunchesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCadToCADLaunchFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="addCadToCADLaunchFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCadToCADLaunch">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="cadId" nillable="true" type="xs:string" />
+            <xs:element name="launchName" nillable="true" type="xs:string" />
+            <xs:element name="launchType" nillable="true" type="xs:string" />
+            <xs:element name="ccoIndex" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+            <xs:element name="launchDesc" nillable="true" type="xs:string" />
+            <xs:element name="launchReason" nillable="true" type="xs:string" />
+            <xs:element name="validFor" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCadToCADLaunchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCadToLaunchFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="addCadToLaunchFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCadToLaunch">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="cadId" nillable="true" type="xs:string" />
+            <xs:element name="launchName" nillable="true" type="xs:string" />
+            <xs:element name="launchType" nillable="true" type="xs:string" />
+            <xs:element name="ccoIndex" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+            <xs:element name="launchDesc" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addCadToLaunchResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchConnectedToObjectIsForOutFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="checkIfLaunchConnectedToObjectIsForOutFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchConnectedToObjectIsForOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkIfLaunchConnectedToObjectIsForOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkin">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NombreFichero" nillable="true" type="xs:string" />
+            <xs:element name="Ruta" nillable="true" type="xs:string" />
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+            <xs:element name="format" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkinResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkinOption">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NombreFichero" nillable="true" type="xs:string" />
+            <xs:element name="Ruta" nillable="true" type="xs:string" />
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+            <xs:element name="format" nillable="true" type="xs:string" />
+            <xs:element name="append" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkinOptionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkoutFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="checkoutFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkout">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Id" nillable="true" type="xs:string" />
+            <xs:element name="fileName" nillable="true" type="xs:string" />
+            <xs:element name="format" nillable="true" type="xs:string" />
+            <xs:element name="directory" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="checkoutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createManufPartSpec">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="partId" nillable="true" type="xs:string" />
+            <xs:element name="desc" nillable="true" type="xs:string" />
+            <xs:element name="owner" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createManufPartSpecResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createNewSimulationFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="createNewSimulationFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createNewSimulation">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" nillable="true" type="xs:string" />
+            <xs:element name="revision" nillable="true" type="xs:string" />
+            <xs:element name="description" nillable="true" type="xs:string" />
+            <xs:element name="MPId" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createNewSimulationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createReviseCADFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="createReviseCADFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createReviseCAD">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="name" nillable="true" type="xs:string" />
+            <xs:element name="revision" nillable="true" type="xs:string" />
+            <xs:element name="descripcion" nillable="true" type="xs:string" />
+            <xs:element name="MPId" nillable="true" type="xs:string" />
+            <xs:element name="OPId" nillable="true" type="xs:string" />
+            <xs:element name="accion" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+            <xs:element name="nuevaRevision" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createReviseCADResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAttributeFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getAttributeFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAttribute">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Id" nillable="true" type="xs:string" />
+            <xs:element name="AttributeName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAttributeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCurrentStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="typeName" nillable="true" type="xs:string" />
+            <xs:element name="objectName" nillable="true" type="xs:string" />
+            <xs:element name="objectRevision" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCurrentStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerFromOF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerFromOFResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerIndexValue">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="typeName" nillable="true" type="xs:string" />
+            <xs:element name="objectName" nillable="true" type="xs:string" />
+            <xs:element name="rev" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCustomerIndexValueResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDieOPRefTroq">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OPName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDieOPRefTroqResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLastRevisionFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getLastRevisionFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLastRevision">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="type" nillable="true" type="xs:string" />
+            <xs:element name="name" nillable="true" type="xs:string" />
+            <xs:element name="indice" nillable="true" type="xs:string" />
+            <xs:element name="state" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLastRevisionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLaunchIdFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getLaunchIdFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLaunchId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+            <xs:element name="valorOP" nillable="true" type="xs:string" />
+            <xs:element name="launchType" nillable="true" type="xs:string" />
+            <xs:element name="validFor" nillable="true" type="xs:string" />
+            <xs:element name="currentState" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLaunchIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartAttribute">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OPName" nillable="true" type="xs:string" />
+            <xs:element name="ManufPartName" nillable="true" type="xs:string" />
+            <xs:element name="AttributeName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartAttributeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="partName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartQuantity">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OPName" nillable="true" type="xs:string" />
+            <xs:element name="ManufPartName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartQuantityResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectIdFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getObjectIdFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="type" nillable="true" type="xs:string" />
+            <xs:element name="name" nillable="true" type="xs:string" />
+            <xs:element name="revision" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectNameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectRevision">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectRevisionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectType">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProgramFromOF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProgramFromOFResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProjectLeadAttrib">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OFName" nillable="true" type="xs:string" />
+            <xs:element name="AttributeName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProjectLeadAttribResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getRolesFromPTKFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getRolesFromPTKFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getRolesFromPTKResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isConnectedFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="isConnectedFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isConnected">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+            <xs:element name="getTo" nillable="true" type="xs:boolean" />
+            <xs:element name="getFrom" nillable="true" type="xs:boolean" />
+            <xs:element name="relType" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="isConnectedResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="promote">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="promoteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="promoteTriggerOnOff">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectId" nillable="true" type="xs:string" />
+            <xs:element name="triggeroff" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="promoteTriggerOnOffResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reviseSimulationFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="reviseSimulationFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reviseSimulation">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="simulId" nillable="true" type="xs:string" />
+            <xs:element name="Description" nillable="true" type="xs:string" />
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="pass" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="reviseSimulationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setContextFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="setContextFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setContext">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="user" nillable="true" type="xs:string" />
+            <xs:element name="password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setContextResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllFilesHashNameFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getAllFilesHashNameFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllFilesHashName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllFilesHashNameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllLaunchesFromPTKFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getAllLaunchesFromPTKFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllLaunchesFromPTK">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CompanyName" nillable="true" type="xs:string" />
+            <xs:element name="ProgramName" nillable="true" type="xs:string" />
+            <xs:element name="OFName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllLaunchesFromPTKResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCompaniesIdFromPTKFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getCompaniesIdFromPTKFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCompaniesIdFromPTK">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCompaniesIdFromPTKResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFiles">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFilesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFormats">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="type" nillable="true" type="xs:string" />
+            <xs:element name="name" nillable="true" type="xs:string" />
+            <xs:element name="revision" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getFormatsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIdList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objectType" nillable="true" type="xs:string" />
+            <xs:element name="objectName" nillable="true" type="xs:string" />
+            <xs:element name="state" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIdListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIdRangeFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getIdRangeFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIdRange">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="type" nillable="true" type="xs:string" />
+            <xs:element name="nameFrom" nillable="true" type="xs:string" />
+            <xs:element name="nameTo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIdRangeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getInternalIndexList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="oFName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getInternalIndexListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMPListIdFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getMPListIdFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMPListId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OFName" nillable="true" type="xs:string" />
+            <xs:element name="indice" nillable="true" type="xs:string" />
+            <xs:element name="status" nillable="true" type="xs:string" />
+            <xs:element name="MPFic" nillable="true" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getMPListIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartIdFromOP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OPName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartIdFromOPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartIdFromOPListType">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OPName" nillable="true" type="xs:string" />
+            <xs:element name="TipoLista" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getManufPartIdFromOPListTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOFsFromProgramFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getOFsFromProgramFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOFsFromProgram">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="programId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOFsFromProgramResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOperationsIDFromPS">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="oFName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getOperationsIDFromPSResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPSMembersAttributeFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getPSMembersAttributeFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPSMembersAttribute">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="valorOF" nillable="true" type="xs:string" />
+            <xs:element name="AttributeName" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPSMembersAttributeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPSNameList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="porRellenar" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getPSNameListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProgramFromCompanyFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getProgramFromCompanyFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProgramFromCompany">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="companyId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProgramFromCompanyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSimulationsIdFromMPFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getSimulationsIdFromMPFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSimulationsIdFromMP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MPId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSimulationsIdFromMPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecIdFromManufPartFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="getSpecIdFromManufPartFault" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecIdFromManufPart">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecIdFromManufPartResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecificationsIDFromOP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecificationsIDFromOPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getAllFilesHashNameMessage">
+    <wsdl:part name="part1" element="xsd:getAllFilesHashName" />
+  </wsdl:message>
+  <wsdl:message name="getAllFilesHashNameResponseMessage">
+    <wsdl:part name="part1" element="xsd:getAllFilesHashNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllFilesHashNameFault">
+    <wsdl:part name="part1" element="xsd:getAllFilesHashNameFault" />
+  </wsdl:message>
+  <wsdl:message name="checkIfPTKUserExistsMessage">
+    <wsdl:part name="part1" element="xsd:checkIfPTKUserExists" />
+  </wsdl:message>
+  <wsdl:message name="checkIfPTKUserExistsResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkIfPTKUserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfPTKUserExistsFault">
+    <wsdl:part name="part1" element="xsd:checkIfPTKUserExistsFault" />
+  </wsdl:message>
+  <wsdl:message name="setObjectDescriptionMessage">
+    <wsdl:part name="part1" element="xsd:setObjectDescription" />
+  </wsdl:message>
+  <wsdl:message name="setObjectDescriptionResponseMessage">
+    <wsdl:part name="part1" element="xsd:setObjectDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="setObjectDescriptionFault">
+    <wsdl:part name="part1" element="xsd:setObjectDescriptionFault" />
+  </wsdl:message>
+  <wsdl:message name="getDieOPRefTroqMessage">
+    <wsdl:part name="part1" element="xsd:getDieOPRefTroq" />
+  </wsdl:message>
+  <wsdl:message name="getDieOPRefTroqResponseMessage">
+    <wsdl:part name="part1" element="xsd:getDieOPRefTroqResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIdListMessage">
+    <wsdl:part name="part1" element="xsd:getIdList" />
+  </wsdl:message>
+  <wsdl:message name="getIdListResponseMessage">
+    <wsdl:part name="part1" element="xsd:getIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuantityOflaunchesMessage">
+    <wsdl:part name="part1" element="xsd:getQuantityOflaunches" />
+  </wsdl:message>
+  <wsdl:message name="getQuantityOflaunchesResponseMessage">
+    <wsdl:part name="part1" element="xsd:getQuantityOflaunchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getQuantityOflaunchesFault">
+    <wsdl:part name="part1" element="xsd:getQuantityOflaunchesFault" />
+  </wsdl:message>
+  <wsdl:message name="getOFsFromProgramMessage">
+    <wsdl:part name="part1" element="xsd:getOFsFromProgram" />
+  </wsdl:message>
+  <wsdl:message name="getOFsFromProgramResponseMessage">
+    <wsdl:part name="part1" element="xsd:getOFsFromProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOFsFromProgramFault">
+    <wsdl:part name="part1" element="xsd:getOFsFromProgramFault" />
+  </wsdl:message>
+  <wsdl:message name="getFilesMessage">
+    <wsdl:part name="part1" element="xsd:getFiles" />
+  </wsdl:message>
+  <wsdl:message name="getFilesResponseMessage">
+    <wsdl:part name="part1" element="xsd:getFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllLaunchesFromPTKMessage">
+    <wsdl:part name="part1" element="xsd:getAllLaunchesFromPTK" />
+  </wsdl:message>
+  <wsdl:message name="getAllLaunchesFromPTKResponseMessage">
+    <wsdl:part name="part1" element="xsd:getAllLaunchesFromPTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllLaunchesFromPTKFault">
+    <wsdl:part name="part1" element="xsd:getAllLaunchesFromPTKFault" />
+  </wsdl:message>
+  <wsdl:message name="getLaunchIdMessage">
+    <wsdl:part name="part1" element="xsd:getLaunchId" />
+  </wsdl:message>
+  <wsdl:message name="getLaunchIdResponseMessage">
+    <wsdl:part name="part1" element="xsd:getLaunchIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLaunchIdFault">
+    <wsdl:part name="part1" element="xsd:getLaunchIdFault" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentStatusMessage">
+    <wsdl:part name="part1" element="xsd:getCurrentStatus" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentStatusResponseMessage">
+    <wsdl:part name="part1" element="xsd:getCurrentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchValidForExistsMessage">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchValidForExists" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchValidForExistsResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchValidForExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchValidForExistsFault">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchValidForExistsFault" />
+  </wsdl:message>
+  <wsdl:message name="connectObjectsMessage">
+    <wsdl:part name="part1" element="xsd:connectObjects" />
+  </wsdl:message>
+  <wsdl:message name="connectObjectsResponseMessage">
+    <wsdl:part name="part1" element="xsd:connectObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="promoteTriggerOnOffMessage">
+    <wsdl:part name="part1" element="xsd:promoteTriggerOnOff" />
+  </wsdl:message>
+  <wsdl:message name="promoteTriggerOnOffResponseMessage">
+    <wsdl:part name="part1" element="xsd:promoteTriggerOnOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="isConnectedMessage">
+    <wsdl:part name="part1" element="xsd:isConnected" />
+  </wsdl:message>
+  <wsdl:message name="isConnectedResponseMessage">
+    <wsdl:part name="part1" element="xsd:isConnectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="isConnectedFault">
+    <wsdl:part name="part1" element="xsd:isConnectedFault" />
+  </wsdl:message>
+  <wsdl:message name="getSimulationsIdFromMPMessage">
+    <wsdl:part name="part1" element="xsd:getSimulationsIdFromMP" />
+  </wsdl:message>
+  <wsdl:message name="getSimulationsIdFromMPResponseMessage">
+    <wsdl:part name="part1" element="xsd:getSimulationsIdFromMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSimulationsIdFromMPFault">
+    <wsdl:part name="part1" element="xsd:getSimulationsIdFromMPFault" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchConnectedToObjectIsForOutMessage">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchConnectedToObjectIsForOut" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchConnectedToObjectIsForOutResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchConnectedToObjectIsForOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchConnectedToObjectIsForOutFault">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchConnectedToObjectIsForOutFault" />
+  </wsdl:message>
+  <wsdl:message name="deleteFilesFromBOMessage">
+    <wsdl:part name="part1" element="xsd:deleteFilesFromBO" />
+  </wsdl:message>
+  <wsdl:message name="deleteFilesFromBOResponseMessage">
+    <wsdl:part name="part1" element="xsd:deleteFilesFromBOResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteFilesFromBOFault">
+    <wsdl:part name="part1" element="xsd:deleteFilesFromBOFault" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartIdMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartId" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartIdResponseMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="syncronizeOPwithERPMessage">
+    <wsdl:part name="part1" element="xsd:syncronizeOPwithERP" />
+  </wsdl:message>
+  <wsdl:message name="syncronizeOPwithERPResponseMessage">
+    <wsdl:part name="part1" element="xsd:syncronizeOPwithERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="syncronizeOPwithERPFault">
+    <wsdl:part name="part1" element="xsd:syncronizeOPwithERPFault" />
+  </wsdl:message>
+  <wsdl:message name="getSpecificationsIDFromOPMessage">
+    <wsdl:part name="part1" element="xsd:getSpecificationsIDFromOP" />
+  </wsdl:message>
+  <wsdl:message name="getSpecificationsIDFromOPResponseMessage">
+    <wsdl:part name="part1" element="xsd:getSpecificationsIDFromOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPSNameListMessage">
+    <wsdl:part name="part1" element="xsd:getPSNameList" />
+  </wsdl:message>
+  <wsdl:message name="getPSNameListResponseMessage">
+    <wsdl:part name="part1" element="xsd:getPSNameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkoutMessage">
+    <wsdl:part name="part1" element="xsd:checkout" />
+  </wsdl:message>
+  <wsdl:message name="checkoutResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkoutFault">
+    <wsdl:part name="part1" element="xsd:checkoutFault" />
+  </wsdl:message>
+  <wsdl:message name="getOperationsIDFromPSMessage">
+    <wsdl:part name="part1" element="xsd:getOperationsIDFromPS" />
+  </wsdl:message>
+  <wsdl:message name="getOperationsIDFromPSResponseMessage">
+    <wsdl:part name="part1" element="xsd:getOperationsIDFromPSResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerIndexValueMessage">
+    <wsdl:part name="part1" element="xsd:getCustomerIndexValue" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerIndexValueResponseMessage">
+    <wsdl:part name="part1" element="xsd:getCustomerIndexValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPSMembersAttributeMessage">
+    <wsdl:part name="part1" element="xsd:getPSMembersAttribute" />
+  </wsdl:message>
+  <wsdl:message name="getPSMembersAttributeResponseMessage">
+    <wsdl:part name="part1" element="xsd:getPSMembersAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPSMembersAttributeFault">
+    <wsdl:part name="part1" element="xsd:getPSMembersAttributeFault" />
+  </wsdl:message>
+  <wsdl:message name="addCadToCADLaunchMessage">
+    <wsdl:part name="part1" element="xsd:addCadToCADLaunch" />
+  </wsdl:message>
+  <wsdl:message name="addCadToCADLaunchResponseMessage">
+    <wsdl:part name="part1" element="xsd:addCadToCADLaunchResponse" />
+  </wsdl:message>
+  <wsdl:message name="addCadToCADLaunchFault">
+    <wsdl:part name="part1" element="xsd:addCadToCADLaunchFault" />
+  </wsdl:message>
+  <wsdl:message name="checkinMessage">
+    <wsdl:part name="part1" element="xsd:checkin" />
+  </wsdl:message>
+  <wsdl:message name="checkinResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkinResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectTypeMessage">
+    <wsdl:part name="part1" element="xsd:getObjectType" />
+  </wsdl:message>
+  <wsdl:message name="getObjectTypeResponseMessage">
+    <wsdl:part name="part1" element="xsd:getObjectTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIdRangeMessage">
+    <wsdl:part name="part1" element="xsd:getIdRange" />
+  </wsdl:message>
+  <wsdl:message name="getIdRangeResponseMessage">
+    <wsdl:part name="part1" element="xsd:getIdRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIdRangeFault">
+    <wsdl:part name="part1" element="xsd:getIdRangeFault" />
+  </wsdl:message>
+  <wsdl:message name="getProgramFromOFMessage">
+    <wsdl:part name="part1" element="xsd:getProgramFromOF" />
+  </wsdl:message>
+  <wsdl:message name="getProgramFromOFResponseMessage">
+    <wsdl:part name="part1" element="xsd:getProgramFromOFResponse" />
+  </wsdl:message>
+  <wsdl:message name="createReviseCADMessage">
+    <wsdl:part name="part1" element="xsd:createReviseCAD" />
+  </wsdl:message>
+  <wsdl:message name="createReviseCADResponseMessage">
+    <wsdl:part name="part1" element="xsd:createReviseCADResponse" />
+  </wsdl:message>
+  <wsdl:message name="createReviseCADFault">
+    <wsdl:part name="part1" element="xsd:createReviseCADFault" />
+  </wsdl:message>
+  <wsdl:message name="createNewSimulationMessage">
+    <wsdl:part name="part1" element="xsd:createNewSimulation" />
+  </wsdl:message>
+  <wsdl:message name="createNewSimulationResponseMessage">
+    <wsdl:part name="part1" element="xsd:createNewSimulationResponse" />
+  </wsdl:message>
+  <wsdl:message name="createNewSimulationFault">
+    <wsdl:part name="part1" element="xsd:createNewSimulationFault" />
+  </wsdl:message>
+  <wsdl:message name="createPartMessage">
+    <wsdl:part name="part1" element="xsd:createPart" />
+  </wsdl:message>
+  <wsdl:message name="createPartResponseMessage">
+    <wsdl:part name="part1" element="xsd:createPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="createPartFault">
+    <wsdl:part name="part1" element="xsd:createPartFault" />
+  </wsdl:message>
+  <wsdl:message name="getObjectRevisionMessage">
+    <wsdl:part name="part1" element="xsd:getObjectRevision" />
+  </wsdl:message>
+  <wsdl:message name="getObjectRevisionResponseMessage">
+    <wsdl:part name="part1" element="xsd:getObjectRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="addCadToLaunchMessage">
+    <wsdl:part name="part1" element="xsd:addCadToLaunch" />
+  </wsdl:message>
+  <wsdl:message name="addCadToLaunchResponseMessage">
+    <wsdl:part name="part1" element="xsd:addCadToLaunchResponse" />
+  </wsdl:message>
+  <wsdl:message name="addCadToLaunchFault">
+    <wsdl:part name="part1" element="xsd:addCadToLaunchFault" />
+  </wsdl:message>
+  <wsdl:message name="getAttributeMessage">
+    <wsdl:part name="part1" element="xsd:getAttribute" />
+  </wsdl:message>
+  <wsdl:message name="getAttributeResponseMessage">
+    <wsdl:part name="part1" element="xsd:getAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAttributeFault">
+    <wsdl:part name="part1" element="xsd:getAttributeFault" />
+  </wsdl:message>
+  <wsdl:message name="reviseSimulationMessage">
+    <wsdl:part name="part1" element="xsd:reviseSimulation" />
+  </wsdl:message>
+  <wsdl:message name="reviseSimulationResponseMessage">
+    <wsdl:part name="part1" element="xsd:reviseSimulationResponse" />
+  </wsdl:message>
+  <wsdl:message name="reviseSimulationFault">
+    <wsdl:part name="part1" element="xsd:reviseSimulationFault" />
+  </wsdl:message>
+  <wsdl:message name="promoteFromStateToStateMessage">
+    <wsdl:part name="part1" element="xsd:promoteFromStateToState" />
+  </wsdl:message>
+  <wsdl:message name="promoteFromStateToStateResponseMessage">
+    <wsdl:part name="part1" element="xsd:promoteFromStateToStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectIdMessage">
+    <wsdl:part name="part1" element="xsd:getObjectId" />
+  </wsdl:message>
+  <wsdl:message name="getObjectIdResponseMessage">
+    <wsdl:part name="part1" element="xsd:getObjectIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectIdFault">
+    <wsdl:part name="part1" element="xsd:getObjectIdFault" />
+  </wsdl:message>
+  <wsdl:message name="createManufPartSpecMessage">
+    <wsdl:part name="part1" element="xsd:createManufPartSpec" />
+  </wsdl:message>
+  <wsdl:message name="createManufPartSpecResponseMessage">
+    <wsdl:part name="part1" element="xsd:createManufPartSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="promoteMessage">
+    <wsdl:part name="part1" element="xsd:promote" />
+  </wsdl:message>
+  <wsdl:message name="promoteResponseMessage">
+    <wsdl:part name="part1" element="xsd:promoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartQuantityMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartQuantity" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartQuantityResponseMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfSimulationExistsMessage">
+    <wsdl:part name="part1" element="xsd:checkIfSimulationExists" />
+  </wsdl:message>
+  <wsdl:message name="checkIfSimulationExistsResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkIfSimulationExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfSimulationExistsFault">
+    <wsdl:part name="part1" element="xsd:checkIfSimulationExistsFault" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerFromOFMessage">
+    <wsdl:part name="part1" element="xsd:getCustomerFromOF" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerFromOFResponseMessage">
+    <wsdl:part name="part1" element="xsd:getCustomerFromOFResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectLeadAttribMessage">
+    <wsdl:part name="part1" element="xsd:getProjectLeadAttrib" />
+  </wsdl:message>
+  <wsdl:message name="getProjectLeadAttribResponseMessage">
+    <wsdl:part name="part1" element="xsd:getProjectLeadAttribResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMPListIdMessage">
+    <wsdl:part name="part1" element="xsd:getMPListId" />
+  </wsdl:message>
+  <wsdl:message name="getMPListIdResponseMessage">
+    <wsdl:part name="part1" element="xsd:getMPListIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMPListIdFault">
+    <wsdl:part name="part1" element="xsd:getMPListIdFault" />
+  </wsdl:message>
+  <wsdl:message name="leerOfakMessage">
+    <wsdl:part name="part1" element="xsd:leerOfak" />
+  </wsdl:message>
+  <wsdl:message name="leerOfakResponseMessage">
+    <wsdl:part name="part1" element="xsd:leerOfakResponse" />
+  </wsdl:message>
+  <wsdl:message name="setContextMessage">
+    <wsdl:part name="part1" element="xsd:setContext" />
+  </wsdl:message>
+  <wsdl:message name="setContextResponseMessage">
+    <wsdl:part name="part1" element="xsd:setContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="setContextFault">
+    <wsdl:part name="part1" element="xsd:setContextFault" />
+  </wsdl:message>
+  <wsdl:message name="getInternalIndexListMessage">
+    <wsdl:part name="part1" element="xsd:getInternalIndexList" />
+  </wsdl:message>
+  <wsdl:message name="getInternalIndexListResponseMessage">
+    <wsdl:part name="part1" element="xsd:getInternalIndexListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCompaniesIdFromPTKMessage">
+    <wsdl:part name="part1" element="xsd:getCompaniesIdFromPTK" />
+  </wsdl:message>
+  <wsdl:message name="getCompaniesIdFromPTKResponseMessage">
+    <wsdl:part name="part1" element="xsd:getCompaniesIdFromPTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCompaniesIdFromPTKFault">
+    <wsdl:part name="part1" element="xsd:getCompaniesIdFromPTKFault" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartAttributeMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartAttribute" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartAttributeResponseMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkinOptionMessage">
+    <wsdl:part name="part1" element="xsd:checkinOption" />
+  </wsdl:message>
+  <wsdl:message name="checkinOptionResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkinOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLastRevisionMessage">
+    <wsdl:part name="part1" element="xsd:getLastRevision" />
+  </wsdl:message>
+  <wsdl:message name="getLastRevisionResponseMessage">
+    <wsdl:part name="part1" element="xsd:getLastRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLastRevisionFault">
+    <wsdl:part name="part1" element="xsd:getLastRevisionFault" />
+  </wsdl:message>
+  <wsdl:message name="syncronizeEBOMwithERPMessage">
+    <wsdl:part name="part1" element="xsd:syncronizeEBOMwithERP" />
+  </wsdl:message>
+  <wsdl:message name="syncronizeEBOMwithERPResponseMessage">
+    <wsdl:part name="part1" element="xsd:syncronizeEBOMwithERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="syncronizeEBOMwithERPFault">
+    <wsdl:part name="part1" element="xsd:syncronizeEBOMwithERPFault" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartIdFromOPListTypeMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartIdFromOPListType" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartIdFromOPListTypeResponseMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartIdFromOPListTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectNameMessage">
+    <wsdl:part name="part1" element="xsd:getObjectName" />
+  </wsdl:message>
+  <wsdl:message name="getObjectNameResponseMessage">
+    <wsdl:part name="part1" element="xsd:getObjectNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSpecIdFromManufPartMessage">
+    <wsdl:part name="part1" element="xsd:getSpecIdFromManufPart" />
+  </wsdl:message>
+  <wsdl:message name="getSpecIdFromManufPartResponseMessage">
+    <wsdl:part name="part1" element="xsd:getSpecIdFromManufPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSpecIdFromManufPartFault">
+    <wsdl:part name="part1" element="xsd:getSpecIdFromManufPartFault" />
+  </wsdl:message>
+  <wsdl:message name="modifyAttribMessage">
+    <wsdl:part name="part1" element="xsd:modifyAttrib" />
+  </wsdl:message>
+  <wsdl:message name="modifyAttribResponseMessage">
+    <wsdl:part name="part1" element="xsd:modifyAttribResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyAttribFault">
+    <wsdl:part name="part1" element="xsd:modifyAttribFault" />
+  </wsdl:message>
+  <wsdl:message name="getRolesFromPTKMessage" />
+  <wsdl:message name="getRolesFromPTKResponseMessage">
+    <wsdl:part name="part1" element="xsd:getRolesFromPTKResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRolesFromPTKFault">
+    <wsdl:part name="part1" element="xsd:getRolesFromPTKFault" />
+  </wsdl:message>
+  <wsdl:message name="delBOMessage">
+    <wsdl:part name="part1" element="xsd:delBO" />
+  </wsdl:message>
+  <wsdl:message name="delBOResponseMessage">
+    <wsdl:part name="part1" element="xsd:delBOResponse" />
+  </wsdl:message>
+  <wsdl:message name="delBOFault">
+    <wsdl:part name="part1" element="xsd:delBOFault" />
+  </wsdl:message>
+  <wsdl:message name="getProgramFromCompanyMessage">
+    <wsdl:part name="part1" element="xsd:getProgramFromCompany" />
+  </wsdl:message>
+  <wsdl:message name="getProgramFromCompanyResponseMessage">
+    <wsdl:part name="part1" element="xsd:getProgramFromCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProgramFromCompanyFault">
+    <wsdl:part name="part1" element="xsd:getProgramFromCompanyFault" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartIdFromOPMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartIdFromOP" />
+  </wsdl:message>
+  <wsdl:message name="getManufPartIdFromOPResponseMessage">
+    <wsdl:part name="part1" element="xsd:getManufPartIdFromOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchExistsMessage">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchExists" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchExistsResponseMessage">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIfLaunchExistsFault">
+    <wsdl:part name="part1" element="xsd:checkIfLaunchExistsFault" />
+  </wsdl:message>
+  <wsdl:message name="getFormatsMessage">
+    <wsdl:part name="part1" element="xsd:getFormats" />
+  </wsdl:message>
+  <wsdl:message name="getFormatsResponseMessage">
+    <wsdl:part name="part1" element="xsd:getFormatsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OfakServicePortType">
+    <wsdl:operation name="getAllFilesHashName">
+      <wsdl:input wsaw:Action="urn:getAllFilesHashName" message="ns:getAllFilesHashNameMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getAllFilesHashNameResponse" message="ns:getAllFilesHashNameResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getAllFilesHashName/Fault/getAllFilesHashNameFault" name="getAllFilesHashNameFault" message="ns:getAllFilesHashNameFault" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfPTKUserExists">
+      <wsdl:input wsaw:Action="urn:checkIfPTKUserExists" message="ns:checkIfPTKUserExistsMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfPTKUserExistsResponse" message="ns:checkIfPTKUserExistsResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfPTKUserExists/Fault/checkIfPTKUserExistsFault" name="checkIfPTKUserExistsFault" message="ns:checkIfPTKUserExistsFault" />
+    </wsdl:operation>
+    <wsdl:operation name="setObjectDescription">
+      <wsdl:input wsaw:Action="urn:setObjectDescription" message="ns:setObjectDescriptionMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/setObjectDescriptionResponse" message="ns:setObjectDescriptionResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/setObjectDescription/Fault/setObjectDescriptionFault" name="setObjectDescriptionFault" message="ns:setObjectDescriptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getDieOPRefTroq">
+      <wsdl:input wsaw:Action="urn:getDieOPRefTroq" message="ns:getDieOPRefTroqMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getDieOPRefTroqResponse" message="ns:getDieOPRefTroqResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getIdList">
+      <wsdl:input wsaw:Action="urn:getIdList" message="ns:getIdListMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getIdListResponse" message="ns:getIdListResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuantityOflaunches">
+      <wsdl:input wsaw:Action="urn:getQuantityOflaunches" message="ns:getQuantityOflaunchesMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getQuantityOflaunchesResponse" message="ns:getQuantityOflaunchesResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getQuantityOflaunches/Fault/getQuantityOflaunchesFault" name="getQuantityOflaunchesFault" message="ns:getQuantityOflaunchesFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getOFsFromProgram">
+      <wsdl:input wsaw:Action="urn:getOFsFromProgram" message="ns:getOFsFromProgramMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getOFsFromProgramResponse" message="ns:getOFsFromProgramResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getOFsFromProgram/Fault/getOFsFromProgramFault" name="getOFsFromProgramFault" message="ns:getOFsFromProgramFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getFiles">
+      <wsdl:input wsaw:Action="urn:getFiles" message="ns:getFilesMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getFilesResponse" message="ns:getFilesResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllLaunchesFromPTK">
+      <wsdl:input wsaw:Action="urn:getAllLaunchesFromPTK" message="ns:getAllLaunchesFromPTKMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getAllLaunchesFromPTKResponse" message="ns:getAllLaunchesFromPTKResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getAllLaunchesFromPTK/Fault/getAllLaunchesFromPTKFault" name="getAllLaunchesFromPTKFault" message="ns:getAllLaunchesFromPTKFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getLaunchId">
+      <wsdl:input wsaw:Action="urn:getLaunchId" message="ns:getLaunchIdMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getLaunchIdResponse" message="ns:getLaunchIdResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getLaunchId/Fault/getLaunchIdFault" name="getLaunchIdFault" message="ns:getLaunchIdFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentStatus">
+      <wsdl:input wsaw:Action="urn:getCurrentStatus" message="ns:getCurrentStatusMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getCurrentStatusResponse" message="ns:getCurrentStatusResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchValidForExists">
+      <wsdl:input wsaw:Action="urn:checkIfLaunchValidForExists" message="ns:checkIfLaunchValidForExistsMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfLaunchValidForExistsResponse" message="ns:checkIfLaunchValidForExistsResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfLaunchValidForExists/Fault/checkIfLaunchValidForExistsFault" name="checkIfLaunchValidForExistsFault" message="ns:checkIfLaunchValidForExistsFault" />
+    </wsdl:operation>
+    <wsdl:operation name="connectObjects">
+      <wsdl:input wsaw:Action="urn:connectObjects" message="ns:connectObjectsMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/connectObjectsResponse" message="ns:connectObjectsResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="promoteTriggerOnOff">
+      <wsdl:input wsaw:Action="urn:promoteTriggerOnOff" message="ns:promoteTriggerOnOffMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/promoteTriggerOnOffResponse" message="ns:promoteTriggerOnOffResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isConnected">
+      <wsdl:input wsaw:Action="urn:isConnected" message="ns:isConnectedMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/isConnectedResponse" message="ns:isConnectedResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/isConnected/Fault/isConnectedFault" name="isConnectedFault" message="ns:isConnectedFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getSimulationsIdFromMP">
+      <wsdl:input wsaw:Action="urn:getSimulationsIdFromMP" message="ns:getSimulationsIdFromMPMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getSimulationsIdFromMPResponse" message="ns:getSimulationsIdFromMPResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getSimulationsIdFromMP/Fault/getSimulationsIdFromMPFault" name="getSimulationsIdFromMPFault" message="ns:getSimulationsIdFromMPFault" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchConnectedToObjectIsForOut">
+      <wsdl:input wsaw:Action="urn:checkIfLaunchConnectedToObjectIsForOut" message="ns:checkIfLaunchConnectedToObjectIsForOutMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfLaunchConnectedToObjectIsForOutResponse" message="ns:checkIfLaunchConnectedToObjectIsForOutResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfLaunchConnectedToObjectIsForOut/Fault/checkIfLaunchConnectedToObjectIsForOutFault" name="checkIfLaunchConnectedToObjectIsForOutFault" message="ns:checkIfLaunchConnectedToObjectIsForOutFault" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFilesFromBO">
+      <wsdl:input wsaw:Action="urn:deleteFilesFromBO" message="ns:deleteFilesFromBOMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/deleteFilesFromBOResponse" message="ns:deleteFilesFromBOResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/deleteFilesFromBO/Fault/deleteFilesFromBOFault" name="deleteFilesFromBOFault" message="ns:deleteFilesFromBOFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartId">
+      <wsdl:input wsaw:Action="urn:getManufPartId" message="ns:getManufPartIdMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getManufPartIdResponse" message="ns:getManufPartIdResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeOPwithERP">
+      <wsdl:input wsaw:Action="urn:syncronizeOPwithERP" message="ns:syncronizeOPwithERPMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/syncronizeOPwithERPResponse" message="ns:syncronizeOPwithERPResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/syncronizeOPwithERP/Fault/syncronizeOPwithERPFault" name="syncronizeOPwithERPFault" message="ns:syncronizeOPwithERPFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificationsIDFromOP">
+      <wsdl:input wsaw:Action="urn:getSpecificationsIDFromOP" message="ns:getSpecificationsIDFromOPMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getSpecificationsIDFromOPResponse" message="ns:getSpecificationsIDFromOPResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPSNameList">
+      <wsdl:input wsaw:Action="urn:getPSNameList" message="ns:getPSNameListMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getPSNameListResponse" message="ns:getPSNameListResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkout">
+      <wsdl:input wsaw:Action="urn:checkout" message="ns:checkoutMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkoutResponse" message="ns:checkoutResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkout/Fault/checkoutFault" name="checkoutFault" message="ns:checkoutFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getOperationsIDFromPS">
+      <wsdl:input wsaw:Action="urn:getOperationsIDFromPS" message="ns:getOperationsIDFromPSMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getOperationsIDFromPSResponse" message="ns:getOperationsIDFromPSResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIndexValue">
+      <wsdl:input wsaw:Action="urn:getCustomerIndexValue" message="ns:getCustomerIndexValueMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getCustomerIndexValueResponse" message="ns:getCustomerIndexValueResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPSMembersAttribute">
+      <wsdl:input wsaw:Action="urn:getPSMembersAttribute" message="ns:getPSMembersAttributeMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getPSMembersAttributeResponse" message="ns:getPSMembersAttributeResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getPSMembersAttribute/Fault/getPSMembersAttributeFault" name="getPSMembersAttributeFault" message="ns:getPSMembersAttributeFault" />
+    </wsdl:operation>
+    <wsdl:operation name="addCadToCADLaunch">
+      <wsdl:input wsaw:Action="urn:addCadToCADLaunch" message="ns:addCadToCADLaunchMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/addCadToCADLaunchResponse" message="ns:addCadToCADLaunchResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/addCadToCADLaunch/Fault/addCadToCADLaunchFault" name="addCadToCADLaunchFault" message="ns:addCadToCADLaunchFault" />
+    </wsdl:operation>
+    <wsdl:operation name="checkin">
+      <wsdl:input wsaw:Action="urn:checkin" message="ns:checkinMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkinResponse" message="ns:checkinResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectType">
+      <wsdl:input wsaw:Action="urn:getObjectType" message="ns:getObjectTypeMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getObjectTypeResponse" message="ns:getObjectTypeResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getIdRange">
+      <wsdl:input wsaw:Action="urn:getIdRange" message="ns:getIdRangeMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getIdRangeResponse" message="ns:getIdRangeResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getIdRange/Fault/getIdRangeFault" name="getIdRangeFault" message="ns:getIdRangeFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromOF">
+      <wsdl:input wsaw:Action="urn:getProgramFromOF" message="ns:getProgramFromOFMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getProgramFromOFResponse" message="ns:getProgramFromOFResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createReviseCAD">
+      <wsdl:input wsaw:Action="urn:createReviseCAD" message="ns:createReviseCADMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createReviseCADResponse" message="ns:createReviseCADResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createReviseCAD/Fault/createReviseCADFault" name="createReviseCADFault" message="ns:createReviseCADFault" />
+    </wsdl:operation>
+    <wsdl:operation name="createNewSimulation">
+      <wsdl:input wsaw:Action="urn:createNewSimulation" message="ns:createNewSimulationMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createNewSimulationResponse" message="ns:createNewSimulationResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createNewSimulation/Fault/createNewSimulationFault" name="createNewSimulationFault" message="ns:createNewSimulationFault" />
+    </wsdl:operation>
+    <wsdl:operation name="createPart">
+      <wsdl:input wsaw:Action="urn:createPart" message="ns:createPartMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createPartResponse" message="ns:createPartResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createPart/Fault/createPartFault" name="createPartFault" message="ns:createPartFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectRevision">
+      <wsdl:input wsaw:Action="urn:getObjectRevision" message="ns:getObjectRevisionMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getObjectRevisionResponse" message="ns:getObjectRevisionResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCadToLaunch">
+      <wsdl:input wsaw:Action="urn:addCadToLaunch" message="ns:addCadToLaunchMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/addCadToLaunchResponse" message="ns:addCadToLaunchResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/addCadToLaunch/Fault/addCadToLaunchFault" name="addCadToLaunchFault" message="ns:addCadToLaunchFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getAttribute">
+      <wsdl:input wsaw:Action="urn:getAttribute" message="ns:getAttributeMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getAttributeResponse" message="ns:getAttributeResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getAttribute/Fault/getAttributeFault" name="getAttributeFault" message="ns:getAttributeFault" />
+    </wsdl:operation>
+    <wsdl:operation name="reviseSimulation">
+      <wsdl:input wsaw:Action="urn:reviseSimulation" message="ns:reviseSimulationMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/reviseSimulationResponse" message="ns:reviseSimulationResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/reviseSimulation/Fault/reviseSimulationFault" name="reviseSimulationFault" message="ns:reviseSimulationFault" />
+    </wsdl:operation>
+    <wsdl:operation name="promoteFromStateToState">
+      <wsdl:input wsaw:Action="urn:promoteFromStateToState" message="ns:promoteFromStateToStateMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/promoteFromStateToStateResponse" message="ns:promoteFromStateToStateResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectId">
+      <wsdl:input wsaw:Action="urn:getObjectId" message="ns:getObjectIdMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getObjectIdResponse" message="ns:getObjectIdResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getObjectId/Fault/getObjectIdFault" name="getObjectIdFault" message="ns:getObjectIdFault" />
+    </wsdl:operation>
+    <wsdl:operation name="createManufPartSpec">
+      <wsdl:input wsaw:Action="urn:createManufPartSpec" message="ns:createManufPartSpecMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/createManufPartSpecResponse" message="ns:createManufPartSpecResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="promote">
+      <wsdl:input wsaw:Action="urn:promote" message="ns:promoteMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/promoteResponse" message="ns:promoteResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartQuantity">
+      <wsdl:input wsaw:Action="urn:getManufPartQuantity" message="ns:getManufPartQuantityMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getManufPartQuantityResponse" message="ns:getManufPartQuantityResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfSimulationExists">
+      <wsdl:input wsaw:Action="urn:checkIfSimulationExists" message="ns:checkIfSimulationExistsMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfSimulationExistsResponse" message="ns:checkIfSimulationExistsResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfSimulationExists/Fault/checkIfSimulationExistsFault" name="checkIfSimulationExistsFault" message="ns:checkIfSimulationExistsFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerFromOF">
+      <wsdl:input wsaw:Action="urn:getCustomerFromOF" message="ns:getCustomerFromOFMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getCustomerFromOFResponse" message="ns:getCustomerFromOFResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectLeadAttrib">
+      <wsdl:input wsaw:Action="urn:getProjectLeadAttrib" message="ns:getProjectLeadAttribMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getProjectLeadAttribResponse" message="ns:getProjectLeadAttribResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMPListId">
+      <wsdl:input wsaw:Action="urn:getMPListId" message="ns:getMPListIdMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getMPListIdResponse" message="ns:getMPListIdResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getMPListId/Fault/getMPListIdFault" name="getMPListIdFault" message="ns:getMPListIdFault" />
+    </wsdl:operation>
+    <wsdl:operation name="leerOfak">
+      <wsdl:input wsaw:Action="urn:leerOfak" message="ns:leerOfakMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/leerOfakResponse" message="ns:leerOfakResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setContext">
+      <wsdl:input wsaw:Action="urn:setContext" message="ns:setContextMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/setContextResponse" message="ns:setContextResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/setContext/Fault/setContextFault" name="setContextFault" message="ns:setContextFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getInternalIndexList">
+      <wsdl:input wsaw:Action="urn:getInternalIndexList" message="ns:getInternalIndexListMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getInternalIndexListResponse" message="ns:getInternalIndexListResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompaniesIdFromPTK">
+      <wsdl:input wsaw:Action="urn:getCompaniesIdFromPTK" message="ns:getCompaniesIdFromPTKMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getCompaniesIdFromPTKResponse" message="ns:getCompaniesIdFromPTKResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getCompaniesIdFromPTK/Fault/getCompaniesIdFromPTKFault" name="getCompaniesIdFromPTKFault" message="ns:getCompaniesIdFromPTKFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartAttribute">
+      <wsdl:input wsaw:Action="urn:getManufPartAttribute" message="ns:getManufPartAttributeMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getManufPartAttributeResponse" message="ns:getManufPartAttributeResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkinOption">
+      <wsdl:input wsaw:Action="urn:checkinOption" message="ns:checkinOptionMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkinOptionResponse" message="ns:checkinOptionResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastRevision">
+      <wsdl:input wsaw:Action="urn:getLastRevision" message="ns:getLastRevisionMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getLastRevisionResponse" message="ns:getLastRevisionResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getLastRevision/Fault/getLastRevisionFault" name="getLastRevisionFault" message="ns:getLastRevisionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeEBOMwithERP">
+      <wsdl:input wsaw:Action="urn:syncronizeEBOMwithERP" message="ns:syncronizeEBOMwithERPMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/syncronizeEBOMwithERPResponse" message="ns:syncronizeEBOMwithERPResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/syncronizeEBOMwithERP/Fault/syncronizeEBOMwithERPFault" name="syncronizeEBOMwithERPFault" message="ns:syncronizeEBOMwithERPFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOPListType">
+      <wsdl:input wsaw:Action="urn:getManufPartIdFromOPListType" message="ns:getManufPartIdFromOPListTypeMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getManufPartIdFromOPListTypeResponse" message="ns:getManufPartIdFromOPListTypeResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectName">
+      <wsdl:input wsaw:Action="urn:getObjectName" message="ns:getObjectNameMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getObjectNameResponse" message="ns:getObjectNameResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecIdFromManufPart">
+      <wsdl:input wsaw:Action="urn:getSpecIdFromManufPart" message="ns:getSpecIdFromManufPartMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getSpecIdFromManufPartResponse" message="ns:getSpecIdFromManufPartResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getSpecIdFromManufPart/Fault/getSpecIdFromManufPartFault" name="getSpecIdFromManufPartFault" message="ns:getSpecIdFromManufPartFault" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyAttrib">
+      <wsdl:input wsaw:Action="urn:modifyAttrib" message="ns:modifyAttribMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/modifyAttribResponse" message="ns:modifyAttribResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/modifyAttrib/Fault/modifyAttribFault" name="modifyAttribFault" message="ns:modifyAttribFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getRolesFromPTK">
+      <wsdl:input wsaw:Action="urn:getRolesFromPTK" message="ns:getRolesFromPTKMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getRolesFromPTKResponse" message="ns:getRolesFromPTKResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getRolesFromPTK/Fault/getRolesFromPTKFault" name="getRolesFromPTKFault" message="ns:getRolesFromPTKFault" />
+    </wsdl:operation>
+    <wsdl:operation name="delBO">
+      <wsdl:input wsaw:Action="urn:delBO" message="ns:delBOMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/delBOResponse" message="ns:delBOResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/delBO/Fault/delBOFault" name="delBOFault" message="ns:delBOFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromCompany">
+      <wsdl:input wsaw:Action="urn:getProgramFromCompany" message="ns:getProgramFromCompanyMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getProgramFromCompanyResponse" message="ns:getProgramFromCompanyResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getProgramFromCompany/Fault/getProgramFromCompanyFault" name="getProgramFromCompanyFault" message="ns:getProgramFromCompanyFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOP">
+      <wsdl:input wsaw:Action="urn:getManufPartIdFromOP" message="ns:getManufPartIdFromOPMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getManufPartIdFromOPResponse" message="ns:getManufPartIdFromOPResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchExists">
+      <wsdl:input wsaw:Action="urn:checkIfLaunchExists" message="ns:checkIfLaunchExistsMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfLaunchExistsResponse" message="ns:checkIfLaunchExistsResponseMessage" />
+      <wsdl:fault wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/checkIfLaunchExists/Fault/checkIfLaunchExistsFault" name="checkIfLaunchExistsFault" message="ns:checkIfLaunchExistsFault" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormats">
+      <wsdl:input wsaw:Action="urn:getFormats" message="ns:getFormatsMessage" />
+      <wsdl:output wsaw:Action="http://ptk.ws.batz.com/OfakServicePortType/getFormatsResponse" message="ns:getFormatsResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OfakServiceSOAP11Binding" type="ns:OfakServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllFilesHashName">
+      <soap:operation soapAction="urn:getAllFilesHashName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getAllFilesHashNameFault">
+        <soap12:fault use="literal" name="getAllFilesHashNameFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfPTKUserExists">
+      <soap:operation soapAction="urn:checkIfPTKUserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfPTKUserExistsFault">
+        <soap12:fault use="literal" name="checkIfPTKUserExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setObjectDescription">
+      <soap:operation soapAction="urn:setObjectDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="setObjectDescriptionFault">
+        <soap12:fault use="literal" name="setObjectDescriptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDieOPRefTroq">
+      <soap:operation soapAction="urn:getDieOPRefTroq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdList">
+      <soap:operation soapAction="urn:getIdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuantityOflaunches">
+      <soap:operation soapAction="urn:getQuantityOflaunches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getQuantityOflaunchesFault">
+        <soap12:fault use="literal" name="getQuantityOflaunchesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOFsFromProgram">
+      <soap:operation soapAction="urn:getOFsFromProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getOFsFromProgramFault">
+        <soap12:fault use="literal" name="getOFsFromProgramFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFiles">
+      <soap:operation soapAction="urn:getFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLaunchesFromPTK">
+      <soap:operation soapAction="urn:getAllLaunchesFromPTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getAllLaunchesFromPTKFault">
+        <soap12:fault use="literal" name="getAllLaunchesFromPTKFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLaunchId">
+      <soap:operation soapAction="urn:getLaunchId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getLaunchIdFault">
+        <soap12:fault use="literal" name="getLaunchIdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentStatus">
+      <soap:operation soapAction="urn:getCurrentStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchValidForExists">
+      <soap:operation soapAction="urn:checkIfLaunchValidForExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfLaunchValidForExistsFault">
+        <soap12:fault use="literal" name="checkIfLaunchValidForExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="connectObjects">
+      <soap:operation soapAction="urn:connectObjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promoteTriggerOnOff">
+      <soap:operation soapAction="urn:promoteTriggerOnOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isConnected">
+      <soap:operation soapAction="urn:isConnected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="isConnectedFault">
+        <soap12:fault use="literal" name="isConnectedFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSimulationsIdFromMP">
+      <soap:operation soapAction="urn:getSimulationsIdFromMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getSimulationsIdFromMPFault">
+        <soap12:fault use="literal" name="getSimulationsIdFromMPFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchConnectedToObjectIsForOut">
+      <soap:operation soapAction="urn:checkIfLaunchConnectedToObjectIsForOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfLaunchConnectedToObjectIsForOutFault">
+        <soap12:fault use="literal" name="checkIfLaunchConnectedToObjectIsForOutFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFilesFromBO">
+      <soap:operation soapAction="urn:deleteFilesFromBO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="deleteFilesFromBOFault">
+        <soap12:fault use="literal" name="deleteFilesFromBOFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartId">
+      <soap:operation soapAction="urn:getManufPartId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeOPwithERP">
+      <soap:operation soapAction="urn:syncronizeOPwithERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="syncronizeOPwithERPFault">
+        <soap12:fault use="literal" name="syncronizeOPwithERPFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificationsIDFromOP">
+      <soap:operation soapAction="urn:getSpecificationsIDFromOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPSNameList">
+      <soap:operation soapAction="urn:getPSNameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkout">
+      <soap:operation soapAction="urn:checkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkoutFault">
+        <soap12:fault use="literal" name="checkoutFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationsIDFromPS">
+      <soap:operation soapAction="urn:getOperationsIDFromPS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIndexValue">
+      <soap:operation soapAction="urn:getCustomerIndexValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPSMembersAttribute">
+      <soap:operation soapAction="urn:getPSMembersAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getPSMembersAttributeFault">
+        <soap12:fault use="literal" name="getPSMembersAttributeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCadToCADLaunch">
+      <soap:operation soapAction="urn:addCadToCADLaunch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="addCadToCADLaunchFault">
+        <soap12:fault use="literal" name="addCadToCADLaunchFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkin">
+      <soap:operation soapAction="urn:checkin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectType">
+      <soap:operation soapAction="urn:getObjectType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdRange">
+      <soap:operation soapAction="urn:getIdRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getIdRangeFault">
+        <soap12:fault use="literal" name="getIdRangeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromOF">
+      <soap:operation soapAction="urn:getProgramFromOF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createReviseCAD">
+      <soap:operation soapAction="urn:createReviseCAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="createReviseCADFault">
+        <soap12:fault use="literal" name="createReviseCADFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createNewSimulation">
+      <soap:operation soapAction="urn:createNewSimulation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="createNewSimulationFault">
+        <soap12:fault use="literal" name="createNewSimulationFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPart">
+      <soap:operation soapAction="urn:createPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="createPartFault">
+        <soap12:fault use="literal" name="createPartFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectRevision">
+      <soap:operation soapAction="urn:getObjectRevision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCadToLaunch">
+      <soap:operation soapAction="urn:addCadToLaunch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="addCadToLaunchFault">
+        <soap12:fault use="literal" name="addCadToLaunchFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAttribute">
+      <soap:operation soapAction="urn:getAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getAttributeFault">
+        <soap12:fault use="literal" name="getAttributeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reviseSimulation">
+      <soap:operation soapAction="urn:reviseSimulation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="reviseSimulationFault">
+        <soap12:fault use="literal" name="reviseSimulationFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="promoteFromStateToState">
+      <soap:operation soapAction="urn:promoteFromStateToState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectId">
+      <soap:operation soapAction="urn:getObjectId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getObjectIdFault">
+        <soap12:fault use="literal" name="getObjectIdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createManufPartSpec">
+      <soap:operation soapAction="urn:createManufPartSpec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promote">
+      <soap:operation soapAction="urn:promote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartQuantity">
+      <soap:operation soapAction="urn:getManufPartQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfSimulationExists">
+      <soap:operation soapAction="urn:checkIfSimulationExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfSimulationExistsFault">
+        <soap12:fault use="literal" name="checkIfSimulationExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerFromOF">
+      <soap:operation soapAction="urn:getCustomerFromOF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectLeadAttrib">
+      <soap:operation soapAction="urn:getProjectLeadAttrib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMPListId">
+      <soap:operation soapAction="urn:getMPListId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getMPListIdFault">
+        <soap12:fault use="literal" name="getMPListIdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="leerOfak">
+      <soap:operation soapAction="urn:leerOfak" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setContext">
+      <soap:operation soapAction="urn:setContext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="setContextFault">
+        <soap12:fault use="literal" name="setContextFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInternalIndexList">
+      <soap:operation soapAction="urn:getInternalIndexList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompaniesIdFromPTK">
+      <soap:operation soapAction="urn:getCompaniesIdFromPTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getCompaniesIdFromPTKFault">
+        <soap12:fault use="literal" name="getCompaniesIdFromPTKFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartAttribute">
+      <soap:operation soapAction="urn:getManufPartAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkinOption">
+      <soap:operation soapAction="urn:checkinOption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastRevision">
+      <soap:operation soapAction="urn:getLastRevision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getLastRevisionFault">
+        <soap12:fault use="literal" name="getLastRevisionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeEBOMwithERP">
+      <soap:operation soapAction="urn:syncronizeEBOMwithERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="syncronizeEBOMwithERPFault">
+        <soap12:fault use="literal" name="syncronizeEBOMwithERPFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOPListType">
+      <soap:operation soapAction="urn:getManufPartIdFromOPListType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectName">
+      <soap:operation soapAction="urn:getObjectName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecIdFromManufPart">
+      <soap:operation soapAction="urn:getSpecIdFromManufPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getSpecIdFromManufPartFault">
+        <soap12:fault use="literal" name="getSpecIdFromManufPartFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAttrib">
+      <soap:operation soapAction="urn:modifyAttrib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="modifyAttribFault">
+        <soap12:fault use="literal" name="modifyAttribFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getRolesFromPTK">
+      <soap:operation soapAction="urn:getRolesFromPTK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getRolesFromPTKFault">
+        <soap12:fault use="literal" name="getRolesFromPTKFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delBO">
+      <soap:operation soapAction="urn:delBO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="delBOFault">
+        <soap12:fault use="literal" name="delBOFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromCompany">
+      <soap:operation soapAction="urn:getProgramFromCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getProgramFromCompanyFault">
+        <soap12:fault use="literal" name="getProgramFromCompanyFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOP">
+      <soap:operation soapAction="urn:getManufPartIdFromOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchExists">
+      <soap:operation soapAction="urn:checkIfLaunchExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfLaunchExistsFault">
+        <soap12:fault use="literal" name="checkIfLaunchExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFormats">
+      <soap:operation soapAction="urn:getFormats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OfakServiceSOAP12Binding" type="ns:OfakServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAllFilesHashName">
+      <soap12:operation soapAction="urn:getAllFilesHashName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getAllFilesHashNameFault">
+        <soap12:fault use="literal" name="getAllFilesHashNameFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfPTKUserExists">
+      <soap12:operation soapAction="urn:checkIfPTKUserExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfPTKUserExistsFault">
+        <soap12:fault use="literal" name="checkIfPTKUserExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setObjectDescription">
+      <soap12:operation soapAction="urn:setObjectDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="setObjectDescriptionFault">
+        <soap12:fault use="literal" name="setObjectDescriptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDieOPRefTroq">
+      <soap12:operation soapAction="urn:getDieOPRefTroq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdList">
+      <soap12:operation soapAction="urn:getIdList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuantityOflaunches">
+      <soap12:operation soapAction="urn:getQuantityOflaunches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getQuantityOflaunchesFault">
+        <soap12:fault use="literal" name="getQuantityOflaunchesFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOFsFromProgram">
+      <soap12:operation soapAction="urn:getOFsFromProgram" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getOFsFromProgramFault">
+        <soap12:fault use="literal" name="getOFsFromProgramFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFiles">
+      <soap12:operation soapAction="urn:getFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLaunchesFromPTK">
+      <soap12:operation soapAction="urn:getAllLaunchesFromPTK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getAllLaunchesFromPTKFault">
+        <soap12:fault use="literal" name="getAllLaunchesFromPTKFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLaunchId">
+      <soap12:operation soapAction="urn:getLaunchId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getLaunchIdFault">
+        <soap12:fault use="literal" name="getLaunchIdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentStatus">
+      <soap12:operation soapAction="urn:getCurrentStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchValidForExists">
+      <soap12:operation soapAction="urn:checkIfLaunchValidForExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfLaunchValidForExistsFault">
+        <soap12:fault use="literal" name="checkIfLaunchValidForExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="connectObjects">
+      <soap12:operation soapAction="urn:connectObjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promoteTriggerOnOff">
+      <soap12:operation soapAction="urn:promoteTriggerOnOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isConnected">
+      <soap12:operation soapAction="urn:isConnected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="isConnectedFault">
+        <soap12:fault use="literal" name="isConnectedFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSimulationsIdFromMP">
+      <soap12:operation soapAction="urn:getSimulationsIdFromMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getSimulationsIdFromMPFault">
+        <soap12:fault use="literal" name="getSimulationsIdFromMPFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchConnectedToObjectIsForOut">
+      <soap12:operation soapAction="urn:checkIfLaunchConnectedToObjectIsForOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfLaunchConnectedToObjectIsForOutFault">
+        <soap12:fault use="literal" name="checkIfLaunchConnectedToObjectIsForOutFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFilesFromBO">
+      <soap12:operation soapAction="urn:deleteFilesFromBO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="deleteFilesFromBOFault">
+        <soap12:fault use="literal" name="deleteFilesFromBOFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartId">
+      <soap12:operation soapAction="urn:getManufPartId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeOPwithERP">
+      <soap12:operation soapAction="urn:syncronizeOPwithERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="syncronizeOPwithERPFault">
+        <soap12:fault use="literal" name="syncronizeOPwithERPFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificationsIDFromOP">
+      <soap12:operation soapAction="urn:getSpecificationsIDFromOP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPSNameList">
+      <soap12:operation soapAction="urn:getPSNameList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkout">
+      <soap12:operation soapAction="urn:checkout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkoutFault">
+        <soap12:fault use="literal" name="checkoutFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationsIDFromPS">
+      <soap12:operation soapAction="urn:getOperationsIDFromPS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIndexValue">
+      <soap12:operation soapAction="urn:getCustomerIndexValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPSMembersAttribute">
+      <soap12:operation soapAction="urn:getPSMembersAttribute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getPSMembersAttributeFault">
+        <soap12:fault use="literal" name="getPSMembersAttributeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addCadToCADLaunch">
+      <soap12:operation soapAction="urn:addCadToCADLaunch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="addCadToCADLaunchFault">
+        <soap12:fault use="literal" name="addCadToCADLaunchFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkin">
+      <soap12:operation soapAction="urn:checkin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectType">
+      <soap12:operation soapAction="urn:getObjectType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdRange">
+      <soap12:operation soapAction="urn:getIdRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getIdRangeFault">
+        <soap12:fault use="literal" name="getIdRangeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromOF">
+      <soap12:operation soapAction="urn:getProgramFromOF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createReviseCAD">
+      <soap12:operation soapAction="urn:createReviseCAD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="createReviseCADFault">
+        <soap12:fault use="literal" name="createReviseCADFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createNewSimulation">
+      <soap12:operation soapAction="urn:createNewSimulation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="createNewSimulationFault">
+        <soap12:fault use="literal" name="createNewSimulationFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPart">
+      <soap12:operation soapAction="urn:createPart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="createPartFault">
+        <soap12:fault use="literal" name="createPartFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectRevision">
+      <soap12:operation soapAction="urn:getObjectRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCadToLaunch">
+      <soap12:operation soapAction="urn:addCadToLaunch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="addCadToLaunchFault">
+        <soap12:fault use="literal" name="addCadToLaunchFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAttribute">
+      <soap12:operation soapAction="urn:getAttribute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getAttributeFault">
+        <soap12:fault use="literal" name="getAttributeFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reviseSimulation">
+      <soap12:operation soapAction="urn:reviseSimulation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="reviseSimulationFault">
+        <soap12:fault use="literal" name="reviseSimulationFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="promoteFromStateToState">
+      <soap12:operation soapAction="urn:promoteFromStateToState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectId">
+      <soap12:operation soapAction="urn:getObjectId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getObjectIdFault">
+        <soap12:fault use="literal" name="getObjectIdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createManufPartSpec">
+      <soap12:operation soapAction="urn:createManufPartSpec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promote">
+      <soap12:operation soapAction="urn:promote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartQuantity">
+      <soap12:operation soapAction="urn:getManufPartQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfSimulationExists">
+      <soap12:operation soapAction="urn:checkIfSimulationExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfSimulationExistsFault">
+        <soap12:fault use="literal" name="checkIfSimulationExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerFromOF">
+      <soap12:operation soapAction="urn:getCustomerFromOF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectLeadAttrib">
+      <soap12:operation soapAction="urn:getProjectLeadAttrib" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMPListId">
+      <soap12:operation soapAction="urn:getMPListId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getMPListIdFault">
+        <soap12:fault use="literal" name="getMPListIdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="leerOfak">
+      <soap12:operation soapAction="urn:leerOfak" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setContext">
+      <soap12:operation soapAction="urn:setContext" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="setContextFault">
+        <soap12:fault use="literal" name="setContextFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInternalIndexList">
+      <soap12:operation soapAction="urn:getInternalIndexList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompaniesIdFromPTK">
+      <soap12:operation soapAction="urn:getCompaniesIdFromPTK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getCompaniesIdFromPTKFault">
+        <soap12:fault use="literal" name="getCompaniesIdFromPTKFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartAttribute">
+      <soap12:operation soapAction="urn:getManufPartAttribute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkinOption">
+      <soap12:operation soapAction="urn:checkinOption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastRevision">
+      <soap12:operation soapAction="urn:getLastRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getLastRevisionFault">
+        <soap12:fault use="literal" name="getLastRevisionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeEBOMwithERP">
+      <soap12:operation soapAction="urn:syncronizeEBOMwithERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="syncronizeEBOMwithERPFault">
+        <soap12:fault use="literal" name="syncronizeEBOMwithERPFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOPListType">
+      <soap12:operation soapAction="urn:getManufPartIdFromOPListType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectName">
+      <soap12:operation soapAction="urn:getObjectName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecIdFromManufPart">
+      <soap12:operation soapAction="urn:getSpecIdFromManufPart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getSpecIdFromManufPartFault">
+        <soap12:fault use="literal" name="getSpecIdFromManufPartFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAttrib">
+      <soap12:operation soapAction="urn:modifyAttrib" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="modifyAttribFault">
+        <soap12:fault use="literal" name="modifyAttribFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getRolesFromPTK">
+      <soap12:operation soapAction="urn:getRolesFromPTK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getRolesFromPTKFault">
+        <soap12:fault use="literal" name="getRolesFromPTKFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delBO">
+      <soap12:operation soapAction="urn:delBO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="delBOFault">
+        <soap12:fault use="literal" name="delBOFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromCompany">
+      <soap12:operation soapAction="urn:getProgramFromCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="getProgramFromCompanyFault">
+        <soap12:fault use="literal" name="getProgramFromCompanyFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOP">
+      <soap12:operation soapAction="urn:getManufPartIdFromOP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchExists">
+      <soap12:operation soapAction="urn:checkIfLaunchExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="checkIfLaunchExistsFault">
+        <soap12:fault use="literal" name="checkIfLaunchExistsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFormats">
+      <soap12:operation soapAction="urn:getFormats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OfakServiceHttpBinding" type="ns:OfakServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getAllFilesHashName">
+      <http:operation location="getAllFilesHashName" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfPTKUserExists">
+      <http:operation location="checkIfPTKUserExists" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setObjectDescription">
+      <http:operation location="setObjectDescription" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDieOPRefTroq">
+      <http:operation location="getDieOPRefTroq" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdList">
+      <http:operation location="getIdList" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuantityOflaunches">
+      <http:operation location="getQuantityOflaunches" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOFsFromProgram">
+      <http:operation location="getOFsFromProgram" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFiles">
+      <http:operation location="getFiles" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllLaunchesFromPTK">
+      <http:operation location="getAllLaunchesFromPTK" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLaunchId">
+      <http:operation location="getLaunchId" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentStatus">
+      <http:operation location="getCurrentStatus" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchValidForExists">
+      <http:operation location="checkIfLaunchValidForExists" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="connectObjects">
+      <http:operation location="connectObjects" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promoteTriggerOnOff">
+      <http:operation location="promoteTriggerOnOff" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isConnected">
+      <http:operation location="isConnected" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSimulationsIdFromMP">
+      <http:operation location="getSimulationsIdFromMP" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchConnectedToObjectIsForOut">
+      <http:operation location="checkIfLaunchConnectedToObjectIsForOut" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFilesFromBO">
+      <http:operation location="deleteFilesFromBO" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartId">
+      <http:operation location="getManufPartId" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeOPwithERP">
+      <http:operation location="syncronizeOPwithERP" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificationsIDFromOP">
+      <http:operation location="getSpecificationsIDFromOP" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPSNameList">
+      <http:operation location="getPSNameList" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkout">
+      <http:operation location="checkout" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationsIDFromPS">
+      <http:operation location="getOperationsIDFromPS" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerIndexValue">
+      <http:operation location="getCustomerIndexValue" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPSMembersAttribute">
+      <http:operation location="getPSMembersAttribute" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCadToCADLaunch">
+      <http:operation location="addCadToCADLaunch" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkin">
+      <http:operation location="checkin" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectType">
+      <http:operation location="getObjectType" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdRange">
+      <http:operation location="getIdRange" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromOF">
+      <http:operation location="getProgramFromOF" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createReviseCAD">
+      <http:operation location="createReviseCAD" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createNewSimulation">
+      <http:operation location="createNewSimulation" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createPart">
+      <http:operation location="createPart" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectRevision">
+      <http:operation location="getObjectRevision" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCadToLaunch">
+      <http:operation location="addCadToLaunch" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAttribute">
+      <http:operation location="getAttribute" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reviseSimulation">
+      <http:operation location="reviseSimulation" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promoteFromStateToState">
+      <http:operation location="promoteFromStateToState" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectId">
+      <http:operation location="getObjectId" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createManufPartSpec">
+      <http:operation location="createManufPartSpec" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promote">
+      <http:operation location="promote" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartQuantity">
+      <http:operation location="getManufPartQuantity" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfSimulationExists">
+      <http:operation location="checkIfSimulationExists" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerFromOF">
+      <http:operation location="getCustomerFromOF" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectLeadAttrib">
+      <http:operation location="getProjectLeadAttrib" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMPListId">
+      <http:operation location="getMPListId" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerOfak">
+      <http:operation location="leerOfak" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setContext">
+      <http:operation location="setContext" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInternalIndexList">
+      <http:operation location="getInternalIndexList" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompaniesIdFromPTK">
+      <http:operation location="getCompaniesIdFromPTK" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartAttribute">
+      <http:operation location="getManufPartAttribute" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkinOption">
+      <http:operation location="checkinOption" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastRevision">
+      <http:operation location="getLastRevision" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncronizeEBOMwithERP">
+      <http:operation location="syncronizeEBOMwithERP" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOPListType">
+      <http:operation location="getManufPartIdFromOPListType" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectName">
+      <http:operation location="getObjectName" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecIdFromManufPart">
+      <http:operation location="getSpecIdFromManufPart" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAttrib">
+      <http:operation location="modifyAttrib" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRolesFromPTK">
+      <http:operation location="getRolesFromPTK" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBO">
+      <http:operation location="delBO" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramFromCompany">
+      <http:operation location="getProgramFromCompany" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManufPartIdFromOP">
+      <http:operation location="getManufPartIdFromOP" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIfLaunchExists">
+      <http:operation location="checkIfLaunchExists" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormats">
+      <http:operation location="getFormats" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OfakService">
+    <wsdl:port name="OfakServiceSOAP11port_http" binding="ns:OfakServiceSOAP11Binding">
+      <soap:address location="http://192.168.1.121:7001/ematrix/services/OfakService" />
+    </wsdl:port>
+    <wsdl:port name="OfakServiceSOAP12port_http" binding="ns:OfakServiceSOAP12Binding">
+      <soap12:address location="http://192.168.1.121:7001/ematrix/services/OfakService" />
+    </wsdl:port>
+    <wsdl:port name="OfakServiceHttpport" binding="ns:OfakServiceHttpBinding">
+      <http:address location="http://192.168.1.121:7001/ematrix/services/OfakService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

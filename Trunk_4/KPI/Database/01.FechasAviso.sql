@@ -1,0 +1,58 @@
+CREATE TABLE FECHAS_AVISO 
+(
+  FECHA DATE NOT NULL 
+, CONSTRAINT FECHAS_AVISO_PK PRIMARY KEY 
+  (
+    FECHA 
+  )
+  ENABLE 
+);
+
+COMMENT ON TABLE FECHAS_AVISO IS 'Fechas en las que habrá que avisar a los gerentes para ver si han cerrado los indicadores.
+En esas fechas, habrá que comprobar los indicadores del mes anterior';
+
+COMMENT ON COLUMN FECHAS_AVISO.FECHA IS 'Fecha de aviso';
+
+INSERT INTO FECHAS_AVISO VALUES ('14/05/2020');
+INSERT INTO FECHAS_AVISO VALUES ('18/06/2020');
+INSERT INTO FECHAS_AVISO VALUES ('16/07/2020');
+INSERT INTO FECHAS_AVISO VALUES ('17/09/2020');
+INSERT INTO FECHAS_AVISO VALUES ('15/10/2020');
+INSERT INTO FECHAS_AVISO VALUES ('19/11/2020');
+INSERT INTO FECHAS_AVISO VALUES ('10/12/2020');
+
+CREATE TABLE CIERRE_INDICADORES 
+(
+  ID_USUARIO NUMBER NOT NULL 
+, FECHA DATE NOT NULL 
+, ID_PLANTA NUMBER NOT NULL 
+, MES NUMBER NOT NULL 
+, ANNO NUMBER NOT NULL 
+, CONSTRAINT CIERRE_INDICADORES_PK PRIMARY KEY 
+  (
+    ID_USUARIO 
+  , ID_PLANTA 
+  , MES 
+  , ANNO 
+  )
+  ENABLE 
+);
+
+COMMENT ON TABLE CIERRE_INDICADORES IS 'Tabla para gestionar que plantas y en que meses se van cerrando. A partir de entonces, no podrán modificar los datos';
+
+COMMENT ON COLUMN CIERRE_INDICADORES.ID_USUARIO IS 'Id del usuario que realiza el cierre';
+
+COMMENT ON COLUMN CIERRE_INDICADORES.FECHA IS 'Fecha en el que se cierra';
+
+COMMENT ON COLUMN CIERRE_INDICADORES.ID_PLANTA IS 'Id de la planta';
+
+COMMENT ON COLUMN CIERRE_INDICADORES.MES IS 'Mes que se cierra';
+
+COMMENT ON COLUMN CIERRE_INDICADORES.ANNO IS 'Año que se cierra';
+
+ALTER TABLE PLANTAS 
+ADD (AVISAR NUMBER(1) DEFAULT 0 );
+
+COMMENT ON COLUMN PLANTAS.AVISAR IS 'Indicara si esa planta tiene que hacer cierres de los indicadores y avisar a los gerentes';
+
+grant SELECT on "BIDAIAK"."GERENTES_PLANTAS" to "KPI" ;

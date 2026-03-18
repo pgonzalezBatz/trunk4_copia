@@ -1,0 +1,68 @@
+digraph schema{
+	start[label="Inicio"];	
+	subgraph cluster1{
+		label = "Usuario";
+		usuario[label="Elegir usuario"];
+		historico[label="Ver historico usuario"];
+		
+		etiquetar2[label="Pegar etiqueta"];
+		lectura2[label="Leer etiqueta"];
+		datos2[label="Introducir:\nTipo\nMarca\nModelo"];
+		ok[label="Confirmacion"];
+	}
+	subgraph cluster2{
+		label = "Etiqueta";
+		leeretiqueta[label="Leer etiqueta"];
+		etiquetaconusuario[label="Mostrar datos etiqueta y usuario"];
+		etiquetaconactivo[label="Mostrar datos de etiqueta"];
+		etiquetasinactivo[label="Asignar \nTipo\nMarca\nModelo"];
+		historicoetiqueta[label="Historico etiqueta"];
+		reasignar[label="Reasignar etiqueta"]
+		baja[label="Dar de baja la etiqueta"]
+		
+		
+	}
+
+	subgraph cluster3{
+		label="reporting";
+	}
+	subgraph cluster4{
+		label="Administrar jerarquia";
+		tipo[label="Insertar/Editar Tipo"];
+		marca[label="Insertar/Editar Marca"];
+		modelo[label="Insertar/Editar Modelo\nAqui va el precio"];
+		}
+	start->usuario;
+	usuario->etiquetar2;
+	usuario->lectura2;
+	usuario->historico;
+
+	start->leeretiqueta;
+	leeretiqueta->etiquetaconusuario[label="tiene modelo y usuario"];
+	leeretiqueta->etiquetaconactivo[label="tiene modelo"];
+	leeretiqueta->etiquetasinactivo[label="Sin modelo"];
+
+	etiquetaconusuario->reasignar;
+	etiquetaconusuario->baja;
+	etiquetaconusuario->historicoetiqueta;
+	
+	etiquetaconactivo->reasignar;
+	etiquetaconactivo->historicoetiqueta;
+
+	etiquetasinactivo->datos2;
+	
+
+	etiquetar2->lectura2;
+	lectura2->datos2;
+	datos2->ok;
+	datos2->start;
+	start->reporting;
+	start->etiquetar;
+	etiquetar->lectura;
+	lectura->datos;
+	start->tipo;
+	tipo->marca;
+	marca->modelo;
+	modelo->start;
+	
+}

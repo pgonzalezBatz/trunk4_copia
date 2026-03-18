@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Portadores de coste" controller="CostCarriers" action="Index" roles=""></Item>
+  <Item title="Plantillas" controller="Plantilla" action="Index" roles="6"></Item>
+  <Item title="Validaciones" roles="1,2,4,5,7,8,9,11,12">
+    <Item title="Pendiente" controller="Validaciones" action="Index" roles="1,2,4,5,7,8,9,11,12"></Item>
+    <Item title="Estado actual e histórico" controller="Validaciones" action="IndexHistorico" roles="1,2,4,5,7,8,9,11,12"></Item>
+  </Item>
+  <Item title="Opening" roles="3">
+    <Item title="Gestionar apertura pasos" controller="Financiero" action="Index" roles="3"></Item>
+    <Item title="Metadatos portadores de coste" controller="Metadata" action="Index" roles="3"></Item>
+  </Item>
+	<Item title="Invoicing" roles="10">
+		<Item title="Gestionar facturación pasos" controller="Comercial" action="Index" roles="10"></Item>
+	</Item>
+	<Item title="Mantenimiento" roles="6">
+		<Item title="Paises IVA" controller="CostCarriers" action="MantenimientoPais" roles="6"></Item>
+	</Item>
+  <Item title="Manuales" roles="">
+    <Item title="Apertura - Castellano" controller="Manual" action="Descargar" roles="" idManual="1"></Item>
+    <Item title="Opening - English" controller="Manual" action="Descargar" roles="" idManual="2"></Item>
+    <Item title="Solicitante - Castellano" controller="Manual" action="Descargar" roles="" idManual="3"></Item>
+    <Item title="Applicant - Inglés" controller="Manual" action="Descargar" roles="" idManual="4"></Item>
+    <Item title="Validador - Castellano" controller="Manual" action="Descargar" roles="" idManual="5"></Item>
+    <Item title="Validator - Inglés" controller="Manual" action="Descargar" roles="" idManual="6"></Item>
+    <Item title="Facturación - Castellano" controller="Manual" action="Descargar" roles="" idManual="7"></Item>
+    <Item title="Invoicing - Inglés" controller="Manual" action="Descargar" roles="" idManual="8"></Item>
+  </Item>
+</Root>
+

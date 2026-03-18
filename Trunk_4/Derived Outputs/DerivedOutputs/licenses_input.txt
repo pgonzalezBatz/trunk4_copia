@@ -1,0 +1,2 @@
+connect Lobantzo 4084
+getLicenseUsage -short

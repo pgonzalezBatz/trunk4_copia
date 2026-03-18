@@ -1,0 +1,52 @@
+* A veces la aplicación queda colgada:
+  Vamos a dividirla en dos procesos. Uno lanzara el otro.
+  El primero sera el encardado de estar siempre funcionando
+* NX movimiento ejes en assemblies
+  parece que tras mover los ejes, desaparecen algunos bodies.
+  - intento de guardar el parasolido e importar IGS desde archivo FALLIDO
+  Parece que el problema esta en la llamada a session.Parts.Work.Views.WorkView.AskVisibleObjects()
+  Despues de hacer el movimiento, no lista todos los bodies que iniciaron el movimiento
+  Solucionado haciendolo todo en una funcion y añadiendo los bodies a una lista antes de moverlos.
+* DSLS 
+  - Para acceder al listado de licencias disponibles es necesario instalar el programa de administracion
+    de DSLS y conectarse al serbidor de licencias. El programa se encuentra:
+  \\itecservnas\programas\DSLS\DSLS.AllOS\1
+* Importante para CATIA
+  - Cuando se quiere instalar el programa en una maquina nueva, se debe de ejecutar cnext.exe /regserver
+    esto añadira las referencias necesarias en el GAC. De lo contratio, parece que las ddls no se pueden
+    referenciar desde .net a pesar de que esten fisicamente en local.
+* Importante para UG/NX
+  - Configurar las variables de entorno que se cargan en el bat
+    Las variables que se cargan en el bat valen para ejecutar NX pero el codigo .NET necesita tener estas
+    variables cargadas. La carga del BAT no afecta al codigo. Por esta razon, una opcion es la de cargar las
+    variables de entorno.
+
+* Como acceder a enovia
+  url: http://plmv6.batz.es:7001/enovia/emxLogin.jsp
+  usuario: Test Everything
+
+* Solucion para la copia parece estar aqui. Como seleccionar el product desde el part
+'now the meat of the issue
+Sub CopyPasteAsResultPartBody(sourcePartProduct As Product, targetPart As Part)
+
+   'make sure the part body is published
+   PublishThePartBody sourcePartProduct
+
+  'get the selection object
+   Dim sel As Selection
+  Set sel = CATIA.ActiveDocument.Selection
+
+  'get the part
+  Dim thePart As Part
+  Set thePart = sourcePartProduct.ReferenceProduct.Parent.Part
+
+  'get the part body to copy. It must be published. Because you never go to the Part object (via   product.referenceproduct.parent.part)
+  '   the publication allows you to keep the instance-ism of each part intact.
+   sel.Clear
+   sel.Add sourcePartProduct.Publications.Item("PartBody" ).Valuation
+  sel.Copy
+  sel.Clear
+
+  sel.Add targetPart
+  sel.PasteSpecial ("CATPrtResultWithOutLink" )
+  bodyCount = bodyCount + 1

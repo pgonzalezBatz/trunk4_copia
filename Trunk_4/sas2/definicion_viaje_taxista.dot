@@ -1,0 +1,13 @@
+digraph Viaje_taxista {
+	label="Recoger datos extra para los viajes que hagan los taxistas\nAfectara a los viajes taxi y a los productivos"
+
+	extranet[shape="parallelogram" label="Extranet\n Añadir campos\nAplicacion ya existente"];
+	intranet[shape="parallelogram" label="SAS Intranet\nMostrar los datos extra introducidos"];
+	bd[shape="trapezium" label="Base de datos\nNuevos campos\nKilometros\nNumero punto espera\nEspera superios a hora\nfestivo"];
+	
+	proveedor -> extranet;
+	extranet -> bd;
+	usuario_batz-> intranet;
+	intranet -> bd;
+	
+}

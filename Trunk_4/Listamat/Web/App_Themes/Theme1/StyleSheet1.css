@@ -1,0 +1,24 @@
+﻿body{font-size:11px;}
+img{border:none;}
+a,a:hover{color:#0063ff;}
+#fondoContenido{padding:0 0 4em 2em;}
+#incluyeTodo{min-height:500px;}
+#divcl1{width:40%;float:left;}
+#divcl2{width:60%;float:left;}
+#divcl1 input,#divcl2 input{width:20em;}
+#menu1{margin:0 0 2em 0; text-align:center;}
+#menu1 a{ margin-right:1em; font-size:1.3em; font-weight:bold;}
+#menu1 b{font-size:1.5em; margin-right:1em;}
+#cabecera{font-size:12px; font-weight:bold;}
+
+.div1{display:inline; margin-left:5em;} 
+.formLabel{min-width:13em; display:block; float:left;}
+.table1{border:solid 1px #c8d8e6; border-spacing:0; border-collapse:collapse; margin:2em 0 0 0; min-width:85%;}
+.table1 thead th{background-color:#008FD8;border-bottom:solid 2px #c8d8e6;border-right:solid 1px #c8d8e6; color:#fff;}
+.table1 tbody td{border-bottom:solid 1px #c8d8e6;border-right:solid 1px #c8d8e6;}
+.table1 a{color:#fff;}
+.table1 a:hover{color:#111;}
+.fontGrande{font-size:13px;}
+.alingWithImages{text-align:center; margin-top:3em;}
+.alingWithImages img {vertical-align:middle;}
+.alingMiddle img, .alingMiddle input[type=image]{vertical-align:middle;}

@@ -1,0 +1,77 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPWeb.master.vb" Inherits="WebRaiz.MPWeb" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title>KPI</title>	    
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+    <link href="App_Themes/Tema1/WebControls.css" rel="stylesheet" type="text/css" />			
+	<link href="App_Themes/Tema1/style.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/AjaxControlToolKit.css" type="text/css" rel="Stylesheet" />	           
+</head>
+<body>
+	<form id="form1" runat="server">        
+	<ajax:ToolkitScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True" />	
+    <asp:ContentPlaceHolder ID="cphHeader" runat="server">        
+        <a href="/HomeIntranet" title='<%=Traducir("Ir a la pagina de la intranet")%>' class="cabApp"></a>        
+    </asp:ContentPlaceHolder> 
+	<div>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="cabeceraIzquierda">
+					<asp:Literal ID="ltlUsuario" runat="server" Text="usuarioConectado"></asp:Literal>:
+					<asp:Label ID="lblUsuario" runat="server"></asp:Label>
+				</td>
+				<td class="cabeceraDerecha"><asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal></td>
+			</tr>
+		</table>
+		<div id="menuWeb" runat="server">
+			<asp:XmlDataSource ID="XmlDataSource" runat="server"></asp:XmlDataSource>
+			<table width="100%">
+				<tr>
+					<td style="width: 15px"><asp:Image ID="imgLogo" runat="server" ImageUrl="~/App_Themes/Tema1/Images/logo.png" /></td>
+					<td>
+						<asp:Menu runat="server" DataSourceID="XmlDataSource" Orientation="Horizontal" ID="menu">
+							<StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" ItemSpacing="0" CssClass="StaticMenuItemStyle" />
+							<StaticHoverStyle CssClass="StaticHoverStyle" />
+							<DynamicMenuItemStyle CssClass="DynamicMenuItemStyle" HorizontalPadding="8px" VerticalPadding="3px" ItemSpacing="0" />
+							<DynamicHoverStyle CssClass="DynamicHoverStyle" />
+                            <DynamicMenuStyle CssClass="DynamicMenuStyle" />
+							<DataBindings>
+								<asp:MenuItemBinding TextField="title" NavigateUrlField="url" ValueField="id" ImageUrl="~/App_Themes/Tema1/Images/bullet_hl.gif" PopOutImageUrl="~/App_Themes/Tema1/Images/arrow.gif" />
+							</DataBindings>
+						</asp:Menu>
+					</td>					                     
+				</tr>
+			</table>
+		</div>
+		<div id="contenido1">
+			<table width="100%">
+				<tr>
+					<td align="left" colspan="2">
+						<asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+							<ContentTemplate>
+								<asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+									<asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+									<asp:Label ID="lblMensaje" runat="server"></asp:Label>
+								</asp:Panel>
+							</ContentTemplate>
+						</asp:UpdatePanel>
+					</td>															
+				</tr>
+			</table>            
+			<div id="contenido2" style="padding-left:20px;padding-top:15px;">              
+				<asp:ContentPlaceHolder ID="cp" runat="server">
+				</asp:ContentPlaceHolder>
+				<br />
+			</div>
+		</div>
+		<div id="pie">
+			<asp:ContentPlaceHolder ID="cphPie" runat="server">
+				<asp:Literal runat="server" ID="labelPie1" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>
+				&nbsp;<asp:HyperLink id="hlnkHelp" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk" Target="_blank"/>
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+	</form>
+</body>
+</html>

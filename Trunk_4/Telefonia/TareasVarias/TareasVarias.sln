@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TareasVarias", "TareasVarias.vbproj", "{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TelefoniaLib", "..\TelefoniaLib\TelefoniaLib.vbproj", "{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SABLib2", "..\..\SABLib2\SABLib2.vbproj", "{3283DECE-6B4E-4009-A3A7-1370E6C0E053}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Memcached", "..\..\Memcached\Memcached.vbproj", "{1F46E55D-906C-4588-99CC-E81C4B4E373E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LocalizationLib2", "..\..\Localization\LocalizationLib2\LocalizationLib2.vbproj", "{0E619969-8585-4D6C-A20B-9848826A4F1D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AccesoAutomaticoBD", "..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj", "{D8DFD338-036C-4472-8611-59566F4E37FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GertakariakMS|Any CPU = GertakariakMS|Any CPU
+		Istriku_Debug|Any CPU = Istriku_Debug|Any CPU
+		Istriku_Release|Any CPU = Istriku_Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8AD431-6FE7-49E1-BB27-C94E6C74C88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.GertakariakMS|Any CPU.ActiveCfg = GertakariakMS|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.GertakariakMS|Any CPU.Build.0 = GertakariakMS|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Debug|Any CPU.ActiveCfg = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Debug|Any CPU.Build.0 = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Release|Any CPU.ActiveCfg = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Release|Any CPU.Build.0 = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.GertakariakMS|Any CPU.ActiveCfg = GertakariakMS|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.GertakariakMS|Any CPU.Build.0 = GertakariakMS|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Debug|Any CPU.ActiveCfg = Istriku_Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Debug|Any CPU.Build.0 = Istriku_Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Release|Any CPU.ActiveCfg = Istriku_Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Release|Any CPU.Build.0 = Istriku_Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E619969-8585-4D6C-A20B-9848826A4F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DFD338-036C-4472-8611-59566F4E37FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

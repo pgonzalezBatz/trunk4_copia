@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{color}
+\begin{document}
+
+\title{GIP}
+\author{Asier Azkuenaga}
+
+
+
+\section {Antiguo GIP}
+\begin{itemize}
+\item Proceso de creación/edición proveedor:\\ XBAT \ding{253} SAB \ding{253} RH \ding{253} Navision \ding{253} Matrix \ding{253} zrs-supplier
+\item Creación tanto de proveedores como capacidades en Matrix
+\item Importación de proveedores nuevos en Navision. \\
+  No se importan automáticamente cuando son nuevos.
+\item Búsquedas y búsquedas avanzadas
+\item Importación de proveedores potenciales desde XBAT
+\item Exportación de proveedores de Igorre a plantas de sistemas en RH
+\item Homologaciones de proveedores (Sonia Lanbarri)
+\item Comentarios de proveedores
+\item Versión imprimible de ciertos datos de proveedor
+\item Notificaciones a proveedores para el acceso a la extranet.
+\end{itemize}
+\textbf{Estimación aproximada 40 horas}
+\section {Ideas para GIP multiplanta}
+\begin{itemize}
+\item Las notificaciones de cambio dirigirlas únicamente a Mª Carmen\\
+  Añadir Nº de proveedor y responsable del cambio. \textcolor{purple}{¿Tal vez algún tipo de login en BD?¿Quizás opción de adjuntar?}
+\item Añadir la planta 1 en la tabla de empresas de SAB. 
+\item \textcolor{purple}{Darle una vuelta a como cachear las búsquedas de proveedores y búsquedas avanzadas}.
+\item separar los recurso y las capacidades Matrix de la creación de proveedores.
+\item Asegurarnos de que cuando insertan forma de pago transferencia, existan datos bancarios en Navision. \textcolor{purple}{Dependemos de Zubero}.
+\item Mantenimiento del listado de números abreviados, cuya tabla esta en telefonía.
+\item Respecto al calculo del siguiente numero de proveedor libre, 
+  ¿Podríamos liberar el listado de números de administración que actualmente mantenemos? \textcolor{purple}{Tenemos que analizar RPS \textit{(karbamaieta grospts)} y mirar los movimientos de esos proveedores y si existen en Navision}.
+\item \textcolor{red}{Añadir los mapeos de codigo pais, pais iva moneda y tipo de iva de Brain a las respectivas tablas de XBAT}
+\end{itemize}
+\textbf{Estimación aproximada 110 horas}
+\section {Roles identificados para la aplicación}
+\begin{itemize}
+\item Normal: buscar y ver proveedores
+\item Crear / Editar proveedores
+\item Editar CIF
+\item Importar proveedores potenciales desde XBAT
+\item Exportar proveedores a las plantas de sistemas (RH)
+\item Homologaciones (Sonia Lanbarri)
+\item Editar Extensiones de teléfonos 
+\end{itemize}
+\textbf{Estimación aproximada de implementación de roles 20 horas}
+\section {Importacion de proveedores de otras plantas de sistemas}
+\begin{itemize}
+  \item Creacion de un script para importar 
+\end{itemize}
+\textbf{Estimación aproximada 28 horas} \\
+
+\textbf{Estimación total 198 horas}
+\end{document}
+
+

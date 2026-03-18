@@ -1,0 +1,1965 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KAPLAN_TEST" EntityNamespace="Registro" ContextNamespace="DAL" Class="ELL" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=btzsqldb1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner" SettingsObjectName="KaPlanLib.My.MySettings" SettingsPropertyName="KAPLAN_TESTConnectionString4" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[MAESTRO DE EFECTOS]" Member="MAESTRO_DE_EFECTOS">
+    <Type Name="MAESTRO_DE_EFECTOS">
+      <Column Name="EFECTO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO OPERACIONES GENERALES]" Member="MAESTRO_OPERACION_GENERAL">
+    <Type Name="MAESTRO_OPERACION_GENERAL">
+      <Column Name="[OPERACION GENERAL]" Member="OPERACION_GENERAL" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MAESTRO_OPERACION_GENERAL_MAESTRO_DE_CAUSAS_DE_FALLO" Member="MAESTRO_DE_CAUSAS_DE_FALLO" ThisKey="OPERACION_GENERAL" OtherKey="OPERACION" Type="MAESTRO_DE_CAUSAS_DE_FALLO" />
+      <Association Name="MAESTRO_OPERACION_GENERAL_OPERACIONES_TIPO" Member="OPERACIONES_TIPO" ThisKey="OPERACION_GENERAL" OtherKey="OPERACION_GENERAL" Type="OPERACIONES_TIPO" />
+      <Association Name="MAESTRO_OPERACION_GENERAL_MAESTRO_INSTRUCCIONES_DE_TRABAJO" Member="MAESTRO_INSTRUCCIONES_DE_TRABAJO" ThisKey="OPERACION_GENERAL" OtherKey="OPERACION_GENERAL" Type="MAESTRO_INSTRUCCIONES_DE_TRABAJO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO SECCIONES]" Member="M_SECCION">
+    <Type Name="M_SECCION">
+      <Column Name="[ID SECCION]" Member="ID_SECCION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SECCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MECANIZADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VARIOS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PRENSAS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EMBALAJE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MONTAJE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SOLDADURA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="M_SECCION_PARAMETRO_GENERAL_SECCION" Member="PARAMETRO_GENERAL_SECCION" ThisKey="ID_SECCION" OtherKey="SECCION" Type="PARAMETRO_GENERAL_SECCION" />
+      <Association Name="M_SECCION_CELULAS" Member="CELULAS" ThisKey="ID_SECCION" OtherKey="ID_SECCION" Type="CELULAS" />
+      <Association Name="M_SECCION_OPERACIONES_TIPO" Member="OPERACIONES_TIPO" ThisKey="ID_SECCION" OtherKey="ID_SECCION" Type="OPERACIONES_TIPO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PARAMETROS GENERALES DE SECCION]" Member="PARAMETRO_GENERAL_SECCION">
+    <Type Name="PARAMETRO_GENERAL_SECCION">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SECCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CLAVE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="M_SECCION_PARAMETRO_GENERAL_SECCION" Member="M_SECCION" ThisKey="SECCION" OtherKey="ID_SECCION" Type="M_SECCION" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE LANTEGI]" Member="M_LANTEGI">
+    <Type Name="M_LANTEGI">
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TODOS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="M_LANTEGI_MAESTRO_ARTICULOS" Member="MAESTRO_ARTICULOS" ThisKey="LANTEGI" OtherKey="LANTEGI" Type="MAESTRO_ARTICULOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_FRECUENCIA_CONTROL" Member="M_FRECUENCIA_CONTROL">
+    <Type Name="M_FRECUENCIA_CONTROL">
+      <Column Name="ID_FRECUENCIA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FRECUENCIA_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RESPONSABLE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE PROVEEDORES]" Member="MAESTRO_DE_PROVEEDORES">
+    <Type Name="MAESTRO_DE_PROVEEDORES">
+      <Column Name="PROVEEDOR" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Familias" Member="Familia">
+    <Type Name="Familia">
+      <Column Name="FAMILIA" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_CLASES" Member="M_CLASE">
+    <Type Name="M_CLASE">
+      <Column Name="ID_CLASE" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="frecuencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE MODOS DE FALLO]" Member="MAESTRO_DE_MODO_DE_FALLO">
+    <Type Name="MAESTRO_DE_MODO_DE_FALLO">
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[MODO DE FALLO]" Member="MODO_DE_FALLO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE CAUSAS DE FALLO]" Member="MAESTRO_DE_CAUSAS_DE_FALLO">
+    <Type Name="MAESTRO_DE_CAUSAS_DE_FALLO">
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CAUSA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="MAESTRO_OPERACION_GENERAL_MAESTRO_DE_CAUSAS_DE_FALLO" Member="MAESTRO_OPERACION_GENERAL" ThisKey="OPERACION" OtherKey="OPERACION_GENERAL" Type="MAESTRO_OPERACION_GENERAL" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CELULAS" Member="CELULAS">
+    <Type Name="CELULAS">
+      <Column Name="[ID SECCION]" Member="ID_SECCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[ID CELULA]" Member="ID_CELULA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CELULA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CELULAS_MAQUINAS" Member="MAQUINAS" ThisKey="ID_CELULA" OtherKey="ID_CELULA" Type="MAQUINAS" />
+      <Association Name="M_SECCION_CELULAS" Member="M_SECCION" ThisKey="ID_SECCION" OtherKey="ID_SECCION" Type="M_SECCION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MAQUINAS" Member="MAQUINAS">
+    <Type Name="MAQUINAS">
+      <Column Name="[ID CELULA]" Member="ID_CELULA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Nº MAQUINA]" Member="Nº_MAQUINA" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[CTR COSTE]" Member="CTR_COSTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[CTR TRAB]" Member="CTR_TRAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[COD MAQUINA]" Member="COD_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MAQUINAS_TIPO_SOL_MAQUINA_PARA_OPERACIONES_TIPO" Member="TIPO_SOL_MAQUINA_PARA_OPERACIONES_TIPO" ThisKey="Nº_MAQUINA" OtherKey="TIPO_SOL_MAQUINA" Type="TIPO_SOL_MAQUINA_PARA_OPERACIONES_TIPO" />
+      <Association Name="CELULAS_MAQUINAS" Member="CELULAS" ThisKey="ID_CELULA" OtherKey="ID_CELULA" Type="CELULAS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[AMFES PIEZA]" Member="AMFES_PIEZA">
+    <Type Name="AMFES_PIEZA">
+      <Column Name="[ID AMFE PIEZA]" Member="ID_AMFE_PIEZA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="[FECHA AMFE]" Member="FECHA_AMFE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[NIVEL AMFE]" Member="NIVEL_AMFE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[PREPARADO POR]" Member="PREPARADO_POR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DISENO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="AMFES_PIEZA_RESUMEN_AMFE" Member="RESUMEN_AMFE" ThisKey="ID_AMFE_PIEZA" OtherKey="ID_AMFE" Type="RESUMEN_AMFE" />
+      <Association Name="AMFES_PIEZA_PLANNING_RESUMEN" Member="PLANNING_RESUMEN" ThisKey="ID_AMFE_PIEZA" OtherKey="ID_AMFE" Type="PLANNING_RESUMEN" />
+      <Association Name="AMFES_PIEZA_BALANCE" Member="BALANCE" ThisKey="ID_AMFE_PIEZA" OtherKey="ID_AMFE" Type="BALANCE" />
+      <Association Name="AMFES_PIEZA_NIVELES_AMFE_PIEZA" Member="NIVELES_AMFE_PIEZA" ThisKey="ID_AMFE_PIEZA" OtherKey="IDENTIFICA" Type="NIVELES_AMFE_PIEZA" />
+      <Association Name="MAESTRO_ARTICULOS_AMFES_PIEZA" Member="MAESTRO_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="MAESTRO_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTES" Member="CLIENTES">
+    <Type Name="CLIENTES">
+      <Column Name="CLIENTE" Type="System.String" DbType="NVarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NPRCLI" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="CLIENTES_MAESTRO_ARTICULOS" Member="MAESTRO_ARTICULOS" ThisKey="CLIENTE" OtherKey="CLIENTE" Type="MAESTRO_ARTICULOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTES_ARTICULO" Member="CLIENTES_ARTICULO">
+    <Type Name="CLIENTES_ARTICULO">
+      <Column Name="IDENTIFICA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="REFERENCIA_CLIENTE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Association Name="MAESTRO_ARTICULOS_CLIENTES_ARTICULO" Member="MAESTRO_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="MAESTRO_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES ARTICULOS]" Member="NIVELES_ARTICULOS">
+    <Type Name="NIVELES_ARTICULOS">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="MAESTRO_ARTICULOS_NIVELES_ARTICULOS" Member="MAESTRO_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="MAESTRO_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AVISOS" Member="AVISOS">
+    <Type Name="AVISOS">
+      <Column Name="ID_AVISO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOCUMENTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[DISTRIBUCION de DOCUMENTACION]" Member="DISTRIBUCION_de_DOCUMENTACION">
+    <Type Name="DISTRIBUCION_de_DOCUMENTACION">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[ID ORIGEN]" Member="ID_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[DE:]" Member="DE_" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TITULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="EDICION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[COPIA Nº]" Member="COPIA_Nº" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="ORIGEN_de_DOCUMENTACION_DISTRIBUCION_de_DOCUMENTACION" Member="ORIGEN_de_DOCUMENTACION" ThisKey="ID_ORIGEN" OtherKey="ID_ORIGEN" Type="ORIGEN_de_DOCUMENTACION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DE" Member="DE">
+    <Type Name="DE">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[ORIGEN de DOCUMENTACION]" Member="ORIGEN_de_DOCUMENTACION">
+    <Type Name="ORIGEN_de_DOCUMENTACION">
+      <Column Name="[ID ORIGEN]" Member="ID_ORIGEN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORIGEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ORIGEN_de_DOCUMENTACION_DISTRIBUCION_de_DOCUMENTACION" Member="DISTRIBUCION_de_DOCUMENTACION" ThisKey="ID_ORIGEN" OtherKey="ID_ORIGEN" Type="DISTRIBUCION_de_DOCUMENTACION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[DESTINO de DOCUMENTACION]" Member="DESTINO_de_DOCUMENTACION">
+    <Type Name="DESTINO_de_DOCUMENTACION">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[ID ORIGEN]" Member="ID_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESTINO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PRIMERA Y ULTIMA MAQUINA]" Member="PRIMERA_Y_ULTIMA_MAQUINA">
+    <Type Name="PRIMERA_Y_ULTIMA_MAQUINA">
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="[PrimeroDeTIPO SOL/MAQUINA]" Member="PrimeroDeTIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[ÚltimoDeTIPO SOL/MAQUINA]" Member="ÚltimoDeTIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[RESUMEN AMFE]" Member="RESUMEN_AMFE">
+    <Type Name="RESUMEN_AMFE">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[ID AMFE]" Member="ID_AMFE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[OBJETIVO DEL ESTUDIO]" Member="OBJETIVO_DEL_ESTUDIO" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="[CAUSAS DEL ESTUDIO]" Member="CAUSAS_DEL_ESTUDIO" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="SOLICITA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[RESPONSABLE PIEZA]" Member="RESPONSABLE_PIEZA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[LIMITES DEL ESTUDIO]" Member="LIMITES_DEL_ESTUDIO" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[PERMANENTE 1]" Member="PERMANENTE_1" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[PERMANENTE 2]" Member="PERMANENTE_2" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[PERMANENTE 3]" Member="PERMANENTE_3" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[PERMANENTE 4]" Member="PERMANENTE_4" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[SECCION 1]" Member="SECCION_1" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[SECCION 2]" Member="SECCION_2" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[SECCION 3]" Member="SECCION_3" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[SECCION 4]" Member="SECCION_4" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[NUEVO 1]" Member="NUEVO_1" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[NUEVO 2]" Member="NUEVO_2" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[NUEVO 3]" Member="NUEVO_3" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[NUEVO 4]" Member="NUEVO_4" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[SECCION 21]" Member="SECCION_21" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[SECCION 22]" Member="SECCION_22" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[SECCION 23]" Member="SECCION_23" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[SECCION 24]" Member="SECCION_24" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ANIMADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SECCION" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="AMFES_PIEZA_RESUMEN_AMFE" Member="AMFES_PIEZA" ThisKey="ID_AMFE" OtherKey="ID_AMFE_PIEZA" Type="AMFES_PIEZA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PLANNING RESUMEN]" Member="PLANNING_RESUMEN">
+    <Type Name="PLANNING_RESUMEN">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[ID AMFE]" Member="ID_AMFE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PREVISTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REALIZADO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EVENTO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="AMFES_PIEZA_PLANNING_RESUMEN" Member="AMFES_PIEZA" ThisKey="ID_AMFE" OtherKey="ID_AMFE_PIEZA" Type="AMFES_PIEZA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BALANCE" Member="BALANCE">
+    <Type Name="BALANCE">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[ID AMFE]" Member="ID_AMFE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Nº TOTAL DE CAUSAS]" Member="Nº_TOTAL_DE_CAUSAS" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[Nº CAUSAS CON NPR&gt;100]" Member="Nº_CAUSAS_CON_NPR_100" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="AMFES_PIEZA_BALANCE" Member="AMFES_PIEZA" ThisKey="ID_AMFE" OtherKey="ID_AMFE_PIEZA" Type="AMFES_PIEZA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EFECTOS" Member="EFECTOS">
+    <Type Name="EFECTOS">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[ID MODO]" Member="ID_MODO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EFECTO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CLAVE" Type="System.Char" DbType="NVarChar(1)" CanBeNull="true" />
+      <Association Name="MODOS_DE_FALLO_EFECTOS" Member="MODOS_DE_FALLO" ThisKey="ID_MODO" OtherKey="ID_MODO" Type="MODOS_DE_FALLO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OCURRENCIA" Member="OCURRENCIA">
+    <Type Name="OCURRENCIA">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROBABILIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FRECUENCIA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PUNTUACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO PERSONAL]" Member="MAESTRO_PERSONAL">
+    <Type Name="MAESTRO_PERSONAL">
+      <Column Name="ID_USUARIO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO_PERSONA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_PERFIL" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="E_MAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ALIAS_ENTRADA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[CONCEPTOS SEGUIMIENTO]" Member="CONCEPTOS_SEGUIMIENTO">
+    <Type Name="CONCEPTOS_SEGUIMIENTO">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="[NUMERO CONCEPTO]" Member="NUMERO_CONCEPTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONCEPTO" Type="System.String" DbType="NVarChar(63)" CanBeNull="true" />
+      <Column Name="DEPARTAMENTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PERSONA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[VºBº PILOTO]" Member="VºBº_PILOTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NVarChar(63)" CanBeNull="true" />
+      <Column Name="[INICIO PREVISTO]" Member="INICIO_PREVISTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[INICIO REAL]" Member="INICIO_REAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FINAL PREVISTO]" Member="FINAL_PREVISTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FINAL REAL]" Member="FINAL_REAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PLANNING_SEGUIMIENTO_CONCEPTOS_SEGUIMIENTO" Member="PLANNING_SEGUIMIENTO" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLANNING_SEGUIMIENTO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES SEGUIMIENTO]" Member="NIVELES_SEGUIMIENTO">
+    <Type Name="NIVELES_SEGUIMIENTO">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA PREVISTA]" Member="FECHA_PREVISTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FECHA REALIZADA]" Member="FECHA_REALIZADA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PLANNING_SEGUIMIENTO_NIVELES_SEGUIMIENTO" Member="PLANNING_SEGUIMIENTO" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLANNING_SEGUIMIENTO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PLANNING SEGUIMIENTO]" Member="PLANNING_SEGUIMIENTO">
+    <Type Name="PLANNING_SEGUIMIENTO">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OFERTA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA INICIO]" Member="FECHA_INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FECHA PREVISTA FIN]" Member="FECHA_PREVISTA_FIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FECHA FINAL]" Member="FECHA_FINAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REALIZADO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA REALIZADO]" Member="FECHA_REALIZADO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VºBº" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA VºBº]" Member="FECHA_VºBº" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PLANNING_SEGUIMIENTO_CONCEPTOS_SEGUIMIENTO" Member="CONCEPTOS_SEGUIMIENTO" ThisKey="CODIGO" OtherKey="CODIGO" Type="CONCEPTOS_SEGUIMIENTO" />
+      <Association Name="PLANNING_SEGUIMIENTO_NIVELES_SEGUIMIENTO" Member="NIVELES_SEGUIMIENTO" ThisKey="CODIGO" OtherKey="CODIGO" Type="NIVELES_SEGUIMIENTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SINOPTICO" Member="SINOPTICO">
+    <Type Name="SINOPTICO">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[NIVEL SINOPTICO]" Member="NIVEL_SINOPTICO" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DIBUJO" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MAESTRO_ARTICULOS_SINOPTICO" Member="MAESTRO_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="MAESTRO_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[COORRESNPENCIA DE LOS ID CARAC]" Member="COORRESNPENCIA_DE_LOS_ID_CARAC">
+    <Type Name="COORRESNPENCIA_DE_LOS_ID_CARAC">
+      <Column Name="IDAMFEORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDCARACORIGEN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDAMFEDESTINO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDCARACDESTINO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PUENTE" Member="PUENTE">
+    <Type Name="PUENTE">
+      <Column Name="CODORIGEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTORIGEN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CODDESTINO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="true" />
+      <Column Name="CONTDESTINO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDAMFEORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDAMFEDESTINO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE PRENSAS]" Member="MAESTRO_DE_PRENSAS">
+    <Type Name="MAESTRO_DE_PRENSAS">
+      <Column Name="[ID PRENSA]" Member="ID_PRENSA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PRENSA" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DIBUJO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_BRAIN_ARTICULOS_EXCEL" Member="R_BRAIN_ARTICULOS_EXCEL">
+    <Type Name="R_BRAIN_ARTICULOS_EXCEL">
+      <Column Name="TETENR" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TEBEZ1" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="TEBEZ2" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="TEWKNR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TEWKSF" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TEWKFE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TEESVA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TEZINR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TEASBZ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TEVAAU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TETART" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VOLCAR" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_PROVEEDORES_AS400" Member="R_V_PROVEEDORES_AS400">
+    <Type Name="R_V_PROVEEDORES_AS400">
+      <Column Name="COD_PROVEEDOR" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="DES_PROVEEDOR" Type="System.String" DbType="Char(35) NOT NULL" CanBeNull="false" />
+      <Column Name="DIRECCION" Type="System.String" DbType="Char(35) NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGO_POSTAL" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="POBLACION" Type="System.String" DbType="Char(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CIF" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTO" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FAX" Type="System.String" DbType="Char(31) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_PAISES_AS400" Member="R_V_PAISES_AS400">
+    <Type Name="R_V_PAISES_AS400">
+      <Column Name="COD_PAIS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DES_PAIS" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="COD_TABLA" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_PRODUCTOS_AS400" Member="R_V_PRODUCTOS_AS400">
+    <Type Name="R_V_PRODUCTOS_AS400">
+      <Column Name="COD_PRODUCTO" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DES_PRODUCTO" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="COD_TABLA" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_BRAIN_PROVEEDORES_EXCEL" Member="R_BRAIN_PROVEEDORES_EXCEL">
+    <Type Name="R_BRAIN_PROVEEDORES_EXCEL">
+      <Column Name="LILINR" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LINAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LISTRA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LIPOLZ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LIWORT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LILAKZ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LIIDNR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LILIAR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LITLNR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LITFAX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VOLCAR" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_RECEPCIONES_AS400" Member="R_V_RECEPCIONES_AS400">
+    <Type Name="R_V_RECEPCIONES_AS400">
+      <Column Name="N_RECEPCION" Type="System.Decimal" DbType="Decimal(7,0) NOT NULL" CanBeNull="false" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="COD_PROVEEDOR" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_RECEPCION" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CANTIDAD_RECEP" Type="System.Decimal" DbType="Decimal(11,0) NOT NULL" CanBeNull="false" />
+      <Column Name="LOTE" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ALBARAN" Type="System.String" DbType="Char(17) NOT NULL" CanBeNull="false" />
+      <Column Name="INSPECCIONAR" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_PREVISTA" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PRECIO" Type="System.Decimal" DbType="Decimal(13,2) NOT NULL" CanBeNull="false" />
+      <Column Name="WEBEPO" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="WESTKZ" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_BRAIN_RECEPCIONES_EXCEL" Member="R_BRAIN_RECEPCIONES_EXCEL">
+    <Type Name="R_BRAIN_RECEPCIONES_EXCEL">
+      <Column Name="WEWENR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WETENR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WELINR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEWEDF" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WELIMG" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WECHNR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WELIES" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEWRKR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEBEDF" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BOP001" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VOLCAR" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WEBEPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_NORMAS" Member="R_M_NORMAS">
+    <Type Name="R_M_NORMAS">
+      <Column Name="ID_M_NORMA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NORMA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_CERTIFICADORES" Member="R_M_CERTIFICADORES">
+    <Type Name="R_M_CERTIFICADORES">
+      <Column Name="ID_M_CERTIFICADOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CERTIFICADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_PROVEEDORES" Member="R_M_PROVEEDORES">
+    <Type Name="R_M_PROVEEDORES">
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CODIGO_POSTAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="POBLACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PAIS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CIF" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRODUCTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="VER_LISTADOS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OBJETIVO_PPM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBJETIVO_ACUM_NC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="R_M_PROVEEDORES_R_FRECUENCIAS_PA" Member="R_FRECUENCIAS_PA" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_FRECUENCIAS_PA" />
+      <Association Name="R_M_PROVEEDORES_R_M_PROVEEDORES_PROYECTOS" Member="R_M_PROVEEDORES_PROYECTOS" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_M_PROVEEDORES_PROYECTOS" />
+      <Association Name="R_M_PROVEEDORES_R_NORMAS_PROVEEDOR" Member="R_NORMAS_PROVEEDOR" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_NORMAS_PROVEEDOR" />
+      <Association Name="R_M_PROVEEDORES_R_CONTACTOS_PROVEEDOR" Member="R_CONTACTOS_PROVEEDOR" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_CONTACTOS_PROVEEDOR" />
+      <Association Name="R_M_PROVEEDORES_R_VALORACION_SISTEMA" Member="R_VALORACION_SISTEMA" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_VALORACION_SISTEMA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_ARTICULOS" Member="R_M_ARTICULOS">
+    <Type Name="R_M_ARTICULOS">
+      <Column Name="ID_ARTICULO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATERIAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MEDIDAS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_ESPECIFICACION_TECNICA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION_TECNICA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="COD_PLANO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PLANO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LANTEGI_RH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N_PLANO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="F_PLANO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N_ESPECIFICACION_TECNICA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="F_ESPECIFICACION_TECNICA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HOMOLOGACION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NIVEL_HOMOLOGADO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COMPRA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DENOMINACION_2" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="id_clase" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="R_M_ARTICULOS_R_FRECUENCIAS_PA" Member="R_FRECUENCIAS_PA" ThisKey="ID_ARTICULO" OtherKey="ID_ARTICULO" Type="R_FRECUENCIAS_PA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_FRECUENCIAS_PA" Member="R_FRECUENCIAS_PA">
+    <Type Name="R_FRECUENCIAS_PA">
+      <Column Name="ID_FRECUENCIA_PA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_ARTICULO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_FRECUENCIA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="R_M_ARTICULOS_R_FRECUENCIAS_PA" Member="R_M_ARTICULOS" ThisKey="ID_ARTICULO" OtherKey="ID_ARTICULO" Type="R_M_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="R_M_PROVEEDORES_R_FRECUENCIAS_PA" Member="R_M_PROVEEDORES" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_M_PROVEEDORES" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="R_M_FRECUENCIAS_ENTREGA_R_FRECUENCIAS_PA" Member="R_M_FRECUENCIAS_ENTREGA" ThisKey="ID_FRECUENCIA" OtherKey="ID_FRECUENCIA" Type="R_M_FRECUENCIAS_ENTREGA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_PERIODICIDAD" Member="R_M_PERIODICIDAD">
+    <Type Name="R_M_PERIODICIDAD">
+      <Column Name="ID_PERIODICIDAD" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_FRECUENCIAS_CONTROL" Member="R_M_FRECUENCIAS_CONTROL">
+    <Type Name="R_M_FRECUENCIAS_CONTROL">
+      <Column Name="ID_M_FRECUENCIA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HASTA_ENTRADAS" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="INSPECCIONAR_CADA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_VERIFICADORES" Member="R_M_VERIFICADORES">
+    <Type Name="R_M_VERIFICADORES">
+      <Column Name="ID_M_VERIFICADOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VERIFICADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_LINEAS" Member="R_M_LINEAS">
+    <Type Name="R_M_LINEAS">
+      <Column Name="ID_M_LINEA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="COD_LINEA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_LINEA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRECIO_LINEA" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_TIPOS_BRAIN" Member="R_M_TIPOS_BRAIN">
+    <Type Name="R_M_TIPOS_BRAIN">
+      <Column Name="ID_M_TIPO_BRAIN" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="COD_TIPO_BRAIN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DES_TIPO_BRAIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_PRECIOS_NC" Member="R_M_PRECIOS_NC">
+    <Type Name="R_M_PRECIOS_NC">
+      <Column Name="ID_M_PRECIOS" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRECIO_INGENIERIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_GARANTIA_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_CONTROL_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_SELECCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_RECUPERACION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_CHATARRA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_GASTOS_ADMIN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_TRANSPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_PROYECTOS" Member="R_M_PROYECTOS">
+    <Type Name="R_M_PROYECTOS">
+      <Column Name="ID_PROYECTO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROYECTO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="R_M_PROYECTOS_R_M_PROVEEDORES_PROYECTOS" Member="R_M_PROVEEDORES_PROYECTOS" ThisKey="ID_PROYECTO" OtherKey="ID_PROYECTO" Type="R_M_PROVEEDORES_PROYECTOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_PROVEEDORES_PROYECTOS" Member="R_M_PROVEEDORES_PROYECTOS">
+    <Type Name="R_M_PROVEEDORES_PROYECTOS">
+      <Column Name="ID_PROV_PROYECTO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PROYECTO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="R_M_PROYECTOS_R_M_PROVEEDORES_PROYECTOS" Member="R_M_PROYECTOS" ThisKey="ID_PROYECTO" OtherKey="ID_PROYECTO" Type="R_M_PROYECTOS" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="R_M_PROVEEDORES_R_M_PROVEEDORES_PROYECTOS" Member="R_M_PROVEEDORES" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_M_PROVEEDORES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_TEXTOS" Member="R_M_TEXTOS">
+    <Type Name="R_M_TEXTOS">
+      <Column Name="ID_TEXTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOM_TEXTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_TEXTO" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_VALORACION_CALIDAD" Member="R_M_VALORACION_CALIDAD">
+    <Type Name="R_M_VALORACION_CALIDAD">
+      <Column Name="ID_VALORACION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VALORACION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_VALORACION_SERVICIO" Member="R_M_VALORACION_SERVICIO">
+    <Type Name="R_M_VALORACION_SERVICIO">
+      <Column Name="ID_VALORACION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VALORACION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_FRECUENCIAS_ENTREGA" Member="R_M_FRECUENCIAS_ENTREGA">
+    <Type Name="R_M_FRECUENCIAS_ENTREGA">
+      <Column Name="ID_FRECUENCIA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FRECUENCIA_ENTREGA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FREC_PREDETERMINADA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="R_M_FRECUENCIAS_ENTREGA_R_FRECUENCIAS_PA" Member="R_FRECUENCIAS_PA" ThisKey="ID_FRECUENCIA" OtherKey="ID_FRECUENCIA" Type="R_FRECUENCIAS_PA" />
+      <Association Name="R_M_FRECUENCIAS_ENTREGA_R_M_PLAZOS" Member="R_M_PLAZOS" ThisKey="ID_FRECUENCIA" OtherKey="ID_FRECUENCIA" Type="R_M_PLAZOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_M_PLAZOS" Member="R_M_PLAZOS">
+    <Type Name="R_M_PLAZOS">
+      <Column Name="ID_PLAZO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_FRECUENCIA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PLAZO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALORACION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="R_M_FRECUENCIAS_ENTREGA_R_M_PLAZOS" Member="R_M_FRECUENCIAS_ENTREGA" ThisKey="ID_FRECUENCIA" OtherKey="ID_FRECUENCIA" Type="R_M_FRECUENCIAS_ENTREGA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_PLAZOS" Member="R_V_PLAZOS">
+    <Type Name="R_V_PLAZOS">
+      <Column Name="N_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_PREVISTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_RECEPCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DIAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_ARTICULO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_DEMERITOS" Member="R_V_DEMERITOS">
+    <Type Name="R_V_DEMERITOS">
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_ARTICULO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PLAZO" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_FRECUENCIA_PREDETERMINADA" Member="R_V_FRECUENCIA_PREDETERMINADA">
+    <Type Name="R_V_FRECUENCIA_PREDETERMINADA">
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PLAZO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FREC_PREDETERMINADA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FRECUENCIA_ENTREGA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_NORMAS_PROVEEDOR" Member="R_NORMAS_PROVEEDOR">
+    <Type Name="R_NORMAS_PROVEEDOR">
+      <Column Name="ID_NORMA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="HOMOLOGADO_POR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NORMA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_REVISION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="R_M_PROVEEDORES_R_NORMAS_PROVEEDOR" Member="R_M_PROVEEDORES" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_M_PROVEEDORES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_CONTACTOS_PROVEEDOR" Member="R_CONTACTOS_PROVEEDOR">
+    <Type Name="R_CONTACTOS_PROVEEDOR">
+      <Column Name="ID_CONTACTO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTAMENTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MOVIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_M_PROVEEDORES_R_CONTACTOS_PROVEEDOR" Member="R_M_PROVEEDORES" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_M_PROVEEDORES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_VALORACION_SISTEMA" Member="R_VALORACION_SISTEMA">
+    <Type Name="R_VALORACION_SISTEMA">
+      <Column Name="ID_VAL_SISTEMA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="FECHA_VAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PUNTOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="R_M_PROVEEDORES_R_VALORACION_SISTEMA" Member="R_M_PROVEEDORES" ThisKey="ID_PROVEEDOR" OtherKey="ID_PROVEEDOR" Type="R_M_PROVEEDORES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_COSTES_NC" Member="V_COSTES_NC">
+    <Type Name="V_COSTES_NC">
+      <Column Name="N_INFORME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N_FACTURA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_FACTURA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COSTE_MO_I" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COSTE_MO_D" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COSTE_DEVOLUCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COSTE_IMPRODUCTIVIDAD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COSTE_CHATARRA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COSTE_GASTOS_ADMIN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COSTE_TRANSPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FECHA_INFORME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_CIERRE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANTEGI_RH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_NO_CONFORMIDADES" Member="R_NO_CONFORMIDADES">
+    <Type Name="R_NO_CONFORMIDADES">
+      <Column Name="ID_INFORME" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="N_INFORME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_INFORME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_CIERRE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALBARAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECEP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_CONTROLADA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECHAZADA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_NOK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PROBLEMA" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROCEDENCIA_FALLO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="RUTA_FOTO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RESULTADOS_REINSPECCION" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="N_FACTURA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INGENIERIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_INGENIERIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GARANTIA_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_GARANTIA_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CONTROL_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_CONTROL_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SELECCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_SELECCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RECUPERACION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_RECUPERACION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DEVOLUCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_DEVOLUCION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IMPRODUCTIVIDAD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_IMPRODUCTIVIDAD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CHATARRA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_CHATARRA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GASTOS_ADMIN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_GASTOS_ADMIN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TRANSPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRECIO_TRANSPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CHECK_1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DETALLE_PROBLEMA" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CHECK_2_PUEDE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PRE_2_1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRE_2_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRE_2_3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CHECK_2_1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_2_2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_2_3" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="COM_2_1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COM_2_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COM_2_3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CHECK_3_RECEPCION" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_3_DURANTE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_3_SOBRE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_3_ANTES" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_3_OTROS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="COM_3_RAZONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COM_3_OTROS" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_FAB" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_CURSO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_ALM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_PROD" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_OTROS" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_IDEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="COM_4_ALB" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CAN_4_OK_FAB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_NOK_FAB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_OK_CURSO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_NOK_CURSO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_OK_ALM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_NOK_ALM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_OK_PROD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_NOK_PROD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_OK_OTROS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAN_4_NOK_OTROS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CHECK_7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="COM_7" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CHECK_8_GAMAS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_FICHAS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_PLANES" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_AMFE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_PSA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_MEDIOS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_AUDIT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_SEG" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CHECK_8_OTRAS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RESP_VALIDACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMISOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_EMISION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GARANTIA_CALIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_GARANTIA_CALIDAD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_LINEA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_FACTURAS_R_NO_CONFORMIDADES" Member="R_FACTURAS" ThisKey="N_FACTURA" OtherKey="N_FACTURA" Type="R_FACTURAS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_FACTURAS" Member="R_FACTURAS">
+    <Type Name="R_FACTURAS">
+      <Column Name="ID_FACTURA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="N_FACTURA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SOLICITANTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTAMENTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SU_REFERENCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SU_FECHA_PEDIDO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SU_PEDIDO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N_REFERENCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_FACTURA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IVA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANTEGI_RH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MONEDA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BASE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="R_FACTURAS_R_NO_CONFORMIDADES" Member="R_NO_CONFORMIDADES" ThisKey="N_FACTURA" OtherKey="N_FACTURA" Type="R_NO_CONFORMIDADES" />
+      <Association Name="R_FACTURAS_R_LINEAS_FACTURA" Member="R_LINEAS_FACTURA" ThisKey="ID_FACTURA" OtherKey="ID_FACTURA" Type="R_LINEAS_FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOMAS_PROCESO" Member="TOMAS_PROCESO">
+    <Type Name="TOMAS_PROCESO">
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="DES_ARTICULO" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CARACTERISTICA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_01" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_02" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_03" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_04" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_05" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_06" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_07" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_08" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_09" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_10" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_11" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_12" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_13" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_14" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_15" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_16" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_17" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_18" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_19" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_20" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_21" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_22" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_23" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_24" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_25" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_26" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_28" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_27" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_29" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_30" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_31" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_32" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_33" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_34" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_35" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_36" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_37" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_38" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_39" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_40" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_41" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_42" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_43" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_44" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_45" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_46" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_47" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_48" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_49" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOMA_50" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N_USUARIO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_PA" Member="R_V_PA">
+    <Type Name="R_V_PA">
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_ARTICULO" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="FECHA_RECEPCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECEP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DES_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBJETIVO_PPM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_PROVEEDOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_VALORACION_CAL" Member="R_VALORACION_CAL">
+    <Type Name="R_VALORACION_CAL">
+      <Column Name="ID_VALORACION_CAL" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CANTIDAD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALORACION_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="R_RECEPCIONES_R_VALORACION_CAL" Member="R_RECEPCIONES" ThisKey="ID_RECEPCION" OtherKey="ID_RECEPCION" Type="R_RECEPCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_RECUPERAR_INSPECCIONABLES" Member="R_V_RECUPERAR_INSPECCIONABLES">
+    <Type Name="R_V_RECUPERAR_INSPECCIONABLES">
+      <Column Name="WEWENR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="WETENR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WELINR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEWEDF" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WELIMG" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WECHNR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WELIES" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEWRKR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WEBEDF" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BOP001" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WEBEPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_LINEAS_FACTURA" Member="R_LINEAS_FACTURA">
+    <Type Name="R_LINEAS_FACTURA">
+      <Column Name="ID_LINEA_FACTURA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_FACTURA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="N_LINEA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="REFERENCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="R_FACTURAS_R_LINEAS_FACTURA" Member="R_FACTURAS" ThisKey="ID_FACTURA" OtherKey="ID_FACTURA" Type="R_FACTURAS" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_Facturas" Member="R_V_Facturas">
+    <Type Name="R_V_Facturas">
+      <Column Name="N_FACTURA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AÑO_FACTURA" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="NUM_FACTURA" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE LANTEGI]" Member="MAESTRO_DE_LANTEGI">
+    <Type Name="MAESTRO_DE_LANTEGI">
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TODOS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_VALORES_AUDITORIA" Member="R_VALORES_AUDITORIA">
+    <Type Name="R_VALORES_AUDITORIA">
+      <Column Name="ID_VALOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_CARAC" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VALOR_V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALOR_A" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIPO_VALOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_CARACTERISTICAS_AUDITORIA_R_VALORES_AUDITORIA" Member="R_CARACTERISTICAS_AUDITORIA" ThisKey="ID_CARAC" OtherKey="ID_CARAC" Type="R_CARACTERISTICAS_AUDITORIA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_VALORES" Member="R_VALORES">
+    <Type Name="R_VALORES">
+      <Column Name="ID_VALOR" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_CARAC" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VALOR_V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALOR_A" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIPO_VALOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_CARACTERISTICAS_R_VALORES" Member="R_CARACTERISTICAS" ThisKey="ID_CARAC" OtherKey="ID_CARAC" Type="R_CARACTERISTICAS" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_AUDITORIAS_PRODUCTO" Member="R_AUDITORIAS_PRODUCTO">
+    <Type Name="R_AUDITORIAS_PRODUCTO">
+      <Column Name="ID_AUDITORIA_PRODUCTO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="N_AUDITORIA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_ENTRADA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AUDITAR" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PERIODICIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LANTEGI_RH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIPO_AB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_AUDITORIAS_PRODUCTO_R_REALIZADOS_AUDITORIA_PRODUCTO" Member="R_REALIZADOS_AUDITORIA_PRODUCTO" ThisKey="ID_AUDITORIA_PRODUCTO" OtherKey="ID_AUDITORIA_PRODUCTO" Type="R_REALIZADOS_AUDITORIA_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_REALIZADOS_AUDITORIA_PRODUCTO" Member="R_REALIZADOS_AUDITORIA_PRODUCTO">
+    <Type Name="R_REALIZADOS_AUDITORIA_PRODUCTO">
+      <Column Name="ID_REALIZADO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_AUDITORIA_PRODUCTO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="FECHA_PREVISTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_REAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ENVIADO_PPAP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RECIBIDO_PPAP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HOMOLOGACION" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DIMENSIONAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATERIAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FUNCIONAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AUDITORIA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="R_AUDITORIAS_PRODUCTO_R_REALIZADOS_AUDITORIA_PRODUCTO" Member="R_AUDITORIAS_PRODUCTO" ThisKey="ID_AUDITORIA_PRODUCTO" OtherKey="ID_AUDITORIA_PRODUCTO" Type="R_AUDITORIAS_PRODUCTO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_Vista_PREVISTAS_AUDPRO" Member="R_Vista_PREVISTAS_AUDPRO">
+    <Type Name="R_Vista_PREVISTAS_AUDPRO">
+      <Column Name="ID_AUDITORIA_PRODUCTO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="FECHA_PREVISTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_REAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[OPERACIONES TIPO]" Member="OPERACIONES_TIPO">
+    <Type Name="OPERACIONES_TIPO">
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[OPERACION GENERAL]" Member="OPERACION_GENERAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[OPERACION TIPO]" Member="OPERACION_TIPO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[NUMERO OPERACION]" Member="NUMERO_OPERACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[ID SECCION]" Member="ID_SECCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AUDITORIA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="OPERACIONES_TIPO_OPERACIONES_DE_UN_ARTICULO" Member="OPERACIONES_DE_UN_ARTICULO" ThisKey="COD_OPERACION" OtherKey="COD_OPERACION" Type="OPERACIONES_DE_UN_ARTICULO" />
+      <Association Name="OPERACIONES_TIPO_PLAN_DE_CONTROL" Member="PLAN_DE_CONTROL" ThisKey="COD_OPERACION" OtherKey="CODIGO" Type="PLAN_DE_CONTROL" Cardinality="One" />
+      <Association Name="OPERACIONES_TIPO_AMFES" Member="AMFES" ThisKey="COD_OPERACION" OtherKey="CODIGO" Type="AMFES" />
+      <Association Name="OPERACIONES_TIPO_HOJA_DE_INSTRUCCIONES" Member="HOJA_DE_INSTRUCCIONES" ThisKey="COD_OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" Cardinality="One" />
+      <Association Name="M_SECCION_OPERACIONES_TIPO" Member="M_SECCION" ThisKey="ID_SECCION" OtherKey="ID_SECCION" Type="M_SECCION" IsForeignKey="true" />
+      <Association Name="MAESTRO_OPERACION_GENERAL_OPERACIONES_TIPO" Member="MAESTRO_OPERACION_GENERAL" ThisKey="OPERACION_GENERAL" OtherKey="OPERACION_GENERAL" Type="MAESTRO_OPERACION_GENERAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[OPERACIONES DE UN ARTICULO]" Member="OPERACIONES_DE_UN_ARTICULO">
+    <Type Name="OPERACIONES_DE_UN_ARTICULO">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="[NUM OPERACION]" Member="NUM_OPERACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VER_PLAN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="OPERACIONES_TIPO_OPERACIONES_DE_UN_ARTICULO" Member="OPERACIONES_TIPO" ThisKey="COD_OPERACION" OtherKey="COD_OPERACION" Type="OPERACIONES_TIPO" IsForeignKey="true" />
+      <Association Name="MAESTRO_ARTICULOS_OPERACIONES_DE_UN_ARTICULO" Member="MAESTRO_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="MAESTRO_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PROVEEDORES POR HOJA]" Member="PROVEEDORES_POR_HOJA">
+    <Type Name="PROVEEDORES_POR_HOJA">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PROVEEDOR" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_PROVEEDORES_POR_HOJA" Member="HOJA_DE_INSTRUCCIONES" ThisKey="CODIGO" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PARAMETROS DE MAQUINAS]" Member="PARAMETROS_DE_MAQUINAS">
+    <Type Name="PARAMETROS_DE_MAQUINAS">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CLAVE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONSIGNA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_PARAMETROS_DE_MAQUINAS" Member="HOJA_DE_INSTRUCCIONES" ThisKey="OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[ORDEN DE MONTAJE DE PIEZAS]" Member="ORDEN_DE_MONTAJE_DE_PIEZAS">
+    <Type Name="ORDEN_DE_MONTAJE_DE_PIEZAS">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMOPER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[CODIGO PIEZA]" Member="CODIGO_PIEZA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_ORDEN_DE_MONTAJE_DE_PIEZAS" Member="HOJA_DE_INSTRUCCIONES" ThisKey="NUMOPER" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[ORDEN DE MONTAJE DE PIEZAS FABRICACION]" Member="ORDEN_DE_MONTAJE_DE_PIEZAS_FABRICACION">
+    <Type Name="ORDEN_DE_MONTAJE_DE_PIEZAS_FABRICACION">
+      <Column Name="NUMOPER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[CODIGO PIEZA]" Member="CODIGO_PIEZA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_ORDEN_DE_MONTAJE_DE_PIEZAS_FABRICACION" Member="HOJA_DE_INSTRUCCIONES_FABRICACION" ThisKey="NUMOPER" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PARAMETROS DE MAQUINAS FABRICACION]" Member="PARAMETROS_DE_MAQUINAS_FABRICACION">
+    <Type Name="PARAMETROS_DE_MAQUINAS_FABRICACION">
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CLAVE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONSIGNA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_PARAMETROS_DE_MAQUINAS_FABRICACION" Member="HOJA_DE_INSTRUCCIONES_FABRICACION" ThisKey="OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PLAN DE CONTROL]" Member="PLAN_DE_CONTROL">
+    <Type Name="PLAN_DE_CONTROL">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_PLAN_DE_CONTROL_FABRICACION" Member="PLAN_DE_CONTROL_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_FABRICACION" Cardinality="One" />
+      <Association Name="PLAN_DE_CONTROL_NIVELES_PLANES_DE_CONTROL" Member="NIVELES_PLANES_DE_CONTROL" ThisKey="CODIGO" OtherKey="CODIGO" Type="NIVELES_PLANES_DE_CONTROL" />
+      <Association Name="PLAN_DE_CONTROL_CARACTERISTICAS_DEL_PLAN" Member="CARACTERISTICAS_DEL_PLAN" ThisKey="CODIGO" OtherKey="CODIGO" Type="CARACTERISTICAS_DEL_PLAN" />
+      <Association Name="OPERACIONES_TIPO_PLAN_DE_CONTROL" Member="OPERACIONES_TIPO" ThisKey="CODIGO" OtherKey="COD_OPERACION" Type="OPERACIONES_TIPO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PLAN DE CONTROL FABRICACION]" Member="PLAN_DE_CONTROL_FABRICACION">
+    <Type Name="PLAN_DE_CONTROL_FABRICACION">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_FABRICACION_NIVELES_PLANES_DE_CONTROL_FABRICACION" Member="NIVELES_PLANES_DE_CONTROL_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="NIVELES_PLANES_DE_CONTROL_FABRICACION" />
+      <Association Name="PLAN_DE_CONTROL_FABRICACION_CARACTERISTICAS_DEL_PLAN_FABRICACION" Member="CARACTERISTICAS_DEL_PLAN_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="CARACTERISTICAS_DEL_PLAN_FABRICACION" />
+      <Association Name="PLAN_DE_CONTROL_PLAN_DE_CONTROL_FABRICACION" Member="PLAN_DE_CONTROL" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[TIPO SOL/MAQUINA PARA OPERACIONES TIPO]" Member="TIPO_SOL_MAQUINA_PARA_OPERACIONES_TIPO">
+    <Type Name="TIPO_SOL_MAQUINA_PARA_OPERACIONES_TIPO">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TIPO SOL/MAQUINA]" Member="TIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MAQUINAS_TIPO_SOL_MAQUINA_PARA_OPERACIONES_TIPO" Member="MAQUINAS" ThisKey="TIPO_SOL_MAQUINA" OtherKey="Nº_MAQUINA" Type="MAQUINAS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_AUDITORIAS" Member="R_AUDITORIAS">
+    <Type Name="R_AUDITORIAS">
+      <Column Name="ID_AUDITORIA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="COD_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_PREVISTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VERIFICADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REALIZADA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TIPO_AUDITORIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="N_AUDITORIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_AUDITORIAS_R_CARACTERISTICAS_AUDITORIA" Member="R_CARACTERISTICAS_AUDITORIA" ThisKey="ID_AUDITORIA" OtherKey="ID_AUDITORIA" Type="R_CARACTERISTICAS_AUDITORIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AMFES" Member="AMFES">
+    <Type Name="AMFES">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA AMFE]" Member="FECHA_AMFE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[NIVEL AMFE]" Member="NIVEL_AMFE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="AMFES_NIVELES_AMFE" Member="NIVELES_AMFE" ThisKey="ID" OtherKey="IDENTIFICA" Type="NIVELES_AMFE" />
+      <Association Name="AMFES_CARACTERISTICAS_AMFE" Member="CARACTERISTICAS_AMFE" ThisKey="ID" OtherKey="ID_AMFE" Type="CARACTERISTICAS_AMFE" />
+      <Association Name="OPERACIONES_TIPO_AMFES" Member="OPERACIONES_TIPO" ThisKey="CODIGO" OtherKey="COD_OPERACION" Type="OPERACIONES_TIPO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[LISTA DE OPERACIONES SIN AMFE]" Member="LISTA_DE_OPERACIONES_SIN_AMFE">
+    <Type Name="LISTA_DE_OPERACIONES_SIN_AMFE">
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[OPERACION GENERAL]" Member="OPERACION_GENERAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[OPERACION TIPO]" Member="OPERACION_TIPO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MODOS DE FALLO]" Member="MODOS_DE_FALLO">
+    <Type Name="MODOS_DE_FALLO">
+      <Column Name="[ID CARACTERISTICA]" Member="ID_CARACTERISTICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[ID OPERACION]" Member="ID_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[MODO DE FALLO]" Member="MODO_DE_FALLO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[ID MODO]" Member="ID_MODO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="MODOS_DE_FALLO_EFECTOS" Member="EFECTOS" ThisKey="ID_MODO" OtherKey="ID_MODO" Type="EFECTOS" />
+      <Association Name="MODOS_DE_FALLO_Modos_de_Fallo_Origen" Member="Modos_de_Fallo_Origen" ThisKey="ID_MODO" OtherKey="IdModo" Type="Modos_de_Fallo_Origen" />
+      <Association Name="MODOS_DE_FALLO_CAUSAS_DE_FALLO" Member="CAUSAS_DE_FALLO" ThisKey="ID_MODO" OtherKey="ID_MODO" Type="CAUSAS_DE_FALLO" />
+      <Association Name="CARACTERISTICAS_AMFE_MODOS_DE_FALLO" Member="CARACTERISTICAS_AMFE" ThisKey="ID_CARACTERISTICA" OtherKey="ID_CARACTERISTICA" Type="CARACTERISTICAS_AMFE" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Modos de Fallo Origen]" Member="Modos_de_Fallo_Origen">
+    <Type Name="Modos_de_Fallo_Origen">
+      <Column Name="IdModo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdOrigen" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MODOS_DE_FALLO_Modos_de_Fallo_Origen" Member="MODOS_DE_FALLO" ThisKey="IdModo" OtherKey="ID_MODO" Type="MODOS_DE_FALLO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Estructuras_Modos_de_Fallo_Origen" Member="Estructuras" ThisKey="IdOrigen" OtherKey="ID" Type="Estructuras" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES AMFE]" Member="NIVELES_AMFE">
+    <Type Name="NIVELES_AMFE">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NIVEL AMFE]" Member="NIVEL_AMFE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IDENTIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="AMFES_NIVELES_AMFE" Member="AMFES" ThisKey="IDENTIFICA" OtherKey="ID" Type="AMFES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES AMFE PIEZA]" Member="NIVELES_AMFE_PIEZA">
+    <Type Name="NIVELES_AMFE_PIEZA">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NIVEL AMFE]" Member="NIVEL_AMFE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IDENTIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="AMFES_PIEZA_NIVELES_AMFE_PIEZA" Member="AMFES_PIEZA" ThisKey="IDENTIFICA" OtherKey="ID_AMFE_PIEZA" Type="AMFES_PIEZA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES PLANES DE CONTROL]" Member="NIVELES_PLANES_DE_CONTROL">
+    <Type Name="NIVELES_PLANES_DE_CONTROL">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NIVEL PLAN]" Member="NIVEL_PLAN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_NIVELES_PLANES_DE_CONTROL" Member="PLAN_DE_CONTROL" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES PLANES DE CONTROL FABRICACION]" Member="NIVELES_PLANES_DE_CONTROL_FABRICACION">
+    <Type Name="NIVELES_PLANES_DE_CONTROL_FABRICACION">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NIVEL PLAN]" Member="NIVEL_PLAN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_FABRICACION_NIVELES_PLANES_DE_CONTROL_FABRICACION" Member="PLAN_DE_CONTROL_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[CARACTERISTICAS AMFE]" Member="CARACTERISTICAS_AMFE">
+    <Type Name="CARACTERISTICAS_AMFE">
+      <Column Name="[ID AMFE]" Member="ID_AMFE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARACTERISTICA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[ID CARACTERISTICA]" Member="ID_CARACTERISTICA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORDEN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CARACTERISTICAS_AMFE_MODOS_DE_FALLO" Member="MODOS_DE_FALLO" ThisKey="ID_CARACTERISTICA" OtherKey="ID_CARACTERISTICA" Type="MODOS_DE_FALLO" />
+      <Association Name="AMFES_CARACTERISTICAS_AMFE" Member="AMFES" ThisKey="ID_AMFE" OtherKey="ID" Type="AMFES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_CARACTERISTICAS_AUDITORIA" Member="R_CARACTERISTICAS_AUDITORIA">
+    <Type Name="R_CARACTERISTICAS_AUDITORIA">
+      <Column Name="ID_CARAC" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_AUDITORIA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CARACTERISTICA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MINIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MAXIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TECNICA_EVALUACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TAMAÑO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FRECUENCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="METODO_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DECISION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_CARAC_COPIA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="VER_REG_REC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_PRO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="R_CARACTERISTICAS_AUDITORIA_R_VALORES_AUDITORIA" Member="R_VALORES_AUDITORIA" ThisKey="ID_CARAC" OtherKey="ID_CARAC" Type="R_VALORES_AUDITORIA" />
+      <Association Name="R_AUDITORIAS_R_CARACTERISTICAS_AUDITORIA" Member="R_AUDITORIAS" ThisKey="ID_AUDITORIA" OtherKey="ID_AUDITORIA" Type="R_AUDITORIAS" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_RECUPERAR_APROVISIONAMIENTO" Member="R_V_RECUPERAR_APROVISIONAMIENTO">
+    <Type Name="R_V_RECUPERAR_APROVISIONAMIENTO">
+      <Column Name="N_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_RECEPCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECEP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALBARAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INSPECCIONAR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VOLCAR" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WEBEPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_RECUPERAR_HOMOLOGACION" Member="R_V_RECUPERAR_HOMOLOGACION">
+    <Type Name="R_V_RECUPERAR_HOMOLOGACION">
+      <Column Name="N_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_RECEPCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECEP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALBARAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INSPECCIONAR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VOLCAR" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WEBEPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES PLANES DE CONTROL PIEZA FABRICACION]" Member="NIVELES_PLANES_DE_CONTROL_PIEZA_FABRICACION">
+    <Type Name="NIVELES_PLANES_DE_CONTROL_PIEZA_FABRICACION">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NIVEL PLAN]" Member="NIVEL_PLAN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_PIEZA_FABRICACION_NIVELES_PLANES_DE_CONTROL_PIEZA_FABRICACION" Member="PLAN_DE_CONTROL_PIEZA_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_PIEZA_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DETECCION" Member="DETECCION">
+    <Type Name="DETECCION">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROBABILIDAD" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="[PROBABILIDAD DE NO DETECCION]" Member="PROBABILIDAD_DE_NO_DETECCION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PUNTUACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PLAN DE CONTROL PIEZA]" Member="PLAN_DE_CONTROL_PIEZA">
+    <Type Name="PLAN_DE_CONTROL_PIEZA">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.Char" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="[TELEFONO CONTACTO]" Member="TELEFONO_CONTACTO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="EQUIPO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[APROBACION PLANTA]" Member="APROBACION_PLANTA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[APROBACION ING CLI]" Member="APROBACION_ING_CLI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[APROBACION CAL CLI]" Member="APROBACION_CAL_CLI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[OTRAS APROBACIONES1]" Member="OTRAS_APROBACIONES1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[OTRAS APROBACIONES2]" Member="OTRAS_APROBACIONES2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[CODIGO CLIENTE]" Member="CODIGO_CLIENTE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[PREPARADO POR]" Member="PREPARADO_POR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[PLAN RECEP]" Member="PLAN_RECEP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[TIPO PLAN]" Member="TIPO_PLAN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SUMINISTRADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[COD SUMINISTRADOR]" Member="COD_SUMINISTRADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ACCIONES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_PIEZA_PLAN_DE_CONTROL_PIEZA_FABRICACION" Member="PLAN_DE_CONTROL_PIEZA_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_PIEZA_FABRICACION" Cardinality="One" />
+      <Association Name="PLAN_DE_CONTROL_PIEZA_NIVELES_PLANES_DE_CONTROL_PIEZA" Member="NIVELES_PLANES_DE_CONTROL_PIEZA" ThisKey="CODIGO" OtherKey="CODIGO" Type="NIVELES_PLANES_DE_CONTROL_PIEZA" />
+      <Association Name="MAESTRO_ARTICULOS_PLAN_DE_CONTROL_PIEZA" Member="MAESTRO_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="MAESTRO_ARTICULOS" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MAESTRO_DE_ACCIONES_PLAN_DE_CONTROL_PIEZA" Member="MAESTRO_DE_ACCIONES" ThisKey="ACCIONES" OtherKey="ID_ACCION" Type="MAESTRO_DE_ACCIONES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[PLAN DE CONTROL PIEZA FABRICACION]" Member="PLAN_DE_CONTROL_PIEZA_FABRICACION">
+    <Type Name="PLAN_DE_CONTROL_PIEZA_FABRICACION">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.Char" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="[TELEFONO CONTACTO]" Member="TELEFONO_CONTACTO" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="EQUIPO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[APROBACION PLANTA]" Member="APROBACION_PLANTA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[APROBACION ING CLI]" Member="APROBACION_ING_CLI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[APROBACION CAL CLI]" Member="APROBACION_CAL_CLI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[OTRAS APROBACIONES1]" Member="OTRAS_APROBACIONES1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[OTRAS APROBACIONES2]" Member="OTRAS_APROBACIONES2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[CODIGO CLIENTE]" Member="CODIGO_CLIENTE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[PREPARADO POR]" Member="PREPARADO_POR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[PLAN RECEP]" Member="PLAN_RECEP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[TIPO PLAN]" Member="TIPO_PLAN" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SUMINISTRADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[COD SUMINISTRADOR]" Member="COD_SUMINISTRADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ACCIONES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PLAN_DE_CONTROL_PIEZA_FABRICACION_NIVELES_PLANES_DE_CONTROL_PIEZA_FABRICACION" Member="NIVELES_PLANES_DE_CONTROL_PIEZA_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="NIVELES_PLANES_DE_CONTROL_PIEZA_FABRICACION" />
+      <Association Name="PLAN_DE_CONTROL_PIEZA_PLAN_DE_CONTROL_PIEZA_FABRICACION" Member="PLAN_DE_CONTROL_PIEZA" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_PIEZA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MAESTRO_DE_ACCIONES_PLAN_DE_CONTROL_PIEZA_FABRICACION" Member="MAESTRO_DE_ACCIONES" ThisKey="ACCIONES" OtherKey="ID_ACCION" Type="MAESTRO_DE_ACCIONES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES PLANES DE CONTROL PIEZA]" Member="NIVELES_PLANES_DE_CONTROL_PIEZA">
+    <Type Name="NIVELES_PLANES_DE_CONTROL_PIEZA">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NIVEL PLAN]" Member="NIVEL_PLAN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="PLAN_DE_CONTROL_PIEZA_NIVELES_PLANES_DE_CONTROL_PIEZA" Member="PLAN_DE_CONTROL_PIEZA" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_PIEZA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Archivos" Member="Archivos">
+    <Type Name="Archivos">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Content_Type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaCreacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Archivo" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Archivos_Archivos_Caracteristicas_Plan" Member="Archivos_Caracteristicas_Plan" ThisKey="ID" OtherKey="Id_Archivo" Type="Archivos_Caracteristicas_Plan" />
+      <Association Name="Archivos_Archivos_Caracteristicas_Plan_FAB" Member="Archivos_Caracteristicas_Plan_FAB" ThisKey="ID" OtherKey="Id_Archivo" Type="Archivos_Caracteristicas_Plan_FAB" />
+      <Association Name="Archivos_Archivos_R_Caracteristicas" Member="Archivos_R_Caracteristicas" ThisKey="ID" OtherKey="Id_Archivo" Type="Archivos_R_Caracteristicas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Archivos_Caracteristicas_Plan" Member="Archivos_Caracteristicas_Plan">
+    <Type Name="Archivos_Caracteristicas_Plan">
+      <Column Name="Id_Carac_Plan" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_Archivo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Archivos_Archivos_Caracteristicas_Plan" Member="Archivos" ThisKey="Id_Archivo" OtherKey="ID" Type="Archivos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CARACTERISTICAS_DEL_PLAN_Archivos_Caracteristicas_Plan" Member="CARACTERISTICAS_DEL_PLAN" ThisKey="Id_Carac_Plan" OtherKey="ID_REGISTRO" Type="CARACTERISTICAS_DEL_PLAN" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Archivos_Caracteristicas_Plan_FAB" Member="Archivos_Caracteristicas_Plan_FAB">
+    <Type Name="Archivos_Caracteristicas_Plan_FAB">
+      <Column Name="Id_Carac_Plan" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_Archivo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Archivos_Archivos_Caracteristicas_Plan_FAB" Member="Archivos" ThisKey="Id_Archivo" OtherKey="ID" Type="Archivos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CARACTERISTICAS_DEL_PLAN_FABRICACION_Archivos_Caracteristicas_Plan_FAB" Member="CARACTERISTICAS_DEL_PLAN_FABRICACION" ThisKey="Id_Carac_Plan" OtherKey="ID_REGISTRO" Type="CARACTERISTICAS_DEL_PLAN_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Archivos_R_Caracteristicas" Member="Archivos_R_Caracteristicas">
+    <Type Name="Archivos_R_Caracteristicas">
+      <Column Name="Id_Caracteristica" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_Archivo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Archivos_Archivos_R_Caracteristicas" Member="Archivos" ThisKey="Id_Archivo" OtherKey="ID" Type="Archivos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="R_CARACTERISTICAS_Archivos_R_Caracteristicas" Member="R_CARACTERISTICAS" ThisKey="Id_Caracteristica" OtherKey="ID_CARAC" Type="R_CARACTERISTICAS" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO ARTICULOS]" Member="MAESTRO_ARTICULOS">
+    <Type Name="MAESTRO_ARTICULOS">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FAMILIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[REFERENCIA CLIENTE]" Member="REFERENCIA_CLIENTE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="[JEFE DE PROYECTO]" Member="JEFE_DE_PROYECTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="PLANO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CLIENTE" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="VEHICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA SERIE]" Member="FECHA_SERIE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ORGANO" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="OBJETIVO" Type="System.String" DbType="NVarChar(75)" CanBeNull="true" />
+      <Column Name="ESLABON" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="LANTEGI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Obsoleto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MAESTRO_ARTICULOS_AMFES_PIEZA" Member="AMFES_PIEZA" ThisKey="CODIGO" OtherKey="CODIGO" Type="AMFES_PIEZA" />
+      <Association Name="MAESTRO_ARTICULOS_CLIENTES_ARTICULO" Member="CLIENTES_ARTICULO" ThisKey="CODIGO" OtherKey="CODIGO" Type="CLIENTES_ARTICULO" />
+      <Association Name="MAESTRO_ARTICULOS_NIVELES_ARTICULOS" Member="NIVELES_ARTICULOS" ThisKey="CODIGO" OtherKey="CODIGO" Type="NIVELES_ARTICULOS" />
+      <Association Name="MAESTRO_ARTICULOS_SINOPTICO" Member="SINOPTICO" ThisKey="CODIGO" OtherKey="CODIGO" Type="SINOPTICO" Cardinality="One" />
+      <Association Name="MAESTRO_ARTICULOS_OPERACIONES_DE_UN_ARTICULO" Member="OPERACIONES_DE_UN_ARTICULO" ThisKey="CODIGO" OtherKey="CODIGO" Type="OPERACIONES_DE_UN_ARTICULO" />
+      <Association Name="MAESTRO_ARTICULOS_PLAN_DE_CONTROL_PIEZA" Member="PLAN_DE_CONTROL_PIEZA" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_PIEZA" Cardinality="One" />
+      <Association Name="M_LANTEGI_MAESTRO_ARTICULOS" Member="M_LANTEGI" ThisKey="LANTEGI" OtherKey="LANTEGI" Type="M_LANTEGI" IsForeignKey="true" />
+      <Association Name="CLIENTES_MAESTRO_ARTICULOS" Member="CLIENTES" ThisKey="CLIENTE" OtherKey="CLIENTE" Type="CLIENTES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES HOJAS DE INSTRUCCIONES]" Member="NIVELES_HOJAS_DE_INSTRUCCIONES">
+    <Type Name="NIVELES_HOJAS_DE_INSTRUCCIONES">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TIPO SOL/MAQUINA]" Member="TIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[NIVEL HOJA]" Member="NIVEL_HOJA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PROCESOS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CALIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRODUCCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="vProcesos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="vCalidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="vProduccion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_NIVELES_HOJAS_DE_INSTRUCCIONES" Member="HOJA_DE_INSTRUCCIONES" ThisKey="OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[NIVELES HOJAS DE INSTRUCCIONES FABRICACION]" Member="NIVELES_HOJAS_DE_INSTRUCCIONES_FABRICACION">
+    <Type Name="NIVELES_HOJAS_DE_INSTRUCCIONES_FABRICACION">
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TIPO SOL/MAQUINA]" Member="TIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[NIVEL HOJA]" Member="NIVEL_HOJA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFICACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PROCESOS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CALIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRODUCCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vProcesos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="vCalidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="vProduccion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_NIVELES_HOJAS_DE_INSTRUCCIONES_FABRICACION" Member="HOJA_DE_INSTRUCCIONES_FABRICACION" ThisKey="OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[INSTRUCCIONES DE TRABAJO]" Member="INSTRUCCIONES_DE_TRABAJO">
+    <Type Name="INSTRUCCIONES_DE_TRABAJO">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="INSTRUCCION" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_INSTRUCCIONES_DE_TRABAJO" Member="HOJA_DE_INSTRUCCIONES" ThisKey="OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[INSTRUCCIONES DE TRABAJO FABRICACION]" Member="INSTRUCCIONES_DE_TRABAJO_FABRICACION">
+    <Type Name="INSTRUCCIONES_DE_TRABAJO_FABRICACION">
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="INSTRUCCION" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_INSTRUCCIONES_DE_TRABAJO_FABRICACION" Member="HOJA_DE_INSTRUCCIONES_FABRICACION" ThisKey="OPERACION" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO INSTRUCCIONES DE TRABAJO]" Member="MAESTRO_INSTRUCCIONES_DE_TRABAJO">
+    <Type Name="MAESTRO_INSTRUCCIONES_DE_TRABAJO">
+      <Column Name="[OPERACION GENERAL]" Member="OPERACION_GENERAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TIPO SOL/MAQUINA]" Member="TIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="INSTRUCCION" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="MAESTRO_OPERACION_GENERAL_MAESTRO_INSTRUCCIONES_DE_TRABAJO" Member="MAESTRO_OPERACION_GENERAL" ThisKey="OPERACION_GENERAL" OtherKey="OPERACION_GENERAL" Type="MAESTRO_OPERACION_GENERAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[CAUSAS DE FALLO]" Member="CAUSAS_DE_FALLO">
+    <Type Name="CAUSAS_DE_FALLO">
+      <Column Name="[ID MODO]" Member="ID_MODO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[CONT CAUSA]" Member="CONT_CAUSA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CAUSA" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="CONTROLES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[FRECUENCIA DE CONTROL]" Member="FRECUENCIA_DE_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OCURRENCIA" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GRAVEDAD" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DETECCION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[ACCION RECOMENDADA]" Member="ACCION_RECOMENDADA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DEPARTAMENTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA DE INICIO]" Member="FECHA_DE_INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FECHA DE FIN]" Member="FECHA_DE_FIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PROGRESO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[EFECTO DE LA ACCION]" Member="EFECTO_DE_LA_ACCION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NUEVA OCURRENCIA]" Member="NUEVA_OCURRENCIA" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[NUEVA GRAVEDAD]" Member="NUEVA_GRAVEDAD" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[NUEVA DETECCION]" Member="NUEVA_DETECCION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[M CONTROL]" Member="M_CONTROL" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="[M FABRICAC]" Member="M_FABRICAC" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="[M HUMAN]" Member="M_HUMAN" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="[ENVIAR A PLAN]" Member="ENVIAR_A_PLAN" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="[¿EN PLAN?]" Member="_EN_PLAN_" Type="System.Char" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="[NOMBRE MEDIO]" Member="NOMBRE_MEDIO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NOMBRE MEDIO FAB]" Member="NOMBRE_MEDIO_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[NOMBRE MEDIO HUM]" Member="NOMBRE_MEDIO_HUM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FRECUENCIA DE CONTROL CAL]" Member="FRECUENCIA_DE_CONTROL_CAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUEVO_MEDIO_COTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[PREVENTIVA MEDIO FAB]" Member="PREVENTIVA_MEDIO_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_Control_ME_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tamaño_OP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tamaño_CAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO CONTROL]" Member="METODO_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO CONTROL FAB]" Member="METODO_CONTROL_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MODOS_DE_FALLO_CAUSAS_DE_FALLO" Member="MODOS_DE_FALLO" ThisKey="ID_MODO" OtherKey="ID_MODO" Type="MODOS_DE_FALLO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[MAESTRO DE ACCIONES]" Member="MAESTRO_DE_ACCIONES">
+    <Type Name="MAESTRO_DE_ACCIONES">
+      <Column Name="[ID ACCION]" Member="ID_ACCION" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ACCIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CodProcedimiento" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="MAESTRO_DE_ACCIONES_PLAN_DE_CONTROL_PIEZA" Member="PLAN_DE_CONTROL_PIEZA" ThisKey="ID_ACCION" OtherKey="ACCIONES" Type="PLAN_DE_CONTROL_PIEZA" />
+      <Association Name="MAESTRO_DE_ACCIONES_PLAN_DE_CONTROL_PIEZA_FABRICACION" Member="PLAN_DE_CONTROL_PIEZA_FABRICACION" ThisKey="ID_ACCION" OtherKey="ACCIONES" Type="PLAN_DE_CONTROL_PIEZA_FABRICACION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_CARACTERISTICAS" Member="R_CARACTERISTICAS">
+    <Type Name="R_CARACTERISTICAS">
+      <Column Name="ID_CARAC" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CARACTERISTICA" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MINIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MAXIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TECNICA_EVALUACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TAMAÑO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FRECUENCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="METODO_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_CARACTERISTICAS_R_VALORES" Member="R_VALORES" ThisKey="ID_CARAC" OtherKey="ID_CARAC" Type="R_VALORES" />
+      <Association Name="R_CARACTERISTICAS_Archivos_R_Caracteristicas" Member="Archivos_R_Caracteristicas" ThisKey="ID_CARAC" OtherKey="Id_Caracteristica" Type="Archivos_R_Caracteristicas" />
+      <Association Name="R_RECEPCIONES_R_CARACTERISTICAS" Member="R_RECEPCIONES" ThisKey="ID_RECEPCION" OtherKey="ID_RECEPCION" Type="R_RECEPCIONES" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estructuras" Member="Estructuras">
+    <Type Name="Estructuras">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdIturria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Orden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Estructuras_Modos_de_Fallo_Origen" Member="Modos_de_Fallo_Origen" ThisKey="ID" OtherKey="IdOrigen" Type="Modos_de_Fallo_Origen" />
+      <Association Name="Estructuras_Estructuras" Member="Estructuras1" ThisKey="ID" OtherKey="IdIturria" Type="Estructuras" />
+      <Association Name="Estructuras_Estructuras" Member="Estructuras" ThisKey="IdIturria" OtherKey="ID" Type="Estructuras" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Maestro Documento Registro]" Member="Maestro_Documento_Registro">
+    <Type Name="Maestro_Documento_Registro">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Association Name="Maestro_Documento_Registro_CARACTERISTICAS_DEL_PLAN" Member="CARACTERISTICAS_DEL_PLAN" ThisKey="ID" OtherKey="ID_Doc_Registro" Type="CARACTERISTICAS_DEL_PLAN" />
+      <Association Name="Maestro_Documento_Registro_CARACTERISTICAS_DEL_PLAN_FABRICACION" Member="CARACTERISTICAS_DEL_PLAN_FABRICACION" ThisKey="ID" OtherKey="ID_Doc_Registro" Type="CARACTERISTICAS_DEL_PLAN_FABRICACION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_RECEPCIONES" Member="R_RECEPCIONES">
+    <Type Name="R_RECEPCIONES">
+      <Column Name="ID_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="N_RECEPCION" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_RECEPCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_REGISTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HORA_REGISTRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VERIFICADOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VALORACION_SER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALORACION_CAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECEP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_CONTROLADA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_RECHAZADA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CANTIDAD_NOK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LOTE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALBARAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REGISTRADA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="N_INFORME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INSPECCIONAR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N_OF" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA_OF" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CANTIDAD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DEMERITOS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALORACION_SER_BRAIN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FECHA_PREVISTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WEBEPO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="R_RECEPCIONES_R_VALORACION_CAL" Member="R_VALORACION_CAL" ThisKey="ID_RECEPCION" OtherKey="ID_RECEPCION" Type="R_VALORACION_CAL" />
+      <Association Name="R_RECEPCIONES_R_CARACTERISTICAS" Member="R_CARACTERISTICAS" ThisKey="ID_RECEPCION" OtherKey="ID_RECEPCION" Type="R_CARACTERISTICAS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.R_V_ARTICULOS_AS400_AGRUP" Member="R_V_ARTICULOS_AS400_AGRUP">
+    <Type Name="R_V_ARTICULOS_AS400_AGRUP">
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="DES_ARTICULO" Type="System.String" DbType="Char(26) NOT NULL" CanBeNull="false" />
+      <Column Name="DES_ARTICULO_2" Type="System.String" DbType="Char(26) NOT NULL" CanBeNull="false" />
+      <Column Name="MATERIAL" Type="System.String" DbType="Char(21) NOT NULL" CanBeNull="false" />
+      <Column Name="MEDIDAS" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ESPECIFICACION_TECNICA" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="N_PLANO" Type="System.String" DbType="Char(19) NOT NULL" CanBeNull="false" />
+      <Column Name="F_PLANO" Type="System.String" DbType="Char(16) NOT NULL" CanBeNull="false" />
+      <Column Name="N_ESPECIFICACION_TECNICA" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LANTEGI" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="COMPRA" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[HOJA DE INSTRUCCIONES]" Member="HOJA_DE_INSTRUCCIONES">
+    <Type Name="HOJA_DE_INSTRUCCIONES">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[NIVEL HOJA]" Member="NIVEL_HOJA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CROQUIS" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[NUMERO DE OPERACION]" Member="NUMERO_DE_OPERACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[MAQUINA 1]" Member="MAQUINA_1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[MAQUINA 2]" Member="MAQUINA_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[OBSER 2]" Member="OBSER_2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="[TIPO CROQUIS]" Member="TIPO_CROQUIS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MATERIAL" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MEDIDAS" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ACCIONES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[FECHA HI]" Member="FECHA_HI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[NIVEL OPERACION]" Member="NIVEL_OPERACION" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[TIPO CONTENEDOR]" Member="TIPO_CONTENEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Nº PIEZAS]" Member="Nº_PIEZAS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[EN RECEP]" Member="EN_RECEP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DIBUJO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TiempoCiclo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_PROVEEDORES_POR_HOJA" Member="PROVEEDORES_POR_HOJA" ThisKey="CODIGO" OtherKey="CODIGO" Type="PROVEEDORES_POR_HOJA" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_PARAMETROS_DE_MAQUINAS" Member="PARAMETROS_DE_MAQUINAS" ThisKey="CODIGO" OtherKey="OPERACION" Type="PARAMETROS_DE_MAQUINAS" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_ORDEN_DE_MONTAJE_DE_PIEZAS" Member="ORDEN_DE_MONTAJE_DE_PIEZAS" ThisKey="CODIGO" OtherKey="NUMOPER" Type="ORDEN_DE_MONTAJE_DE_PIEZAS" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_NIVELES_HOJAS_DE_INSTRUCCIONES" Member="NIVELES_HOJAS_DE_INSTRUCCIONES" ThisKey="CODIGO" OtherKey="OPERACION" Type="NIVELES_HOJAS_DE_INSTRUCCIONES" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_INSTRUCCIONES_DE_TRABAJO" Member="INSTRUCCIONES_DE_TRABAJO" ThisKey="CODIGO" OtherKey="OPERACION" Type="INSTRUCCIONES_DE_TRABAJO" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_HOJA_DE_INSTRUCCIONES_FABRICACION" Member="HOJA_DE_INSTRUCCIONES_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES_FABRICACION" Cardinality="One" />
+      <Association Name="OPERACIONES_TIPO_HOJA_DE_INSTRUCCIONES" Member="OPERACIONES_TIPO" ThisKey="CODIGO" OtherKey="COD_OPERACION" Type="OPERACIONES_TIPO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[HOJA DE INSTRUCCIONES FABRICACION]" Member="HOJA_DE_INSTRUCCIONES_FABRICACION">
+    <Type Name="HOJA_DE_INSTRUCCIONES_FABRICACION">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[NIVEL HOJA]" Member="NIVEL_HOJA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CROQUIS" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[NUMERO DE OPERACION]" Member="NUMERO_DE_OPERACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[MAQUINA 1]" Member="MAQUINA_1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[MAQUINA 2]" Member="MAQUINA_2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="N2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[OBSER 2]" Member="OBSER_2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="[TIPO CROQUIS]" Member="TIPO_CROQUIS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MATERIAL" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MEDIDAS" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ACCIONES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[FECHA HI]" Member="FECHA_HI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[NIVEL OPERACION]" Member="NIVEL_OPERACION" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[TIPO CONTENEDOR]" Member="TIPO_CONTENEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Nº PIEZAS]" Member="Nº_PIEZAS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIBUJO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TiempoCiclo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_ORDEN_DE_MONTAJE_DE_PIEZAS_FABRICACION" Member="ORDEN_DE_MONTAJE_DE_PIEZAS_FABRICACION" ThisKey="CODIGO" OtherKey="NUMOPER" Type="ORDEN_DE_MONTAJE_DE_PIEZAS_FABRICACION" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_PARAMETROS_DE_MAQUINAS_FABRICACION" Member="PARAMETROS_DE_MAQUINAS_FABRICACION" ThisKey="CODIGO" OtherKey="OPERACION" Type="PARAMETROS_DE_MAQUINAS_FABRICACION" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_NIVELES_HOJAS_DE_INSTRUCCIONES_FABRICACION" Member="NIVELES_HOJAS_DE_INSTRUCCIONES_FABRICACION" ThisKey="CODIGO" OtherKey="OPERACION" Type="NIVELES_HOJAS_DE_INSTRUCCIONES_FABRICACION" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_FABRICACION_INSTRUCCIONES_DE_TRABAJO_FABRICACION" Member="INSTRUCCIONES_DE_TRABAJO_FABRICACION" ThisKey="CODIGO" OtherKey="OPERACION" Type="INSTRUCCIONES_DE_TRABAJO_FABRICACION" />
+      <Association Name="HOJA_DE_INSTRUCCIONES_HOJA_DE_INSTRUCCIONES_FABRICACION" Member="HOJA_DE_INSTRUCCIONES" ThisKey="CODIGO" OtherKey="CODIGO" Type="HOJA_DE_INSTRUCCIONES" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[T LOGO]" Member="T_LOGO">
+    <Type Name="T_LOGO">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LOGO" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="F_VERSION" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PLANTA" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="BATZ_IVA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PAIS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RUTA_PLANTILLA_8D" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="TEXTO_1_FACTURA" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="TEXTO_2_FACTURA" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[CARACTERISTICAS DEL PLAN]" Member="CARACTERISTICAS_DEL_PLAN">
+    <Type Name="CARACTERISTICAS_DEL_PLAN">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAQUINA" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="POSICION" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[ORDEN CARAC]" Member="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[CARAC/PARAM]" Member="CARAC_PARAM" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[FRECUENCIA CONTROL]" Member="FRECUENCIA_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FRECUENCIA REGISTRO]" Member="FRECUENCIA_REGISTRO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO EVALUACION]" Member="METODO_EVALUACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="RESPONSABLE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[MEDIO DENOMINACION]" Member="MEDIO_DENOMINACION" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[MEDIO RFA]" Member="MEDIO_RFA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[ACCION RECOMENDADA]" Member="ACCION_RECOMENDADA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[RESPONSABLE REGISTRO]" Member="RESPONSABLE_REGISTRO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[CONT CAUSA]" Member="CONT_CAUSA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[ID CARACTERISTICA]" Member="ID_CARACTERISTICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[PROCEDE DE]" Member="PROCEDE_DE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[PROCESO/PRODUCTO]" Member="PROCESO_PRODUCTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TAMAÑO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO CONTROL]" Member="METODO_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO CONTROL FAB]" Member="METODO_CONTROL_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[HOJA REGISTROS]" Member="HOJA_REGISTROS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VER_REG_REC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_PRO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_DIM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_MAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_FUN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MAXIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MINIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[FRECUENCIA CONTROL CAL]" Member="FRECUENCIA_CONTROL_CAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TAMAÑO CAL]" Member="TAMAÑO_CAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_Control_ME_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Control_DET_ME_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Control_DET_ME_CTRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Responsable_Maquina" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Operario" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Calidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Reg_Ope" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Reg_Cal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID_Doc_Registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Responsable_Reg_Gestor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CARACTERISTICAS_DEL_PLAN_Archivos_Caracteristicas_Plan" Member="Archivos_Caracteristicas_Plan" ThisKey="ID_REGISTRO" OtherKey="Id_Carac_Plan" Type="Archivos_Caracteristicas_Plan" />
+      <Association Name="Maestro_Documento_Registro_CARACTERISTICAS_DEL_PLAN" Member="Maestro_Documento_Registro" ThisKey="ID_Doc_Registro" OtherKey="ID" Type="Maestro_Documento_Registro" IsForeignKey="true" />
+      <Association Name="PLAN_DE_CONTROL_CARACTERISTICAS_DEL_PLAN" Member="PLAN_DE_CONTROL" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[CARACTERISTICAS DEL PLAN FABRICACION]" Member="CARACTERISTICAS_DEL_PLAN_FABRICACION">
+    <Type Name="CARACTERISTICAS_DEL_PLAN_FABRICACION">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAQUINA" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="POSICION" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[ORDEN CARAC]" Member="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[CARAC/PARAM]" Member="CARAC_PARAM" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="[FRECUENCIA CONTROL]" Member="FRECUENCIA_CONTROL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="[FRECUENCIA REGISTRO]" Member="FRECUENCIA_REGISTRO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO EVALUACION]" Member="METODO_EVALUACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RESPONSABLE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[MEDIO DENOMINACION]" Member="MEDIO_DENOMINACION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[MEDIO RFA]" Member="MEDIO_RFA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[ACCION RECOMENDADA]" Member="ACCION_RECOMENDADA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[RESPONSABLE REGISTRO]" Member="RESPONSABLE_REGISTRO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[CONT CAUSA]" Member="CONT_CAUSA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[ID CARACTERISTICA]" Member="ID_CARACTERISTICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[PROCEDE DE]" Member="PROCEDE_DE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[PROCESO/PRODUCTO]" Member="PROCESO_PRODUCTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TAMAÑO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO CONTROL]" Member="METODO_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[METODO CONTROL FAB]" Member="METODO_CONTROL_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[HOJA REGISTROS]" Member="HOJA_REGISTROS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VER_REG_REC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_PRO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_DIM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_MAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_FUN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MAXIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MINIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[FRECUENCIA CONTROL CAL]" Member="FRECUENCIA_CONTROL_CAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TAMAÑO CAL]" Member="TAMAÑO_CAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_Control_ME_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Control_DET_ME_FAB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Control_DET_ME_CTRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Responsable_Maquina" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Operario" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Calidad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Reg_Ope" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Responsable_Reg_Cal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID_Doc_Registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Responsable_Reg_Gestor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CARACTERISTICAS_DEL_PLAN_FABRICACION_Archivos_Caracteristicas_Plan_FAB" Member="Archivos_Caracteristicas_Plan_FAB" ThisKey="ID_REGISTRO" OtherKey="Id_Carac_Plan" Type="Archivos_Caracteristicas_Plan_FAB" />
+      <Association Name="Maestro_Documento_Registro_CARACTERISTICAS_DEL_PLAN_FABRICACION" Member="Maestro_Documento_Registro" ThisKey="ID_Doc_Registro" OtherKey="ID" Type="Maestro_Documento_Registro" IsForeignKey="true" />
+      <Association Name="PLAN_DE_CONTROL_FABRICACION_CARACTERISTICAS_DEL_PLAN_FABRICACION" Member="PLAN_DE_CONTROL_FABRICACION" ThisKey="CODIGO" OtherKey="CODIGO" Type="PLAN_DE_CONTROL_FABRICACION" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GRAVEDAD" Member="GRAVEDAD">
+    <Type Name="GRAVEDAD">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[SEVERIDAD DEL EFECTO]" Member="SEVERIDAD_DEL_EFECTO" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PUNTUACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Limite_NPR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_CONTAR_CAUSAS" Member="V_CONTAR_CAUSAS">
+    <Type Name="V_CONTAR_CAUSAS">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="[CONT CAUSA]" Member="CONT_CAUSA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NPR_CLIENTE" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="NPR_CAUSA" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="NPR_CAUSA2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DETECCION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="OCURRENCIA" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[NUEVA DETECCION]" Member="NUEVA_DETECCION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[NUEVA OCURRENCIA]" Member="NUEVA_OCURRENCIA" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.[Proc_Sol/Maquina_Operacion_Tipo]" Method="Proc_Sol_Maquina_Operacion_Tipo">
+    <Parameter Name="CODOPERACION" Parameter="cODOPERACION" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="Proc_Sol_Maquina_Operacion_TipoResult">
+      <Column Name="ID_REGISTRO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TIPO SOL/MAQUINA]" Member="TIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Proc_Maquinas_Celulas" Method="Proc_Maquinas_Celulas">
+    <Parameter Name="IDSECCION" Parameter="iDSECCION" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Proc_Maquinas_CelulasResult">
+      <Column Name="[ID SECCION]" Member="ID_SECCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[ID CELULA]" Member="ID_CELULA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CELULA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Proc_MInstruccionesTrabajo" Method="Proc_MInstruccionesTrabajo">
+    <Parameter Name="OPERACIONTXT" Parameter="oPERACIONTXT" Type="System.String" DbType="Char(40)" />
+    <ElementType Name="Proc_MInstruccionesTrabajoResult">
+      <Column Name="[OPERACION GENERAL]" Member="OPERACION_GENERAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[TIPO SOL/MAQUINA]" Member="TIPO_SOL_MAQUINA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="INSTRUCCION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_REGISTRO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.R_Proc_Carac_Auditoria" Method="R_Proc_Carac_Auditoria">
+    <Parameter Name="IDAUDITORIA" Parameter="iDAUDITORIA" Type="System.Decimal" DbType="Decimal" />
+    <ElementType Name="R_Proc_Carac_AuditoriaResult">
+      <Column Name="ID_CARAC" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AUDITORIA" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CARACTERISTICA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ESPECIFICACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MINIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MAXIM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TECNICA_EVALUACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TAMAÑO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FRECUENCIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="METODO_CONTROL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLASE" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="DECISION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_CARAC_COPIA" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="VER_REG_REC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VER_REG_PRO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.R_Proc_Recepciones_Calidad_Precio" Method="R_Proc_Recepciones_Calidad_Precio">
+    <Parameter Name="DESDE" Parameter="dESDE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HASTA" Parameter="hASTA" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PROVEEDOR" Parameter="pROVEEDOR" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ORDENAR_POR" Parameter="oRDENAR_POR" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IDPROYECTO" Parameter="iDPROYECTO" Type="System.Decimal" DbType="Decimal" />
+    <ElementType Name="R_Proc_Recepciones_Calidad_PrecioResult">
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N_RECEP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CANT_RECEPCIONADA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DES_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.R_Proc_Recepciones_Cantidad_Precio" Method="R_Proc_Recepciones_Cantidad_Precio">
+    <Parameter Name="DESDE" Parameter="dESDE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HASTA" Parameter="hASTA" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PROVEEDOR" Parameter="pROVEEDOR" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ARTICULO" Parameter="aRTICULO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IDPROYECTO" Parameter="iDPROYECTO" Type="System.Decimal" DbType="Decimal" />
+    <ElementType Name="R_Proc_Recepciones_Cantidad_PrecioResult">
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COD_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DES_PROVEEDOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N_RECEP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CANT_RECEPCIONADA" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.R_Proc_Resumen_Tomas" Method="R_Proc_Resumen_Tomas">
+    <Parameter Name="DESDE" Parameter="dESDE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HASTA" Parameter="hASTA" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CARACTERISTICA" Parameter="cARACTERISTICA" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ARTICULO" Parameter="aRTICULO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Decimal" DbType="Decimal" />
+    <ElementType Name="R_Proc_Resumen_TomasResult">
+      <Column Name="COD_ARTICULO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDEN_CARAC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CARACTERISTICA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FECHA_RECEPCION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VALOR_MAXIMO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALOR_MINIMO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VALOR_MEDIO" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.P_InsertRecepcionesAS400" Method="P_InsertRecepcionesAS400">
+    <Parameter Name="N_RECEPCION" Parameter="n_RECEPCION" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Demeritos" Parameter="demeritos" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Proc_Actualizar_OperacionTipo" Method="Proc_Actualizar_OperacionTipo">
+    <Parameter Name="COD_OPERACION" Parameter="cOD_OPERACION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="COD_OPERACION_Nuevo" Parameter="cOD_OPERACION_Nuevo" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Proc_Actualizar_MaestroArticulo" Method="Proc_Actualizar_MaestroArticulo">
+    <Parameter Name="CODIGO" Parameter="cODIGO" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="CODIGO_Nuevo" Parameter="cODIGO_Nuevo" Type="System.String" DbType="NVarChar(25)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Proc_Acciones_Correctivas_Amfe" Method="Proc_Acciones_Correctivas_Amfe">
+    <Parameter Name="CODIGO" Parameter="cODIGO" Type="System.String" DbType="NVarChar(25)" />
+    <ElementType Name="Proc_Acciones_Correctivas_AmfeResult">
+      <Column Name="CODIGO" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="[ACCION RECOMENDADA]" Member="ACCION_RECOMENDADA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[NUM OPERACION]" Member="NUM_OPERACION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[COD OPERACION]" Member="COD_OPERACION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[NPR-CLAVE]" Member="NPR_CLAVE" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DEPARTAMENTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[FECHA DE INICIO]" Member="FECHA_DE_INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[FECHA DE FIN]" Member="FECHA_DE_FIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PROGRESO" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[EFECTO DE LA ACCION]" Member="EFECTO_DE_LA_ACCION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[NUEVA OCURRENCIA]" Member="NUEVA_OCURRENCIA" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[NUEVA GRAVEDAD]" Member="NUEVA_GRAVEDAD" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[NUEVA DETECCION]" Member="NUEVA_DETECCION" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="NPR" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="[CONT CAUSA]" Member="CONT_CAUSA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

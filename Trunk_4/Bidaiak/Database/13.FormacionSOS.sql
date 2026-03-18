@@ -1,0 +1,1 @@
+grant SELECT on "MATRIZPUESTOS"."ADOK_TRD" to "BIDAIAK" ;

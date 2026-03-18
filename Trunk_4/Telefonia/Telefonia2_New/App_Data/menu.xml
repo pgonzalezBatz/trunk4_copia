@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root>			
+	<Item title="mantenimientosGenerales" description="" url="" id="">
+		<Item title="alveolos" description="" url="" id="igorre">
+			<Item title="alveolo" description="" url="Mantenimientos\Alveolo\Alveolo.aspx" id="" />
+			<Item title="Tipo" description="" url="Mantenimientos\Alveolo\TipoAlveolo.aspx" id="" />      
+		</Item>
+		<Item title="telefonos" description="" url="" id="">
+			<Item title="telefono" description="" url="Mantenimientos\Telefono\Telefono.aspx" id="" />
+			<Item title="compañia" description="" url="Mantenimientos\Telefono\CiaTlfno.aspx" id="" />			
+      <Item title="Perfiles movil" description="" url="Mantenimientos\Telefono\PerfilesMovil.aspx" id="" />
+      <Item title="Prefijo" description="" url="Mantenimientos\Telefono\Prefijo.aspx" id="" />
+      <Item title="Tarifa datos" description="" url="Mantenimientos\Telefono\TarifaDatos.aspx" id="" />
+		</Item>
+		<Item title="grupoExtension" description="" url="Mantenimientos\GrupoExtension.aspx" id="" />
+		<Item title="administradores" description="" url="Mantenimientos\Administradores.aspx" id="igorre" />
+		<Item title="otros" description="" url="Mantenimientos\Otros.aspx" id="" />
+	</Item>
+	<Item title="gestionExtensiones" description="" url="" id="">
+		<Item title="extension" description="" url="Mantenimientos\Extension\Extension.aspx" id="" />
+		<Item title="tipoLinea" description="" url="Mantenimientos\Extension\TipoLinea.aspx" id="" />
+		<Item title="asignacionExtensiones" description="" url="Mantenimientos\Extension\Asignaciones\AsigExtInternas.aspx" id="" />
+		<Item title="asignacionMoviles" description="" url="Mantenimientos\Extension\Asignaciones\AsigMoviles.aspx" id="" />
+		<Item title="asignacionNumSinExtension" description="" url="Mantenimientos\Extension\Asignaciones\AsigNumSinExt.aspx" id="" />
+	</Item>
+	<Item title="listados" description="" url="" id="">   
+    <Item title="moviles" description="" url="Listados\Moviles\Moviles.aspx" id=""></Item>
+    <Item title="numerosDirectos" description="" url="Listados\NumerosDirectos.aspx" id=""></Item>
+    <Item title="extensiones" description="" url="Listados\Extensiones.aspx" id=""></Item>
+    <Item title="repartidor" description="" url="Listados\RepartidorAlveolos.aspx" id="" />
+		<Item title="facturacion" description="" url="Listados\Facturacion\FacturacionPersona.aspx" id="" />
+    <Item title="facturacionMoviles" description="" url="Listados\Moviles\CargaFacturasMov.aspx" id="igorre"></Item>
+    <Item title="Importar/Exportar Matrici" description="" url="Listados\Matrici\ImportarExportar.aspx" id="igorre"></Item>
+    <Item title="sincronizaciones" description="" url="" id="igorre">
+      <Item title="Altas / Bajas" description="" url="Sincronizacion\AltasBajas.aspx" id="" />
+      <Item title="sincronizarGeminix" description="" url="Sincronizacion\Sincronizacion.aspx" id=""></Item>
+    </Item>				    
+	</Item>
+  <Item title="Refrescar usuarios" description="" url="DeleteCache.aspx" id="igorre" />  
+</Root>

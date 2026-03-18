@@ -1,0 +1,1141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Modelo_BezerreSis.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CLIENTES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="IDPLANTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CLIPRO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDCLI" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDPRO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="INDICADORES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDCLIENTE" Type="number" Precision="38" Scale="0" />
+          <Property Name="IDPRODUCTO" Type="number" Precision="38" Scale="0" />
+          <Property Name="FECHA" Type="date" />
+          <Property Name="ENVIADAS" Type="number" Precision="38" Scale="0" />
+          <Property Name="RECHAZADAS" Type="number" Precision="38" Scale="0" />
+          <Property Name="INCIDENCIAS" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="OBJETIVOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDCLIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="PPM_ANUAL" Type="number" Precision="38" Scale="0" />
+          <Property Name="PPM_MENSUAL" Type="number" Precision="38" Scale="0" />
+          <Property Name="IPB_SEMESTRAL" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="PRODUCTOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CODIGO" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="NOMBRE" Type="nvarchar2" MaxLength="1000" />
+          <Property Name="IDPLANTA" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RECLAMACIONES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="REFCLIENTE" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="PLANTACLIENTE" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CODXCLIENTE" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="FECHACREACION" Type="date" Nullable="false" />
+          <Property Name="REFINTERNAPIEZA" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="DENOMINACION" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="PROYECTO" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="NUMPIEZASNOK" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar2" MaxLength="1000" Nullable="false" />
+          <Property Name="PRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PROCEDENCIA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CLASIFICACION" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NIVELIMPORTANCIA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="REPETITIVA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="RECLAMACIONOFICIAL" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CREADOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="AFECTA_INDICADORES" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RECLAMACIONES_CIERRE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_RESP_CONTENCION" Type="date" />
+          <Property Name="FECHA_RESP_CORRECTIVAS" Type="date" />
+          <Property Name="FECHA_CIERRECLIENTE" Type="date" />
+          <Property Name="COSTE_REVISIONCLIENTE" Type="number" Precision="38" Scale="0" />
+          <Property Name="COSTE_CARGOSCLIENTE" Type="number" Precision="38" Scale="0" />
+          <Property Name="COSTE_REVISIONINTERNA" Type="number" Precision="38" Scale="0" />
+          <Property Name="COSTE_MATERIALESCHATARRA" Type="number" Precision="38" Scale="0" />
+          <Property Name="COSTE_OTROS" Type="number" Precision="38" Scale="0" />
+          <Property Name="COSTE_OTROS_DESCRIPCION" Type="nvarchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="GRUPOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="OBSOLETO" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GRUPOSRECURSOS">
+          <Key>
+            <PropertyRef Name="IDGRUPOS" />
+            <PropertyRef Name="IDRECURSOS" />
+          </Key>
+          <Property Name="IDGRUPOS" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDRECURSOS" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PLANTAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar2" MaxLength="50" />
+          <Property Name="DESCRIP" Type="varchar2" MaxLength="100" />
+          <Property Name="OBSOLETO" Type="number" Precision="38" Scale="0" />
+          <Property Name="DOMINIO" Type="varchar2" MaxLength="20" />
+          <Property Name="PATH_LDAP" Type="varchar2" MaxLength="75" />
+          <Property Name="PATH_EXCHANGE" Type="varchar2" MaxLength="75" />
+          <Property Name="TIMEZONE_ID" Type="varchar2" MaxLength="50" />
+          <Property Name="MOSTRAR_RELOJ" Type="number" Precision="1" Scale="0" />
+          <Property Name="TEXTO_RELOJ" Type="varchar2" MaxLength="30" />
+          <Property Name="USER_LDAP" Type="varchar2" MaxLength="50" />
+          <Property Name="PASS_LDAP" Type="varchar2" MaxLength="50" />
+          <Property Name="CIF" Type="varchar2" MaxLength="15" />
+          <Property Name="UBICACION" Type="varchar2" MaxLength="2" />
+          <Property Name="ID_IZARO" Type="number" Precision="38" Scale="0" />
+          <Property Name="ID_MONEDA" Type="number" Precision="38" Scale="0" />
+          <Property Name="CIUDAD" Type="varchar2" MaxLength="75" />
+          <Property Name="PAIS" Type="varchar2" MaxLength="75" />
+          <Property Name="ID_BRAIN" Type="varchar2" MaxLength="2" />
+          <Property Name="ID_EPSILON" Type="varchar2" MaxLength="10" />
+          <Property Name="XBAT_CONSTRING" Type="varchar2" MaxLength="150" />
+          <Property Name="DIRECCION" Type="varchar2" MaxLength="100" />
+          <Property Name="CP" Type="varchar2" MaxLength="10" />
+          <Property Name="PROVINCIA" Type="varchar2" MaxLength="75" />
+          <Property Name="TELEFONO" Type="varchar2" MaxLength="20" />
+          <Property Name="FAX" Type="varchar2" MaxLength="20" />
+          <Property Name="EPSILON_CONSTRING" Type="varchar2" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="RECURSOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDPARENT" Type="number" Precision="38" Scale="0" />
+          <Property Name="URL" Type="varchar2" MaxLength="150" />
+          <Property Name="OBSOLETO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TIPO" Type="varchar2" MaxLength="1" />
+          <Property Name="IMAGEN" Type="blob" />
+          <Property Name="VISIBLE" Type="number" Precision="1" Scale="0" />
+          <Property Name="FICHERO" Type="blob" />
+          <Property Name="NOMBRE_FICHERO" Type="varchar2" MaxLength="50" />
+          <Property Name="TARGET" Type="varchar2" MaxLength="10" />
+          <Property Name="CATALOGABLE" Type="number" Precision="1" Scale="0" />
+          <Property Name="IMG_CATALOGO" Type="blob" />
+          <Property Name="DESCRIP_CATALOGO" Type="clob" />
+          <Property Name="NOMBRE_IMGCATALOGO" Type="varchar2" MaxLength="30" />
+          <Property Name="ID_RESPONSABLE" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDEMPRESAS" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDCULTURAS" Type="varchar2" MaxLength="5" Nullable="false" />
+          <Property Name="NOMBREUSUARIO" Type="varchar2" MaxLength="100" />
+          <Property Name="IDDIRECTORIOACTIVO" Type="varchar2" MaxLength="100" />
+          <Property Name="CODPERSONA" Type="number" Precision="38" Scale="0" />
+          <Property Name="PWD" Type="varchar2" MaxLength="20" />
+          <Property Name="FECHAALTA" Type="date" />
+          <Property Name="FECHABAJA" Type="date" />
+          <Property Name="APELLIDO1" Type="varchar2" MaxLength="25" />
+          <Property Name="APELLIDO2" Type="varchar2" MaxLength="25" />
+          <Property Name="IDMATRIX" Type="varchar2" MaxLength="25" />
+          <Property Name="IDFTP" Type="varchar2" MaxLength="20" />
+          <Property Name="EMAIL" Type="varchar2" MaxLength="100" />
+          <Property Name="IDDEPARTAMENTO" Type="varchar2" MaxLength="10" />
+          <Property Name="NOMBRE" Type="varchar2" MaxLength="40" />
+          <Property Name="FOTO" Type="blob" />
+          <Property Name="DNI" Type="varchar2" MaxLength="20" />
+          <Property Name="NIKEUSKARAZ" Type="number" Precision="1" Scale="0" />
+          <Property Name="IDPLANTA" Type="number" Precision="38" Scale="0" />
+          <Property Name="USUARIO_EMPRESA" Type="number" Precision="1" Scale="0" />
+        </EntityType>
+        <EntityType Name="USUARIOSGRUPOS">
+          <Key>
+            <PropertyRef Name="IDUSUARIOS" />
+            <PropertyRef Name="IDGRUPOS" />
+          </Key>
+          <Property Name="IDUSUARIOS" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDGRUPOS" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="CLIENTES_FK1">
+          <End Role="PLANTAS" Type="Self.PLANTAS" Multiplicity="1" />
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANTAS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CLIENTES">
+              <PropertyRef Name="IDPLANTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CLIPRO_FK1">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CLIPRO" Type="Self.CLIPRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CLIPRO">
+              <PropertyRef Name="IDCLI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CLIPRO_FK2">
+          <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CLIPRO" Type="Self.CLIPRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CLIPRO">
+              <PropertyRef Name="IDPRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GRUPOSRECURSOSIDGRUPOS">
+          <End Role="GRUPOS" Type="Self.GRUPOS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GRUPOSRECURSOS" Type="Self.GRUPOSRECURSOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GRUPOSRECURSOS">
+              <PropertyRef Name="IDGRUPOS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GRUPOSRECURSOSIDRECURSOS">
+          <End Role="RECURSOS" Type="Self.RECURSOS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GRUPOSRECURSOS" Type="Self.GRUPOSRECURSOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECURSOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GRUPOSRECURSOS">
+              <PropertyRef Name="IDRECURSOS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIOSGRUPOSIDGRUPOS">
+          <End Role="GRUPOS" Type="Self.GRUPOS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="USUARIOSGRUPOS" Type="Self.USUARIOSGRUPOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="USUARIOSGRUPOS">
+              <PropertyRef Name="IDGRUPOS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIOSGRUPOSIDUSUARIOS">
+          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="USUARIOSGRUPOS" Type="Self.USUARIOSGRUPOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="USUARIOSGRUPOS">
+              <PropertyRef Name="IDUSUARIOS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INDICADORES_FK1">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="0..1" />
+          <End Role="INDICADORES" Type="Self.INDICADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="INDICADORES">
+              <PropertyRef Name="IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INDICADORES_FK2">
+          <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="0..1" />
+          <End Role="INDICADORES" Type="Self.INDICADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="INDICADORES">
+              <PropertyRef Name="IDPRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="OBJETIVOS_FK1">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OBJETIVOS" Type="Self.OBJETIVOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OBJETIVOS">
+              <PropertyRef Name="IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRODUCTOS_FK1">
+          <End Role="PLANTAS" Type="Self.PLANTAS" Multiplicity="1" />
+          <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANTAS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PRODUCTOS">
+              <PropertyRef Name="IDPLANTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECLAMACIONES_CIERRE_FK1">
+          <End Role="RECLAMACIONES" Type="Self.RECLAMACIONES" Multiplicity="1" />
+          <End Role="RECLAMACIONES_CIERRE" Type="Self.RECLAMACIONES_CIERRE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="RECLAMACIONES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES_CIERRE">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECLAMACIONES_FK1">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="1" />
+          <End Role="RECLAMACIONES" Type="Self.RECLAMACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES">
+              <PropertyRef Name="CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECLAMACIONES_FK2">
+          <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
+          <End Role="RECLAMACIONES" Type="Self.RECLAMACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES">
+              <PropertyRef Name="PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECLAMACIONES_FK3">
+          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+          <End Role="RECLAMACIONES" Type="Self.RECLAMACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES">
+              <PropertyRef Name="CREADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USUARIOS_FK1">
+          <End Role="PLANTAS" Type="Self.PLANTAS" Multiplicity="0..1" />
+          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANTAS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="IDPLANTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Modelo_BezerreSisStoreContainer">
+          <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="CLIPRO" EntityType="Self.CLIPRO" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="INDICADORES" EntityType="Self.INDICADORES" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="OBJETIVOS" EntityType="Self.OBJETIVOS" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="RECLAMACIONES" EntityType="Self.RECLAMACIONES" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="RECLAMACIONES_CIERRE" EntityType="Self.RECLAMACIONES_CIERRE" Schema="BEZERRESIS" store:Type="Tables" />
+          <EntitySet Name="GRUPOS" EntityType="Self.GRUPOS" Schema="SAB" store:Type="Tables" />
+          <EntitySet Name="GRUPOSRECURSOS" EntityType="Self.GRUPOSRECURSOS" Schema="SAB" store:Type="Tables" />
+          <EntitySet Name="PLANTAS" EntityType="Self.PLANTAS" Schema="SAB" store:Type="Tables" />
+          <EntitySet Name="RECURSOS" EntityType="Self.RECURSOS" Schema="SAB" store:Type="Tables" />
+          <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="SAB" store:Type="Tables" />
+          <EntitySet Name="USUARIOSGRUPOS" EntityType="Self.USUARIOSGRUPOS" Schema="SAB" store:Type="Tables" />
+          <AssociationSet Name="CLIENTES_FK1" Association="Self.CLIENTES_FK1">
+            <End Role="PLANTAS" EntitySet="PLANTAS" />
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+          </AssociationSet>
+          <AssociationSet Name="CLIPRO_FK1" Association="Self.CLIPRO_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="CLIPRO" EntitySet="CLIPRO" />
+          </AssociationSet>
+          <AssociationSet Name="CLIPRO_FK2" Association="Self.CLIPRO_FK2">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="CLIPRO" EntitySet="CLIPRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GRUPOSRECURSOSIDGRUPOS" Association="Self.FK_GRUPOSRECURSOSIDGRUPOS">
+            <End Role="GRUPOS" EntitySet="GRUPOS" />
+            <End Role="GRUPOSRECURSOS" EntitySet="GRUPOSRECURSOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GRUPOSRECURSOSIDRECURSOS" Association="Self.FK_GRUPOSRECURSOSIDRECURSOS">
+            <End Role="RECURSOS" EntitySet="RECURSOS" />
+            <End Role="GRUPOSRECURSOS" EntitySet="GRUPOSRECURSOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIOSGRUPOSIDGRUPOS" Association="Self.FK_USUARIOSGRUPOSIDGRUPOS">
+            <End Role="GRUPOS" EntitySet="GRUPOS" />
+            <End Role="USUARIOSGRUPOS" EntitySet="USUARIOSGRUPOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIOSGRUPOSIDUSUARIOS" Association="Self.FK_USUARIOSGRUPOSIDUSUARIOS">
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+            <End Role="USUARIOSGRUPOS" EntitySet="USUARIOSGRUPOS" />
+          </AssociationSet>
+          <AssociationSet Name="INDICADORES_FK1" Association="Self.INDICADORES_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="INDICADORES" EntitySet="INDICADORES" />
+          </AssociationSet>
+          <AssociationSet Name="INDICADORES_FK2" Association="Self.INDICADORES_FK2">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="INDICADORES" EntitySet="INDICADORES" />
+          </AssociationSet>
+          <AssociationSet Name="OBJETIVOS_FK1" Association="Self.OBJETIVOS_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="OBJETIVOS" EntitySet="OBJETIVOS" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUCTOS_FK1" Association="Self.PRODUCTOS_FK1">
+            <End Role="PLANTAS" EntitySet="PLANTAS" />
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+          </AssociationSet>
+          <AssociationSet Name="RECLAMACIONES_CIERRE_FK1" Association="Self.RECLAMACIONES_CIERRE_FK1">
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+            <End Role="RECLAMACIONES_CIERRE" EntitySet="RECLAMACIONES_CIERRE" />
+          </AssociationSet>
+          <AssociationSet Name="RECLAMACIONES_FK1" Association="Self.RECLAMACIONES_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+          </AssociationSet>
+          <AssociationSet Name="RECLAMACIONES_FK2" Association="Self.RECLAMACIONES_FK2">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+          </AssociationSet>
+          <AssociationSet Name="RECLAMACIONES_FK3" Association="Self.RECLAMACIONES_FK3">
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+          </AssociationSet>
+          <AssociationSet Name="USUARIOS_FK1" Association="Self.USUARIOS_FK1">
+            <End Role="PLANTAS" EntitySet="PLANTAS" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Modelo_BezerreSis" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="CLIENTES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="NOMBRE" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="INDICADORES" Relationship="Self.INDICADORES_FK1" FromRole="CLIENTES" ToRole="INDICADORES" />
+          <Property Name="IDPLANTA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="PLANTAS" Relationship="Modelo_BezerreSis.CLIENTES_FK1" FromRole="CLIENTES" ToRole="PLANTAS" />
+          <NavigationProperty Name="OBJETIVOS" Relationship="Modelo_BezerreSis.OBJETIVOS_FK1" FromRole="CLIENTES" ToRole="OBJETIVOS" />
+          <NavigationProperty Name="CLIPRO" Relationship="Modelo_BezerreSis.CLIPRO_FK1" FromRole="CLIENTES" ToRole="CLIPRO" />
+          <NavigationProperty Name="RECLAMACIONES" Relationship="Modelo_BezerreSis.RECLAMACIONES_FK1" FromRole="CLIENTES" ToRole="RECLAMACIONES" />
+        </EntityType>
+        <EntityType Name="INDICADORES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="IDCLIENTE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="IDPRODUCTO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="FECHA" Type="DateTime" />
+          <Property Name="ENVIADAS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="RECHAZADAS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="INCIDENCIAS" Type="Decimal" Precision="38" Scale="0" />
+          <NavigationProperty Name="CLIENTES" Relationship="Self.INDICADORES_FK1" FromRole="INDICADORES" ToRole="CLIENTES" />
+          <NavigationProperty Name="PRODUCTOS" Relationship="Self.INDICADORES_FK2" FromRole="INDICADORES" ToRole="PRODUCTOS" />
+        </EntityType>
+        <EntityType Name="PRODUCTOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CODIGO" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="INDICADORES" Relationship="Self.INDICADORES_FK2" FromRole="PRODUCTOS" ToRole="INDICADORES" />
+          <NavigationProperty Name="CLIPRO" Relationship="Modelo_BezerreSis.CLIPRO_FK2" FromRole="PRODUCTOS" ToRole="CLIPRO" />
+          <Property Name="IDPLANTA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="PLANTAS" Relationship="Modelo_BezerreSis.PRODUCTOS_FK1" FromRole="PRODUCTOS" ToRole="PLANTAS" />
+          <NavigationProperty Name="RECLAMACIONES" Relationship="Modelo_BezerreSis.RECLAMACIONES_FK2" FromRole="PRODUCTOS" ToRole="RECLAMACIONES" />
+        </EntityType>
+        <Association Name="INDICADORES_FK1">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="0..1" />
+          <End Role="INDICADORES" Type="Self.INDICADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="INDICADORES">
+              <PropertyRef Name="IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INDICADORES_FK2">
+          <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="0..1" />
+          <End Role="INDICADORES" Type="Self.INDICADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="INDICADORES">
+              <PropertyRef Name="IDPRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities_BezerreSis" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" />
+          <EntitySet Name="INDICADORES" EntityType="Self.INDICADORES" />
+          <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" />
+          <AssociationSet Name="INDICADORES_FK1" Association="Self.INDICADORES_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="INDICADORES" EntitySet="INDICADORES" />
+          </AssociationSet>
+          <AssociationSet Name="INDICADORES_FK2" Association="Self.INDICADORES_FK2">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="INDICADORES" EntitySet="INDICADORES" />
+          </AssociationSet>
+          <EntitySet Name="PLANTAS" EntityType="Modelo_BezerreSis.PLANTAS" />
+          <AssociationSet Name="CLIENTES_FK1" Association="Modelo_BezerreSis.CLIENTES_FK1">
+            <End Role="PLANTAS" EntitySet="PLANTAS" />
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+          </AssociationSet>
+          <EntitySet Name="OBJETIVOS" EntityType="Modelo_BezerreSis.OBJETIVOS" />
+          <AssociationSet Name="OBJETIVOS_FK1" Association="Modelo_BezerreSis.OBJETIVOS_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="OBJETIVOS" EntitySet="OBJETIVOS" />
+          </AssociationSet>
+          <EntitySet Name="CLIPRO" EntityType="Modelo_BezerreSis.CLIPRO" />
+          <AssociationSet Name="CLIPRO_FK1" Association="Modelo_BezerreSis.CLIPRO_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="CLIPRO" EntitySet="CLIPRO" />
+          </AssociationSet>
+          <AssociationSet Name="CLIPRO_FK2" Association="Modelo_BezerreSis.CLIPRO_FK2">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="CLIPRO" EntitySet="CLIPRO" />
+          </AssociationSet>
+          <EntitySet Name="GRUPOS" EntityType="Modelo_BezerreSis.GRUPOS" />
+          <EntitySet Name="RECURSOS" EntityType="Modelo_BezerreSis.RECURSOS" />
+          <EntitySet Name="USUARIOS" EntityType="Modelo_BezerreSis.USUARIOS" />
+          <AssociationSet Name="USUARIOS_FK1" Association="Modelo_BezerreSis.USUARIOS_FK1">
+            <End Role="PLANTAS" EntitySet="PLANTAS" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="GRUPOSRECURSOS" Association="Modelo_BezerreSis.GRUPOSRECURSOS">
+            <End Role="GRUPOS" EntitySet="GRUPOS" />
+            <End Role="RECURSOS" EntitySet="RECURSOS" />
+          </AssociationSet>
+          <AssociationSet Name="USUARIOSGRUPOS" Association="Modelo_BezerreSis.USUARIOSGRUPOS">
+            <End Role="GRUPOS" EntitySet="GRUPOS" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUCTOS_FK1" Association="Modelo_BezerreSis.PRODUCTOS_FK1">
+            <End Role="PLANTAS" EntitySet="PLANTAS" />
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+          </AssociationSet>
+          <EntitySet Name="RECLAMACIONES" EntityType="Modelo_BezerreSis.RECLAMACIONES" />
+          <AssociationSet Name="RECLAMACIONES_FK1" Association="Modelo_BezerreSis.RECLAMACIONES_FK1">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+          </AssociationSet>
+          <AssociationSet Name="RECLAMACIONES_FK2" Association="Modelo_BezerreSis.RECLAMACIONES_FK2">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+          </AssociationSet>
+          <AssociationSet Name="RECLAMACIONES_FK3" Association="Modelo_BezerreSis.RECLAMACIONES_FK3">
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+          </AssociationSet>
+          <EntitySet Name="RECLAMACIONES_CIERRE" EntityType="Modelo_BezerreSis.RECLAMACIONES_CIERRE" />
+          <AssociationSet Name="RECLAMACIONES_CIERRE_FK1" Association="Modelo_BezerreSis.RECLAMACIONES_CIERRE_FK1">
+            <End Role="RECLAMACIONES" EntitySet="RECLAMACIONES" />
+            <End Role="RECLAMACIONES_CIERRE" EntitySet="RECLAMACIONES_CIERRE" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="PLANTAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OBSOLETO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="DOMINIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PATH_LDAP" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="PATH_EXCHANGE" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="TIMEZONE_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MOSTRAR_RELOJ" Type="Boolean" />
+          <Property Name="TEXTO_RELOJ" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="USER_LDAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PASS_LDAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CIF" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="UBICACION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ID_IZARO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ID_MONEDA" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CIUDAD" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="PAIS" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="ID_BRAIN" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ID_EPSILON" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="XBAT_CONSTRING" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PROVINCIA" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FAX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CLIENTES" Relationship="Modelo_BezerreSis.CLIENTES_FK1" FromRole="PLANTAS" ToRole="CLIENTES" />
+          <NavigationProperty Name="USUARIOS" Relationship="Modelo_BezerreSis.USUARIOS_FK1" FromRole="PLANTAS" ToRole="USUARIOS" />
+          <NavigationProperty Name="PRODUCTOS" Relationship="Modelo_BezerreSis.PRODUCTOS_FK1" FromRole="PLANTAS" ToRole="PRODUCTOS" />
+          <Property Name="EPSILON_CONSTRING" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="CLIENTES_FK1">
+          <End Type="Modelo_BezerreSis.PLANTAS" Role="PLANTAS" Multiplicity="1" />
+          <End Type="Modelo_BezerreSis.CLIENTES" Role="CLIENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANTAS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CLIENTES">
+              <PropertyRef Name="IDPLANTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="OBJETIVOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="IDCLIENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="FECHA" Type="DateTime" Nullable="false" />
+          <Property Name="PPM_ANUAL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PPM_MENSUAL" Type="Decimal" Precision="38" Scale="0" />
+          <NavigationProperty Name="CLIENTES" Relationship="Modelo_BezerreSis.OBJETIVOS_FK1" FromRole="OBJETIVOS" ToRole="CLIENTES" />
+          <Property Name="IPB_SEMESTRAL" Type="Decimal" Precision="38" Scale="0" />
+        </EntityType>
+        <Association Name="OBJETIVOS_FK1">
+          <End Type="Modelo_BezerreSis.CLIENTES" Role="CLIENTES" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Modelo_BezerreSis.OBJETIVOS" Role="OBJETIVOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OBJETIVOS">
+              <PropertyRef Name="IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CLIPRO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDCLI" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="IDPRO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <NavigationProperty Name="CLIENTES" Relationship="Modelo_BezerreSis.CLIPRO_FK1" FromRole="CLIPRO" ToRole="CLIENTES" />
+          <NavigationProperty Name="PRODUCTOS" Relationship="Modelo_BezerreSis.CLIPRO_FK2" FromRole="CLIPRO" ToRole="PRODUCTOS" />
+        </EntityType>
+        <Association Name="CLIPRO_FK1">
+          <End Type="Modelo_BezerreSis.CLIENTES" Role="CLIENTES" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Modelo_BezerreSis.CLIPRO" Role="CLIPRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CLIPRO">
+              <PropertyRef Name="IDCLI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CLIPRO_FK2">
+          <End Type="Modelo_BezerreSis.PRODUCTOS" Role="PRODUCTOS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Modelo_BezerreSis.CLIPRO" Role="CLIPRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CLIPRO">
+              <PropertyRef Name="IDPRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="GRUPOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="OBSOLETO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="RECURSOS" Relationship="Modelo_BezerreSis.GRUPOSRECURSOS" FromRole="GRUPOS" ToRole="RECURSOS" />
+          <NavigationProperty Name="USUARIOS" Relationship="Modelo_BezerreSis.USUARIOSGRUPOS" FromRole="GRUPOS" ToRole="USUARIOS" />
+        </EntityType>
+        <EntityType Name="RECURSOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="IDPARENT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="URL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="OBSOLETO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="TIPO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="VISIBLE" Type="Boolean" />
+          <Property Name="FICHERO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="NOMBRE_FICHERO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TARGET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CATALOGABLE" Type="Boolean" />
+          <Property Name="IMG_CATALOGO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DESCRIP_CATALOGO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE_IMGCATALOGO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ID_RESPONSABLE" Type="Decimal" Precision="38" Scale="0" />
+          <NavigationProperty Name="GRUPOS" Relationship="Modelo_BezerreSis.GRUPOSRECURSOS" FromRole="RECURSOS" ToRole="GRUPOS" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="IDEMPRESAS" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="IDCULTURAS" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBREUSUARIO" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="IDDIRECTORIOACTIVO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CODPERSONA" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PWD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAALTA" Type="DateTime" />
+          <Property Name="FECHABAJA" Type="DateTime" />
+          <Property Name="APELLIDO1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="IDMATRIX" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="IDFTP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDDEPARTAMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DNI" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="NIKEUSKARAZ" Type="Boolean" />
+          <Property Name="IDPLANTA" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="USUARIO_EMPRESA" Type="Boolean" />
+          <NavigationProperty Name="PLANTAS" Relationship="Modelo_BezerreSis.USUARIOS_FK1" FromRole="USUARIOS" ToRole="PLANTAS" />
+          <NavigationProperty Name="GRUPOS" Relationship="Modelo_BezerreSis.USUARIOSGRUPOS" FromRole="USUARIOS" ToRole="GRUPOS" />
+          <NavigationProperty Name="RECLAMACIONES" Relationship="Modelo_BezerreSis.RECLAMACIONES_FK3" FromRole="USUARIOS" ToRole="RECLAMACIONES" />
+        </EntityType>
+        <Association Name="USUARIOS_FK1">
+          <End Type="Modelo_BezerreSis.PLANTAS" Role="PLANTAS" Multiplicity="0..1" />
+          <End Type="Modelo_BezerreSis.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANTAS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="IDPLANTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="GRUPOSRECURSOS">
+          <End Type="Modelo_BezerreSis.GRUPOS" Role="GRUPOS" Multiplicity="*" />
+          <End Type="Modelo_BezerreSis.RECURSOS" Role="RECURSOS" Multiplicity="*" />
+        </Association>
+        <Association Name="USUARIOSGRUPOS">
+          <End Type="Modelo_BezerreSis.GRUPOS" Role="GRUPOS" Multiplicity="*" />
+          <End Type="Modelo_BezerreSis.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+        </Association>
+        <Association Name="PRODUCTOS_FK1">
+          <End Type="Modelo_BezerreSis.PLANTAS" Role="PLANTAS" Multiplicity="1" />
+          <End Type="Modelo_BezerreSis.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANTAS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PRODUCTOS">
+              <PropertyRef Name="IDPLANTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="RECLAMACIONES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CLIENTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="REFCLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PLANTACLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CODXCLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FECHACREACION" Type="DateTime" Nullable="false" />
+          <Property Name="REFINTERNAPIEZA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DENOMINACION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PROYECTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NUMPIEZASNOK" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PROCEDENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CLASIFICACION" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NIVELIMPORTANCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="REPETITIVA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="RECLAMACIONOFICIAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CREADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="AFECTA_INDICADORES" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="CLIENTES" Relationship="Modelo_BezerreSis.RECLAMACIONES_FK1" FromRole="RECLAMACIONES" ToRole="CLIENTES" />
+          <NavigationProperty Name="PRODUCTOS" Relationship="Modelo_BezerreSis.RECLAMACIONES_FK2" FromRole="RECLAMACIONES" ToRole="PRODUCTOS" />
+          <NavigationProperty Name="USUARIOS" Relationship="Modelo_BezerreSis.RECLAMACIONES_FK3" FromRole="RECLAMACIONES" ToRole="USUARIOS" />
+          <NavigationProperty Name="RECLAMACIONES_CIERRE" Relationship="Modelo_BezerreSis.RECLAMACIONES_CIERRE_FK1" FromRole="RECLAMACIONES" ToRole="RECLAMACIONES_CIERRE" />
+        </EntityType>
+        <Association Name="RECLAMACIONES_FK1">
+          <End Type="Modelo_BezerreSis.CLIENTES" Role="CLIENTES" Multiplicity="1" />
+          <End Type="Modelo_BezerreSis.RECLAMACIONES" Role="RECLAMACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES">
+              <PropertyRef Name="CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECLAMACIONES_FK2">
+          <End Type="Modelo_BezerreSis.PRODUCTOS" Role="PRODUCTOS" Multiplicity="1" />
+          <End Type="Modelo_BezerreSis.RECLAMACIONES" Role="RECLAMACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES">
+              <PropertyRef Name="PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECLAMACIONES_FK3">
+          <End Type="Modelo_BezerreSis.USUARIOS" Role="USUARIOS" Multiplicity="1" />
+          <End Type="Modelo_BezerreSis.RECLAMACIONES" Role="RECLAMACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES">
+              <PropertyRef Name="CREADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="RECLAMACIONES_CIERRE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="FECHA_RESP_CONTENCION" Type="DateTime" />
+          <Property Name="FECHA_RESP_CORRECTIVAS" Type="DateTime" />
+          <Property Name="FECHA_CIERRECLIENTE" Type="DateTime" />
+          <Property Name="COSTE_REVISIONCLIENTE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="COSTE_CARGOSCLIENTE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="COSTE_REVISIONINTERNA" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="COSTE_MATERIALESCHATARRA" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="COSTE_OTROS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="COSTE_OTROS_DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RECLAMACIONES" Relationship="Modelo_BezerreSis.RECLAMACIONES_CIERRE_FK1" FromRole="RECLAMACIONES_CIERRE" ToRole="RECLAMACIONES" />
+        </EntityType>
+        <Association Name="RECLAMACIONES_CIERRE_FK1">
+          <End Type="Modelo_BezerreSis.RECLAMACIONES" Role="RECLAMACIONES" Multiplicity="1" />
+          <End Type="Modelo_BezerreSis.RECLAMACIONES_CIERRE" Role="RECLAMACIONES_CIERRE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="RECLAMACIONES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RECLAMACIONES_CIERRE">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Modelo_BezerreSisStoreContainer" CdmEntityContainer="Entities_BezerreSis">
+          <EntitySetMapping Name="CLIENTES">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.CLIENTES">
+              <MappingFragment StoreEntitySet="CLIENTES">
+                <ScalarProperty Name="IDPLANTA" ColumnName="IDPLANTA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INDICADORES">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.INDICADORES">
+              <MappingFragment StoreEntitySet="INDICADORES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+                <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ENVIADAS" ColumnName="ENVIADAS" />
+                <ScalarProperty Name="RECHAZADAS" ColumnName="RECHAZADAS" />
+                <ScalarProperty Name="INCIDENCIAS" ColumnName="INCIDENCIAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTOS">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.PRODUCTOS">
+              <MappingFragment StoreEntitySet="PRODUCTOS">
+                <ScalarProperty Name="IDPLANTA" ColumnName="IDPLANTA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLANTAS">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.PLANTAS">
+              <MappingFragment StoreEntitySet="PLANTAS">
+                <ScalarProperty Name="EPSILON_CONSTRING" ColumnName="EPSILON_CONSTRING" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="XBAT_CONSTRING" ColumnName="XBAT_CONSTRING" />
+                <ScalarProperty Name="ID_EPSILON" ColumnName="ID_EPSILON" />
+                <ScalarProperty Name="ID_BRAIN" ColumnName="ID_BRAIN" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+                <ScalarProperty Name="ID_IZARO" ColumnName="ID_IZARO" />
+                <ScalarProperty Name="UBICACION" ColumnName="UBICACION" />
+                <ScalarProperty Name="CIF" ColumnName="CIF" />
+                <ScalarProperty Name="PASS_LDAP" ColumnName="PASS_LDAP" />
+                <ScalarProperty Name="USER_LDAP" ColumnName="USER_LDAP" />
+                <ScalarProperty Name="TEXTO_RELOJ" ColumnName="TEXTO_RELOJ" />
+                <ScalarProperty Name="MOSTRAR_RELOJ" ColumnName="MOSTRAR_RELOJ" />
+                <ScalarProperty Name="TIMEZONE_ID" ColumnName="TIMEZONE_ID" />
+                <ScalarProperty Name="PATH_EXCHANGE" ColumnName="PATH_EXCHANGE" />
+                <ScalarProperty Name="PATH_LDAP" ColumnName="PATH_LDAP" />
+                <ScalarProperty Name="DOMINIO" ColumnName="DOMINIO" />
+                <ScalarProperty Name="OBSOLETO" ColumnName="OBSOLETO" />
+                <ScalarProperty Name="DESCRIP" ColumnName="DESCRIP" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OBJETIVOS">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.OBJETIVOS">
+              <MappingFragment StoreEntitySet="OBJETIVOS">
+                <ScalarProperty Name="IPB_SEMESTRAL" ColumnName="IPB_SEMESTRAL" />
+                <ScalarProperty Name="PPM_MENSUAL" ColumnName="PPM_MENSUAL" />
+                <ScalarProperty Name="PPM_ANUAL" ColumnName="PPM_ANUAL" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIPRO">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.CLIPRO">
+              <MappingFragment StoreEntitySet="CLIPRO">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDPRO" ColumnName="IDPRO" />
+                <ScalarProperty Name="IDCLI" ColumnName="IDCLI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRUPOS">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.GRUPOS">
+              <MappingFragment StoreEntitySet="GRUPOS">
+                <ScalarProperty Name="OBSOLETO" ColumnName="OBSOLETO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RECURSOS">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.RECURSOS">
+              <MappingFragment StoreEntitySet="RECURSOS">
+                <ScalarProperty Name="ID_RESPONSABLE" ColumnName="ID_RESPONSABLE" />
+                <ScalarProperty Name="NOMBRE_IMGCATALOGO" ColumnName="NOMBRE_IMGCATALOGO" />
+                <ScalarProperty Name="DESCRIP_CATALOGO" ColumnName="DESCRIP_CATALOGO" />
+                <ScalarProperty Name="IMG_CATALOGO" ColumnName="IMG_CATALOGO" />
+                <ScalarProperty Name="CATALOGABLE" ColumnName="CATALOGABLE" />
+                <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+                <ScalarProperty Name="NOMBRE_FICHERO" ColumnName="NOMBRE_FICHERO" />
+                <ScalarProperty Name="FICHERO" ColumnName="FICHERO" />
+                <ScalarProperty Name="VISIBLE" ColumnName="VISIBLE" />
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="OBSOLETO" ColumnName="OBSOLETO" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="IDPARENT" ColumnName="IDPARENT" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="USUARIO_EMPRESA" ColumnName="USUARIO_EMPRESA" />
+                <ScalarProperty Name="IDPLANTA" ColumnName="IDPLANTA" />
+                <ScalarProperty Name="NIKEUSKARAZ" ColumnName="NIKEUSKARAZ" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="IDDEPARTAMENTO" ColumnName="IDDEPARTAMENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="IDFTP" ColumnName="IDFTP" />
+                <ScalarProperty Name="IDMATRIX" ColumnName="IDMATRIX" />
+                <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+                <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+                <ScalarProperty Name="FECHABAJA" ColumnName="FECHABAJA" />
+                <ScalarProperty Name="FECHAALTA" ColumnName="FECHAALTA" />
+                <ScalarProperty Name="PWD" ColumnName="PWD" />
+                <ScalarProperty Name="CODPERSONA" ColumnName="CODPERSONA" />
+                <ScalarProperty Name="IDDIRECTORIOACTIVO" ColumnName="IDDIRECTORIOACTIVO" />
+                <ScalarProperty Name="NOMBREUSUARIO" ColumnName="NOMBREUSUARIO" />
+                <ScalarProperty Name="IDCULTURAS" ColumnName="IDCULTURAS" />
+                <ScalarProperty Name="IDEMPRESAS" ColumnName="IDEMPRESAS" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="GRUPOSRECURSOS" TypeName="Modelo_BezerreSis.GRUPOSRECURSOS" StoreEntitySet="GRUPOSRECURSOS">
+            <EndProperty Name="RECURSOS">
+              <ScalarProperty Name="ID" ColumnName="IDRECURSOS" />
+            </EndProperty>
+            <EndProperty Name="GRUPOS">
+              <ScalarProperty Name="ID" ColumnName="IDGRUPOS" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="USUARIOSGRUPOS" TypeName="Modelo_BezerreSis.USUARIOSGRUPOS" StoreEntitySet="USUARIOSGRUPOS">
+            <EndProperty Name="USUARIOS">
+              <ScalarProperty Name="ID" ColumnName="IDUSUARIOS" />
+            </EndProperty>
+            <EndProperty Name="GRUPOS">
+              <ScalarProperty Name="ID" ColumnName="IDGRUPOS" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="RECLAMACIONES">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.RECLAMACIONES">
+              <MappingFragment StoreEntitySet="RECLAMACIONES">
+                <ScalarProperty Name="CREADOR" ColumnName="CREADOR" />
+                <ScalarProperty Name="RECLAMACIONOFICIAL" ColumnName="RECLAMACIONOFICIAL" />
+                <ScalarProperty Name="REPETITIVA" ColumnName="REPETITIVA" />
+                <ScalarProperty Name="NIVELIMPORTANCIA" ColumnName="NIVELIMPORTANCIA" />
+                <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+                <ScalarProperty Name="PROCEDENCIA" ColumnName="PROCEDENCIA" />
+                <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="NUMPIEZASNOK" ColumnName="NUMPIEZASNOK" />
+                <ScalarProperty Name="PROYECTO" ColumnName="PROYECTO" />
+                <ScalarProperty Name="DENOMINACION" ColumnName="DENOMINACION" />
+                <ScalarProperty Name="REFINTERNAPIEZA" ColumnName="REFINTERNAPIEZA" />
+                <ScalarProperty Name="FECHACREACION" ColumnName="FECHACREACION" />
+                <ScalarProperty Name="CODXCLIENTE" ColumnName="CODXCLIENTE" />
+                <ScalarProperty Name="PLANTACLIENTE" ColumnName="PLANTACLIENTE" />
+                <ScalarProperty Name="REFCLIENTE" ColumnName="REFCLIENTE" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+                <ScalarProperty Name="AFECTA_INDICADORES" ColumnName="AFECTA_INDICADORES" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RECLAMACIONES_CIERRE">
+            <EntityTypeMapping TypeName="Modelo_BezerreSis.RECLAMACIONES_CIERRE">
+              <MappingFragment StoreEntitySet="RECLAMACIONES_CIERRE">
+                <ScalarProperty Name="COSTE_OTROS_DESCRIPCION" ColumnName="COSTE_OTROS_DESCRIPCION" />
+                <ScalarProperty Name="COSTE_OTROS" ColumnName="COSTE_OTROS" />
+                <ScalarProperty Name="COSTE_MATERIALESCHATARRA" ColumnName="COSTE_MATERIALESCHATARRA" />
+                <ScalarProperty Name="COSTE_REVISIONINTERNA" ColumnName="COSTE_REVISIONINTERNA" />
+                <ScalarProperty Name="COSTE_CARGOSCLIENTE" ColumnName="COSTE_CARGOSCLIENTE" />
+                <ScalarProperty Name="COSTE_REVISIONCLIENTE" ColumnName="COSTE_REVISIONCLIENTE" />
+                <ScalarProperty Name="FECHA_CIERRECLIENTE" ColumnName="FECHA_CIERRECLIENTE" />
+                <ScalarProperty Name="FECHA_RESP_CORRECTIVAS" ColumnName="FECHA_RESP_CORRECTIVAS" />
+                <ScalarProperty Name="FECHA_RESP_CONTENCION" ColumnName="FECHA_RESP_CONTENCION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="false" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <edmx:DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToOracle.tt" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+  </edmx:Designer>
+</edmx:Edmx>

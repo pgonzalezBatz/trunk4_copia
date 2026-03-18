@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c07660cc803d44b886321d9a4d81fd47" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="Modelo_BezerreSis.CLIENTES" Width="1.5" PointX="10.125" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.INDICADORES" Width="1.5" PointX="10.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.PRODUCTOS" Width="1.5" PointX="12.875" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Modelo_BezerreSis.INDICADORES_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="Modelo_BezerreSis.INDICADORES_FK2" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.PLANTAS" Width="1.875" PointX="7.5" PointY="2" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Modelo_BezerreSis.CLIENTES_FK1" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.OBJETIVOS" Width="1.5" PointX="10.125" PointY="6.375" />
+        <AssociationConnector Association="Modelo_BezerreSis.OBJETIVOS_FK1" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.CLIPRO" Width="1.5" PointX="12.875" PointY="3.625" />
+        <AssociationConnector Association="Modelo_BezerreSis.CLIPRO_FK1" />
+        <AssociationConnector Association="Modelo_BezerreSis.CLIPRO_FK2" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.GRUPOS" Width="1.5" PointX="3" PointY="2" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.RECURSOS" Width="2" PointX="0.5" PointY="2" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.USUARIOS" Width="1.75" PointX="5.125" PointY="2" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Modelo_BezerreSis.USUARIOS_FK1" />
+        <AssociationConnector Association="Modelo_BezerreSis.GRUPOSRECURSOS" />
+        <AssociationConnector Association="Modelo_BezerreSis.USUARIOSGRUPOS" />
+        <AssociationConnector Association="Modelo_BezerreSis.PRODUCTOS_FK1" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.RECLAMACIONES" Width="1.5" PointX="16.25" PointY="0.875" />
+        <AssociationConnector Association="Modelo_BezerreSis.RECLAMACIONES_FK1" />
+        <AssociationConnector Association="Modelo_BezerreSis.RECLAMACIONES_FK2" />
+        <AssociationConnector Association="Modelo_BezerreSis.RECLAMACIONES_FK3" />
+        <EntityTypeShape EntityType="Modelo_BezerreSis.RECLAMACIONES_CIERRE" Width="1.5" PointX="18.5" PointY="1.875" />
+        <AssociationConnector Association="Modelo_BezerreSis.RECLAMACIONES_CIERRE_FK1" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

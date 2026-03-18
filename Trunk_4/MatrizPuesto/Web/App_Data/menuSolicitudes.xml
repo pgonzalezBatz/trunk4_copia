@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+
+
+
+
+
+
+    <Item title="Crear solicitud" descripion="Crear solicitud" url="Solicitudes.aspx?id=1" id="" roles="2" >
+    </Item>
+    <Item title="Estado solicitud" descripion="Estado solicitud" url="Solicitudes.aspx?id=0" id="" roles="2" >
+    </Item>
+
+
+
+
+
+
+</Root>

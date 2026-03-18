@@ -1,0 +1,422 @@
+﻿#Botonera, .Botonera
+{
+	position: static;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.MensajeInfoAdvertencia
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Blue;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+.MensajeError
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Red;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+.ListSearchExtenderPrompt
+{
+	font-style:italic;
+	color:Gray;
+	background-color:white;
+}
+.table2{border:solid 1px #5D7B9D;}
+.table2 caption{font-weight:bold;}
+.table2 thead tr{background-color: #5D7B9D;}
+.table2 thead tr th{text-align:center; color:#FFFFFF;}
+.table2 tbody tr{background-color:#ffffff;}
+.table2 a{width:100%;display:block;}
+.table2 tfoot tr {background-color:#F4F4F4;}
+.table2 tfoot tr th{text-align: center;font-size: 11px;font-style: italic;color: #999999;}
+
+.table3{border:0px;}
+.table3 caption{font-weight:bold;}
+.table3 thead tr th{background-color:#F4F4F4;border:0px; padding:7px;}
+.table3 tbody tr td{background-color:#ffffff;border:0px;padding:7px;}
+.table3 a{width:100%;display:block;}
+
+.negrita{font-weight:bold;}
+.mayusculasNegrita{font-weight:bold;text-transform:uppercase;}
+.mayusculas{text-transform:uppercase;}
+
+.trOver{background-color:#ccccff;cursor:pointer;}
+.trOverPointer{background-color:#ccccff;}
+.trVerde{background-color: #DBFE89;}
+.trRojo{background: #ff6666;}
+
+.boton
+{
+	width:32px;
+	height:32px;
+	vertical-align:middle;
+	text-align:center;
+	padding:7px 27px 7px 27px;
+	background-image:url('Imagenes/fondoBoton.gif');	
+}
+
+.botonClasico {
+    vertical-align:middle;
+	text-align:center;
+	padding:7px 27px 7px 27px;
+	background-image:url('Imagenes/fondoBoton.gif');
+}
+.usuarioFecha {
+	background-color: #F3F3F3;
+	height:10px;
+}
+.izquierda{text-align:left;}
+.derecha {text-align:right;}
+
+.recuadroLabel
+{
+	border:solid 1px #000000;
+	background-color:#FFFFFF;
+	height:18px;
+	/*Aqui el width no funciona, por eso se pone en codigo*/
+}
+
+.font10{font-size:10px;}
+
+.Alerta
+{
+	background-color: #FF0000;
+	background-attachment: inherit;
+	text-decoration: underline overline blink;
+	font-weight: bold;
+	font-style: italic;
+	color: #FFFFFF;
+}
+.BatzFont
+{
+	font-family: 'Batz Font';
+	font-size: large;
+}
+
+/* WIZARD */
+
+.FirstStepButtonStyle {
+    background-image:url('./Imagenes/boton_siguiente_paso.png');
+}
+
+.StepButtonStyle {
+    background-color:rgb(242, 242, 242);
+    border:2px solid rgb(56, 93, 138);
+    width:100px;
+    font-size:18px;
+    margin-top:5px;
+    /*margin-right:5px;*/
+}
+
+.FinishStepButtonStyle {
+    background-image:url('./Imagenes/boton_siguiente_paso.png');
+    border:2px solid rgb(56, 93, 138);
+    width:100px;
+    font-size:18px;
+    margin-top:5px;
+}
+
+.StepRight {
+    float:right;
+}
+.StepLeft {
+    float:left;
+}
+
+/*Parecido al gris: rgb(153,153,153) o #999999*/
+.pasoNoCompletado
+{
+    background-color: #999999;
+    width: 9px;
+    border: 1px solid #999999;
+    margin-right: 5px;
+    color: White;
+    font-family: Arial;
+    font-size: 10px;
+    text-align: center;
+}
+
+/*Parecido al negro: #4d4d4d*/
+.pasoCompletado
+{
+    background-color: rgb(89, 203, 43);/*#90ee90*/
+    /*width: 15px;*/
+    width: 9px;
+    border: 1px solid rgb(89, 203, 43);
+    color: White;
+    font-family: Arial;
+    font-size: 10px;
+    text-align: center;
+}
+
+/*Parecido al rojo:#e01122*/
+.pasoActual
+{
+    background-color: rgb(92,180,243);/*#999999*/
+    width: 15px;
+    border: 1px solid rgb(92,180,243);/*#999999*/
+    color: White;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Parecido al gris: rgb(153,153,153) o #999999*/
+.pasoExito
+{
+    background-color: rgb(89, 203, 43);/*Verde*/
+    /*width: 15px;*/
+    width: 9px;
+    border: 1px solid rgb(89, 203, 43);
+    margin-right: 5px;
+    color: White;
+    font-family: Arial;
+    /*font-size: 12px;*/
+    font-size: 10px;
+    text-align: center;
+}
+
+/*Parecido al negro: #4d4d4d*/
+.pasoNoExito
+{
+    background-color: #e01122;/*Rojo*/
+    /*width: 15px;*/
+    width: 9px;
+    border: 1px solid #e01122;
+    color: White;
+    font-family: Arial;
+    /*font-size: 12px;*/
+    font-size: 10px;
+    text-align: center;
+}
+
+.stepBreak
+{
+    width: 3px;
+    background-color: Transparent;
+}
+
+.wizardProgress
+{
+    padding-right: 10px;
+    font-family: Arial;
+    color: #333333;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+.wizardTitle {
+    font-family: Arial;
+    /*font-size: 120%;*/
+    width:15%;
+    font-size:100%;
+    font-weight: bold;
+    color: #333333;
+    vertical-align: middle;
+}
+
+.wizardExit {
+    font-family: Arial;
+    font-size:100%;    
+    padding-left:10px;
+    /*width:15%;*/
+    width:5%;
+    font-weight: bold;
+    color: #333333;
+    vertical-align: middle;
+    text-decoration:none;
+}
+
+.divInfoStyle {
+    width:100%;
+    background-color: #318591;
+    border-width:0px;
+}
+
+.divRegistroAyudaVisualStyle {
+    width:100%;/*99%*/
+    border-right:2px solid black;
+    border-left:2px solid black;
+    border-bottom:2px solid black;
+    border-top:0px;
+    border-color:#385D8A;
+}
+
+.divMainStyle {
+    width:100%;
+    background-color: #DBEEF4;
+}
+
+/*.divInfoBackColor {
+    background-color:#B9CDE5;
+}*/
+
+.divAyudaVisualBackColor {
+    background-color:#B9CDE5;
+}
+
+.divRegistroBackColor {
+    /*background-color:#DCE6F2;*/
+    background-color:#ffffff;
+}
+
+.divTituloStyle {
+    float:left;
+    width:5%;
+    font-family: Corbel;
+    /*font-weight:bold;*/
+    /*border-right: 2px solid black;*/
+    border-right: 0px solid black;
+    border-right-color:#385D8A;
+    text-align:center;
+    vertical-align:middle; 
+    background-color:white;   
+}
+
+.divInfoDatosStyle {
+    float:left;
+    /*height:100%;*/
+}
+
+.divInfoGeneralStyle {
+    float:left;
+    width:70%;
+    border: 0px solid black;
+    background-color:#318591;
+}
+
+.divInfoImagenStyle {
+    float:left;
+    width:29%;
+    border: 0px solid black;
+    background-color:#318591;
+}
+
+/*.divPlanoStyle {
+    float:left;
+    width:10%;
+    border-right: 2px solid black;
+    border-right-color:#385D8A;
+    text-align:center;
+    font-size:12px;    
+    background: #B9CDE5;
+	color: #000000;
+}*/
+
+.divPlanoStyle {
+    float:left;
+    width:15%;
+    text-align:center;   
+    background-color: #B7DEE8;
+	color: #000000;
+    border:0px solid;
+}
+
+.divDatosStyle {
+    float:left;
+    width:85%;       
+}
+
+.divRegistroStyle {
+    float:left;
+    width:84%;
+    border: 0px solid black;          
+}
+
+/*.divDatosStyle {
+    float:left;
+    width:95%;
+    border: 0px solid black;        
+}*/
+
+.divAyudaVisualImagen {
+    float:left;
+    width:94%;/*95%*/
+    border: 0px solid black;
+    text-align:center;
+}
+
+.imagenCentrada {
+    vertical-align:middle;
+}
+
+.divFloatClear {
+    clear:both;
+    font-size:0;
+}
+
+/*.divDatosMargenesStyle {
+    
+}*/
+
+.labelVertical {
+    font-size:16px;
+    /*width:100%;*/
+    writing-mode: tb-rl; filter: flipv fliph;       
+}
+
+.labelPlano {
+    font-size:20px;
+    /*width:100%;*/
+    /*writing-mode: tb-rl; filter: flipv fliph;*/
+}
+
+.labelDefinicion {
+    /*margin:10px 10px 10px 10px;*/
+    /*height:100px;*/
+    float:left;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:20px;
+    /*margin-left:30px;*/
+    /*width:10%;*/
+}
+
+.labelValor {
+    /*margin:10px 10px 10px 10px;*/
+    /*height:100px;*/
+    float:left;
+    font-size:18px;    
+    margin-top:20px;
+    /*padding-left:2px;*/  
+    /*width:30%;*/  
+}
+
+.tablaInformacion {
+    width:100%;
+    height:100%;
+    font-size:22px;
+    color:white;
+}
+
+.filaInformacion {
+    vertical-align:middle;
+}      
+
+/*BATZ FONT*/ 
+.BatzFont
+{
+	font-family: 'Batz Font';
+	font-size: large;
+}
+
+/*RadioButtonList*/
+
+.radiobuttonlist td 
+{
+    
+    font-size:32px;
+}

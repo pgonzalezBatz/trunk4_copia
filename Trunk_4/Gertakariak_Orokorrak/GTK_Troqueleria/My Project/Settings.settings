@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Extranet" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GTK_Troqueleria_es_batz_intranet2_Enovia" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://intranet2.batz.es/ServicioEnovia/enovia.asmx</Value>
+    </Setting>
+    <Setting Name="IdTipoIncidencia_IdPlantaSAB" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;1;1;Troqueleria;90&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="IdSubprocesos_TV" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1026</Value>
+    </Setting>
+    <Setting Name="IdConceptosLineasCoste" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">745</Value>
+    </Setting>
+    <Setting Name="IdArea" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1228</Value>
+    </Setting>
+    <Setting Name="IdNotificacionesUG" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1287</Value>
+    </Setting>
+    <Setting Name="IdNotificaciones" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">9999</Value>
+    </Setting>
+    <Setting Name="AdminNotificaciones" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2787</Value>
+    </Setting>
+    <Setting Name="AdminRechazoCierre" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2788</Value>
+    </Setting>
+    <Setting Name="AdminCompras" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2987</Value>
+    </Setting>
+    <Setting Name="IdPEs" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">9998</Value>
+    </Setting>
+    <Setting Name="IdProducto_TV" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1267</Value>
+    </Setting>
+    <Setting Name="IdCaracteristica_TV" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1268</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

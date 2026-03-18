@@ -1,0 +1,20 @@
+2011/06/29
+==========
+ALTER TABLE helbide MODIFY (direccion nvarchar2(150))
+ALTER TABLE helbide MODIFY (codigo_postal nvarchar2(20))
+ALTER TABLE helbide MODIFY (poblacion nvarchar2(40))
+ALTER TABLE helbide MODIFY (provincia nvarchar2(150))
+2011/03/17
+==========
+create sequence helbide_seq start with 1 increment by 1
+
+create table helbide(
+       id		number		not null,
+       direccion	varchar(150)	not null,
+       codigo_postal	varchar(20) 	not null,
+       poblacion	varchar(40) 	not null,
+       provincia	varchar(40),
+       pais		varchar(40)	not null,
+       constraint pk_helbide primary key (id)
+)
+

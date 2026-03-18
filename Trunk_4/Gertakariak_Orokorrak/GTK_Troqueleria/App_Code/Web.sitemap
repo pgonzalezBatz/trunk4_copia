@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Default.aspx" title="Listado"  description="Listado y Filtro de No Conformidades">
+		<siteMapNode url="~/Incidencia/Detalle.aspx" title="No Conformidad"  description="Detalle">
+			<!--<siteMapNode url="~/Incidencia/8D/Detalle8D.aspx" title="8D"  description="Detalle">-->
+			<siteMapNode url="~/Incidencia/8D/Etapas/E14.aspx" title="Etapa 2-4"  description="Etapa 2-4"/>
+			<siteMapNode url="~/Incidencia/8D/Etapas/E56.aspx" title="Etapa 5-6"  description="Etapa 5-6">
+				<siteMapNode url="~/Incidencia/8D/Etapas/E56_5PQ.aspx" title="5 Porques"  description="5 Porques"/>
+				<siteMapNode url="~/Incidencia/8D/Etapas/E56_Acciones.aspx" title="Acciones Definitivas"  description="Acciones Definitivas"/>				
+			</siteMapNode>
+			<siteMapNode url="~/Incidencia/8D/Etapas/E78.aspx" title="Etapa 7-8"  description="Etapa 7-8"/>
+			<!--</siteMapNode>-->
+			<siteMapNode url="~/Incidencia/Mantenimiento/DatosGenerales.aspx" title="Datos Generales (Etapa 1-2)"  description="Datos Generales (Etapa 1)"/>
+			<siteMapNode url="~/Incidencia/Mantenimiento/Documento.aspx" title="Documentos"  description="Documentos"/>
+			<siteMapNode url="~/Incidencia/Mantenimiento/LineaCoste.aspx" title="Coste"  description="Lineas de Coste"/>
+      <siteMapNode url="~/Incidencia/Mantenimiento/ListadoLC.aspx" title="Buscador Coste"  description="Lineas de Coste"/>
+      <siteMapNode url="~/Incidencia/Mantenimiento/TotalAcordado.aspx" title="Total Acordado"  description="Total Acordado"/>
+      <siteMapNode url="~/Incidencia/Mantenimiento/GertakariakWeb/Facturacion.aspx" title="Facturacion"  description="Pedidos a proveedor"/>
+      <siteMapNode url="~/Incidencia/Mantenimiento/GertakariakWeb/ConfirmacionEmail.aspx" title="Avisos"  description="Avisos"/>
+		</siteMapNode>
+		<siteMapNode url="~/Mantenimiento/Usuarios/Listado.aspx" title="Gestion de Usuarios"  description="Gestion de Usuarios" />
+		<siteMapNode url="~/Mantenimiento/Caracteristicas/ListadoCarac.aspx" title="Mantenimiento Caracteristicas"  description="Mantenimiento Caracteristicas">
+			<siteMapNode url="~/Mantenimiento/Caracteristicas/DetalleCarac.aspx" title="Detalle"  description="Detalle Caracteristica" />
+		</siteMapNode>
+    <siteMapNode url="~/Mantenimiento/Notificaciones/ListadoUG.aspx" title="Notificaciones"  description="Notificaciones por UG" >
+      <siteMapNode url="~/Mantenimiento/Notificaciones/UsuarioUG.aspx" title="Usuarios"  description="Notificaciones por UG" />
+      </siteMapNode>
+      <siteMapNode url="~/Mantenimiento/Notificaciones/Perseguidores.aspx" title="Asignacion de Persiguidores"  description="Asignacion automatica de 'Perseguidores' dependiendo de las caractateristicas" />
+    <siteMapNode url="~/Mantenimiento/Relaciones/Inicio.aspx" title="Relaciones"  description="Relaciones">
+      <siteMapNode url="~/Mantenimiento/Relaciones/Relacionar.aspx" title="Detalle"  description="Detalle"/>
+      </siteMapNode>
+	</siteMapNode>
+</siteMap>

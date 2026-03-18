@@ -1,0 +1,50 @@
+﻿.modalBox {
+	background-color : #f5f5f5;
+	border-width: 1px;
+	border-style: solid;
+	border-color: Black;
+	padding: 3px;
+}
+
+.modalBackground {
+	background-color: Gray;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+/*************************************************/
+/* Nueva version*/
+/*************************************************/
+/*.updateProgress
+{
+	border-width: 1px;
+	border-style: solid;
+	background-color: #FFFFFF;
+	position: absolute;
+	width: 180px;
+	height: 65px;
+}*/
+/*************************************************/
+/* Meter el cotendio del updateProgress dentro de una tabla para que salga centrado. */
+/*************************************************/
+.updateProgress
+{
+	border-width: 1px;
+	border-style: solid;
+	background-color: #FFFFFF;
+	position: absolute;
+	width: 180px;
+	height: 65px;
+	left: 50%;
+	top: 50%;
+	margin-top: -33px;
+	margin-left: -90px;
+	vertical-align: middle;
+	text-align: center;
+}
+.updateProgress table
+{
+	border-width:1px;
+	width:100%; height:100%
+}
+/*************************************************/

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KAPLAN" EntityNamespace="Registro" ContextNamespace="DAL_KaPlan" Class="ELL" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ATXEKOITURRI;Initial Catalog=KAPLAN;Persist Security Info=True;User ID=sa" SettingsObjectName="KaPlanLib.My.MySettings" SettingsPropertyName="KAPLANConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Actualizaciones" Member="Actualizaciones">
+    <Type Name="Actualizaciones">
+      <Column Name="Catalogo" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Conexion" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Historico_DOC" Member="Historico_DOC">
+    <Type Name="Historico_DOC">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaGeneracion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaInsercion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Referencia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdNivel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Documento" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Maquina" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdPlanta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

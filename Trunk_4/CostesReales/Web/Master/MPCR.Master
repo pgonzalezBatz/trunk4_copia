@@ -1,0 +1,91 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPCR.Master.vb" Inherits="CostesReales.MPCR" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <%--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/moment-with-locales.min.js"></script>
+    <script src="Scripts/bootstrap-datetimepicker.min.js"></script>
+    <title>Costes Reales</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" runat="server" id="btnMenu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://<%=Servidor%>.batz.es/homeintranet"><img src="Content/img/logo.png" /></a>
+                </div>
+                <div class="navbar-collapse collapse divMenu" runat="server" id="divMenu" style="display:flex!important;align-items:center">
+                     <ul class="nav navbar-nav navbar-left">
+                        <li class="nav-item">
+                            <a class="nav-link" href="PeriodoCierre.aspx">Periodo de cierre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="RepartoActivosAmortizaciones.aspx">Reparto activos para Amortizaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="HorasSerial.aspx">Horas Serial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Maquinas.aspx">Máquinas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="RepartosMOI.aspx">Repartos MOI</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuentas Contables
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item nav-link" href="CCGastosPorNegocio.aspx">Cuentas de Venta e Inventario PT y PC</a></li>
+                                <li><a href="CCGastosPorVenta.aspx">Gastos de la 164 y materia prima</a></li>
+                                <li><a href="CCGastosMOI.aspx">CC por Gastos MOI</a></li>
+                            </ul>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link" href="DiferenciaInventario.aspx">Diferencia Inventario Cierre Año</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="RPGenericos.aspx">RP Genéricos</a>
+                        </li>                                      
+                        <li class="nav-item">
+                            <a class="nav-link" href="Lantegis.aspx">Lantegis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="LanzarJob.aspx">Jobs</a>
+                        </li>
+                    </ul>                              
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a><span class="glyphicon glyphicon-user"></span>&nbsp;<asp:Label runat="server" ID="lblUserCon"><%= Session("usuario") %></asp:Label></a></li>
+                    </ul>                    
+                </div>               
+            </div>             
+            <div class="container-fluid" style="background-color:#ebebeb;">
+                <div class="navbar-header">                    
+                    <div class="navbar-brand"><asp:Label runat="server" style="color:#337ab7" ID="lblTitulo"></asp:Label></div>
+                </div>
+            </div>            
+        </div>  
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

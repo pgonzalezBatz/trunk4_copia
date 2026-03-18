@@ -1,0 +1,6 @@
+FACTURAS TELEFONIA
+
+Cuando se subia el access de las facturas, fallaba siempre en atxerre y elorribakar por un problema de los drivers
+Asi que se ha creado en atxerre y elorribakar un DNS de systema llamado Factura_Telefonia que apunta a \\supelegor\Documentos\Factura_Telefonia\Temp\Factura.mdb
+
+Cuando se sube una factura, se mete en temp con ese nombre, y cuando acaba, se cogia a fuera del directorio Temp con el nombre que tenia al subirse

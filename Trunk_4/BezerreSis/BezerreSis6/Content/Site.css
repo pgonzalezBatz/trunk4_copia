@@ -1,0 +1,402 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#datetimepicker1 > .input-group-addon,
+.myDatePicker > .input-group-addon,
+.euroTextbox > .input-group-addon {
+    width:auto;
+}
+
+.tooltip-inner {
+    text-align: left;
+    background-color:black;
+    color:white;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: black;
+}
+
+.table tr > th,
+.table tr > td {
+    text-align:center;
+    vertical-align:middle!important;
+}
+
+.table tr > td {
+    vertical-align:middle!important;
+}
+
+.table tr:not(:first-child):hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.table .noHover {
+    cursor:auto!important
+}
+
+    .table .noHover th {
+        border-top-color: #337ab7;
+    }
+
+p.col-md-6 {
+    padding: 0px;
+}
+
+
+/* improving navbar behaviour - breakpoint extended */
+
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left, .navbar-right {
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+        .navbar-nav > li {
+            float: none;
+        }
+
+            .navbar-nav > li > a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    #cambioPlanta + div.tooltip {
+        display: none!important;
+    }
+}
+
+.body-content > h1 ,
+.body-content > h2 {
+    color: #337ab7;
+    text-align:center;
+    font-weight:700;
+}
+
+
+/*#region Dialog */
+
+    #confirmBox {
+        display: none;
+        background-color: #eee;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        position: fixed;
+        width: 300px;
+        left: 50%;
+        top: 50%;
+        margin-left: -150px;
+        padding: 6px 8px 8px;
+        box-sizing: border-box;
+        text-align: center;
+        z-index: 2;
+    }
+
+    #confirmBox button {
+        background-color: #ccc;
+        display: inline-block;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        padding: 2px;
+        text-align: center;
+        width: 80px;
+        cursor: pointer;
+    }
+
+    #confirmBox button:hover {
+        background-color: #ddd;
+    }
+
+    #confirmBox .message {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    div > div.ui-widget-content {
+        border: none;
+    }
+
+    div > div.ui-dialog-titlebar {
+        background: #337ab7;
+        color: white;
+    }
+
+    div > div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
+        display:none;
+    }
+
+/*#endregion */
+
+/*#region Filters */
+
+.multiselect-native-select > .btn-group > button {
+    /*width: 180px;*/
+    min-width: 220px;
+}
+.myDatePicker > input {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    div.row.filters > div > h4 {
+        text-align: right;
+    }
+}
+
+@media (min-width: 992px) {
+    div.row > div > h4 {
+        text-align: right;
+    }
+}
+
+@media (max-width: 991px) {
+    div.row.filters > div {
+        text-align: center;
+    }
+    .filters .myDatePicker {
+        margin: 0 auto;
+    }
+}
+
+/*@media (max-width: 768px) {
+    div.form-group > div.input-group,
+    .myDatePicker{
+        margin: 0 auto;
+    }
+}*/
+
+/*#endregion */
+
+/*#region Tables */
+
+.container > .table {
+    min-width: 50%;
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+.body-content > table {
+    border: 1px solid #ccc;
+}
+
+/*table.tablaCalidad tr th,
+table.tablaProceso tr th {
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: white;
+    border-left-style: solid;
+    border-left-width: 1px;
+}*/
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 5px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 5px;
+}
+
+
+/*.reclamacionesTable tr + .tooltip.top {
+    margin-top: 10px;
+}*/
+
+/*#endregion */
+
+/*.form-horizontal > div > div > select:first-child {
+     no funciona 
+}*/
+
+.dl-horizontal > dt > label{
+    float:right;
+}
+
+
+/*#region submenu's right caret */
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.caret-right {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid;
+    display: inline-block;
+    /*height: 0;
+            opacity: 0.3;
+            vertical-align: top;
+            width: 0;*/
+    margin-left: 50%;
+}
+
+
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+
+/*#endregion */
+
+
+
+span.line-through {
+    position: relative;
+    display: inline-block;
+    /*padding: 0 10px;
+    margin: 10px;*/
+}
+
+button[enabled] > span.line-through:after {
+        content: "";
+        position: absolute;
+        border: 2px solid #000;
+        top: 50%;
+        margin-top: -1px;
+        /*width: 100%;*/
+        width: 130%;
+        left: -2px;
+    }
+
+button[disabled] > span.line-through:after {
+        content: "";
+        position: absolute;
+        border: 2px solid #777!important;
+        top: 50%;
+        margin-top: -1px;
+        /*width: 100%;*/
+        width: 130%;
+        left: -2px;
+    }
+
+.btn.disabled, [disabled].btn, fieldset[disabled] .btn {
+    opacity: 0.35!important;
+}
+
+@media all and (min-width:768px) {
+    .dl-horizontal dd {
+        margin-left: 50%;
+        padding-left: 20px;
+    }
+}
+
+/* Ñapa para que la flecha del dropdown no se muestre */
+
+select[readonly='readonly']::-ms-expand {
+    display: none;
+}
+
+select[readonly='readonly'] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+/* para que los dropdowns en readonly mode no reaccionen al ratón */
+[readonly='readonly'] {
+    pointer-events: none;
+}
+
+/*#tablaProceso tr td span {
+    color:green;
+    font-size:10px;
+}*/
+
+p.reportes > a {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.reportes > a > img {
+    height:20px;
+}
+
+.resumenFiltros {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.muestraMsg {
+    color: red;
+    font-style: italic;
+    position: absolute;
+    transform: translateY(50%);
+}
+
+.myDropDown {
+    margin: 0 auto;
+}

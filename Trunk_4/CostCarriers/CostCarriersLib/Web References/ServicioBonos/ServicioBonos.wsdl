@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddBono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idMaquina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="estadoBono" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="producto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="proyecto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoProy" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idActividad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="horas" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="procedencia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idIndicadorSolMed" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddBonoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLineaBono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idIndicadorSolMed" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idActividad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLineaBonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLineaBonoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaquina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaquinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaquinaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMaquinas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlanta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaquinasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaquinasResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddMaquina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPlanta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoMaq" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMaquinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddMaquinaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMaquina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMaq" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMaquinaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTipoMaquina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTipoMaquinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTipoMaquinaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTiposMaquinas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlanta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTiposMaquinasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTiposMaquinasResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectPlantToCharges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectPlantToChargesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectPlantToChargesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGrupoDistribucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idGrupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGrupoDistribucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGrupoDistribucionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruposDistribucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlanta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGruposDistribucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGruposDistribucionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosDistribucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProj" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDistribucion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idGrupoDistrib" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrencyDestino" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosDistribucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosDistribucionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnyosDistribucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="states" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDistribucion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnyosDistribucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAnyosDistribucionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosDistribucionPorAnyos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProj" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDistribucion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idGrupoDistrib" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrencyDestino" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosDistribucionPorAnyosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosDistribucionPorAnyosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHorasBonoGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlantaSab" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idGrupoBono" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHorasBonoGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHorasBonoGrupoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectMembersByRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rolName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectMembersByRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectMembersByRolResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOwner">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOwnerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOwnerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsProjectInManagementPlant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="anno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsProjectInManagementPlantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsProjectInManagementPlantResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectsAffected">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectsAffectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectsAffectedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProjectCostCarrier">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="costCarrier" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProjectCostCarrierResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateProjectCostCarrierResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddBonoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddBono" />
+  </wsdl:message>
+  <wsdl:message name="AddBonoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddBonoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLineaBonoSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLineaBono" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLineaBonoSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLineaBonoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaquinaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaquina" />
+  </wsdl:message>
+  <wsdl:message name="GetMaquinaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaquinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaquinasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaquinas" />
+  </wsdl:message>
+  <wsdl:message name="GetMaquinasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaquinasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMaquinaSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMaquina" />
+  </wsdl:message>
+  <wsdl:message name="AddMaquinaSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMaquinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMaquinaSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMaquina" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMaquinaSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMaquinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoMaquinaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTipoMaquina" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoMaquinaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTipoMaquinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTiposMaquinasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTiposMaquinas" />
+  </wsdl:message>
+  <wsdl:message name="GetTiposMaquinasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTiposMaquinasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectPlantToChargesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectPlantToCharges" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectPlantToChargesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectPlantToChargesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGrupoDistribucionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGrupoDistribucion" />
+  </wsdl:message>
+  <wsdl:message name="GetGrupoDistribucionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGrupoDistribucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGruposDistribucionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGruposDistribucion" />
+  </wsdl:message>
+  <wsdl:message name="GetGruposDistribucionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGruposDistribucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosDistribucionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosDistribucion" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosDistribucionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosDistribucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAnyosDistribucionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAnyosDistribucion" />
+  </wsdl:message>
+  <wsdl:message name="GetAnyosDistribucionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAnyosDistribucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosDistribucionPorAnyosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosDistribucionPorAnyos" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosDistribucionPorAnyosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosDistribucionPorAnyosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHorasBonoGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHorasBonoGrupo" />
+  </wsdl:message>
+  <wsdl:message name="GetHorasBonoGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHorasBonoGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectMembersByRolSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectMembersByRol" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectMembersByRolSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectMembersByRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOwnerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOwner" />
+  </wsdl:message>
+  <wsdl:message name="GetOwnerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsProjectInManagementPlantSoapIn">
+    <wsdl:part name="parameters" element="tns:IsProjectInManagementPlant" />
+  </wsdl:message>
+  <wsdl:message name="IsProjectInManagementPlantSoapOut">
+    <wsdl:part name="parameters" element="tns:IsProjectInManagementPlantResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsAffectedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectsAffected" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsAffectedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectsAffectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProjectCostCarrierSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProjectCostCarrier" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProjectCostCarrierSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProjectCostCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioBonosSoap">
+    <wsdl:operation name="AddBono">
+      <wsdl:input message="tns:AddBonoSoapIn" />
+      <wsdl:output message="tns:AddBonoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLineaBono">
+      <wsdl:input message="tns:DeleteLineaBonoSoapIn" />
+      <wsdl:output message="tns:DeleteLineaBonoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaquina">
+      <wsdl:input message="tns:GetMaquinaSoapIn" />
+      <wsdl:output message="tns:GetMaquinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaquinas">
+      <wsdl:input message="tns:GetMaquinasSoapIn" />
+      <wsdl:output message="tns:GetMaquinasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMaquina">
+      <wsdl:input message="tns:AddMaquinaSoapIn" />
+      <wsdl:output message="tns:AddMaquinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaquina">
+      <wsdl:input message="tns:DeleteMaquinaSoapIn" />
+      <wsdl:output message="tns:DeleteMaquinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoMaquina">
+      <wsdl:input message="tns:GetTipoMaquinaSoapIn" />
+      <wsdl:output message="tns:GetTipoMaquinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTiposMaquinas">
+      <wsdl:input message="tns:GetTiposMaquinasSoapIn" />
+      <wsdl:output message="tns:GetTiposMaquinasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectPlantToCharges">
+      <wsdl:input message="tns:GetProjectPlantToChargesSoapIn" />
+      <wsdl:output message="tns:GetProjectPlantToChargesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGrupoDistribucion">
+      <wsdl:input message="tns:GetGrupoDistribucionSoapIn" />
+      <wsdl:output message="tns:GetGrupoDistribucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGruposDistribucion">
+      <wsdl:input message="tns:GetGruposDistribucionSoapIn" />
+      <wsdl:output message="tns:GetGruposDistribucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDistribucion">
+      <wsdl:input message="tns:GetDatosDistribucionSoapIn" />
+      <wsdl:output message="tns:GetDatosDistribucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnyosDistribucion">
+      <wsdl:input message="tns:GetAnyosDistribucionSoapIn" />
+      <wsdl:output message="tns:GetAnyosDistribucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDistribucionPorAnyos">
+      <wsdl:input message="tns:GetDatosDistribucionPorAnyosSoapIn" />
+      <wsdl:output message="tns:GetDatosDistribucionPorAnyosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHorasBonoGrupo">
+      <wsdl:input message="tns:GetHorasBonoGrupoSoapIn" />
+      <wsdl:output message="tns:GetHorasBonoGrupoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectMembersByRol">
+      <wsdl:input message="tns:GetProjectMembersByRolSoapIn" />
+      <wsdl:output message="tns:GetProjectMembersByRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOwner">
+      <wsdl:input message="tns:GetOwnerSoapIn" />
+      <wsdl:output message="tns:GetOwnerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectInfo">
+      <wsdl:input message="tns:GetProjectInfoSoapIn" />
+      <wsdl:output message="tns:GetProjectInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsProjectInManagementPlant">
+      <wsdl:input message="tns:IsProjectInManagementPlantSoapIn" />
+      <wsdl:output message="tns:IsProjectInManagementPlantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectsAffected">
+      <wsdl:input message="tns:GetProjectsAffectedSoapIn" />
+      <wsdl:output message="tns:GetProjectsAffectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectCostCarrier">
+      <wsdl:input message="tns:UpdateProjectCostCarrierSoapIn" />
+      <wsdl:output message="tns:UpdateProjectCostCarrierSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioBonosSoap" type="tns:ServicioBonosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddBono">
+      <soap:operation soapAction="http://tempuri.org/AddBono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLineaBono">
+      <soap:operation soapAction="http://tempuri.org/DeleteLineaBono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaquina">
+      <soap:operation soapAction="http://tempuri.org/GetMaquina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaquinas">
+      <soap:operation soapAction="http://tempuri.org/GetMaquinas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMaquina">
+      <soap:operation soapAction="http://tempuri.org/AddMaquina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaquina">
+      <soap:operation soapAction="http://tempuri.org/DeleteMaquina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoMaquina">
+      <soap:operation soapAction="http://tempuri.org/GetTipoMaquina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTiposMaquinas">
+      <soap:operation soapAction="http://tempuri.org/GetTiposMaquinas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectPlantToCharges">
+      <soap:operation soapAction="http://tempuri.org/GetProjectPlantToCharges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGrupoDistribucion">
+      <soap:operation soapAction="http://tempuri.org/GetGrupoDistribucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruposDistribucion">
+      <soap:operation soapAction="http://tempuri.org/GetGruposDistribucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDistribucion">
+      <soap:operation soapAction="http://tempuri.org/GetDatosDistribucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnyosDistribucion">
+      <soap:operation soapAction="http://tempuri.org/GetAnyosDistribucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDistribucionPorAnyos">
+      <soap:operation soapAction="http://tempuri.org/GetDatosDistribucionPorAnyos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHorasBonoGrupo">
+      <soap:operation soapAction="http://tempuri.org/GetHorasBonoGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectMembersByRol">
+      <soap:operation soapAction="http://tempuri.org/GetProjectMembersByRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwner">
+      <soap:operation soapAction="http://tempuri.org/GetOwner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectInfo">
+      <soap:operation soapAction="http://tempuri.org/GetProjectInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProjectInManagementPlant">
+      <soap:operation soapAction="http://tempuri.org/IsProjectInManagementPlant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectsAffected">
+      <soap:operation soapAction="http://tempuri.org/GetProjectsAffected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectCostCarrier">
+      <soap:operation soapAction="http://tempuri.org/UpdateProjectCostCarrier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioBonosSoap12" type="tns:ServicioBonosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddBono">
+      <soap12:operation soapAction="http://tempuri.org/AddBono" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLineaBono">
+      <soap12:operation soapAction="http://tempuri.org/DeleteLineaBono" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaquina">
+      <soap12:operation soapAction="http://tempuri.org/GetMaquina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaquinas">
+      <soap12:operation soapAction="http://tempuri.org/GetMaquinas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMaquina">
+      <soap12:operation soapAction="http://tempuri.org/AddMaquina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaquina">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMaquina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoMaquina">
+      <soap12:operation soapAction="http://tempuri.org/GetTipoMaquina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTiposMaquinas">
+      <soap12:operation soapAction="http://tempuri.org/GetTiposMaquinas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectPlantToCharges">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectPlantToCharges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGrupoDistribucion">
+      <soap12:operation soapAction="http://tempuri.org/GetGrupoDistribucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGruposDistribucion">
+      <soap12:operation soapAction="http://tempuri.org/GetGruposDistribucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDistribucion">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosDistribucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnyosDistribucion">
+      <soap12:operation soapAction="http://tempuri.org/GetAnyosDistribucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDistribucionPorAnyos">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosDistribucionPorAnyos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHorasBonoGrupo">
+      <soap12:operation soapAction="http://tempuri.org/GetHorasBonoGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectMembersByRol">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectMembersByRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwner">
+      <soap12:operation soapAction="http://tempuri.org/GetOwner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsProjectInManagementPlant">
+      <soap12:operation soapAction="http://tempuri.org/IsProjectInManagementPlant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectsAffected">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectsAffected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProjectCostCarrier">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProjectCostCarrier" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioBonos">
+    <wsdl:port name="ServicioBonosSoap" binding="tns:ServicioBonosSoap">
+      <soap:address location="https://intranet2.batz.es/BonosSis/Publico/ServicioBonos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioBonosSoap12" binding="tns:ServicioBonosSoap12">
+      <soap12:address location="https://intranet2.batz.es/BonosSis/Publico/ServicioBonos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

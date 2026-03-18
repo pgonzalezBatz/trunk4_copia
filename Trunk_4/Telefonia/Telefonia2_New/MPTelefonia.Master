@@ -1,0 +1,81 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPTelefonia.Master.vb" Inherits="Telefonia.MPTelefonia" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Telefonia</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1;maximum-scale=1, user-scalable=no" />    
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <link href="Content/ToastNotification/jquery.toastmessage.css" type="text/css" rel="Stylesheet" />    
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />	        
+</head>
+<body onload="top.document.title = 'Telefonia'">
+    <script type="text/javascript">
+         function showToast(pTexto, pType, pSticky) {
+             $().toastmessage('showToast', {
+                 text: pTexto,
+                 sticky: pSticky,
+                 position: 'middle-center',
+                 type: pType,
+                 closeText: '',
+             });
+         }
+     </script> 
+    <form id="form1" runat="server">
+    <ajax:ToolkitScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">
+        <Scripts>            
+            <asp:ScriptReference Path="~/Scripts/jquery-1.9.1.min.js" />                        
+            <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />
+            <asp:ScriptReference Path="~/Scripts/bootstrap-pagination.js" />            
+            <asp:ScriptReference Path="~/Scripts/moment-with-locales.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.toastmessage.js" />
+            <asp:ScriptReference Path="~/Scripts/bootstrap-datetimepicker.js" />
+            <asp:ScriptReference Path="~/Scripts/typeahead.bundle.min.js" /> 
+        </Scripts>
+    </ajax:ToolkitScriptManager>
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" runat="server" id="btnMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                                        
+                <asp:Image ID="imgLogo" runat="server" AlternateText="Telefonia" CssClass="navbar-brand" />
+            </div>
+            <div class="navbar-collapse collapse" runat="server" id="divMenu">
+                <asp:Label runat="server" ID="labelMenu"></asp:Label>
+                <ul class="nav navbar-nav navbar-right">                                                           
+                    <li><a><span class="glyphicon glyphicon-user"></span>&nbsp;<asp:Label runat="server" ID="lblUserCon"></asp:Label></a></li>
+                    <li><a href="https://<%=Servidor%>.batz.es/Homeintranet" id="aSalir"><span class="glyphicon glyphicon-off"></span>&nbsp;<%=Traducir("Salir")%></a></li>
+                </ul>                
+            </div> 
+        </div>	      
+    </div>       
+    <asp:Button runat="server" ID="btnLogOff" class="logOff" style="display:none" />
+    <div class="container">
+        <div class="page-header">
+            <h3><asp:Label runat="server" ID="lblTitulo"></asp:Label></h3>
+            <asp:Panel runat="server" ID="pnlPlantaAdm" CssClass="form-inline" Visible="false">
+                <div>
+                    <b><asp:Label runat="server" ID="labelPlanta" text="plantaAdministracion"></asp:Label></b>&nbsp;
+                    <asp:Label runat="server" ID="lblPlantaAdm"></asp:Label>
+                </div>    
+            </asp:Panel>
+        </div>        
+        <asp:ContentPlaceHolder ID="cp" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="footer">
+                <br /><center>				    
+				<asp:Label id="labelFooter" runat="server" Text="encasodeteneralgunproblema contactarcon" />
+				<asp:HyperLink id="hlnkAdmin" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk"/>
+            </center><br />
+        </div>
+    </div>	
+
+
+         
+    </form>
+</body>
+</html>

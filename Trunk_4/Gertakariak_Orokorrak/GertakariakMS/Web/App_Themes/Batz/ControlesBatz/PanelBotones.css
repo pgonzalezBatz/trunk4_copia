@@ -1,0 +1,47 @@
+﻿/*
+Al generar el panel de botones con "asp:ImageButton" el resultado son "<input type="image" />" 
+que tienen asignados por defecto valores en el "Margin". Esto nos obliga a calcular y compensar esos "Margin".
+Esos valores son diferentes entre el FrameWork 3.5 y 4.0.
+*/
+.PanelBotones {
+    /*
+        El ancho del panel no se ajusta correctamente en IE8. Tiende a ocupar toda el ancho.
+        Para IE8 poner el panel dentro de '<table style="width: auto; border-collapse: collapse;">' (o un control que lo pueda contener) 
+        o poner en el panel un ancho fijo '<asp:Panel ID="Panel1" runat="server" CssClass="PanelBotones" Width="26px">'.
+    */
+    border: 1px outset #EBEBEB;
+    display: inline-block;
+    background-color: #EBEBEB;
+    margin: 0px;
+}
+
+    .PanelBotones input[type="image"], .PanelBotones  img, .PanelBotones  span {
+        /*.PanelBotones div > img*/
+        /*vertical-align:top;*/
+		vertical-align:middle;
+
+        margin-top: 3px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        margin-left: 3px;
+        
+        border-color: transparent;
+        border-width: 1px;
+        border-style: solid ;   
+    }
+
+        .PanelBotones input[type="image"]:hover, .PanelBotones img:hover {
+            /*.PanelBotones div > img:hover*/
+            background-color: #BBDDFF;
+            /*vertical-align:top;*/
+			vertical-align:middle;
+
+            /*margin-top: 3px;*/ /*Calculamos el margin con "input(margin-top) - input:hover(border-width)"*/
+            /*margin-right: 3px;*/ /*Calculamos el margin con "input(margin-right) - input:hover(border-width)"*/
+            /*margin-bottom: 4px;*/ /*Calculamos el margin con "input(margin-bottom) - input:hover(border-width)"*/
+            /*margin-left: 3px;*/ /*Calculamos el margin con "input(margin-left) - input:hover(border-width)"*/
+
+            border-color: #00468C;
+            border-width: 1px;
+            border-style: solid;   
+        }

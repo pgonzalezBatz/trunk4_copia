@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://DefaultNamespace" targetNamespace="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="descargarEstructuraRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="descargarEstructuraResponse">
+    <wsdl:part name="descargarEstructuraReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="descargarEstructuraRequest1">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="soapenc:string" />
+    <wsdl:part name="in2" type="soapenc:string" />
+    <wsdl:part name="in3" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="descargarEstructuraResponse1">
+    <wsdl:part name="descargarEstructuraReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="upload3dXMlRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="soapenc:string" />
+    <wsdl:part name="in2" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="upload3dXMlResponse">
+    <wsdl:part name="upload3dXMlReturn" type="soapenc:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="prgJobserverWS">
+    <wsdl:operation name="descargarEstructura" parameterOrder="in0 in1">
+      <wsdl:input name="descargarEstructuraRequest" message="impl:descargarEstructuraRequest" />
+      <wsdl:output name="descargarEstructuraResponse" message="impl:descargarEstructuraResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="descargarEstructura" parameterOrder="in0 in1 in2 in3">
+      <wsdl:input name="descargarEstructuraRequest1" message="impl:descargarEstructuraRequest1" />
+      <wsdl:output name="descargarEstructuraResponse1" message="impl:descargarEstructuraResponse1" />
+    </wsdl:operation>
+    <wsdl:operation name="upload3dXMl" parameterOrder="in0 in1 in2">
+      <wsdl:input name="upload3dXMlRequest" message="impl:upload3dXMlRequest" />
+      <wsdl:output name="upload3dXMlResponse" message="impl:upload3dXMlResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrgJobserverWSSoapBinding" type="impl:prgJobserverWS">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="descargarEstructura">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="descargarEstructuraRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="descargarEstructuraResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descargarEstructura">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="descargarEstructuraRequest1">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="descargarEstructuraResponse1">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upload3dXMl">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="upload3dXMlRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="upload3dXMlResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="prgJobserverWSService">
+    <wsdl:port name="PrgJobserverWS" binding="impl:PrgJobserverWSSoapBinding">
+      <wsdlsoap:address location="http://arranoatx.batz.es:7001/enovia/services/PrgJobserverWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

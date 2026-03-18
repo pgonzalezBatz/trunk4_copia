@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{A545E1E7-8F08-49F5-A1C8-12CCFDA1A7C5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Telefonia</RootNamespace>
+    <AssemblyName>Telefonia2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Telefonia2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Telefonia2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.930, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Ajax Control ToolKit\UltimaVersion\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj">
+      <Project>{d8dfd338-036c-4472-8611-59566f4e37fb}</Project>
+      <Name>AccesoAutomaticoBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RRHH\RRHHLib\RRHHLib.vbproj">
+      <Project>{73193fb9-7806-4b49-9cea-56078dffb69b}</Project>
+      <Name>RRHHLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TraduccionesLib\TraduccionesLib.vbproj">
+      <Project>{c6bcb6d1-678b-4c12-99c3-df57c9c28cae}</Project>
+      <Name>TraduccionesLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelefoniaLib\TelefoniaLib.vbproj">
+      <Project>{7b917a2e-36ff-40ad-96ab-9a2214fe9c9e}</Project>
+      <Name>TelefoniaLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Oracle.ManagedDataAccess.Client" />
+    <Import Include="Oracle.ManagedDataAccess.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="TelefoniaLib" />
+    <Import Include="TraduccionesLib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\menu.xml" />
+    <Content Include="App_Themes\Tema1\estilo.css" />
+    <Content Include="App_Themes\Tema1\Images\actividad.gif" />
+    <Content Include="App_Themes\Tema1\Images\advertencia.gif" />
+    <Content Include="App_Themes\Tema1\Images\agregar.gif" />
+    <Content Include="App_Themes\Tema1\Images\alarma.gif" />
+    <Content Include="App_Themes\Tema1\Images\arrow.gif" />
+    <Content Include="App_Themes\Tema1\Images\atras.png" />
+    <Content Include="App_Themes\Tema1\Images\barra3d1.gif" />
+    <Content Include="App_Themes\Tema1\Images\barra3d2.gif" />
+    <Content Include="App_Themes\Tema1\Images\barra3d3.gif" />
+    <Content Include="App_Themes\Tema1\Images\bonoSis.gif" />
+    <Content Include="App_Themes\Tema1\Images\borrar.gif" />
+    <Content Include="App_Themes\Tema1\Images\bullet_hl.gif" />
+    <Content Include="App_Themes\Tema1\Images\Calendar.gif" />
+    <Content Include="App_Themes\Tema1\Images\Cancelar.gif" />
+    <Content Include="App_Themes\Tema1\Images\cerrar.gif" />
+    <Content Include="App_Themes\Tema1\Images\close.gif" />
+    <Content Include="App_Themes\Tema1\Images\collapse_blue.jpg" />
+    <Content Include="App_Themes\Tema1\Images\confima.gif" />
+    <Content Include="App_Themes\Tema1\Images\coste.JPG" />
+    <Content Include="App_Themes\Tema1\Images\datos.JPG" />
+    <Content Include="App_Themes\Tema1\Images\departamento.gif" />
+    <Content Include="App_Themes\Tema1\Images\detalles.gif" />
+    <Content Include="App_Themes\Tema1\Images\empresa.png" />
+    <Content Include="App_Themes\Tema1\Images\error.gif" />
+    <Content Include="App_Themes\Tema1\Images\expand_blue.jpg" />
+    <Content Include="App_Themes\Tema1\Images\File.gif" />
+    <Content Include="App_Themes\Tema1\Images\filtro.png" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_alemania.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_czech.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_fpkPeine.png" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_fpkZamudio.png" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_igorre.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_kunshan.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_mbtooling.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_mbtrioja.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_mexicana.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\dir_mus.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_czech.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_Energy.jpg" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_fpk.png" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_igorre.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_kunshan.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_mbtooling.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_mbtrioja.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_mexicana.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_mus.gif" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_Solar_RSA.jpg" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\logo_Solar_Services.jpg" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\matraca.png" />
+    <Content Include="App_Themes\Tema1\Images\FirmasCorporativas\matraca2.png" />
+    <Content Include="App_Themes\Tema1\Images\Folder.gif" />
+    <Content Include="App_Themes\Tema1\Images\fotoNoDisponible.jpg" />
+    <Content Include="App_Themes\Tema1\Images\imprimir.gif" />
+    <Content Include="App_Themes\Tema1\Images\info.gif" />
+    <Content Include="App_Themes\Tema1\Images\integrado.gif" />
+    <Content Include="App_Themes\Tema1\Images\lapiz.gif" />
+    <Content Include="App_Themes\Tema1\Images\leido.GIF" />
+    <Content Include="App_Themes\Tema1\Images\loadin.gif" />
+    <Content Include="App_Themes\Tema1\Images\logo.gif" />
+    <Content Include="App_Themes\Tema1\Images\mail.gif" />
+    <Content Include="App_Themes\Tema1\Images\mobile.png" />
+    <Content Include="App_Themes\Tema1\Images\movil.gif" />
+    <Content Include="App_Themes\Tema1\Images\NikEuskaraz.png" />
+    <Content Include="App_Themes\Tema1\Images\NikEuskaraz_txiki.jpg" />
+    <Content Include="App_Themes\Tema1\Images\noLeido.GIF" />
+    <Content Include="App_Themes\Tema1\Images\Nuevo.png" />
+    <Content Include="App_Themes\Tema1\Images\ok.gif" />
+    <Content Include="App_Themes\Tema1\Images\persona.gif" />
+    <Content Include="App_Themes\Tema1\Images\persona_small.gif" />
+    <Content Include="App_Themes\Tema1\Images\plano.swf" />
+    <Content Include="App_Themes\Tema1\Images\plano2.swf" />
+    <Content Include="App_Themes\Tema1\Images\rol.gif" />
+    <Content Include="App_Themes\Tema1\Images\Root.gif" />
+    <Content Include="App_Themes\Tema1\Images\sinFiltro.PNG" />
+    <Content Include="App_Themes\Tema1\Images\skype.png" />
+    <Content Include="App_Themes\Tema1\Images\sortascending.gif" />
+    <Content Include="App_Themes\Tema1\Images\sortdescending.gif" />
+    <Content Include="App_Themes\Tema1\Images\telefono.gif" />
+    <Content Include="App_Themes\Tema1\Images\TelefonoLogo.png" />
+    <Content Include="App_Themes\Tema1\Images\telephone.png" />
+    <Content Include="App_Themes\Tema1\Images\tiempo.jpg" />
+    <Content Include="App_Themes\Tema1\Images\user.gif" />
+    <Content Include="App_Themes\Tema1\Images\volver.gif" />
+    <Content Include="App_Themes\Tema1\Images\voz.JPG" />
+    <Content Include="App_Themes\Tema1\Images\warning.gif" />
+    <Content Include="App_Themes\Tema1\Images\Wireless.png" />
+    <Content Include="App_Themes\Tema1\Images\zoiper.png" />
+    <Content Include="App_Themes\Tema1\ToastNotification\close.gif" />
+    <Content Include="App_Themes\Tema1\ToastNotification\error.png" />
+    <Content Include="App_Themes\Tema1\ToastNotification\jquery.toastmessage.css" />
+    <Content Include="App_Themes\Tema1\ToastNotification\notice.png" />
+    <Content Include="App_Themes\Tema1\ToastNotification\success.png" />
+    <Content Include="App_Themes\Tema1\ToastNotification\warning.png" />
+    <Content Include="Assemblies\System.Web.DataVisualization.Design.dll" />
+    <Content Include="Assemblies\System.Web.DataVisualization.dll" />
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.js" />
+    <Content Include="Content\bootstrap-filestyle.min.js" />
+    <Content Include="Content\bootstrap-pagination.js" />
+    <Content Include="Content\bootstrap.js" />
+    <Content Include="Content\bootstrap.min.js" />
+    <None Include="Content\jquery-1.9.1.intellisense.js" />
+    <Content Include="Content\jquery-1.9.1.js" />
+    <Content Include="Content\jquery-1.9.1.min.js" />
+    <Content Include="Content\jquery.toastmessage.js" />
+    <Content Include="Content\moment-with-locales.js" />
+    <Content Include="Content\ToastNotification\close.gif" />
+    <Content Include="Content\ToastNotification\error.png" />
+    <Content Include="Content\ToastNotification\jquery.toastmessage.css" />
+    <Content Include="Content\ToastNotification\notice.png" />
+    <Content Include="Content\ToastNotification\success.png" />
+    <Content Include="Content\ToastNotification\warning.png" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Controls\msGrafico.ascx" />
+    <Content Include="Controls\PanelCargandoDatos.ascx" />
+    <Content Include="Controls\Titulo.ascx" />
+    <Content Include="default.aspx" />
+    <Content Include="Default_PortalEmpleado.aspx" />
+    <Content Include="DeleteCache.aspx" />
+    <Content Include="Documentacion\Factura_Telefonia.txt" />
+    <Content Include="Documentacion\Scripts\Telefonia_VistaMaterializada.sql" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="js\ajax.js" />
+    <Content Include="js\jQuery\jquery.js" />
+    <Content Include="js\jQuery\jquery.toastmessage.js" />
+    <Content Include="Listados\Facturacion\detalleFacturacion.aspx" />
+    <Content Include="Listados\Moviles\Moviles.aspx" />
+    <Content Include="Listados\NumerosDirectos.aspx" />
+    <Content Include="Mantenimientos\GrupoExtension.aspx" />
+    <Content Include="Mantenimientos\Telefono\CiaTlfno.aspx" />
+    <Content Include="Mantenimientos\Telefono\Gestor.aspx" />
+    <Content Include="Mantenimientos\Telefono\PerfilesMovil.aspx" />
+    <Content Include="Mantenimientos\Telefono\TarifaDatos.aspx" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-filestyle.min.js" />
+    <Content Include="Scripts\bootstrap-pagination.js" />
+    <Content Include="Scripts\jquery.toastmessage.js" />
+    <Content Include="js\Utiles.js" />
+    <Content Include="Listados\Extensiones.aspx" />
+    <Content Include="Listados\Facturacion\FacturacionPersona.aspx" />
+    <Content Include="Listados\Moviles\CargaFacturasMov.aspx" />
+    <Content Include="Listados\RepartidorAlveolos.aspx" />
+    <Content Include="Mantenimientos\Administradores.aspx" />
+    <Content Include="Mantenimientos\Alveolo\Alveolo.aspx" />
+    <Content Include="Mantenimientos\Alveolo\TipoAlveolo.aspx" />
+    <Content Include="Mantenimientos\DefaultAdm.aspx" />
+    <Content Include="Mantenimientos\Extension\Asignaciones\AsigExtInternas.aspx" />
+    <Content Include="Mantenimientos\Extension\Asignaciones\AsigMoviles.aspx" />
+    <Content Include="Mantenimientos\Extension\Asignaciones\AsigNumSinExt.aspx" />
+    <Content Include="Mantenimientos\Extension\Asignaciones\ExportExcelMovil.aspx" />
+    <Content Include="Mantenimientos\Extension\Extension.aspx" />
+    <Content Include="Mantenimientos\Extension\TipoLinea.aspx" />
+    <Content Include="Mantenimientos\Otros.aspx" />
+    <Content Include="Mantenimientos\Telefono\Prefijo.aspx" />
+    <Content Include="Mantenimientos\Telefono\Telefono.aspx" />
+    <Content Include="PermisoDenegado.aspx" />
+    <Content Include="RefrescarSession.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Mantenimientos\MPTelefoniaAdm.Master" />
+    <Content Include="MPSinMenu.master" />
+    <Content Include="Content\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="SeleccionPlanta.aspx" />
+    <Content Include="Services\ServiceTelefonia.asmx" />
+    <Content Include="TempImages\Readme.txt" />
+    <Content Include="WCF\ServiceTelefonia.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App_Data\log4netConfig.Debug.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="App_Data\log4netConfig.Release.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clases\PageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\msGrafico.ascx.designer.vb">
+      <DependentUpon>msGrafico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\msGrafico.ascx.vb">
+      <DependentUpon>msGrafico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PanelCargandoDatos.ascx.designer.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PanelCargandoDatos.ascx.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Titulo.ascx.designer.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Titulo.ascx.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_PortalEmpleado.aspx.designer.vb">
+      <DependentUpon>Default_PortalEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_PortalEmpleado.aspx.vb">
+      <DependentUpon>Default_PortalEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteCache.aspx.designer.vb">
+      <DependentUpon>DeleteCache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCache.aspx.vb">
+      <DependentUpon>DeleteCache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\Extensiones.aspx.designer.vb">
+      <DependentUpon>Extensiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\Extensiones.aspx.vb">
+      <DependentUpon>Extensiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados\Facturacion\detalleFacturacion.aspx.designer.vb">
+      <DependentUpon>detalleFacturacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\Facturacion\detalleFacturacion.aspx.vb">
+      <DependentUpon>detalleFacturacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados\Facturacion\FacturacionPersona.aspx.designer.vb">
+      <DependentUpon>FacturacionPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\Facturacion\FacturacionPersona.aspx.vb">
+      <DependentUpon>FacturacionPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados\Moviles\CargaFacturasMov.aspx.designer.vb">
+      <DependentUpon>CargaFacturasMov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\Moviles\CargaFacturasMov.aspx.vb">
+      <DependentUpon>CargaFacturasMov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados\Moviles\Moviles.aspx.designer.vb">
+      <DependentUpon>Moviles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\Moviles\Moviles.aspx.vb">
+      <DependentUpon>Moviles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados\NumerosDirectos.aspx.designer.vb">
+      <DependentUpon>NumerosDirectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\NumerosDirectos.aspx.vb">
+      <DependentUpon>NumerosDirectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listados\RepartidorAlveolos.aspx.designer.vb">
+      <DependentUpon>RepartidorAlveolos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\RepartidorAlveolos.aspx.vb">
+      <DependentUpon>RepartidorAlveolos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Administradores.aspx.designer.vb">
+      <DependentUpon>Administradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Administradores.aspx.vb">
+      <DependentUpon>Administradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Alveolo\Alveolo.aspx.designer.vb">
+      <DependentUpon>Alveolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Alveolo\Alveolo.aspx.vb">
+      <DependentUpon>Alveolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Alveolo\TipoAlveolo.aspx.designer.vb">
+      <DependentUpon>TipoAlveolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Alveolo\TipoAlveolo.aspx.vb">
+      <DependentUpon>TipoAlveolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\DefaultAdm.aspx.designer.vb">
+      <DependentUpon>DefaultAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\DefaultAdm.aspx.vb">
+      <DependentUpon>DefaultAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\AsigExtInternas.aspx.designer.vb">
+      <DependentUpon>AsigExtInternas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\AsigExtInternas.aspx.vb">
+      <DependentUpon>AsigExtInternas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\AsigMoviles.aspx.designer.vb">
+      <DependentUpon>AsigMoviles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\AsigMoviles.aspx.vb">
+      <DependentUpon>AsigMoviles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\AsigNumSinExt.aspx.designer.vb">
+      <DependentUpon>AsigNumSinExt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\AsigNumSinExt.aspx.vb">
+      <DependentUpon>AsigNumSinExt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\ExportExcelMovil.aspx.designer.vb">
+      <DependentUpon>ExportExcelMovil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Asignaciones\ExportExcelMovil.aspx.vb">
+      <DependentUpon>ExportExcelMovil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Extension.aspx.designer.vb">
+      <DependentUpon>Extension.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\Extension.aspx.vb">
+      <DependentUpon>Extension.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\TipoLinea.aspx.designer.vb">
+      <DependentUpon>TipoLinea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Extension\TipoLinea.aspx.vb">
+      <DependentUpon>TipoLinea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GrupoExtension.aspx.designer.vb">
+      <DependentUpon>GrupoExtension.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GrupoExtension.aspx.vb">
+      <DependentUpon>GrupoExtension.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\MPTelefoniaAdm.Master.designer.vb">
+      <DependentUpon>MPTelefoniaAdm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\MPTelefoniaAdm.Master.vb">
+      <DependentUpon>MPTelefoniaAdm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\CiaTlfno.aspx.designer.vb">
+      <DependentUpon>CiaTlfno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\CiaTlfno.aspx.vb">
+      <DependentUpon>CiaTlfno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\Gestor.aspx.designer.vb">
+      <DependentUpon>Gestor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\Gestor.aspx.vb">
+      <DependentUpon>Gestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\PerfilesMovil.aspx.designer.vb">
+      <DependentUpon>PerfilesMovil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\PerfilesMovil.aspx.vb">
+      <DependentUpon>PerfilesMovil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\TarifaDatos.aspx.designer.vb">
+      <DependentUpon>TarifaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\TarifaDatos.aspx.vb">
+      <DependentUpon>TarifaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPSinMenu.master.vb">
+      <DependentUpon>MPSinMenu.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPTelefonia.Master.designer.vb">
+      <DependentUpon>MPTelefonia.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPTelefonia.Master.vb">
+      <DependentUpon>MPTelefonia.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Otros.aspx.designer.vb">
+      <DependentUpon>Otros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Otros.aspx.vb">
+      <DependentUpon>Otros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\Prefijo.aspx.designer.vb">
+      <DependentUpon>Prefijo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\Prefijo.aspx.vb">
+      <DependentUpon>Prefijo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\Telefono.aspx.designer.vb">
+      <DependentUpon>Telefono.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono\Telefono.aspx.vb">
+      <DependentUpon>Telefono.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RefrescarSession.aspx.designer.vb">
+      <DependentUpon>RefrescarSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RefrescarSession.aspx.vb">
+      <DependentUpon>RefrescarSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeleccionPlanta.aspx.designer.vb">
+      <DependentUpon>SeleccionPlanta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionPlanta.aspx.vb">
+      <DependentUpon>SeleccionPlanta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceTelefonia.asmx.vb">
+      <DependentUpon>ServiceTelefonia.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WCF\IServiceTelefonia.vb" />
+    <Compile Include="WCF\ServiceTelefonia.svc.vb">
+      <DependentUpon>ServiceTelefonia.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\log4netConfig.config">
+      <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MPTelefonia.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
+    <Content Include="Services\Web.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62676</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62676/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

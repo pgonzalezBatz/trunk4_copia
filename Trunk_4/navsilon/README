@@ -1,0 +1,109 @@
+El proyecto tiene dependencias de Codigo_Compartido y el proyecto helbide.
+De este último, enlaza la clase h que se utiliza como ayuda para traducciones etc.
+
+TODO: El enlace a helbide deberiamos de mirarlo y tratar de hacerlo de una forma mas elegante
+
+
+Notas para entender el traspaso de los asientos contables:
+
+Nomina LA
+
+Para cada departamento de administracion, agrupar los gastos nomina LA sin IRPF y sin ILT y sin gourmet
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de nomina LA.
+
+Para cada departamento de administracion, agrupar  IRPF para socios (con diferente signo a la nomina)
+de todos los departamentos de RRHH relacionados con la cuenta de IRPF para socios.
+
+Para cada departamento de administracion, agrupar  Gourmet para socios (con diferente signo a la nomina)
+de todos los departamentos de RRHH relacionados con la cuenta de Gourmet para socios.
+
+Para cada departamento de administracion, agrupar  ILT
+de todos los departamentos de RRHH relacionados con la cuenta de ILT para socios.
+
+Para cada departamento de administracion, agrupar  el total liquido de socios
+de todos los departamentos de RRHH relacionados con la cuenta de total liquido para socios.
+
+Total liquido(socio)= Nomina - IRPF - Gourmet + ILT
+
+Nomina SS
+
+Para cada departamento de administracion, agrupar los gastos nomina SS sin IRPF y sin gourmet
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de nomina SS.
+
+Para cada departamento de administracion, agrupar  IRPF para eventuales (con diferente signo a la nomina)
+de todos los departamentos de RRHH relacionados con la cuenta de IRPF para eventuales.
+
+Para cada departamento de administracion, agrupar  Gourmet para eventuales (con diferente signo a la nomina)
+de todos los departamentos de RRHH relacionados con la cuenta de Gourmet para eventuales.
+
+Para cada departamento de administracion, agrupar  SS Trabajador
+de todos los departamentos de RRHH relacionados con la cuenta de SS trabajador.
+
+Para cada departamento de administracion, agrupar  el total liquido de eventuales
+de todos los departamentos de RRHH relacionados con la cuenta de total liquido para eventuales.
+
+Total liquido(eventual)= Nomina - IRPF - Gourmet - SS trabajador
+
+Cuota LA
+
+Para cada departamento de administracion, agrupar los gastos Cuota LA
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota LA.
+
+Para cada departamento de administracion, agrupar los gastos Cuota LA Troqueleria
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota LA Troqueleria.
+
+Para cada departamento de administracion, agrupar los gastos Cuota LA sistemas
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota LA sistemas.
+
+Para cada departamento de administracion, agrupar los gastos Cuota LA gral
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota LA gral
+
+Cuota LA Troqueleria + Cuota LA sistemas + Cuota LA GRAL = Total Cuota LA
+
+
+Cuota SS
+
+Para cada departamento de administracion, agrupar los gastos Cuota SS
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de SS
+
+Para cada departamento de administracion, agrupar los gastos Cuota SS Troqueleria
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota SS Troqueleria.
+
+Para cada departamento de administracion, agrupar los gastos Cuota SS sistemas
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota SS sistemas.
+
+Para cada departamento de administracion, agrupar los gastos Cuota SS gral
+de todos los departamentos de RRHH relacionados con sus respectivas cuentas de Cuota SS gral
+
+Cuota SS Troqueleria + Cuota SS sistemas + Cuota SS GRAL = Total Cuota SS
+
+
+Composición del asiento contable de nominas
+
+1.- Nominas LA bruto(sin IRPF, ILT, Gourmet)
+2.- Nominas SS bruto(sin IRPF, Gourmet, SS Trabajador)
+3.- Nominas LA neto
+4.- Nominas SS neto
+5.- IRPF socios
+6.- IRPF no socios
+7.- Gourmet socios
+8.- Gourmet no socios
+9.- ILT
+10.- SS Trabajadores
+11.- Cuota LA
+12.- Cuota LA (troqueleria, Sistemas, GRAL)
+13.- Cuota SS
+14.- Cuota SS (troqueleria, sistemas, GRAL)
+
+Estos son (o pueden ser) resumenes en Epsilon. Cada uno de estos resumenes tiene una seri de cuentas (una o mas) asignadas.
+
+La forma en la que se combinan estos resumenes para sumar 0 es la siguiente:
+
+0 = Nomina LA bruto + ILT - Gourmet socios - IRPF socios - Nomina LA neto
+0 = Nomina SS bruto - Gourmet eventuales - IRPF eventuales - SS Trabajador
+0 = Cuota LA - Cuota LA (divido en tres cuentas para Troq, Sis y Gral)
+0 = Cuota SS - Cuota SS (divido en tres cuentas para Troq, Sis y Gral)
+
+Notas:
+ - IRPF y Gourmet comparten el mismo numero de cuenta en todos los casos. Es decir podia ser un listado pero 
+   tendriamos problemas para hacer comprovaciones con las nominas separadas.

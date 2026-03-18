@@ -1,0 +1,70 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="PAC_IGO_TESTConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=ATXEKOITURRI;Initial Catalog=PAC_IGO_TEST;Persist Security Info=True;User ID=sa;Password=joane2005 &lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=ATXEKOITURRI;Initial Catalog=PAC_IGO_TEST;Persist Security Info=True;User ID=sa;Password=joane2005 </Value>
+    </Setting>
+    <Setting Name="PAC_IGO_TESTConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=ATXEKOITURRI;Initial Catalog=PAC_IGO_TEST;Persist Security Info=True;User ID=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=ATXEKOITURRI;Initial Catalog=PAC_IGO_TEST;Persist Security Info=True;User ID=sa</Value>
+    </Setting>
+    <Setting Name="KAPLAN_TESTConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner;Password=btzsdbo&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner;Password=btzsdbo</Value>
+    </Setting>
+    <Setting Name="KAPLAN_TESTConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=developer;Password=acyacpnthdd&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=developer;Password=acyacpnthdd</Value>
+    </Setting>
+    <Setting Name="KAPLANConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN;Persist Security Info=True;User ID=BtzSqlLoginWriter;Password=btzsw&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN;Persist Security Info=True;User ID=BtzSqlLoginWriter;Password=btzsw</Value>
+    </Setting>
+    <Setting Name="KAPLAN_TESTConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=BTZSQLDB1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="KAPLAN_TESTConnectionString3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=btzsqldb1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner;Password=btzsdbo&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=btzsqldb1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner;Password=btzsdbo</Value>
+    </Setting>
+    <Setting Name="KAPLAN_TESTConnectionString4" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=btzsqldb1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=btzsqldb1\MSSQLINS1;Initial Catalog=KAPLAN_TEST;Persist Security Info=True;User ID=BtzSqlDbOwner</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

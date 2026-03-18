@@ -1,0 +1,138 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="GTK_Troqueleria.Site" %>
+
+<%--HTML 4.01--%>
+<%--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">--%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%--HTML5--%>
+<%--<!DOCTYPE html>--%>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Batz S. Koop.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <!--Forzar la cabecera de compatibilidad a la mas alta posible -->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+    <!--Forzamos el refresco de la pagian antes de que caduque la sesion (20 min = 1200 seg) -------->
+    <meta http-equiv="refresh" content="1195" />
+    <!-- Estilos CSS ----------------------------------------------------->
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+    <link rel="shortcut icon" href="App_Themes/Batz/Imagenes/IconoAplicacion/favicon.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="act_ToolkitScriptManager" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true">
+            <Scripts>
+                <%--<asp:ScriptReference Path="~/Scripts/AjaxControlToolkit_Fixed.js"/>--%>
+                <%--<asp:ScriptReference Path="~/Scripts/html5-dataset.js"/>--%>
+                <%--<asp:ScriptReference Path="~/Scripts/jquery-1.12.4.min.js" />--%>
+                <%--<asp:ScriptReference Path="~/Scripts/jquery-3.3.1.min.js" />--%>
+                <asp:ScriptReference Path="~/Scripts/jquery-2.2.3.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.11.4.min.js" />
+                <%--<asp:ScriptReference Path="~/Scripts/modal.js" />--%>
+                <asp:ScriptReference Path="~/Scripts/Utiles.js" />
+                <%--<asp:ScriptReference Path="~/App_Themes/Batz/Utilidades.js" />--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div>
+            <asp:HyperLink runat="server" ID="lnkIntranet" NavigateUrl="/HomeIntranet" CssClass="cabApp" ToolTip="Ir a la página principal de la intranet" />
+            <table style="width: 100%;" class="cabecera">
+                <tr>
+                    <td class="cabeceraIzquierda">
+                        <asp:Literal ID="ltlUsuario" runat="server" Text="usuarioConectado"></asp:Literal>
+                        :
+					<asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                        <asp:DropDownList ID="ddlIdioma" runat="server" AutoPostBack="True" align="absmiddle">
+                            <asp:ListItem Value="es-ES">Castellano</asp:ListItem>
+                            <asp:ListItem Value="eu-ES">Euskara</asp:ListItem>
+                            <asp:ListItem Value="en-GB">English</asp:ListItem>
+                            <asp:ListItem Value="cs-CZ">Čeština</asp:ListItem>
+                            <asp:ListItem Value="zh-CN">中文</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                    <td class="cabeceraDerecha">
+                        <%--<asp:Button ID="cambioUsuario" runat="server" Text="Cambio de usuario"/>--%>
+                        <asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal>
+<%--                        <asp:Image ID="btnInfo" runat="server" class="ImageButton" AlternateText="Informacion" ToolTip="Informacion" ImageUrl="~/App_Themes/Batz/IconosAjaxControl/VentanaMensajes/info-icon16.png" onmouseover="this.style.cursor='pointer'" ImageAlign="AbsMiddle" />
+                        <act:BalloonPopupExtender ID="bpe_pnlInfo" runat="server" BalloonPopupControlID="pnlInfo" TargetControlID="btnInfo" Position="BottomLeft" BalloonSize="Small"></act:BalloonPopupExtender>
+                        <asp:Panel ID="pnlInfo" runat="server" HorizontalAlign="Left">
+                            <asp:Label ID="Label1" runat="server" Text="Version"></asp:Label>:
+							<asp:Label ID="lblVersion" runat="server"></asp:Label>
+                            <br />
+                            <asp:HyperLink ID="HyperLink1" runat="server" ToolTip="Manual" NavigateUrl="~/Resources/MANUAL_SA.pptx" Target="_blank">
+                                <asp:Label ID="Label4" runat="server" Text="Manual"></asp:Label>:
+									<asp:Image ID="Image3" runat="server" ImageUrl="~/App_Themes/Batz/Imagenes/TipoArchivos/text-icon24.png" />
+                            </asp:HyperLink>
+                        </asp:Panel>--%>
+                    </td>
+                </tr>
+            </table>
+            <asp:UpdatePanel ID="upContenido" runat="server">
+                <ContentTemplate>
+                    <div id="contenido1">
+                        <div id="contenido2">
+                            <table>
+                                <tr>
+                                    <td style="vertical-align: central">
+                                        <asp:SiteMapPath ID="SiteMapPath" runat="server" SkinID="SiteMapPath" SiteMapProvider="WebSiteMap" ParentLevelsDisplayed="3">
+                                        </asp:SiteMapPath>
+                                    </td>
+                                    <td style="vertical-align: central">
+                                        <asp:Menu ID="mnOpciones" runat="server" SkinID="MenuHorizontal">
+                                            <Items>
+                                                <asp:MenuItem NavigateUrl="~/Index.aspx" ToolTip="Cambiar Planta" ImageUrl="~/App_Themes/Batz/Imagenes/Industry-Factory-icon16.png"></asp:MenuItem>
+                                                <asp:MenuItem ImageUrl="~/App_Themes/Batz/IconosAcciones/Buscador/Opciones16.png" ToolTip="Opciones">
+                                                    <asp:MenuItem Text="Cambiar de usuario" ToolTip="Cambio de usuario" NavigateUrl="~/cambiarUsuario.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Gestion de Usuarios" ToolTip="Gestion de Usuarios" NavigateUrl="~/Mantenimiento/Usuarios/Listado.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Caracteristicas" ToolTip="Gestion de Caracteristicas" NavigateUrl="~/Mantenimiento/Caracteristicas/ListadoCarac.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Relacion de Caracteristicas" ToolTip="Relacion de Caracteristicas" NavigateUrl="~/Mantenimiento/Relaciones/Inicio.aspx"></asp:MenuItem>
+                                                    <%--<asp:MenuItem Text="Notificaciones por UG" ToolTip="Notificaciones por Lantegi" NavigateUrl="~/Mantenimiento/Notificaciones/ListadoUG.aspx"></asp:MenuItem>--%>
+                                                    <asp:MenuItem Text="Notificaciones" ToolTip="Administradores de las notificaciones" NavigateUrl="~/Mantenimiento/Notificaciones/ListadoNotificaciones.aspx"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Excepciones PE/TPC" ToolTip="PEs asignados para proyectos PTK (Matrix)" NavigateUrl="~/Mantenimiento/Notificaciones/ListadoPE.aspx"></asp:MenuItem>
+                                                    <%--<asp:MenuItem Text="Asignacion de Perseguidores" ToolTip="Asignacion automatica de 'Perseguidores' dependiendo de las caractateristicas" NavigateUrl="~/Mantenimiento/Notificaciones/Perseguidores.aspx"></asp:MenuItem>--%>
+                                                </asp:MenuItem>
+                                            </Items>
+                                        </asp:Menu>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr />
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder_FORM" runat="server" />
+                        </div>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <div id="pie">
+                <asp:ContentPlaceHolder ID="cphPie" runat="server">
+                    <asp:Literal ID="Literal1" runat="server" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>
+                    <asp:BulletedList ID="blContactos" runat="server" DisplayMode="HyperLink" Target="_blank" CssClass="ContactarCon">
+                        <asp:ListItem Value="mailto:slanbarri@batz.es" Text="SONIA LAMBARRI ALCOCEBAR" />
+                        <asp:ListItem Value="mailto:ibikarregi@batz.es" Text="IKER BIKARREGI ZULOAGA" />
+                        <asp:ListItem Value="https://intranet2.batz.es/homeintranet/cargacontenido.aspx?enlace=/helpdesk&tituloapp=Helpdesk" Text="HelpDesk" />
+                    </asp:BulletedList>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <PanelCargandoDatos:panelcargandodatos id="PanelCargandoDatos1" runat="server" />
+        <ascx:mensajes runat="server" id="ascx_Mensajes" />
+    </form>
+    <script language="javascript" type="text/javascript">
+        /***************************************************************************************/
+        /* Funciones para indicar que se esta buscado (AutoCompleteExtender) */
+        /***************************************************************************************/
+        function Rellenando(sender, e) {
+            var txt = sender._element; //Objeto asociado al campo "TargetControlID".
+            txt.style.backgroundImage = "url(<%= ResolveUrl("~/App_Themes/Batz/Imagenes/Cargando.gif") %>)";
+
+            txt.style.backgroundRepeat = "no-repeat";
+            txt.style.backgroundPosition = "center";
+        }
+        function Rellenado(sender, e) {
+            var txt = sender._element; //Objeto asociado al campo "TargetControlID".
+            txt.style.backgroundImage = "";
+        }
+        /***************************************************************************************/
+    </script>
+</body>
+</html>

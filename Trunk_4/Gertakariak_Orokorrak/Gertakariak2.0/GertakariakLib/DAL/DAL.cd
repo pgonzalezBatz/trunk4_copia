@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical">
+  <Class Name="GertakariakLib.DAL._ACCIONES" Collapsed="true">
+    <Position X="18.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EYIAARAEAEAAgEAWIQAAQIAwAAEEQAAgAQAAAAAgAAE=</HashCode>
+      <FileName>DAL\Generado\ACCIONES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._ACCIONES_EJECUCION" Collapsed="true">
+    <Position X="12.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAJAEAEAQAAgEAQAAQAAAAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\ACCIONES_EJECUCION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._ACCIONES_USUARIOS" Collapsed="true">
+    <Position X="18.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAJAEAEAQAAgEAQAAQAAAAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\ACCIONES_USUARIOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._AVISOSEMAIL" Collapsed="true">
+    <Position X="9.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EUAAABCEAEAACAAEAQAAQAAgAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\AVISOSEMAIL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._CAPACIDADES">
+    <Position X="20.75" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Class Name="GertakariakLib.DAL._CAPACIDADES.Parameters" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\CAPACIDADES.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._CAPACIDADES.ColumnNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\CAPACIDADES.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._CAPACIDADES.PropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\CAPACIDADES.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._CAPACIDADES.StringPropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\CAPACIDADES.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._CAPACIDADES.WhereClause" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\CAPACIDADES.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._CAPACIDADES.AggregateClause" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\CAPACIDADES.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>MQAAABAEAEgAAAAEAQACQAAAAIEAQAAgIAAIAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\CAPACIDADES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._CAUSASNC" Collapsed="true">
+    <Position X="6.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MQAAABAEAEABgAAEAQAAQAAQAAEAQAAgABAIAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\CAUSASNC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._CAUSASNCKUKTURA" Collapsed="true">
+    <Position X="18.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAARAEAEAAgAAGgQAAQAAQAAEAQQAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\CAUSASNCKUKTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._CAUSASNCPROC" Collapsed="true">
+    <Position X="3.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kQAAABAEAEABIAEEAQAAQAAAAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\CAUSASNCPROC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._CLASIFICACIONREPETITIVA" Collapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MQAAABAEAEABgAAEAQAAQAAQAAEAQAAgABAIAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\CLASIFICACIONREPETITIVA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._CLASIFICACIONREPKULTURA" Collapsed="true">
+    <Position X="0.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAARAEAEAAgAAGgQAAQAAQAAEAQQAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\CLASIFICACIONREPKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._DETECCION" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAEAAsAgEAQAgRAAQAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\DETECCION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._EMPRESAS" Collapsed="true">
+    <Position X="15.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQSAABiGFEAIgAIkAQAQwUAwAIECQAIgoChAAUAQCcE=</HashCode>
+      <FileName>DAL\Generado\EMPRESAS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._EMPRESAS_CAPACIDADES" Collapsed="true">
+    <Position X="12.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQEAABAEAEAAAAAEAQAAQAAAAAEAQAAiAAAABAAAAAE=</HashCode>
+      <FileName>DAL\Generado\EMPRESAS_CAPACIDADES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._EQUIPORESOLUCION" Collapsed="true">
+    <Position X="15.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAEAAAAAEAQAgRgAAAAEAQAAgAAAAAIAAAAE=</HashCode>
+      <FileName>DAL\Generado\EQUIPORESOLUCION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA" Collapsed="true">
+    <Position X="9.5" Y="15.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA.Parameters" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\FAMILIAREPETITIVA.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA.ColumnNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\FAMILIAREPETITIVA.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA.PropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\FAMILIAREPETITIVA.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA.StringPropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\FAMILIAREPETITIVA.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA.WhereClause" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\FAMILIAREPETITIVA.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVA.AggregateClause" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\FAMILIAREPETITIVA.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>MQAAABAEAEQBgAAEAQAAQAAQAAEAQAAgABAIAAABAAE=</HashCode>
+      <FileName>DAL\Generado\FAMILIAREPETITIVA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._FAMILIAREPETITIVAKULTURA" Collapsed="true">
+    <Position X="15.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAARAEAEAAABAGgQAAQAAAAAEAQQAgAAgAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\FAMILIAREPETITIVAKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCALBARA" Collapsed="true">
+    <Position X="6.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lQEACDAGAEGJgAAEMwACQFAAABUAQAIgAAAAEQQIBHE=</HashCode>
+      <FileName>DAL\Generado\GCALBARA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCARTICU" Collapsed="true">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NQC5kTIWQO4ZuQIEHUCzWGplAkEDRQSmYlAcEgFEEiE=</HashCode>
+      <FileName>DAL\Generado\GCARTICU.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCCABALB" Collapsed="true">
+    <Position X="3.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FQEACBAEAUEBwAAEhUhSQUCAABUAQAAgQAAAAAQAACE=</HashCode>
+      <FileName>DAL\Generado\GCCABALB.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCCABCOM" Collapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAADBAEAEAAAAAEAQAAQBAEACEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\GCCABCOM.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCCABPED" Collapsed="true">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ERBhkBAWCU40AAUUAySQQbBoAAEgUBggCCAAFAEAQCE=</HashCode>
+      <FileName>DAL\Generado\GCCABPED.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCHISMOV" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FwARA7AUAMKRIBEkAYBQQAhpBAEAUSwgAgYAEgAIACE=</HashCode>
+      <FileName>DAL\Generado\GCHISMOV.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GCLINPED" Collapsed="true">
+    <Position X="12.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>sSIBLDEGEEDIAdAO4YjASmskgFGhUAIhCgACUgQAACM=</HashCode>
+      <FileName>DAL\Generado\GCLINPED.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GERTAKARIAK">
+    <Position X="26.75" Y="8" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Members" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="GertakariakLib.DAL._GERTAKARIAK.Parameters" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._GERTAKARIAK.ColumnNames">
+        <Compartments>
+          <Compartment Name="Members" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._GERTAKARIAK.PropertyNames">
+        <Compartments>
+          <Compartment Name="Members" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._GERTAKARIAK.StringPropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._GERTAKARIAK.WhereClause">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Class Name="GertakariakLib.DAL._GERTAKARIAK.WhereClause.TearOffWhereParameter">
+            <TypeIdentifier>
+              <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._GERTAKARIAK.AggregateClause">
+        <NestedTypes>
+          <Class Name="GertakariakLib.DAL._GERTAKARIAK.AggregateClause.TearOffAggregateParameter" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\GERTAKARIAK.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>UQIgMBAERGiRgBEEAYIiRIAQAgFATRIkAIEgQUAEEEk=</HashCode>
+      <FileName>DAL\Generado\GERTAKARIAK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GERTAKARIAK_ACCIONES" Collapsed="true">
+    <Position X="12.5" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EQAAAJAEAEAQAAAEAQAgRAAAAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\GERTAKARIAK_ACCIONES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GERTAKARIAK_CAUSASNC" Collapsed="true">
+    <Position X="18.5" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAEAAQAAEAQAgRAAAAAEAQAAgAAQAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\GERTAKARIAK_CAUSASNC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GERTAKARIAK_IRUDIAK" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAARAEAEAAgAAGAQAgRAAQEAEAQAQgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\GERTAKARIAK_IRUDIAK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GERTAKARIAK_TIPONOCONFORMIDAD" Collapsed="true">
+    <Position X="3.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAHAAAAAEAQAgRAAAAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\GERTAKARIAK_TIPONOCONFORMIDAD.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._GRUPOSADMINISTRACION" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQgAABAMAEAAAAAEAQAAQAgAAAEAQQAgAACAAAAAAAU=</HashCode>
+      <FileName>DAL\Generado\GRUPOSADMINISTRACION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._LINEASCOSTE" Collapsed="true">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UUABCTQEIkCxwAAmAwAgRhgzgIEgQAQgAgAAMRBCABM=</HashCode>
+      <FileName>DAL\Generado\LINEASCOSTE.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._OFMARCA" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FQAAABFEAEAwAAAlAQQgRAEACAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\OFMARCA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS" Collapsed="true">
+    <Position X="9.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MQAAEBIEBEABIAAEAQAAUAAAAAEAUAAgBgAIAIAACAE=</HashCode>
+      <FileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._RESPONSABLES_GERTAKARIAK" Collapsed="true">
+    <Position X="6.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAEAAgAgEAQAgRAAQAAEAQAAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\RESPONSABLES_GERTAKARIAK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._TIPONOCONFORMIDAD" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAEABgAAEAQAAQAAQAAEAQAAgABAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\TIPONOCONFORMIDAD.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._TIPONOCONFORMIDADKULTURA" Collapsed="true">
+    <Position X="3.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABAEAEAAAAgEhQEAQAAAACEAQQAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\TIPONOCONFORMIDADKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._TIPOREPETITIVA" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MQAAABAEAEABgBAEAQAAQAAQAAEAQAAgABgIAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\TIPOREPETITIVA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._TIPOREPETITIVAKULTURA" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAARAEAEAAAAAGgQAAQAAAAAFASQAgAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\TIPOREPETITIVAKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._USUARIOS" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EUAAEBAMAEAAAAAEAQAAQAAgAAEAQQIgAAAAQAAAAgE=</HashCode>
+      <FileName>DAL\Generado\USUARIOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_COSTES" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cUABCTCEAACRQAAEAgAAQBgiAcEkQAQAAgAAMQBAABM=</HashCode>
+      <FileName>DAL\Generado\W_COSTES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_CPCABEC" Collapsed="true">
+    <Position X="3.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQQBABA0AAYAIAAEAAAAUAAgAAEAQAAAAEAAEABAAAE=</HashCode>
+      <FileName>DAL\Generado\W_CPCABEC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_CPLANTEGI" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAABIEAACAAAAEAIAAUAAAAAEAQAAAAAAAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\W_CPLANTEGI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_CPLISMAT" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cxAJATCMAAFREhAWgEEKQS5wEAFizAAoBrACFAHCBIE=</HashCode>
+      <FileName>DAL\Generado\W_CPLISMAT.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_CPSECCIO" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAEFAMAAABAAAEAAAAQAAAAAEAQAAABAAAAAAACAE=</HashCode>
+      <FileName>DAL\Generado\W_CPSECCIO.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_GCLINPED" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>sSIBLDEGEEDIAdAO4IjASmskgFGhUAIBCgACUgQAACM=</HashCode>
+      <FileName>DAL\Generado\W_GCLINPED.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_GCPROVEE" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GUMA0pm2LI0ZL2DEAdITRmAAAAUhcSQCUcgMIFIoUOE=</HashCode>
+      <FileName>DAL\Generado\W_GCPROVEE.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_PROCESOS" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAEBIEBAABIAAEAAAAUAAAAAEAUAAABgAAAIAACAE=</HashCode>
+      <FileName>DAL\Generado\W_PROCESOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._W_SCPEDMAR" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EQAABBQEAAAIAEAEABAAQAAABAEkQAAKAACAAAAAAAE=</HashCode>
+      <FileName>DAL\Generado\W_SCPEDMAR.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.ACCIONES" Collapsed="true">
+    <Position X="18.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\ACCIONES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.ACCIONES_EJECUCION" Collapsed="true">
+    <Position X="12.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\ACCIONES_EJECUCION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.ACCIONES_USUARIOS" Collapsed="true">
+    <Position X="18.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\ACCIONES_USUARIOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.AVISOSEMAIL" Collapsed="true">
+    <Position X="9.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\AVISOSEMAIL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.CAPACIDADES">
+    <Position X="23.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\CAPACIDADES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.CAUSASNC" Collapsed="true">
+    <Position X="6.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\CAUSASNC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.CAUSASNCKUKTURA" Collapsed="true">
+    <Position X="18.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\CAUSASNCKUKTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.CAUSASNCPROC" Collapsed="true">
+    <Position X="3.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\CAUSASNCPROC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.CLASIFICACIONREPETITIVA" Collapsed="true">
+    <Position X="18.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\CLASIFICACIONREPETITIVA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.CLASIFICACIONREPKULTURA" Collapsed="true">
+    <Position X="0.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\CLASIFICACIONREPKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.DETECCION" Collapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\DETECCION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.EMPRESAS" Collapsed="true">
+    <Position X="15.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\EMPRESAS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.EMPRESAS_CAPACIDADES" Collapsed="true">
+    <Position X="12.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\EMPRESAS_CAPACIDADES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.EQUIPORESOLUCION" Collapsed="true">
+    <Position X="15.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\EQUIPORESOLUCION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.FAMILIAREPETITIVA" Collapsed="true">
+    <Position X="9.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAQBAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\FAMILIAREPETITIVA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.FAMILIAREPETITIVAKULTURA" Collapsed="true">
+    <Position X="15.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\FAMILIAREPETITIVAKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCALBARA" Collapsed="true">
+    <Position X="6.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCALBARA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCARTICU" Collapsed="true">
+    <Position X="15.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCARTICU.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCCABALB" Collapsed="true">
+    <Position X="3.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCCABALB.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCCABCOM" Collapsed="true">
+    <Position X="15.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCCABCOM.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCCABPED" Collapsed="true">
+    <Position X="0.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCCABPED.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCHISMOV" Collapsed="true">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCHISMOV.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GCLINPED" Collapsed="true">
+    <Position X="12.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GCLINPED.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GERTAKARIAK">
+    <Position X="22" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GERTAKARIAK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GERTAKARIAK_ACCIONES" Collapsed="true">
+    <Position X="12.5" Y="11" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GERTAKARIAK_ACCIONES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GERTAKARIAK_CAUSASNC" Collapsed="true">
+    <Position X="18.75" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GERTAKARIAK_CAUSASNC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GERTAKARIAK_IRUDIAK" Collapsed="true">
+    <Position X="12.5" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GERTAKARIAK_IRUDIAK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GERTAKARIAK_TIPONOCONFORMIDAD" Collapsed="true">
+    <Position X="3.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GERTAKARIAK_TIPONOCONFORMIDAD.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.GRUPOSADMINISTRACION" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\GRUPOSADMINISTRACION.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.LINEASCOSTE" Collapsed="true">
+    <Position X="0.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\LINEASCOSTE.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.OFMARCA" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\OFMARCA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.OTROS_DEPARTAMENTOS" Collapsed="true">
+    <Position X="9.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\OTROS_DEPARTAMENTOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.RESPONSABLES_GERTAKARIAK" Collapsed="true">
+    <Position X="6.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\RESPONSABLES_GERTAKARIAK.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.TIPONOCONFORMIDAD" Collapsed="true">
+    <Position X="9.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\TIPONOCONFORMIDAD.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.TIPONOCONFORMIDADKULTURA" Collapsed="true">
+    <Position X="3.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\TIPONOCONFORMIDADKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.TIPOREPETITIVA" Collapsed="true">
+    <Position X="9.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAQAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\TIPOREPETITIVA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.TIPOREPETITIVAKULTURA" Collapsed="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\TIPOREPETITIVAKULTURA.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.USUARIOS" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\USUARIOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_COSTES" Collapsed="true">
+    <Position X="6.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_COSTES.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_CPCABEC" Collapsed="true">
+    <Position X="3.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_CPCABEC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_CPLANTEGI" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_CPLANTEGI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_CPLISMAT" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_CPLISMAT.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_CPSECCIO" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_CPSECCIO.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_GCLINPED" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_GCLINPED.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_GCPROVEE" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_GCPROVEE.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_PROCESOS" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_PROCESOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL.W_SCPEDMAR" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Personalizado\W_SCPEDMAR.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

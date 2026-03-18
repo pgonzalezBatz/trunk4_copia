@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4FF4F1E5-4255-4981-9FFD-09D29D9B8339}"
+	ProjectSection(SolutionItems) = preProject
+		Y:\Aplicaciones\BaliabideOrokorrak\estiloIntranet.css = Y:\Aplicaciones\BaliabideOrokorrak\estiloIntranet.css
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BezerreSis6", "BezerreSis6\BezerreSis6.vbproj", "{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Memcached", "..\Memcached\Memcached.vbproj", "{1F46E55D-906C-4588-99CC-E81C4B4E373E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SABLib2", "..\SABLib\SABLib2.vbproj", "{3283DECE-6B4E-4009-A3A7-1370E6C0E053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Extranet|Any CPU = Debug_Extranet|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		GertakariakMS|Any CPU = GertakariakMS|Any CPU
+		Istriku_Debug|Any CPU = Istriku_Debug|Any CPU
+		Istriku_Release|Any CPU = Istriku_Release|Any CPU
+		Release_Extranet|Any CPU = Release_Extranet|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Debug_Extranet|Any CPU.ActiveCfg = Debug_Extranet|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Debug_Extranet|Any CPU.Build.0 = Debug_Extranet|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Release_Extranet|Any CPU.ActiveCfg = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Release_Extranet|Any CPU.Build.0 = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7280A12-1AFF-45C8-BE03-6E0A5289F6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Debug_Extranet|Any CPU.ActiveCfg = Debug_Extranet|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Debug_Extranet|Any CPU.Build.0 = Debug_Extranet|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.GertakariakMS|Any CPU.ActiveCfg = GertakariakMS|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.GertakariakMS|Any CPU.Build.0 = GertakariakMS|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Debug|Any CPU.ActiveCfg = Istriku_Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Debug|Any CPU.Build.0 = Istriku_Debug|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Release|Any CPU.ActiveCfg = Istriku_Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Istriku_Release|Any CPU.Build.0 = Istriku_Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Release_Extranet|Any CPU.ActiveCfg = Release_Extranet|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Release_Extranet|Any CPU.Build.0 = Release_Extranet|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F46E55D-906C-4588-99CC-E81C4B4E373E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Debug_Extranet|Any CPU.ActiveCfg = Debug_Extranet|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Debug_Extranet|Any CPU.Build.0 = Debug_Extranet|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.GertakariakMS|Any CPU.ActiveCfg = GertakariakMS|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.GertakariakMS|Any CPU.Build.0 = GertakariakMS|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Debug|Any CPU.ActiveCfg = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Debug|Any CPU.Build.0 = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Release|Any CPU.ActiveCfg = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Istriku_Release|Any CPU.Build.0 = Istriku_Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Release_Extranet|Any CPU.ActiveCfg = Release_Extranet|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Release_Extranet|Any CPU.Build.0 = Release_Extranet|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3283DECE-6B4E-4009-A3A7-1370E6C0E053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17EA6D97-3969-4A4D-B95A-F42BF8223D6D}
+	EndGlobalSection
+EndGlobal

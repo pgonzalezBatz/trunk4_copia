@@ -1,0 +1,1 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="BuscarUsuarios.aspx.vb" Inherits="ReferenciasVentas.BuscarUsuarios" %>

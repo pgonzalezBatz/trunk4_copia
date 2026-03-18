@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="983ca48d516048cebf4f12976013fadf" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="Epsilon_BBDD.CATEGORIAS" Width="1.625" PointX="2.875" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.COD_TRA" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.CONVENIOS" Width="1.75" PointX="0.625" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.TRABAJADORES" Width="1.75" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_CATEGOR_CONVEN" ManuallyRouted="false" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_TRABAJ_CATEGOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_TRABAJ_COD_TRA" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.PERSONAS" Width="1.75" PointX="0.625" PointY="0.5" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_COD_TRA_PERSONA" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.ORDEN" Width="1.5" PointX="12" PointY="12.875" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.PUES_TRAB" Width="1.5" PointX="7.75" PointY="12.875" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_PUE_TRA_TRABAJ" />
+        <EntityTypeShape EntityType="Epsilon_BBDD.NIV_ORG" Width="1.625" PointX="9.75" PointY="12.875" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_ORDEN_NIV_ORG" />
+        <AssociationConnector Association="Epsilon_BBDD.FK_PUE_TRA_NIV_ORG" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

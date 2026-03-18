@@ -1,0 +1,86 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="Web" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="WT.sv" content="<%= Server.MachineName%>"/>
+    <link href="//intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/Site.css") %>" rel="Stylesheet" type="text/css"  />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <a href="\HomeIntranet" title="<%=h.traducir("Ir a la página principal de la intranet") %>" class="cabApp"></a>  
+    <div id="menu1">    
+        <ul >
+            <%  Dim roles = SimpleRoleProvider.GetRole()%>
+          
+            <%If (roles And 1) = 1 Then%>
+                <li>
+                        <a href="<%=Url.Action("list", "recogida") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"recogida"),"background-color:#B3B3B3;","#F4F4F4;") %>">
+                            <%= h.Traducir("Recogidas")%> (<%= web.h.GetCount("r", SimpleRoleProvider.GetId())%>)</a>
+                </li>
+                <li><a href="<%=Url.Action("list", "movimientosmaterial") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"movimientosmaterial"),"background-color:#B3B3B3;","#F4F4F4;") %>">
+                    <%= h.traducir("Movimientos")%> (<%= web.h.GetCount("mm", SimpleRoleProvider.GetId())%>)</a></li>
+                
+                <li><a href="<%=Url.Action("list","agrupacion") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"agrupacion"),"background-color:#B3B3B3;","#F4F4F4;") %>">
+                    <%= h.traducir("Bultos")%> (<%= web.h.GetCount("am", SimpleRoleProvider.GetId())%>)</a></li>
+                <li><a href="<%=Url.Action("list","albaran") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"albaran"),"background-color:#B3B3B3;","#F4F4F4;") %>">
+                    <%= h.traducir("Albaran")%> (<%= web.h.GetCount("a", SimpleRoleProvider.GetId())%>)</a></li>
+            <%End If%>
+            <%If (roles And 2) = 2 Then%>
+                <li><a href="<%=Url.Action("list", "viaje") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"viaje"),"background-color:#B3B3B3;","#F4F4F4;") %>">
+                    <%= h.traducir("Viaje")%> (?)</a></li>
+            <%End If%>
+            <%If (roles And 16) = 16 Then%>
+            <li>
+                <% If Url.Action("list", "taxi") = Request.Path Then%>
+                    <a href="<%=Url.Action("list", "taxi") %>" style="background-color:#B3B3B3;","#F4F4F4;">
+                <%Else%>
+                    <a href="<%=Url.Action("list", "taxi") %>">
+                <%End If%>
+                <%= h.traducir("Taxi")%>(<%= web.h.GetCount("vt", SimpleRoleProvider.GetId())%>)</a>
+            </li>
+            <%End If%>
+            <%If (roles And 4) = 4 Then%>
+                <li><a href="<%=Url.Action("list","transporte") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"transporte"),"background-color:#B3B3B3;","#F4F4F4;") %>">
+                    <%= h.traducir("Transporte")%></a></li>
+            <%End If%>
+            <%If (roles And 32) = 32 Then%>
+            <li>
+                <% If Url.Action("index", "busqueda") = Request.Path Then%>
+                    <a href="<%=Url.Action("index","busqueda") %>" style="background-color:#B3B3B3;","#F4F4F4;">
+                <%Else%>
+                    <a href="<%=Url.Action("index","busqueda") %>">
+                <%End If%>
+                <%= h.traducir("Busquedas")%></a>
+            </li>
+            <%End If%>
+            <%If (roles And 64) = 64 Then%>
+            <li>
+                <% If Url.Action("index", "revision") = Request.Path Then%>
+                    <a href="<%=Url.Action("productivas", "revision")%>" style="background-color:#B3B3B3;","#F4F4F4;">
+                <%Else%>
+                    <a href="<%=Url.Action("productivas", "revision")%>">
+                <%End If%>
+                <%= h.traducir("Revision")%></a>
+            </li>
+            <%End If%>
+            <li><a href="<%=url.Content("~/help.html") %>" target="_blank" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"help"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Ayuda")%></a></li>
+        </ul>
+    </div>
+    <div id="menu2">
+        <asp:ContentPlaceHolder ID="cphMenu2" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div id="contenido1">
+        <asp:ContentPlaceHolder ID="cphContenido1" runat="server"></asp:ContentPlaceHolder>
+        <div id="contenido2">
+            <asp:ContentPlaceHolder ID="cphContenido2" runat="server"></asp:ContentPlaceHolder>
+        </div>         
+    </div>  
+    <div id="pie">
+        <a href="/Helpdesk">Helpdesk</a>
+    </div>
+</body>
+</html>

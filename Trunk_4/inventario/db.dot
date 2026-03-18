@@ -1,0 +1,18 @@
+digraph db{
+	graph [rankdir = "LR" ];
+	node[fontsize = "14" style=bold];
+	
+	tipo [label="<tb> TIPO | id | nombre | fecha_baja"   shape = "record"];
+	marca[label="<tb> MARCA | id | id_tipo | nombre |fecha_baja" shape="record"];
+	modelo[label="<tb> MODELO | id | id_marca | nombre | precio | fecha_baja" shape="record"];
+	etiqueta_grupo[label="<tb> ETIQUETA | id | id_modelo | fecha_baja | numero_serie"   shape = "record"];
+
+	
+	usuario_etiqueta[label="<tb> USUARIO_ETIQUETA | id_sab | id_etiqueta | fecha_alta | fecha_baja | asignado_departamento"   shape = "record"];
+
+	etiqueta_grupo->modelo;
+	modelo->marca;
+	marca->tipo;
+	usuario_etiqueta->etiqueta_grupo;
+	
+	}

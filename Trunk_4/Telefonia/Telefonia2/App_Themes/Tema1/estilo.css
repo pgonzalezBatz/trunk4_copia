@@ -1,0 +1,723 @@
+﻿body 
+{
+	background-color: #FFFFFF;
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+
+}
+
+a
+{
+	font-family: Verdana;
+	font-size:8pt;
+	color:Blue;
+}
+
+a hover
+{
+	color:#2557AD;	
+}
+
+.font_eus
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-WEIGHT: BOLD;
+    FONT-FAMILY: Verdana;
+}
+.font_cast
+{
+    FONT-SIZE: 7pt;
+    FONT-STYLE: ITALIC;
+    FONT-FAMILY: Verdana;
+}
+
+.font11
+{
+	font: 11px Verdana, Arial, Helvetica,sans-serif;
+}
+
+.font11May
+{
+	font: 11px Verdana, Arial, Helvetica,sans-serif;
+	text-transform:uppercase;
+}
+/********Master*********/
+.cabeceraIzquierda
+{
+	background-color: #F3F3F3;
+	text-align:left;
+}
+
+.cabeceraDerecha {
+	background-color: #F3F3F3;
+	text-align:right;
+}
+
+.linea {
+	background-color: #FFFFFF;		
+	border: 1px solid #A8A8A8;
+}
+
+.principal {
+	background-color: #FFFFFF;
+	border: 20px solid #F4F4F4;
+}
+
+.pie {
+	background-color: #F4F4F4;
+	height:30px;
+	padding-top:10px;
+	padding-left:10px;
+	font: 10px Verdana, Arial, Helvetica,
+	sans-serif;
+}
+
+.separador {
+	background-color: #ffffff;
+	height:10px;
+}
+
+#contenido
+{
+	width:100%;
+	margin-left:30px;
+	margin-top:30px;
+}
+
+/****** Fin masterpage *********/
+
+/****** Tablas ***********/
+
+.iconoCelda
+{
+	width:50px;
+}
+
+.alternateRow
+{
+	background-color:#ffffee;
+}
+
+.Titulo
+{
+	font-size:11pt;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.izquierda
+{
+	text-align:left;
+}
+
+.derecha
+{
+	text-align:right;
+}
+
+
+.centrado
+{
+	text-align:center;
+}
+
+.negrita
+{
+	font-weight:bold;
+}
+
+.negrita14
+{
+	font-weight:bold;
+	font-size:14px;
+}
+
+
+.estiloRepeater
+{
+	width: 90%;
+}
+
+.estiloRepeater th {
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	border:1px solid White;  /*#cccccc; */
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #cccccc;
+}
+
+.estiloRepeater td 
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	border:1px solid #cccccc;
+	background: #fff;
+	color: #000000;
+	text-align:center;
+}
+
+
+.estiloRepeaterSimple
+{
+	width: 90%;
+}
+
+.estiloRepeaterSimple th {
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	border:1px solid White;  /*#cccccc; */
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #cccccc;
+}
+
+.estiloRepeaterSimple td 
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	border:1px solid #cccccc;	
+	color: #000000;
+	/*text-align:center;	*/
+}
+
+
+.estiloBono
+{
+	width: 35%;
+	border:1px solid #cccccc;
+}
+
+.estiloBono th {
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	letter-spacing: 1px;
+	background: #cccccc;
+}
+
+.estiloBono td 
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	background: #fff;
+	color: #000000;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:3px;
+}
+
+.treeView
+{
+	font: 12px Verdana, Arial, Helvetica,sans-serif;
+}
+
+.recuadro
+{
+	background:#f4f4f4;
+	width:70%;
+}
+
+
+.Festivo
+{
+	border:1px solid #cccccc;
+	color: #000000;
+	text-align:center;
+	background:#eafbf5;    /*#d5fbf5;*/
+}
+
+.DatagridItemStyle
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	border:1px solid #cccccc;
+	background: #fff;
+	color: #000000;
+	text-align:center;
+}
+
+.DataGridAlternatingStyle
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	border:1px solid #cccccc;
+	background:#fffff4;
+	color: #000000;
+	text-align:center;
+}
+
+.DataGridHeaderStyle
+{
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	border:1px solid White;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #cccccc;
+}
+
+
+.DataGridGrande
+{
+	width:90%;
+}
+
+
+.alturaColumna
+{
+	height:25px;
+}
+
+.MensajeError
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Red;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+.MensajeInfoAdvertencia
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Blue;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+
+.tablaMediana
+{
+	width: 75%;
+}
+
+.tablaMediana th {
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	border:1px solid White;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #cccccc;
+}
+
+.tablaMediana td 
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	border:1px solid #cccccc;
+	background: #fff;
+	color: #000000;
+	text-align:center;
+}
+
+.tablaDetalleGr
+{
+	border:1px solid #dcdcdc;
+}
+
+.tablaDetalleGr th {
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	text-align: center;
+	background: #cccccc;
+}
+
+.tablaDetalleGr td 
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	padding-top:5px;
+	padding-bottom:1px;
+	padding-left:10px;
+}
+
+.tablaDetallePeq
+{
+	width: 25%;
+	border:1px solid #dcdcdc;
+}
+
+.tablaDetallePeq th {
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	text-align: center;
+	background: #cccccc;
+}
+
+.tablaDetallePeq td 
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	padding-top:5px;
+	padding-bottom:1px;
+	padding-left:10px;
+}
+
+/****LOGIN*****/
+
+.login
+{
+	background:#F7F6F3;
+	padding:4px;
+	border:solid 1px #E6E2D8;
+	font-family:Verdana;
+	font-size:0.8em;
+	color:#333333;	
+}
+
+.loginTextBoxStyle
+{
+	Font-Size:0.8em;
+}
+
+
+.loginInstructionTextStyle
+{
+	font-style:italic;
+	color:#000000;	 
+}
+
+.loginTitleTextStyle
+{
+	background:#5D7B9D;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#FFFFFF;
+}
+
+.loginButtonStyle
+{
+	background:#FFFBFF;
+	border:solid 1px #CCCCCC;
+	font-family:Verdana;
+	font-size:0.8em;
+	color:#284775;
+}
+
+/*********Fin login****/
+
+/*GRIDVIEW*/
+.GridView
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	width:85%;
+}
+
+.GridViewScroll
+{
+	width:97%;
+}
+
+.GridViewHeaderStyle th
+{	
+	background: #ccc;
+	color: #000000;
+	text-align:center;
+	font-weight:bold;
+	font-size:12px;
+}
+
+.GridViewHeaderFixed 
+{ 		
+	POSITION: relative; 
+	/*TOP: expression(this.offsetParent.scrollTop);*//*Mantiene en una posicion fija relativa a la pagina*/
+	background: #ccc;
+	color: #000000;
+	font-weight:bold;
+}
+
+
+.GridViewAlternatingRowStyle
+{	
+	background: #ffffff;
+	color: #000000;
+}
+
+.GridViewRowStyle
+{	
+	background: #dcdcdc;
+	color: #000000;		
+}
+
+GridViewFooterStyle
+{	
+	background: #FF0000;
+	color:#000000;
+	font-weight:bold;
+	text-align:right;
+}
+
+.GridViewEmptyRowStyle
+{	
+	font-weight:bold;
+	border:0;
+}
+
+/***********************************************/
+
+.trOver
+{
+	background:#ccccff;
+	cursor:pointer;	
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+}
+
+.trOverArrow
+{
+	background:#ccccff;	
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+}
+
+.trOverYellowArrow
+{
+	background: font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	text-align: center;
+	background-color: #FFFF99;
+}
+
+.trOverYellowArrowNC
+{
+	background: font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	background-color: #FFFF99;
+}
+
+.trOver12
+{
+	background:#ccccff;
+	cursor:pointer;	
+	font: 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+}
+
+.modalBackground {
+	background-color: Gray;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.modalBox {
+	background-color : #f5f5f5;
+	border-width: 1px;
+	border-style: solid;
+	border-color: Black;
+	padding: 3px;
+}
+
+.modalBackground2 {
+	background-color: Gray;
+	filter: alpha(opacity=25);
+	opacity: 0.25;
+}
+
+.updateProgress
+{
+	border-width: 1px;
+	border-style: solid;
+	background-color: #FFFFFF;
+	position: absolute;
+	width: 180px;
+	height: 65px;
+}
+
+.labelRojo
+{
+	font-weight: bold;
+	color: #ff3333;
+}
+
+.labelVerde
+{
+	font-weight: bold;
+	color: #339900;
+}
+
+.labelAzul
+{
+	font-weight:bold;
+	color:#0000FF;
+}
+
+.labelNaraja
+{
+	font-weight: bold;
+	color: #ff9933;
+}
+
+.noWrap
+{
+	white-space:nowrap;
+}
+
+.Ausencia
+{
+	font: 1px Verdana, Arial, Helvetica,sans-serif;
+	border:1px solid #cccccc;
+	color: #000000;
+	text-align:center;
+	background:#ff6666;   
+}
+
+.collapsedPanel
+{
+	cursor: hand;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+
+/*******************MENU****************************/
+.StaticMenuItemStyle
+{
+	font: 10pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+}
+
+.DinamicMenuItemStyle
+{
+	font: 10pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+}
+
+.StaticHoverStyle
+{
+	background:#CCCCCC;
+}
+
+.DynamicHoverStyle 
+{
+	background:#CCCCCC;
+}
+.DynamicMenuStyle{z-index:100;}
+/******************************************************/
+
+.trRojo
+{
+	background:#ff3333;
+}
+
+.trAzul
+{
+	background:#9999FF;
+}
+
+/*********ALERTAS******************/
+
+.alerta
+{
+	color:#ff3333;
+}
+
+/**********************************/
+
+.fondoVerde
+{
+	background-color: #33CC33;
+}
+
+.watermark
+{
+	font-style:oblique;
+	font: 11px Verdana, Arial, Helvetica,sans-serif;	
+}
+
+.listadoRepeater th 
+{
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	text-align: center;
+	background: #cccccc;
+	white-space:nowrap;
+}
+
+.listadoRepeater td
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	text-align: center;	
+	white-space:nowrap;
+}
+
+
+.listadoRepeater2 th 
+{
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	background: #cccccc;
+	white-space:nowrap;
+}
+
+.listadoRepeater2 td
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	white-space:nowrap;
+}
+
+
+.listadoRepeater3 th 
+{
+	font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	background: #cccccc;	
+}
+
+.listadoRepeater3 td
+{
+	font: 13px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;	
+}
+
+.listadoRepeater11 th 
+{
+	font: bold 11px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;
+	background: #cccccc;	
+}
+
+.listadoRepeater11 td
+{
+	font: 11px Verdana, Arial, Helvetica,sans-serif;
+	color: #000000;	
+}
+
+.fondoGrisClaro
+{
+	background-color:#EEEEEE;    /*#ccccff;*/
+}
+
+.textoAzul
+{
+	color:#0000FF;
+}
+
+.mayusculas
+{
+	text-transform:uppercase;
+}
+
+.linkSinSubrayado
+{
+	text-decoration:none;
+}
+
+.celdaTotal
+{
+	background-color:#99CCFF;
+	font-weight:bold;
+	text-align:center;
+}
+
+.tabla1{font-size:11px;border:solid 1px #CCCCCC;}
+.tabla1 thead{font-weight:bold;}

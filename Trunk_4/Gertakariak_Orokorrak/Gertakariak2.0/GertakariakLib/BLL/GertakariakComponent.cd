@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GertakariakLib.BLL.GertakariakComponent" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="GertakariakLib.BLL.GertakariakComponent.ClaseIncidencia">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\GertakariakComponent.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="GertakariakLib.BLL.GertakariakComponent.TipoORD">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\GertakariakComponent.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIQACAgAAAACABACAiAAAAAEMhEBgAAAAAAAQgAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkIrudiakComponent" Collapsed="true">
+    <Position X="3" Y="1" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAABAAAACACAAAAAAIwAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\gtkIrudiakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkFamiliaRepetitivaComponent" Collapsed="true">
+    <Position X="3" Y="4.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAACAAADACABAAAEIgQggAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkTipoRepitivaComponent" Collapsed="true">
+    <Position X="3" Y="5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAQCAAACACABAAAEIAQggAAAAQAIAAAAAA=</HashCode>
+      <FileName>BLL\gtkTipoRepitiva.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkEkintzakComponent" Collapsed="true">
+    <Position X="3" Y="7" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQBAAAAAAAAAAACACAAAAAAIgQAACAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.Utils">
+    <Position X="6" Y="0.5" Width="2.5" />
+    <NestedTypes>
+      <Struct Name="GertakariakLib.BLL.Utils.Literal">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\Utils.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAJCAACAEAAACEAAAAAACAIAAAEDCIAQAAAAIAA=</HashCode>
+      <FileName>BLL\Utils.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkOFMComponent" Collapsed="true">
+    <Position X="3" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAACACAAAAAAIgQAIAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkDeteccionComponent" Collapsed="true">
+    <Position X="3" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAACACAAAAAAIgQAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkLineaCosteComponent">
+    <Position X="3" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAACACAAAgAAIgQAAAAgAAAJAAgAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkProveedorComponent">
+    <Position X="5.75" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAIAAAQAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkUsuarioComponent" Collapsed="true">
+    <Position X="3" Y="2.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAQAAAAAIAAAAAAiACAAAAAAIgQAgAAACAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkGruposComponent" Collapsed="true">
+    <Position X="3" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkClasificacionRepetitivaComponent" Collapsed="true">
+    <Position X="3" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAABAACAAACACABAAAEIgQggAAAAAAIAAACAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkProcesosComponent" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAgAAAEAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkSeccionesComponent" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkAreasComponent" Collapsed="true">
+    <Position X="7.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.BLL.gtkCausasNCComponent">
+    <Position X="8.25" Y="5.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAACAAACACAAAAAEIgQggAAAAAAIAAAAAA=</HashCode>
+      <FileName>BLL\GertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS">
+    <Position X="10" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS.Parameters" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS.ColumnNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS.PropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS.StringPropertyNames" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS.WhereClause" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="GertakariakLib.DAL._OTROS_DEPARTAMENTOS.AggregateClause" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>MQAAEBIEBEABIAAEAQAAUAAAAAEAUAAgBgAIAIAACAE=</HashCode>
+      <FileName>DAL\Generado\OTROS_DEPARTAMENTOS.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GertakariakLib.BLL.IGertakariakComponent" Collapsed="true">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAgAAAAAAAACACAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IGertakariakComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,143 @@
+﻿/*Proponer este estilo para los GridView*/
+
+/* Estilo general de la tabla */
+.GridViewASP {
+    width: 98%;
+}
+
+    .GridViewASP th, .GridViewASP td {
+        padding: 4px;
+        border-width: 0px;
+        margin-left: 80px;
+    }
+
+    .GridViewASP Caption {
+        font-weight: bold;
+        background-color: #CCCCCC;
+    }
+
+    .GridViewASP a {
+        width: 100%;
+        display: block;
+    }
+
+.ControlStyle {
+    width: 98%;
+}
+
+/*Estilo de la cabecera */
+.HeaderStyle {
+    width: 75px;
+}
+
+    .HeaderStyle th {
+        background-color: #5D7B9D;
+        text-align: center;
+        color: White;
+    }
+
+        .HeaderStyle th a {
+            font-weight: bold;
+            color: White;
+            text-transform: uppercase;
+        }
+
+/*Estilo general de las filas*/
+.RowStyle {
+    background-color: #F7F6F3;
+    color: #333333;
+}
+
+    .RowStyle td a {
+        font-weight: bold;
+        color: #5D7B9D;
+    }
+
+.AlternatingRowStyle {
+    background-color: #FFFFFF;
+    color: #284775;
+}
+
+    .AlternatingRowStyle td a {
+        font-weight: bold;
+        color: #5D7B9D;
+    }
+
+    .RowStyle:hover, .AlternatingRowStyle:hover, .RowStyleAdvertencia:hover, .AlternatingRowStyleAdvertencia:hover {
+        background-color: #EAEAFF;
+    }
+/*Estilo de estados para remarcar las filas*/
+.RowStyleAdvertencia {
+    background-color: #FF0000;
+    color: #333333;
+}
+
+.AlternatingRowStyleAdvertencia {
+    background-color: #FF5555;
+    color: #333333;
+}
+
+
+/*Estilo de las filas en modo edición*/
+.EditRowStyle {
+    background-color: #999999;
+}
+
+/*Estilo de las filas en modo seleccionadas*/
+.SelectedRowStyle {
+    border: thin inset #D7FFD7;
+    background-color: #D7FFD7;
+    font-weight: bold;
+    color: #333333;
+}
+    .SelectedRowStyle:hover {
+        border-style: outset;
+    }
+
+/******************************************/
+/*Estilo de Paginación ********************/
+/******************************************/
+.PagerStyle {
+    background-color: #5D7B9D;
+    color: #333333;
+    text-align: center;
+ }
+    .PagerStyle table {
+        margin: 0 auto;
+        text-align: left;
+     }
+            .PagerStyle table tr td {
+               background-color:dimgray;
+               border-width:1px;
+               border-style:solid;
+            }
+                .PagerStyle table tr td a {
+                    color:Background;
+                }
+                .PagerStyle table tr td span {
+                    color:beige;
+                }
+.PagerStyle table tr td:hover {
+    background-color:#D7FFD7;
+    }
+    .PagerStyle table tr td:hover span {
+        color:black;
+    }
+/******************************************/
+
+/*Estilo del pie*/
+.FooterStyle {
+    background-color: #5d9d95;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/*Estilo de los botones*/
+.CommandFieldStyle {
+    width: 1%;
+    white-space: nowrap;
+}
+    .CommandFieldStyle a {
+        display: inline;
+    }

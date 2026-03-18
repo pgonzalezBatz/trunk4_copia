@@ -1,0 +1,50 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="System.Globalization" %>
+<%@ Import Namespace="Web" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="<%=Request.Url.Scheme%>://intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Content/Site.css") %>" rel="Stylesheet" type="text/css"  />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="menu1">    
+        <ul>
+            <%  Dim roles = SimpleRoleProvider.GetRole()  'web.db.GetRoles(HttpContext.Current.SimpleRoleProvider.GetId(), ConfigurationManager.AppSettings("IDRECURSO"), ConfigurationManager.AppSettings("IDRECURSOADMIN"), ConfigurationManager.ConnectionStrings("sab").ConnectionString)%>
+            <%If (roles And 1) = 1 Then%>
+                <li><a href="<%=Url.Action("Index","alta") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"alta.aspx$"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Alta")%></a></li>
+                <%If Web.db.GetImporteAcumuladoEjercicio(Web.db.GetConstantes(ConfigurationManager.ConnectionStrings("gestionhoras").ConnectionString).EjercicioActual, SimpleRoleProvider.GetId(), ConfigurationManager.ConnectionStrings("gestionhoras").ConnectionString) > 0 Then%>
+                <li><a href="<%=Url.Action("listSolicitudes", "alta") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"alta.aspx/listSolicitudes$"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Ver solicitudes")%></a></li>
+                <%End If%>
+                
+            <%End If%>
+            <%If (roles And 2) = 2 Then%>
+                <li><a href="<%=Url.Action("Index","admin") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"admin.aspx$"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Administracion")%></a></li>
+                <li><a href="<%=Url.Action("Index","contrato") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"contrato.aspx$"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Contrato")%></a></li>
+            <li><a href="<%=Url.Action("Index","alta") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"alta.aspx$"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Alta")%></a></li>
+                <%If Web.db.GetImporteAcumuladoEjercicio(Web.db.GetConstantes(ConfigurationManager.ConnectionStrings("gestionhoras").ConnectionString).EjercicioActual, SimpleRoleProvider.GetId(), ConfigurationManager.ConnectionStrings("gestionhoras").ConnectionString) > 0 Then%>
+                <li><a href="<%=Url.Action("listSolicitudes", "alta") %>" style="<%=if(Regex.IsMatch(Request.Url.AbsolutePath,"alta.aspx/listSolicitudes$"),"background-color:#B3B3B3;","#F4F4F4;") %>"><%= h.traducir("Ver solicitudes")%></a></li>
+                <%End If%>
+            <%End If%>
+        </ul>
+        <div class="right">
+            <a href="<%=Url.Action("CerrarSession","access") %>"><%= h.traducir("Cerrar sesión")%></a>
+        </div>
+    </div>
+    <div id="menu2">
+        <asp:ContentPlaceHolder ID="cphMenu2" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div id="contenido1">
+        <asp:ContentPlaceHolder ID="cphContenido1" runat="server"></asp:ContentPlaceHolder>
+        <div id="contenido2">
+            <asp:ContentPlaceHolder ID="cphContenido2" runat="server"></asp:ContentPlaceHolder>
+        </div>    
+        </div>     
+    <div id="pie">
+    </div>
+</body>
+</html>

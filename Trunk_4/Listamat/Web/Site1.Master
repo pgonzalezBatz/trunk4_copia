@@ -1,0 +1,38 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="Web.Site1" %>
+<%@ Import Namespace="Web"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Batz S. Coop. - Lista de Materiales</title>
+  <%--  <link href="https://xbi.batz.es/BaliabideOrokorrak/css/<%=if(not request("emp") is nothing andalso request("emp")="9813","extranetMatrici.css","extranetBatz.css") %>" 
+          type="text/css" rel="Stylesheet" />--%>
+    <link href="//intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/Theme1/StyleSheet1.css" type="text/css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <a href="\HomeIntranet" title="<%=h.traducir("Ir a la página principal de la intranet") %> "class="cabApp"></a>  
+    <form id="form1" runat="server">
+        <div id="incluyeTodo">
+            <div id="cabecera">
+                <div class="alingMiddle">
+                    <asp:LinkButton runat="server" text="MenuPrincipal" OnClick="MenuPrincipal"></asp:LinkButton>
+                    <asp:imagebutton text="cerrarSesion"  runat="server" ImageUrl="~/App_Themes/Theme1/Images/logout.gif" OnClick="Logout" />
+                </div>
+            </div>
+            <div id="fondoContenido">
+                <div id="menu1">
+                    <%=If(Regex.IsMatch(Request.RawUrl, "ListaFundicion"), "<b>Lista de Fundición</b>", "<a href='ListaFundicion.aspx'>Lista de Fundición</a>")%>
+                    <%=If(Regex.IsMatch(Request.RawUrl, "ListaAF[a-zA-Z]*.aspx\?tipolista=2"), "<b>Lista Fabricación</b>", "<a href='ListaAF.aspx?tipolista=2'>Lista Fabricación</a>")%>
+                    <%=If(Regex.IsMatch(Request.RawUrl, "ListaAF[a-zA-Z]*.aspx\?tipolista=3"), "<b>Lista de Adelanto</b>", "<a href='ListaAF.aspx?tipolista=3'>Lista de Adelanto</a>")%>
+                    <%=If(Regex.IsMatch(Request.RawUrl, "DuplicadoLista.aspx"), "<b>Duplicado de listas</b>", "<a href='DuplicadoLista.aspx'>Duplicado de listas</a>")%>
+                </div>
+                <asp:contentplaceholder id="cphContenido" runat="server">
+                </asp:contentplaceholder>
+            </div>
+        </div>
+        <div id="pie"></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,230 @@
+﻿.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+.MensajeInfoAdvertencia{text-align:left;text-transform:uppercase;background:#F3F3F3;color:Blue;font-weight:bold;}
+.MensajeError{text-align:left;text-transform:uppercase;color:Red;font-weight:bold;font-family:Verdana;font-size:12px;}
+.labelDetalle{font-weight: bold;color: #0066CC;}
+.trOver{background:#ccccff;cursor:pointer;font-family:Verdana, Arial, Helvetica,sans-serif;color: #000000;}
+.required{border: solid 1px;background-color: #EBF5FF;}
+.trOverPointer{background:#ccccff;font-family:Verdana, Arial, Helvetica,sans-serif;color: #000000;}
+.trRojo{background-color: #FF9B9B;}
+.campoObligatorio{border: solid 1px;background-color: #F2F9FF;}
+.mayusculas{text-transform:uppercase;}
+.textoAzul{color: #5599FF;}
+.textoRojo{color: #FF5555;}
+.mensajeImportante {color: #FF5555;font-weight:bold;text-transform:uppercase}
+.font10{font-size:10px;}
+.font11{font-size:11px;}
+.informativo{font-size:9px;font-style:italic;}
+.CabeceraDiv{background-color:#DBDBDB; height:30px;}
+#botones{margin-left:90px;}
+#divAyuda{font-size:11px;font-style:italic;border:1px dotted #FF0000;font-weight:bold;}
+.collapsedPanel{font-size:13px;cursor:pointer;text-align:left;background: #D5DFFF;color: #000000;}
+.Repeater{border:1px solid #A8A8A8;}
+.Repeater th{color:#000000;text-align:center;background-color:#9FB8FF;}
+.Repeater th a{color:#000000;text-align:center;background-color:#9FB8FF;}
+.Repeater td{border:solid 1px #a8a8a8; padding:4px; border-width:0px;}
+.Wizard{background-color:#F4F4F4;border:1px solid #B5C7DE;}
+.StepStyle{background-color:#F4F4F4;margin-top:20px;}
+.SideBarStyle{background-color:#D5DFFF;vertical-align:top;}
+.SideBarButtonStyle{background-color:#9FB8FF;color:#000000;}       
+.SideBarSelected{font-weight:bold;background-color:#9FB8FF;color:#FFFFFF;font-size:14px;border-width:1px;border-style:solid;border-color:#537EFF;border-top-width:0px;border-right-width:0px;}      
+.WizardHeaderStyle{background-color:#9FB8FF;font-weight:bold;font-size:15px;}
+.modalBox {background-color : #f5f5f5;border-width: 1px;border-style: solid;border-color: Black;padding: 3px;}
+.modalBackground {background-color: Gray;filter: alpha(opacity=50);opacity: 0.5;}
+.updateProgress{border-width: 1px;border-style: solid;background-color: #FFFFFF;position: absolute;width: 180px;height: 65px;}
+.StaticMenuItemStyle, .DynamicMenuItemStyle{font: 10pt Verdana, Arial, Helvetica,sans-serif;color:#284E98;border:solid 1px #A8A8A8;background:#F4F4F4;padding:2px 2px 2px 2px;}
+.StaticHoverStyle, .DynamicHoverStyle {background:#CCCCCC;}
+.GridViewBHeaderStyle{text-align: center;color: #000000;background-color: #9FB8FF;} /*#0066CC*/
+.GridViewBHeaderStyle a{color:#000000}
+.GridViewBAlternatingRowStyle{background-color: #ffffff;}
+.GridViewBRowStyle{background-color: #D5DFFF;}
+.GridViewBEmptyRowStyle{font-weight:bold;border:0;}
+.GridViewBFooterStyle{background-color: #D5EAFF;font-weight:bold;}
+.GridViewBPagerStyle{background-color: #CEE7FF;}
+.GridView2 th{padding-left:5px;padding-right:5px;}
+.GridView2 td{padding-left:5px;padding-right:5px;}
+.table-hover tr td:hover {cursor: pointer}
+.page-header {margin-top: 0px;} /*Para que no haya tanto espacio entre el menu y el titulo*/
+.ajax__tab_tab {height: 25px !important;}/*Sin esto, las cabeceras de los tabpanels se cortan*/
+@media (min-width: 576px){}
+/*******Buscador*******/
+.tt-query {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.tt-hint {color: #999}
+.tt-menu {width: 422px;margin-top: 4px;padding: 4px 0;background-color: #fff;border: 1px solid #ccc;border: 1px solid rgba(0, 0, 0, 0.2);-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);box-shadow: 0 5px 10px rgba(0,0,0,.2);}
+.tt-suggestion {padding: 3px 20px;line-height: 24px;}
+.tt-suggestion.tt-cursor, .tt-suggestion:hover {color: #fff;background-color: #0097cf;cursor: pointer;}
+.tt-suggestion p {margin: 0;}
+#scrollable-dropdown-menu .tt-menu {max-height: 150px;overflow-y: auto;}
+.tt-suggestions strong {font-weight: normal;color: red;}
+/***********************/
+form .row > [class*="col-"] {margin-bottom: 1%;}
+.form-inline {margin-bottom: 1%;}
+.form-inline .form-control {margin-bottom: 1%;}
+.form-group .form-control {margin-bottom: 1%;}
+.odd {background-color: #F9F9F9;}
+.checkboxlist input {margin-left: 20px;padding-left: 20px;}
+/****Para que el texto de la caja del ticket, salga siempre dentro de la imagen****/
+@media only screen and (min-width: 768px) {
+    .box-ticket {
+        margin-left: 120px;
+        padding-top: 110px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width:768px) {
+    .box-ticket {
+        margin-left: 110px;
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .box-ticket {
+        margin-left: 80px;
+        padding-top: 70px;
+    }
+}
+/******Para que el toastmessage se vea bien desde el movil********/
+.toast-position-middle-center {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width: 768px) {
+    .toast-container {
+        width: 90%;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+.forceInline { /*Cuando hay un formulario inline, hay que ponerle esta clase al control con form-control*/
+    vertical-align:auto !important;
+}
+.gridview-header-center{text-align:center !important;}
+.gridview-header-right {text-align: right !important;}
+.label-custom > div > span {
+    /*border:none !important; 
+    box-shadow:none !important;*/
+    padding:6px 12px !important;
+    display:block !important;
+}
+.custom-label-control {
+    padding: 6px 12px !important;
+    display: block !important;
+}
+.row > div > div.date {
+    padding:0px !important;
+}
+/**Menu dropdown*/
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-submenu > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+.dropdown-submenu:hover > a:after {
+    border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+    float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+.checkboxlist input[type=checkbox] {
+    margin-left: 15px;
+    margin-right: 4px;
+}
+
+.tableWithBorder > tbody > tr > td, .tableWithBorder > tbody > tr > th, .tableWithBorder > tfoot > tr > td, .tableWithBorder > tfoot > tr > th, .tableWithBorder > thead > tr > td, .tableWithBorder > thead > tr > th {
+    border-top:1px solid #000 !important;
+}
+
+/*Fondo de la parte inferior. Si SideBarStyle2 no esta informado, fondo del panel de la izquierda*/
+.Wizard2 {
+    border: 1px solid #d5e2f2;
+}
+
+/*Fondo de cada panel*/
+.StepStyle2 {
+    background-color: #FFFFFF;
+    margin-top: 20px;
+}
+
+/*Botones siguiente*/
+.NavigationStyle2{
+    font-size:15px;
+}
+
+/*Panel de la izquierda*/
+.SideBarStyle2 {
+    background-color: #F3F3F3;
+    vertical-align: top;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B5C7DE;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+/*Estilo de la cabecera de cada panel*/
+.WizardHeaderStyle2 {
+    background-color: #F3F3F3;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+/*No se a que estilo se refiere*/
+.SideBarButtonStyle2 {
+    background-color: #F3F3F3;
+    color: #000000;     
+}
+
+/*Elementos del wizard no seleccionados*/
+.SideBarSelected2 {
+    font-weight: bold;
+    background-color: #d4ddf6;
+    color: #FFFFFF;
+    font-size: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #537EFF;
+    border-radius: 25px;
+    padding:5px;    
+}
+
+.progress-liquidacion{width:150px;}

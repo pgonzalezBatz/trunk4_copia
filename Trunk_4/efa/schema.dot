@@ -1,0 +1,16 @@
+digraph RecursosFisicos {
+	graph [rankdir = "LR" ];
+	node[fontsize = "14" style=bold];
+	GRUPOS [label="<tb> GRUPOS | nombre | imagen"   shape = "record"];
+	RECURSOS[label="<tb> RECURSOS | id | nombre_grupo | id_planta | descripcion | obsoleto" shape = "record"];
+	REGISTROS[label="<tb> REGISTROS | id_sab | nombre_grupo | id_recurso | fecha_coger | fecha_dejar" shape = "record"];
+	GRUPOS_ALARMA[label="<tb> GRUPOS_ALARMA | nombre_grupo | max_dias" shape = "record" color="darkorange"];
+	RECURSOS_EXCEPCIONALES[label="<tb> RECURSOS_EXCEPCIONALES | nombre_grupo | id_recurso" shape="record" color="darkorange"];
+	GRUPOS:tb -> RECURSOS:tb;
+	RECURSOS:tb -> REGISTROS:tb;
+	GRUPOS:tb -> GRUPOS_ALARMA:tb[color="darkorange"];
+	RECURSOS:tb -> RECURSOS_EXCEPCIONALES:tb[color="darkorange"];
+	
+	label = "Gestion de recursos fisicos";
+	fontsize=20;
+}

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Modificar KPI" description="" url="~/ModificarKPI.aspx" id="" />
+  <Item title="Informes" descripcion="" url="Informes.aspx" id="" />
+  <Item title="Mantenimientos" description="" url="" id="admin">
+    <Item title="Negocio-Areas" description="" url="~/Mantenimientos/NegociosAreas.aspx" id=""></Item>
+    <Item title="Valores" description="" url="~/Mantenimientos/Valores.aspx" id=""></Item>
+    <Item title="Indicadores" description="" url="~/Mantenimientos/Indicadores.aspx" id=""></Item>
+    <Item title="Unidades" description="" url="~/Mantenimientos/Unidades.aspx" id=""></Item>
+    <Item title="Plantas" description="" url="~/Mantenimientos/Plantas.aspx" id=""></Item>
+    <Item title="Perfiles" description="" url="~/Mantenimientos/Perfiles.aspx" id=""></Item>
+	<Item title="Comites" description="" url="~/Mantenimientos/Comites.aspx" id=""></Item>
+  </Item>
+  <Item title="Ayuda" description="" url="" id="">
+    <Item title="General" descripcion="" url="~\Ayuda\Help.pdf" id="help" />
+    <Item title="Help BMS" description="" url="~\Ayuda\HelpBMS.pdf" id="help"></Item>
+  </Item>  
+</Root>

@@ -1,0 +1,14 @@
+digraph Control_material_enviado {
+	label="Añadir un modulo extra a SAS2 para que los proveedores notifiquen cuando les llega el material"
+
+	extranet[shape="parallelogram"];
+	intranet[shape="parallelogram" label="SAS Intranet\nNueva pestaña confirmaciones llegada"];
+	extranet[label="Extranet\n nueva aplicacion"];
+	bd[shape="trapezium" label="Base de datos\nNuevos campos\nEstado\nComentario"];
+	
+	proveedor -> extranet;
+	extranet -> bd;
+	usuario_batz-> intranet;
+	intranet -> bd;
+	
+}

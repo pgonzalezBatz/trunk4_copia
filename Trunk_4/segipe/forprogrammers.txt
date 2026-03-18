@@ -1,0 +1,14 @@
+Desde XBAT
+==========
+grant insert,select,references on gchisfec to segipe
+grant insert,update on gcprecon to segipe
+grant select,references on gcarti_especial to segipe
+
+grant select,references on W_PROYECTO_CLIENTE_OF_TODAS to segipe 
+grant update on gclinped to segipe
+grant select,references on faopepre to segipe
+
+Desde SAB
+=========
+grant select,references on usuarios to segipe
+grant select,references on empresas to segipe

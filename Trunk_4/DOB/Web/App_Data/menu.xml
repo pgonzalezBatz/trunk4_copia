@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>  
+  <Item title="Administración" roles="1">
+    <Item title="Usuarios roles" controller="UsuariosRoles" action="Index" roles="1"></Item>    
+    <Item title="Plantas" controller="Plantas" action="Index" roles="1"></Item>
+    <Item title="Plantas despliegue" controller="PlantasDespliegue" action="Index" roles="1"></Item>
+    <Item title="Tipos indicadores" controller="TiposIndicadores" action="Index" roles="1"></Item>
+  </Item>  
+  <Item title="Gestión del área" roles="2,4">
+    <Item title="Ver usuarios roles" controller="UsuariosRoles" action="Ver" roles="2"></Item>
+    <Item title="Retos" controller="Retos" action="Index" roles="2,4"></Item>
+    <Item title="Procesos" controller="Procesos" action="Index" roles="2,4"></Item>
+  </Item>
+  <Item title="Objetivos"  roles="2,3,4">
+    <Item title="Mis objetivos" controller="Objetivos" action="MisObjetivos" roles="2,3"></Item>
+    <Item title="Lista de objetivos" controller="Objetivos" action="Index" roles="2,3,4"></Item>
+  </Item>
+  <Item title="Cuadro de mando" controller="Objetivos" action="CuadroMando" roles="2,3,4"></Item>
+  <Item title="Mis revisiones" controller="Revisiones" action="MisRevisiones" roles="2,3"></Item>
+</Root>
+
+

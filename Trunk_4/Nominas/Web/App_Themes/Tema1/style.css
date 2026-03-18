@@ -1,0 +1,17 @@
+﻿.modalBox {background-color : #f5f5f5;border-width: 1px;border-style: solid;border-color: Black;padding: 3px;}
+.modalBackground {background-color: Gray;filter: alpha(opacity=50);opacity: 0.5;}
+/*.table tr td:hover {cursor:pointer}*/
+.form-inline > * {margin-right:5px;}
+.tablaResul {
+    width: 100%;
+
+}
+
+.form-inline.form-group {
+    margin-bottom: 5px;
+}
+
+#tablehead > th,
+#ctl00_cp_tableHead > th {
+    text-align: center;
+}

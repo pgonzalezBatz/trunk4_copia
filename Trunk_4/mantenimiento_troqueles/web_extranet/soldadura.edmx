@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ABARCA">
+          <Key>
+            <PropertyRef Name="IDFOTO" />
+            <PropertyRef Name="IDINFORME" />
+          </Key>
+          <Property Name="IDFOTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDINFORME" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CERTIFICADO">
+          <Key>
+            <PropertyRef Name="IDCERTIFICADO" />
+          </Key>
+          <Property Name="IDCERTIFICADO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHACERTIFICADO" Type="date" />
+          <Property Name="CERTIFICADO" Type="blob" />
+          <Property Name="NOMBRECERTF" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CONTIENE">
+          <Key>
+            <PropertyRef Name="IDINFORME" />
+            <PropertyRef Name="IDCERTIFICADO" />
+          </Key>
+          <Property Name="IDINFORME" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDCERTIFICADO" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FOTOS">
+          <Key>
+            <PropertyRef Name="IDFOTO" />
+          </Key>
+          <Property Name="IDFOTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IMAGEN" Type="blob" />
+          <Property Name="FECHAIMAGEN" Type="date" />
+        </EntityType>
+        <EntityType Name="INFORME_PROVEEDOR">
+          <Key>
+            <PropertyRef Name="ID_INFORME" />
+          </Key>
+          <Property Name="ID_INFORME" Type="number" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="ID_SAB" Type="number" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="VALIDADO" Type="number" Precision="1" Scale="0" />
+          <Property Name="NUMPEDCAB" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="INFORMES">
+          <Key>
+            <PropertyRef Name="IDINFORME" />
+          </Key>
+          <Property Name="IDINFORME" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="VALOROF" Type="varchar2" MaxLength="6" Nullable="false" />
+          <Property Name="VALOROP" Type="varchar2" MaxLength="3" Nullable="false" />
+          <Property Name="MARCA" Type="varchar2" MaxLength="300" Nullable="false" />
+          <Property Name="CLIENTE" Type="varchar2" MaxLength="50" />
+          <Property Name="PROYECTO" Type="varchar2" MaxLength="50" />
+          <Property Name="NPIEZA" Type="varchar2" MaxLength="60" />
+          <Property Name="DESCPIEZA" Type="varchar2" MaxLength="80" />
+          <Property Name="NTROQUEL" Type="varchar2" MaxLength="30" />
+          <Property Name="MATERIAL" Type="varchar2" MaxLength="80" />
+          <Property Name="TRATAMSEC" Type="varchar2" MaxLength="20" />
+          <Property Name="DUREZA" Type="varchar2" MaxLength="20" />
+          <Property Name="TIPOINFORME" Type="varchar2" MaxLength="40" Nullable="false" />
+          <Property Name="FECHAINFORME" Type="date" />
+          <Property Name="CREADOPOR" Type="varchar2" MaxLength="50" />
+          <Property Name="TIPOSOLDADURADURO" Type="varchar2" MaxLength="15" />
+          <Property Name="MATERIALAPORTACIONSOLDDURO" Type="varchar2" MaxLength="50" />
+          <Property Name="MATERIALAPORTACIONSOLDBLANDO" Type="varchar2" MaxLength="50" />
+          <Property Name="KGCONSUMIDOSSOLDDURO" Type="varchar2" MaxLength="10" />
+          <Property Name="KGCONSUMIDOSSOLDBLANDO" Type="varchar2" MaxLength="10" />
+          <Property Name="VARILLASOLDADURADURO" Type="varchar2" MaxLength="15" />
+          <Property Name="VARILLASOLDADURABLANDO" Type="varchar2" MaxLength="15" />
+          <Property Name="INTENSIDADSOLDADURADURO" Type="varchar2" MaxLength="5" />
+          <Property Name="INTENSIDADSOLDADURABLANDO" Type="varchar2" MaxLength="5" />
+          <Property Name="TRATAMIENTO" Type="varchar2" MaxLength="20" />
+          <Property Name="ANTESTRATAM" Type="varchar2" MaxLength="50" />
+          <Property Name="DESPUESTRATAM" Type="varchar2" MaxLength="50" />
+          <Property Name="CALZO" Type="varchar2" MaxLength="2" />
+          <Property Name="VALORCALZO" Type="varchar2" MaxLength="50" />
+          <Property Name="LARGOCD" Type="varchar2" MaxLength="50" />
+          <Property Name="ANCHOCD" Type="varchar2" MaxLength="50" />
+          <Property Name="ALTOCD" Type="varchar2" MaxLength="50" />
+          <Property Name="DUREZAREALTEMPLEMAX" Type="varchar2" MaxLength="50" />
+          <Property Name="DUREZAREALTEMPLEMIN" Type="varchar2" MaxLength="50" />
+          <Property Name="NUMEROMEDIDASTEMPLE" Type="varchar2" MaxLength="50" />
+          <Property Name="TEMPERATURATEMPLE" Type="varchar2" MaxLength="50" />
+          <Property Name="OPTICAPASO" Type="varchar2" MaxLength="50" />
+          <Property Name="F" Type="varchar2" MaxLength="50" />
+          <Property Name="NOTAS" Type="varchar2" MaxLength="250" />
+          <Property Name="TIPOSOLDADURABLANDO" Type="varchar2" MaxLength="15" />
+          <Property Name="ESTADO" Type="varchar2" MaxLength="50" />
+          <Property Name="FECHABORRADO" Type="date" />
+          <Property Name="BORRADOPOR" Type="varchar2" MaxLength="50" />
+          <Property Name="METROS" Type="varchar2" MaxLength="50" />
+          <Property Name="DUREZAREQUERIDATEMPLE" Type="varchar2" MaxLength="10" />
+          <Property Name="VARILLASOLDADURABLANDO2" Type="varchar2" MaxLength="50" />
+          <Property Name="VARILLASOLDADURADURO2" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PESOVARILLAS">
+          <Key>
+            <PropertyRef Name="IDVALOR" />
+          </Key>
+          <Property Name="IDVALOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PESO" Type="number" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="SOLDADORESINFORME">
+          <Key>
+            <PropertyRef Name="IDINFORME" />
+            <PropertyRef Name="IDSOLDADOR" />
+          </Key>
+          <Property Name="IDINFORME" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDSOLDADOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIPOSOLDADURA">
+          <Key>
+            <PropertyRef Name="TIPO" />
+          </Key>
+          <Property Name="TIPO" Type="varchar2" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="CODIGO" />
+          </Key>
+          <Property Name="CODIGO" Type="varchar2" MaxLength="5" Nullable="false" />
+          <Property Name="TIPO" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="VALORESSOLDADURA">
+          <Key>
+            <PropertyRef Name="IDVALOR" />
+          </Key>
+          <Property Name="IDVALOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TIPOSOLDADURA" Type="varchar2" MaxLength="10" />
+          <Property Name="TIPO" Type="varchar2" MaxLength="10" />
+          <Property Name="OPCION" Type="varchar2" MaxLength="10" />
+          <Property Name="VALOR" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GCLINPED">
+          <Key>
+            <PropertyRef Name="NUMPEDLIN" />
+            <PropertyRef Name="NUMLINLIN" />
+          </Key>
+          <Property Name="NUMPEDLIN" Type="number" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="NUMLINLIN" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CODPROLIN" Type="char" MaxLength="12" />
+          <Property Name="CODART" Type="char" MaxLength="12" />
+          <Property Name="DESCART" Type="char" MaxLength="50" />
+          <Property Name="DESCLISTA" Type="char" MaxLength="50" />
+          <Property Name="NUMORDF" Type="number" Precision="6" Scale="0" />
+          <Property Name="NUMOPE" Type="number" Precision="2" Scale="0" />
+          <Property Name="NUMMAR" Type="char" MaxLength="11" />
+          <Property Name="CANPED" Type="number" Precision="11" Scale="3" />
+          <Property Name="CANREC" Type="number" Precision="11" Scale="3" />
+          <Property Name="CANFAC" Type="number" Precision="11" Scale="3" />
+          <Property Name="PREUNI" Type="number" Precision="38" Scale="0" />
+          <Property Name="DESCTO" Type="number" Precision="5" Scale="2" />
+          <Property Name="ALEACION" Type="number" Precision="3" Scale="0" />
+          <Property Name="IMPPED" Type="number" Precision="12" Scale="2" />
+          <Property Name="IMPREC" Type="number" Precision="12" Scale="2" />
+          <Property Name="IMPFAC" Type="number" Precision="12" Scale="2" />
+          <Property Name="FECENTSOL" Type="date" />
+          <Property Name="FECENTVIG" Type="date" Nullable="false" />
+          <Property Name="CODARPRO" Type="char" MaxLength="15" />
+          <Property Name="NUMNECES" Type="number" Precision="6" Scale="0" />
+          <Property Name="PDTE_PREC" Type="varchar2" MaxLength="1" />
+          <Property Name="LANTEGI" Type="number" Precision="2" Scale="0" />
+          <Property Name="LANTEGI_H" Type="number" Precision="2" Scale="0" />
+          <Property Name="EPREUNI" Type="number" Precision="15" Scale="6" />
+          <Property Name="EDIMPRE" Type="number" Precision="6" Scale="0" />
+          <Property Name="EALEACION" Type="number" Precision="5" Scale="4" />
+          <Property Name="EIMPPED" Type="number" Precision="12" Scale="2" />
+          <Property Name="EIMPREC" Type="number" Precision="12" Scale="2" />
+          <Property Name="EIMPFAC" Type="number" Precision="12" Scale="2" />
+          <Property Name="FECPDTEPRE" Type="date" />
+          <Property Name="FECCALIDAD" Type="date" />
+          <Property Name="ID_ESTADO" Type="number" Precision="2" Scale="0" />
+          <Property Name="MATERIAL" Type="varchar2" MaxLength="80" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="ABARCA" EntityType="Self.ABARCA" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="CERTIFICADO" EntityType="Self.CERTIFICADO" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="CONTIENE" EntityType="Self.CONTIENE" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="FOTOS" EntityType="Self.FOTOS" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="INFORME_PROVEEDOR" EntityType="Self.INFORME_PROVEEDOR" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="INFORMES" EntityType="Self.INFORMES" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="PESOVARILLAS" EntityType="Self.PESOVARILLAS" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="SOLDADORESINFORME" EntityType="Self.SOLDADORESINFORME" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="TIPOSOLDADURA" EntityType="Self.TIPOSOLDADURA" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="VALORESSOLDADURA" EntityType="Self.VALORESSOLDADURA" Schema="SOLDADURA" store:Type="Tables" />
+          <EntitySet Name="GCLINPED" EntityType="Self.GCLINPED" Schema="XBAT" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CERTIFICADO">
+          <Key>
+            <PropertyRef Name="IDCERTIFICADO" />
+          </Key>
+          <Property Name="IDCERTIFICADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHACERTIFICADO" Type="DateTime" />
+          <Property Name="CERTIFICADO1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="NOMBRECERTF" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CONTIENE">
+          <Key>
+            <PropertyRef Name="IDINFORME" />
+            <PropertyRef Name="IDCERTIFICADO" />
+          </Key>
+          <Property Name="IDINFORME" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDCERTIFICADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FOTOS">
+          <Key>
+            <PropertyRef Name="IDFOTO" />
+          </Key>
+          <Property Name="IDFOTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FECHAIMAGEN" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="PESOVARILLAS">
+          <Key>
+            <PropertyRef Name="IDVALOR" />
+          </Key>
+          <Property Name="IDVALOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PESO" Type="Decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="SOLDADORESINFORME">
+          <Key>
+            <PropertyRef Name="IDINFORME" />
+            <PropertyRef Name="IDSOLDADOR" />
+          </Key>
+          <Property Name="IDINFORME" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="IDSOLDADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIPOSOLDADURA">
+          <Key>
+            <PropertyRef Name="TIPO" />
+          </Key>
+          <Property Name="TIPO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VALORESSOLDADURA">
+          <Key>
+            <PropertyRef Name="IDVALOR" />
+          </Key>
+          <Property Name="IDVALOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TIPOSOLDADURA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="OPCION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VALOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities_soldadura" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CERTIFICADO" EntityType="Self.CERTIFICADO" />
+          <EntitySet Name="CONTIENE" EntityType="Self.CONTIENE" />
+          <EntitySet Name="FOTOS" EntityType="Self.FOTOS" />
+          <EntitySet Name="PESOVARILLAS" EntityType="Self.PESOVARILLAS" />
+          <EntitySet Name="SOLDADORESINFORME" EntityType="Self.SOLDADORESINFORME" />
+          <EntitySet Name="TIPOSOLDADURA" EntityType="Self.TIPOSOLDADURA" />
+          <EntitySet Name="VALORESSOLDADURA" EntityType="Self.VALORESSOLDADURA" />
+          <EntitySet Name="ABARCA" EntityType="Model.ABARCA" />
+          <EntitySet Name="INFORME_PROVEEDOR" EntityType="Model.INFORME_PROVEEDOR" />
+          <EntitySet Name="USUARIOS" EntityType="Model.USUARIOS" />
+          <EntitySet Name="INFORMES" EntityType="Model.INFORMES" />
+          <EntitySet Name="GCLINPED" EntityType="Model.GCLINPED" />
+        </EntityContainer>
+        <EntityType Name="ABARCA">
+          <Key>
+            <PropertyRef Name="IDFOTO" />
+            <PropertyRef Name="IDINFORME" />
+          </Key>
+          <Property Name="IDFOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="IDINFORME" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="INFORME_PROVEEDOR">
+          <Key>
+            <PropertyRef Name="ID_INFORME" />
+          </Key>
+          <Property Name="ID_INFORME" Type="Int32" Nullable="false" />
+          <Property Name="ID_SAB" Type="Int32" Nullable="false" />
+          <Property Name="VALIDADO" Type="Boolean" />
+          <Property Name="NUMPEDCAB" Type="Decimal" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="CODIGO" />
+          </Key>
+          <Property Name="CODIGO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="INFORMES">
+          <Key>
+            <PropertyRef Name="IDINFORME" />
+          </Key>
+          <Property Name="IDINFORME" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="VALOROF" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="VALOROP" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="MARCA" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROYECTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NPIEZA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="DESCPIEZA" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="NTROQUEL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIAL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="TRATAMSEC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DUREZA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TIPOINFORME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAINFORME" Type="DateTime" />
+          <Property Name="CREADOPOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIPOSOLDADURADURO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALAPORTACIONSOLDDURO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIALAPORTACIONSOLDBLANDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KGCONSUMIDOSSOLDDURO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KGCONSUMIDOSSOLDBLANDO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VARILLASOLDADURADURO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="VARILLASOLDADURABLANDO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="INTENSIDADSOLDADURADURO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="INTENSIDADSOLDADURABLANDO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="TRATAMIENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ANTESTRATAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DESPUESTRATAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CALZO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="VALORCALZO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LARGOCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ANCHOCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALTOCD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DUREZAREALTEMPLEMAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DUREZAREALTEMPLEMIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NUMEROMEDIDASTEMPLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEMPERATURATEMPLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPTICAPASO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="F" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOTAS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TIPOSOLDADURABLANDO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHABORRADO" Type="DateTime" />
+          <Property Name="BORRADOPOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="METROS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DUREZAREQUERIDATEMPLE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VARILLASOLDADURABLANDO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VARILLASOLDADURADURO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GCLINPED">
+          <Key>
+            <PropertyRef Name="NUMPEDLIN" />
+            <PropertyRef Name="NUMLINLIN" />
+          </Key>
+          <Property Name="NUMPEDLIN" Type="Int32" Nullable="false" />
+          <Property Name="NUMLINLIN" Type="Int16" Nullable="false" />
+          <Property Name="CODPROLIN" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="CODART" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="DESCART" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="DESCLISTA" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="NUMORDF" Type="Int32" />
+          <Property Name="NUMOPE" Type="Int16" />
+          <Property Name="NUMMAR" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="CANPED" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="CANREC" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="CANFAC" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="PREUNI" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="DESCTO" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ALEACION" Type="Int16" />
+          <Property Name="IMPPED" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="IMPREC" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="IMPFAC" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="FECENTSOL" Type="DateTime" />
+          <Property Name="FECENTVIG" Type="DateTime" Nullable="false" />
+          <Property Name="CODARPRO" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="NUMNECES" Type="Int32" />
+          <Property Name="PDTE_PREC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LANTEGI" Type="Int16" />
+          <Property Name="LANTEGI_H" Type="Int16" />
+          <Property Name="EPREUNI" Type="Decimal" Precision="15" Scale="6" />
+          <Property Name="EDIMPRE" Type="Int32" />
+          <Property Name="EALEACION" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="EIMPPED" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EIMPREC" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EIMPFAC" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="FECPDTEPRE" Type="DateTime" />
+          <Property Name="FECCALIDAD" Type="DateTime" />
+          <Property Name="ID_ESTADO" Type="Int16" />
+          <Property Name="MATERIAL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities_soldadura">
+          <EntitySetMapping Name="CERTIFICADO">
+            <EntityTypeMapping TypeName="Model.CERTIFICADO">
+              <MappingFragment StoreEntitySet="CERTIFICADO">
+                <ScalarProperty Name="IDCERTIFICADO" ColumnName="IDCERTIFICADO" />
+                <ScalarProperty Name="FECHACERTIFICADO" ColumnName="FECHACERTIFICADO" />
+                <ScalarProperty Name="CERTIFICADO1" ColumnName="CERTIFICADO" />
+                <ScalarProperty Name="NOMBRECERTF" ColumnName="NOMBRECERTF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONTIENE">
+            <EntityTypeMapping TypeName="Model.CONTIENE">
+              <MappingFragment StoreEntitySet="CONTIENE">
+                <ScalarProperty Name="IDINFORME" ColumnName="IDINFORME" />
+                <ScalarProperty Name="IDCERTIFICADO" ColumnName="IDCERTIFICADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FOTOS">
+            <EntityTypeMapping TypeName="Model.FOTOS">
+              <MappingFragment StoreEntitySet="FOTOS">
+                <ScalarProperty Name="IDFOTO" ColumnName="IDFOTO" />
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="FECHAIMAGEN" ColumnName="FECHAIMAGEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PESOVARILLAS">
+            <EntityTypeMapping TypeName="Model.PESOVARILLAS">
+              <MappingFragment StoreEntitySet="PESOVARILLAS">
+                <ScalarProperty Name="IDVALOR" ColumnName="IDVALOR" />
+                <ScalarProperty Name="PESO" ColumnName="PESO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SOLDADORESINFORME">
+            <EntityTypeMapping TypeName="Model.SOLDADORESINFORME">
+              <MappingFragment StoreEntitySet="SOLDADORESINFORME">
+                <ScalarProperty Name="IDINFORME" ColumnName="IDINFORME" />
+                <ScalarProperty Name="IDSOLDADOR" ColumnName="IDSOLDADOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPOSOLDADURA">
+            <EntityTypeMapping TypeName="Model.TIPOSOLDADURA">
+              <MappingFragment StoreEntitySet="TIPOSOLDADURA">
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VALORESSOLDADURA">
+            <EntityTypeMapping TypeName="Model.VALORESSOLDADURA">
+              <MappingFragment StoreEntitySet="VALORESSOLDADURA">
+                <ScalarProperty Name="IDVALOR" ColumnName="IDVALOR" />
+                <ScalarProperty Name="TIPOSOLDADURA" ColumnName="TIPOSOLDADURA" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="OPCION" ColumnName="OPCION" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABARCA">
+            <EntityTypeMapping TypeName="Model.ABARCA">
+              <MappingFragment StoreEntitySet="ABARCA">
+                <ScalarProperty Name="IDINFORME" ColumnName="IDINFORME" />
+                <ScalarProperty Name="IDFOTO" ColumnName="IDFOTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INFORME_PROVEEDOR">
+            <EntityTypeMapping TypeName="Model.INFORME_PROVEEDOR">
+              <MappingFragment StoreEntitySet="INFORME_PROVEEDOR">
+                <ScalarProperty Name="NUMPEDCAB" ColumnName="NUMPEDCAB" />
+                <ScalarProperty Name="VALIDADO" ColumnName="VALIDADO" />
+                <ScalarProperty Name="ID_SAB" ColumnName="ID_SAB" />
+                <ScalarProperty Name="ID_INFORME" ColumnName="ID_INFORME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="Model.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INFORMES">
+            <EntityTypeMapping TypeName="Model.INFORMES">
+              <MappingFragment StoreEntitySet="INFORMES">
+                <ScalarProperty Name="VARILLASOLDADURADURO2" ColumnName="VARILLASOLDADURADURO2" />
+                <ScalarProperty Name="VARILLASOLDADURABLANDO2" ColumnName="VARILLASOLDADURABLANDO2" />
+                <ScalarProperty Name="DUREZAREQUERIDATEMPLE" ColumnName="DUREZAREQUERIDATEMPLE" />
+                <ScalarProperty Name="METROS" ColumnName="METROS" />
+                <ScalarProperty Name="BORRADOPOR" ColumnName="BORRADOPOR" />
+                <ScalarProperty Name="FECHABORRADO" ColumnName="FECHABORRADO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="TIPOSOLDADURABLANDO" ColumnName="TIPOSOLDADURABLANDO" />
+                <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+                <ScalarProperty Name="F" ColumnName="F" />
+                <ScalarProperty Name="OPTICAPASO" ColumnName="OPTICAPASO" />
+                <ScalarProperty Name="TEMPERATURATEMPLE" ColumnName="TEMPERATURATEMPLE" />
+                <ScalarProperty Name="NUMEROMEDIDASTEMPLE" ColumnName="NUMEROMEDIDASTEMPLE" />
+                <ScalarProperty Name="DUREZAREALTEMPLEMIN" ColumnName="DUREZAREALTEMPLEMIN" />
+                <ScalarProperty Name="DUREZAREALTEMPLEMAX" ColumnName="DUREZAREALTEMPLEMAX" />
+                <ScalarProperty Name="ALTOCD" ColumnName="ALTOCD" />
+                <ScalarProperty Name="ANCHOCD" ColumnName="ANCHOCD" />
+                <ScalarProperty Name="LARGOCD" ColumnName="LARGOCD" />
+                <ScalarProperty Name="VALORCALZO" ColumnName="VALORCALZO" />
+                <ScalarProperty Name="CALZO" ColumnName="CALZO" />
+                <ScalarProperty Name="DESPUESTRATAM" ColumnName="DESPUESTRATAM" />
+                <ScalarProperty Name="ANTESTRATAM" ColumnName="ANTESTRATAM" />
+                <ScalarProperty Name="TRATAMIENTO" ColumnName="TRATAMIENTO" />
+                <ScalarProperty Name="INTENSIDADSOLDADURABLANDO" ColumnName="INTENSIDADSOLDADURABLANDO" />
+                <ScalarProperty Name="INTENSIDADSOLDADURADURO" ColumnName="INTENSIDADSOLDADURADURO" />
+                <ScalarProperty Name="VARILLASOLDADURABLANDO" ColumnName="VARILLASOLDADURABLANDO" />
+                <ScalarProperty Name="VARILLASOLDADURADURO" ColumnName="VARILLASOLDADURADURO" />
+                <ScalarProperty Name="KGCONSUMIDOSSOLDBLANDO" ColumnName="KGCONSUMIDOSSOLDBLANDO" />
+                <ScalarProperty Name="KGCONSUMIDOSSOLDDURO" ColumnName="KGCONSUMIDOSSOLDDURO" />
+                <ScalarProperty Name="MATERIALAPORTACIONSOLDBLANDO" ColumnName="MATERIALAPORTACIONSOLDBLANDO" />
+                <ScalarProperty Name="MATERIALAPORTACIONSOLDDURO" ColumnName="MATERIALAPORTACIONSOLDDURO" />
+                <ScalarProperty Name="TIPOSOLDADURADURO" ColumnName="TIPOSOLDADURADURO" />
+                <ScalarProperty Name="CREADOPOR" ColumnName="CREADOPOR" />
+                <ScalarProperty Name="FECHAINFORME" ColumnName="FECHAINFORME" />
+                <ScalarProperty Name="TIPOINFORME" ColumnName="TIPOINFORME" />
+                <ScalarProperty Name="DUREZA" ColumnName="DUREZA" />
+                <ScalarProperty Name="TRATAMSEC" ColumnName="TRATAMSEC" />
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="NTROQUEL" ColumnName="NTROQUEL" />
+                <ScalarProperty Name="DESCPIEZA" ColumnName="DESCPIEZA" />
+                <ScalarProperty Name="NPIEZA" ColumnName="NPIEZA" />
+                <ScalarProperty Name="PROYECTO" ColumnName="PROYECTO" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="VALOROP" ColumnName="VALOROP" />
+                <ScalarProperty Name="VALOROF" ColumnName="VALOROF" />
+                <ScalarProperty Name="IDINFORME" ColumnName="IDINFORME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GCLINPED">
+            <EntityTypeMapping TypeName="Model.GCLINPED">
+              <MappingFragment StoreEntitySet="GCLINPED">
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="FECCALIDAD" ColumnName="FECCALIDAD" />
+                <ScalarProperty Name="FECPDTEPRE" ColumnName="FECPDTEPRE" />
+                <ScalarProperty Name="EIMPFAC" ColumnName="EIMPFAC" />
+                <ScalarProperty Name="EIMPREC" ColumnName="EIMPREC" />
+                <ScalarProperty Name="EIMPPED" ColumnName="EIMPPED" />
+                <ScalarProperty Name="EALEACION" ColumnName="EALEACION" />
+                <ScalarProperty Name="EDIMPRE" ColumnName="EDIMPRE" />
+                <ScalarProperty Name="EPREUNI" ColumnName="EPREUNI" />
+                <ScalarProperty Name="LANTEGI_H" ColumnName="LANTEGI_H" />
+                <ScalarProperty Name="LANTEGI" ColumnName="LANTEGI" />
+                <ScalarProperty Name="PDTE_PREC" ColumnName="PDTE_PREC" />
+                <ScalarProperty Name="NUMNECES" ColumnName="NUMNECES" />
+                <ScalarProperty Name="CODARPRO" ColumnName="CODARPRO" />
+                <ScalarProperty Name="FECENTVIG" ColumnName="FECENTVIG" />
+                <ScalarProperty Name="FECENTSOL" ColumnName="FECENTSOL" />
+                <ScalarProperty Name="IMPFAC" ColumnName="IMPFAC" />
+                <ScalarProperty Name="IMPREC" ColumnName="IMPREC" />
+                <ScalarProperty Name="IMPPED" ColumnName="IMPPED" />
+                <ScalarProperty Name="ALEACION" ColumnName="ALEACION" />
+                <ScalarProperty Name="DESCTO" ColumnName="DESCTO" />
+                <ScalarProperty Name="PREUNI" ColumnName="PREUNI" />
+                <ScalarProperty Name="CANFAC" ColumnName="CANFAC" />
+                <ScalarProperty Name="CANREC" ColumnName="CANREC" />
+                <ScalarProperty Name="CANPED" ColumnName="CANPED" />
+                <ScalarProperty Name="NUMMAR" ColumnName="NUMMAR" />
+                <ScalarProperty Name="NUMOPE" ColumnName="NUMOPE" />
+                <ScalarProperty Name="NUMORDF" ColumnName="NUMORDF" />
+                <ScalarProperty Name="DESCLISTA" ColumnName="DESCLISTA" />
+                <ScalarProperty Name="DESCART" ColumnName="DESCART" />
+                <ScalarProperty Name="CODART" ColumnName="CODART" />
+                <ScalarProperty Name="CODPROLIN" ColumnName="CODPROLIN" />
+                <ScalarProperty Name="NUMLINLIN" ColumnName="NUMLINLIN" />
+                <ScalarProperty Name="NUMPEDLIN" ColumnName="NUMPEDLIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToOracle.tt" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

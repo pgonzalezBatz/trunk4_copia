@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+	<MenuItem Text="Inicio" ToolTip="Página de Inicio" NavigateUrl="~/Default.aspx"  Value=""/>
+	<MenuItem Text="WebControls" ToolTip="Ejemplos de WebControls" NavigateUrl="~/Default.aspx"  Value="">
+		<MenuItem Text="GridView" ToolTip="Ejemplo GridView" NavigateUrl="~/Ejemplos/WebControl/GridView.aspx"  Value=""/>
+	</MenuItem>
+	<MenuItem Text="Menu 1" ToolTip="Menu con Niveles" NavigateUrl=""  Value="">
+		<MenuItem Text="Menu 1.1" ToolTip="SubMenu" NavigateUrl=""  Value=""/>
+		<MenuItem Text="Menu 1.2" ToolTip="SubMenu" NavigateUrl=""  Value=""/>
+		<MenuItem Text="Menu 1.3" ToolTip="SubMenu" NavigateUrl=""  Value="">
+			<MenuItem Text="Menu 1.3.1" ToolTip="SubMenu-SubMenu" NavigateUrl=""  Value=""/>
+		</MenuItem>
+	</MenuItem>
+</Root>

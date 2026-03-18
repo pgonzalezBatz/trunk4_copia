@@ -1,0 +1,241 @@
+﻿.font11 {
+    font: 11px Verdana, Arial, Helvetica,sans-serif;
+}
+
+/****** Tablas ***********/
+.Titulo {
+    font-size: 11pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.izquierda {
+    text-align: left;
+}
+
+.derecha {
+    text-align: right;
+}
+
+
+.centrado {
+    text-align: center;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.estiloRepeater {
+    width: 90%;
+}
+
+    .estiloRepeater th {
+        font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+        color: #000000;
+        border: 1px solid White; /*#cccccc; */
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        background: #cccccc;
+    }
+
+    .estiloRepeater td {
+        font: 13px Verdana, Arial, Helvetica,sans-serif;
+        border: 1px solid #cccccc;
+        background: #fff;
+        color: #000000;
+        text-align: center;
+    }
+
+
+.estiloRepeaterSimple {
+    width: 90%;
+}
+
+    .estiloRepeaterSimple th {
+        font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+        color: #000000;
+        border: 1px solid White; /*#cccccc; */
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        background: #cccccc;
+    }
+
+    .estiloRepeaterSimple td {
+        font: 13px Verdana, Arial, Helvetica,sans-serif;
+        border: 1px solid #cccccc;
+        color: #000000;
+        /*text-align:center;	*/
+    }
+
+.recuadro {
+    background: #f4f4f4;
+    width: 70%;
+}
+
+/*GRIDVIEW*/
+.GridView {
+    font: 13px Verdana, Arial, Helvetica,sans-serif;
+    width: 85%;
+}
+
+.GridViewHeaderStyle th {
+    background: #ccc;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.GridViewAlternatingRowStyle {
+    background: #ffffff;
+    color: #000000;
+}
+
+.GridViewRowStyle {
+    background: #dcdcdc;
+    color: #000000;
+}
+
+.GridViewEmptyRowStyle {
+    font-weight: bold;
+    border: 0;
+}
+
+.trOver {
+    background: #ccccff;
+    cursor: pointer;
+    font: 13px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+}
+
+.trOverArrow {
+    background: #ccccff;
+    font: 13px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+}
+
+.trOverYellowArrow {
+    background: font: 13px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+    text-align: center;
+    background-color: #FFFF99;
+}
+
+.trOverYellowArrowNC {
+    background: font: 13px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+    background-color: #FFFF99;
+}
+
+.trOver12 {
+    background: #ccccff;
+    cursor: pointer;
+    font: 12px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+}
+
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.modalBox {
+    background-color: #f5f5f5;
+    border-width: 1px;
+    border-style: solid;
+    border-color: Black;
+    padding: 3px;
+}
+
+.modalBackground2 {
+    background-color: Gray;
+    filter: alpha(opacity=25);
+    opacity: 0.25;
+}
+
+.updateProgress {
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 180px;
+    height: 65px;
+}
+
+.labelRojo {
+    font-weight: bold;
+    color: #ff3333;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.trAzul {
+    background: #9999FF;
+}
+
+.fondoVerde {
+    background-color: #33CC33;
+}
+
+.listadoRepeater th {
+    font: bold 12px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+    text-align: center;
+    background: #cccccc;
+    white-space: nowrap;
+}
+
+.listadoRepeater td {
+    font: 13px Verdana, Arial, Helvetica,sans-serif;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.linkSinSubrayado {
+    text-decoration: none;
+}
+
+.celdaTotal {
+    background-color: #99CCFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabla1 {
+    font-size: 11px;
+    border: solid 1px #CCCCCC;
+}
+
+    .tabla1 thead {
+        font-weight: bold;
+    }
+
+/*Para que no haya tanto espacio entre el menu y el titulo*/
+.page-header {
+    margin-top: 0px;
+}
+/******Para que el toastmessage se vea bien desde el movil********/
+.toast-position-middle-center {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width: 768px) {
+    .toast-container {
+        width: 90%;
+    }
+}

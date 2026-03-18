@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Albaranes">
+    <Item title="Albaranes facturables por proveedor" controller="Albaranes" action="Index" tipo="A" origen="1" roles=""></Item>
+    <Item title="Albaranes autofacturables por Batz" controller="Albaranes" action="Index" tipo="A" origen="2" roles=""></Item>
+  </Item>
+  <Item title="Pedidos sin recepcionar" controller="Albaranes" action="Index" tipo="P" roles=""></Item>
+  <Item title="Facturas emitidas">
+    <Item title="Facturas emitidas por proveedor" controller="Facturas" action="Index" roles=""></Item>
+    <Item title="Facturas emitidas por Batz" controller="Facturas" action="IndexBatz" roles=""></Item>
+  </Item>
+</Root>
+
+

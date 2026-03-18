@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sablib.BLL.CulturasComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\CulturasComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.DepartamentosComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAQAAgAAAAAEAA0AAAAAAAAAEEAIIAA=</HashCode>
+      <FileName>BLL\DepartamentosComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.EjecucionProcComponent" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAIAAACAAEAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\EjecucionProcComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.BLL.EmpresasComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAAAAQIAICAAEAAAAgEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\EmpresasComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.EstadisticasComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAUAIAAAgAAgAAAAAAAAEAAAA=</HashCode>
+      <FileName>BLL\EstadisticasComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.GruposComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAACQAAAAAKEAgAAAAAEAAgAAJQAAAEAAAAA=</HashCode>
+      <FileName>BLL\GruposComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.LoginComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAASAAAAAAAAACAAAACAAAAAAAAAAAAAAQAAAAgAA=</HashCode>
+      <FileName>BLL\LoginComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.PerfilesComponent" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABABAAAAA=</HashCode>
+      <FileName>BLL\PerfilesComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.BLL.PlantasComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAgAAAAAAACAAAAAAEAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\PlantasComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.RecursosComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAIECAAAAAAACAAIqAAAAEAAACAAAAAAUAAAAA=</HashCode>
+      <FileName>BLL\RecursosComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.UsuariosComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGEIAoACAAQgAIAQhCAACQAAQAEAGEgASAAASEAggBA=</HashCode>
+      <FileName>BLL\UsuariosComponent.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sablib.BLL.Utils">
+    <Position X="11.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Sablib.BLL.Utils.BusquedaLDAP" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\Utils.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Sablib.BLL.Utils.tipoLDAP" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\Utils.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAMCAACIAAAADAgAMEIAIAAAIBAAALAQADAEKBQ=</HashCode>
+      <FileName>BLL\Utils.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.CulturasDAL" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\CulturasDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.DepartamentosDAL" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAAAAAAAAAAAAEAAAAAEAAAAAEAAAAEgAAAA=</HashCode>
+      <FileName>DAL\DepartamentosDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.EjecucionProcDAL" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAIAAAAAAEAAAAAEAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>DAL\EjecucionProcDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.EmpresasDAL" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJgAAAAAAIAAAAAAEAAAAAEAAAAAEAAAAAABAAA=</HashCode>
+      <FileName>DAL\EmpresasDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.EstadisticasDAL" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAogAAAAAAAAAAAAAAAIAAAAAAAAAEAAAAAEAAAA=</HashCode>
+      <FileName>DAL\EstadisticasDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.GruposDAL" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAgAAAAAAAAACIkAkAAAAAEAAAAAMQAAAEAAAAA=</HashCode>
+      <FileName>DAL\GruposDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.loginDAL" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABggAAAAAAAAAAAAAAgACAAAAABAEAAAAAAAAAA=</HashCode>
+      <FileName>DAL\loginDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.PerfilesDAL" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAEAABABAAAAA=</HashCode>
+      <FileName>DAL\PerfilesDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.PlantasDAL" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAAAAAIAAAAAAEAAAAAEAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>DAL\PlantasDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.RecursosDAL" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIgAQCAAAIAgAAAAgAAAACEAQAAAEQAAAEAAAAA=</HashCode>
+      <FileName>DAL\RecursosDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.DAL.UsuariosDAL" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEhIgCAAAAAIAACAAAEAQAAAEAOEAAWIAAQAQAoBA=</HashCode>
+      <FileName>DAL\UsuariosDAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.cultura" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACgIAAAACAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELL\cultura.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.Departamento" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAABBAgAAAAAAAAAAAhAAAAAIBAQA=</HashCode>
+      <FileName>ELL\Departamento.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.EjecucionProc" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAASAAAAAAAEEAABAAASBAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELL\EjecucionProc.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.Empresa" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAEAJCBAgEAQAIgAEAAAIAAAAkIABAA=</HashCode>
+      <FileName>ELL\empresa.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.grupo" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAQBAAAAAgAAAAAAAAAAAgAAAAAIAAAA=</HashCode>
+      <FileName>ELL\grupo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.Perfil" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAABAAABAAQAAAAQQAAAIAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELL\Perfil.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.Planta" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAACEAABAiAABAAgAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>ELL\Planta.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.recurso" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQIAQkAAAAQCEAABAgCABQAwBABAIiIAiAAKAIAQ=</HashCode>
+      <FileName>ELL\recurso.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.Ticket">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABEACACAGAgAAAgkAAAAAQBAAQAAAIAAAMEAIMEBEEU=</HashCode>
+      <FileName>ELL\Ticket.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sablib.ELL.Usuario" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAECALAAACEABAkEgABAgQDUEoAQEAIAgMEAYoMBCCU=</HashCode>
+      <FileName>ELL\usuario.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Sablib.BLL.ILoginComponent" Collapsed="true">
+    <Position X="9.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>BLL\Interface\ILoginComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.ICulturasComponent" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Interface\ICulturasComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IDepartamentosComponent" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAACAAQAAgAAAAAAAAUAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BLL\Interface\IDepartamentosComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IEmpresasComponent" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAAAAAIAIAAAEAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Interface\IEmpresasComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IEstadisticasComponent" Collapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAUAIAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BLL\Interface\IEstadisticasComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IGruposComponent" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAACQAAAAAIEAgAAAAAEAAAAAJAAAAEAAAAA=</HashCode>
+      <FileName>BLL\Interface\IGruposComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IPlantasComponent" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAAAAAAAAAAAAAAAAEAEEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Interface\IPlantasComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IRecursosComponent" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAIECAAAAAAAAAAIqAAAAEAAACAAAAAAEAAAAA=</HashCode>
+      <FileName>BLL\Interface\IRecursosComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Sablib.BLL.Interface.IUsuariosComponent" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGEIAoACAAQgAIAQhAAAAAAAQAEACEgASAAASEAggBA=</HashCode>
+      <FileName>BLL\Interface\IUsuariosComponent.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

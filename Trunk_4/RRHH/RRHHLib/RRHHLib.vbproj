@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73193FB9-7806-4B49-9CEA-56078DFFB69B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RRHHLib</RootNamespace>
+    <AssemblyName>RRHHLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RRHHLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RRHHLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Oracle.ManagedDataAccess.Client" />
+    <Import Include="Oracle.ManagedDataAccess.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\BLL\calendarioComponent.vb">
+      <Link>BLL\calendarioComponent.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\BLL\FichajesComponent.vb">
+      <Link>BLL\FichajesComponent.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\BLL\Interfaces\ILogin.vb">
+      <Link>BLL\Interfaces\ILogin.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\BLL\Interfaces\IRRHH.vb">
+      <Link>BLL\Interfaces\IRRHH.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\BLL\RRHHComponent.vb">
+      <Link>BLL\RRHHComponent.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\BLL\Utils.vb">
+      <Link>BLL\Utils.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\CUENTAS.vb">
+      <Link>DAL\Generado\CUENTAS.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\FCPWCAL.vb">
+      <Link>DAL\Generado\FCPWCAL.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\FCPWHFI.vb">
+      <Link>DAL\Generado\FCPWHFI.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\FCPWTAC.vb">
+      <Link>DAL\Generado\FCPWTAC.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\FCPWTRA.vb">
+      <Link>DAL\Generado\FCPWTRA.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\RECURSOS.vb">
+      <Link>DAL\Generado\RECURSOS.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\USUARIOS.vb">
+      <Link>DAL\Generado\USUARIOS.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Generado\VALIDACIONES.vb">
+      <Link>DAL\Generado\VALIDACIONES.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\CUENTAS.vb">
+      <Link>DAL\Personalizado\CUENTAS.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\FCPWCAL.vb">
+      <Link>DAL\Personalizado\FCPWCAL.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\FCPWHFI.vb">
+      <Link>DAL\Personalizado\FCPWHFI.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\FCPWTAC.vb">
+      <Link>DAL\Personalizado\FCPWTAC.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\FCPWTRA.vb">
+      <Link>DAL\Personalizado\FCPWTRA.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\Recursos.vb">
+      <Link>DAL\Personalizado\Recursos.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\RRHH.vb">
+      <Link>DAL\Personalizado\RRHH.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\USUARIOS.vb">
+      <Link>DAL\Personalizado\USUARIOS.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\DAL\Personalizado\VALIDACIONES.vb">
+      <Link>DAL\Personalizado\VALIDACIONES.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\ELL\DiaEmpleado.vb">
+      <Link>ELL\DiaEmpleado.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\ELL\Empleado.vb">
+      <Link>ELL\Empleado.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\ELL\Fichajes.vb">
+      <Link>ELL\Fichajes.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\ELL\recursoPE.vb">
+      <Link>ELL\recursoPE.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\RRHHLib\ELL\ticketHorasExtras.vb">
+      <Link>ELL\ticketHorasExtras.vb</Link>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj">
+      <Project>{d8dfd338-036c-4472-8611-59566f4e37fb}</Project>
+      <Name>AccesoAutomaticoBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Memcached\Memcached.vbproj">
+      <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

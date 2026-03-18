@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B917A2E-36FF-40AD-96AB-9A2214FE9C9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TelefoniaLib</RootNamespace>
+    <AssemblyName>TelefoniaLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TelefoniaLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TelefoniaLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Oracle.ManagedDataAccess.Client" />
+    <Import Include="Oracle.ManagedDataAccess.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatzException\BatzException.vb" />
+    <Compile Include="BLL\AlveoloComponent.vb" />
+    <Compile Include="BLL\CiaTlfnoComponent.vb" />
+    <Compile Include="BLL\MatriciComponent.vb" />
+    <Compile Include="BLL\PerfilMovilComponent.vb" />
+    <Compile Include="BLL\DepartamentosComponent.vb" />
+    <Compile Include="BLL\FacturasComponent.vb" />
+    <Compile Include="BLL\LineaFacturaComponent.vb" />
+    <Compile Include="BLL\OtrosComponent.vb" />
+    <Compile Include="BLL\DataReaderAdaterBatz.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\SincronizacionComponent.vb" />
+    <Compile Include="BLL\TipoExtComponent.vb" />
+    <Compile Include="BLL\TipoLineaComponent.vb" />
+    <Compile Include="BLL\GrupoExtComponent.vb" />
+    <Compile Include="BLL\TipoAlvComponent.vb" />
+    <Compile Include="BLL\TelefonoComponent.vb" />
+    <Compile Include="BLL\ExtensionComponent.vb" />
+    <Compile Include="BLL\UsuariosComponent.vb" />
+    <Compile Include="BLL\Utils.vb" />
+    <Compile Include="DAL\TelefonoDAL.vb" />
+    <Compile Include="DAL\Generado\ADMINISTRADORES.vb" />
+    <Compile Include="DAL\Generado\ADMINISTRADORES_PLANTA.vb" />
+    <Compile Include="DAL\Generado\ALVEOLO.vb" />
+    <Compile Include="DAL\Generado\CIA_TLFNO.vb" />
+    <Compile Include="DAL\Generado\EXTENSION.vb" />
+    <Compile Include="DAL\Generado\EXTENSION_DEPARTAMENTOS.vb" />
+    <Compile Include="DAL\Generado\EXTENSION_OTROS.vb" />
+    <Compile Include="DAL\Generado\EXTENSION_PERSONAS.vb" />
+    <Compile Include="DAL\Generado\FACTURAS_MOVILES.vb" />
+    <Compile Include="DAL\Generado\GESTOR_TLFNOS.vb" />
+    <Compile Include="DAL\Generado\GRUPO_EXTENSIONES.vb" />
+    <Compile Include="DAL\Generado\IMPORTACIONES.vb" />
+    <Compile Include="DAL\Generado\OTROS.vb" />
+    <Compile Include="DAL\Generado\SINCRONIZACION_SAB.vb" />
+    <Compile Include="DAL\Generado\TELEFONO.vb" />
+    <Compile Include="DAL\Generado\TELEFONO_PERSONAS.vb" />
+    <Compile Include="DAL\Generado\TICKET_CENT.vb" />
+    <Compile Include="DAL\Generado\TICKET_MOV.vb" />
+    <Compile Include="DAL\Generado\TIPOALV_CULTURA.vb" />
+    <Compile Include="DAL\Generado\TIPOLINEA_CULTURA.vb" />
+    <Compile Include="DAL\Generado\TIPO_ALVEOLO.vb" />
+    <Compile Include="DAL\Generado\TIPO_EXTENSION.vb" />
+    <Compile Include="DAL\Generado\TIPO_LINEA.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\MatriciDAL.vb" />
+    <Compile Include="DAL\MSAccessDirectAccess.vb" />
+    <Compile Include="DAL\PerfilMovDAL.vb" />
+    <Compile Include="DAL\Personalizado\ADMINISTRADORES_PLANTA.vb" />
+    <Compile Include="DAL\Personalizado\ALVEOLO.vb" />
+    <Compile Include="DAL\Personalizado\CIA_TLFNO.vb" />
+    <Compile Include="DAL\Personalizado\ADMINISTRADORES.vb" />
+    <Compile Include="DAL\Personalizado\SINCRONIZACION_SAB.vb" />
+    <Compile Include="DAL\Personalizado\IMPORTACIONES.vb" />
+    <Compile Include="DAL\Personalizado\TELEFONO_PERSONAS.vb" />
+    <Compile Include="DAL\Personalizado\FACTURAS_MOVILES.vb" />
+    <Compile Include="DAL\Personalizado\OTROS.vb" />
+    <Compile Include="DAL\Personalizado\EXTENSION_OTROS.vb" />
+    <Compile Include="DAL\Personalizado\EXTENSION.vb" />
+    <Compile Include="DAL\Personalizado\EXTENSION_DEPARTAMENTOS.vb" />
+    <Compile Include="DAL\Personalizado\EXTENSION_PERSONAS.vb" />
+    <Compile Include="DAL\Personalizado\GESTOR_TLFNOS.vb" />
+    <Compile Include="DAL\Personalizado\GRUPO_EXTENSIONES.vb" />
+    <Compile Include="DAL\Personalizado\TELEFONO.vb" />
+    <Compile Include="DAL\Personalizado\TICKET_CENT.vb" />
+    <Compile Include="DAL\Personalizado\TICKET_MOV.vb" />
+    <Compile Include="DAL\Personalizado\TIPOALV_CULTURA.vb" />
+    <Compile Include="DAL\Personalizado\TIPOLINEA_CULTURA.vb" />
+    <Compile Include="DAL\Personalizado\TIPO_ALVEOLO.vb" />
+    <Compile Include="DAL\Personalizado\TIPO_EXTENSION.vb" />
+    <Compile Include="DAL\Personalizado\TIPO_LINEA.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ELL\Alveolo.vb" />
+    <Compile Include="ELL\Matrici.vb" />
+    <Compile Include="ELL\PerfilMovil.vb" />
+    <Compile Include="ELL\TelefonoExtension.vb" />
+    <Compile Include="ELL\CiaTlfno.vb" />
+    <Compile Include="ELL\TelefonoUsuDep.vb" />
+    <Compile Include="ELL\Departamento.vb" />
+    <Compile Include="ELL\Factura.vb" />
+    <Compile Include="ELL\GrupoExtension.vb" />
+    <Compile Include="ELL\LineaFactura.vb" />
+    <Compile Include="ELL\Otros.vb" />
+    <Compile Include="ELL\TipoCultura.vb" />
+    <Compile Include="ELL\Extension.vb" />
+    <Compile Include="ELL\ExtensionUsuDep.vb" />
+    <Compile Include="ELL\Telefono.vb" />
+    <Compile Include="ELL\TicketTlfno.vb" />
+    <Compile Include="ELL\Tipo.vb" />
+    <Compile Include="ELL\TipoLinea.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ELL\Telefonia.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj">
+      <Project>{D8DFD338-036C-4472-8611-59566F4E37FB}</Project>
+      <Name>AccesoAutomaticoBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MemCached\Memcached.vbproj">
+      <Project>{1F46E55D-906C-4588-99CC-E81C4B4E373E}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TraduccionesLib\TraduccionesLib.vbproj">
+      <Project>{c6bcb6d1-678b-4c12-99c3-df57c9c28cae}</Project>
+      <Name>TraduccionesLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{2A75196C-D9EB-4129-B803-931327F72D5C}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assemblies\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

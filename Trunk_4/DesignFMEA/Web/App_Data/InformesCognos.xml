@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Informes>
+  <Informe name="AMFE">
+    <![CDATA[ibmcognos/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27BATZ%27%5d%2ffolder%5b%40name%3d%27Sistemak%20-%20Sistemas%27%5d%2ffolder%5b%40name%3d%2710%20-%20LESSONS%20LEARNED%27%5d%2freport%5b%40name%3d%27AMFE%20de%20Producto%27%5d&ui.name=AMFE%20de%20Producto&run.outputFormat=XLWA&p_FMEA=[ID_AMFE]&run.prompt=false]]>
+  </Informe>
+  <Informe name="AMFEPROC">
+    <![CDATA[ibmcognos/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27BATZ%27%5d%2ffolder%5b%40name%3d%27Sistemak%20-%20Sistemas%27%5d%2ffolder%5b%40name%3d%2710%20-%20LESSONS%20LEARNED%27%5d%2freport%5b%40name%3d%27AMFE%20de%20Proceso%27%5d&ui.name=AMFE%20de%20Proceso&run.outputFormat=XLWA&p_FMEA=[ID_AMFE]&run.prompt=false]]>
+  </Informe>
+  <Informe name="AMFE_DESC">
+    <![CDATA[ibmcognos/cgi-bin/cognosisapi.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27BATZ%27%5d%2ffolder%5b%40name%3d%27Sistemak%20-%20Sistemas%27%5d%2ffolder%5b%40name%3d%2710%20-%20LESSONS%20LEARNED%27%5d%2freport%5b%40name%3d%27AMFE%20de%20Producto%20Lessons%20Rechazadas%27%5d&ui.name=AMFE%20de%20Producto%20Lessons%20Rechazadas&run.outputFormat=XLWA&p_FMEA=[ID_AMFE]&run.prompt=false]]>             
+  </Informe>
+</Informes>

@@ -1,0 +1,97 @@
+create table tipo_cuenta_columna(
+       id_tipo_cuenta	int not null,
+       id_columna	varchar(2),
+       constraint pk_tipo_cuenta_columna primary key (id_tipo_cuenta, id_columna),
+       constraint fk_tpc_tipo_cuenta foreign key (id_tipo_cuenta) references tipo_cuenta(id)
+)
+create table plan_gestion(
+       id_departamento	int not null,
+       ejercicio	int not null,
+       mes		int not null,
+       n_personas	decimal not null,
+       constraint pk_departamento primary key (id_departamento,ejercicio,mes),
+       constraint fk_epsilon_plan_gestion_depart foreign key (id_departamento) references departamento(id)
+)
+create table negocio(
+       id		int IDENTITY(1,1),
+       nombre		varchar(30),
+       constraint pk_negocio  primary key (id)
+)
+
+create table mano_obra(
+       id		int IDENTITY(1,1),
+       nombre		varchar(20),
+       constraint pk_mano_obra primary key (id)
+)
+create table departamento(
+       id		int IDENTITY(1,1),
+       id_negocio	int not null,
+       id_mano_obra	int not null,
+       nombre		varchar(100),
+       fecha_baja	datetime,
+       constraint pk_departamento primary key (id),
+       constraint fk_dep_neg foreign key (id_negocio) references negocio(id),
+       constraint fk_dep_m_o foreign key (id_mano_obra) references mano_obra(id)
+)
+create table epsilon_contabilidad(
+       id_epsilon	varchar(10) not null,
+       id_departamento	int not null,
+       constraint pk_epsilon_contabilidad primary key(id_epsilon,id_departamento),
+       constraint fk_epsilon_conta_depart foreign key (id_departamento) references departamento(id)
+)
+insert into mano_obra(nombre) values('MOD')
+insert into mano_obra(nombre) values('MOI')
+insert into mano_obra(nombre) values('Comercial')
+
+create table aplicacion(
+       id		int IDENTITY(1,1),
+       nombre		varchar(50),
+       constraint pk_aplicacion primary key(id)
+)
+create table tipo_cuenta(
+       id		int IDENTITY(1,1),
+       id_aplicacion	int not null,
+       nombre		varchar(100) not null,
+       constraint pk_tipo_cuenta primary key(id),
+       constraint fk_tipo_aplicacion foreign key(id_aplicacion) references aplicacion(id)
+)
+create table cuenta(
+       id		int IDENTITY(1,1),	
+       id_tipo_cuenta	int not null,
+       nombre		varchar(100) not null,
+       descripcion	varchar(50),
+       constraint pk_cuenta primary key (id),
+       constraint fk_cuenta_tipo foreign key (id_tipo_cuenta) references tipo_cuenta(id)
+)
+create table departamento_cuenta(
+       id_cuenta	int,
+       id_departamento	int,
+       constraint pk_departamento_cuenta primary key (id_cuenta,id_departamento),
+       constraint fk_depcuenta_cuenta foreign key (id_cuenta) references cuenta(id),
+       constraint fk_depcuenta_dep foreign key (id_departamento) references departamento(id)
+)
+create table asiento(
+       id_aplicacion	int not null,
+       id		int IDENTITY(1,1),	
+       nombre		varchar(100),
+       constraint pk_asiento primary key (id),
+       constraint fk_asiento_aplicacion foreign key(id_aplicacion) references aplicacion(id)
+)
+create table asiento_tipo_cuenta(
+       id_asiento	int not null,
+       id_tipo_cuenta	int not null,
+       suma_resta	varchar(10),
+       constraint pk_asiento_tipo_cuenta primary key (id_asiento, id_tipo_cuenta),
+       constraint fk_asiento_asientotp foreign key(id_asiento) references asiento(id),
+       constraint fk_asientotp_tipo_cuenta foreign key(id_tipo_cuenta) references tipo_cuenta(id)
+)
+       
+
+drop table departamento_cuenta
+drop table cuenta
+drop table tipo_cuenta
+drop table aplicacion
+drop table epsilon_contabilidad
+drop table departamento
+drop table mano_obra
+drop table negocio

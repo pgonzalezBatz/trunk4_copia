@@ -1,0 +1,21 @@
+﻿.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+
+.MensajeError
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Red;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+.Leyenda
+{
+	border-style: dotted;
+	font-family: Arial;
+	font-size: xx-small;
+	font-style: italic;
+	white-space: nowrap;
+}

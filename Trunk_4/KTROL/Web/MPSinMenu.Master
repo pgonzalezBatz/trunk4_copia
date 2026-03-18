@@ -1,0 +1,67 @@
+﻿<%@ Master Language="VB" CodeBehind="MPSinMenu.master.vb" Inherits="WebRaiz.MPSinMenu" %>
+
+ <%--<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title>KTROL</title>
+	<!--Forzar la cabecera de compatibilidad para IE7 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+	<link href="App_Themes/Tema1/MenuBatz.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/style.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/AjaxControlToolKit.css" type="text/css" rel="Stylesheet" />
+	<link href="App_Themes/Tema1/DetailsView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/GridView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/FormView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/PanelCargandoDatos.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">                
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div>
+		<%--<ajax:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">
+		</ajax:ToolkitScriptManager>        --%> 
+		<ASP:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">
+		</ASP:ScriptManager>
+		<%--<div align="right">			
+             <asp:Label ID="lblStatus" runat="server" Text="Debug" CssClass="negrita"></asp:Label>            
+		</div>--%>
+		<br />
+		<div id="contenido1">
+			<table width="100%">
+				<%--<tr>
+					<td align="left">--%>
+						<%--<asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+							<ContentTemplate>
+								<asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+									<asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+									<asp:Label ID="lblMensaje" runat="server"></asp:Label>
+								</asp:Panel>
+							</ContentTemplate>
+						</asp:UpdatePanel>--%>
+                       <%-- <asp:Label ID="lblMensaje" runat="server" Text="LOGIN"></asp:Label>--%>
+					<%--</td>
+					<td></td>
+				</tr>--%>                
+			</table>
+			<div id="contenido2">
+				<asp:ContentPlaceHolder ID="cp" runat="server">
+				</asp:ContentPlaceHolder>
+				<br />
+			</div>
+		</div>
+		<div id="pie">
+			<asp:ContentPlaceHolder ID="cphPie" runat="server">
+				<asp:Literal ID="Literal1" runat="server" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>&nbsp
+				<%--<a href="mailto:intranet@batz.es">intranet@batz.es</a>--%>
+                <asp:HyperLink id="hlnkHelp" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk" Target="_blank"/>
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+		<ascx:Mensajes runat="server" ID="ascx_Mensajes" />
+	</form>
+</body>
+</html>

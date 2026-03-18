@@ -1,0 +1,56 @@
+body{margin:1em;font-size:12px;}
+body {line-height:1.5em;}
+strong{font-weight:bold;}
+h3{font-weight:bold;padding:0.5em 0;}
+.field-validation-error{color: #ff0000;}
+.field-validation-valid{display: none;}
+.input-validation-error{border: 1px solid #ff0000;background-color: #ffeeee;}
+.validation-summary-errors{font-weight: bold;color: #ff0000; margin:1em 0;}
+.validation-summary-valid{display: none;}
+
+fieldset{border:1px solid #A8A8A8;padding:0.5em 0 0.5em 1em;}
+fieldset label{font-weight:bold;}
+legend {padding: 0.2em 0.5em;border:1px solid #A8A8A8;font-size:80%;text-align:right;}
+div.legend{padding: 0.2em 0.5em;border:1px solid #A8A8A8;font-size:80%;text-align:left;margin:1em 0 1em 0;}
+#menu1 a {border:1px solid #A8A8A8;padding:0.4em 0.7em;margin:0 0.6em 0.6em 0;float:left;text-decoration: none;border-radius: 10px;
+          background-color:#F4F4F4;text-shadow: 0 -1px 0 #DCDCDC;color:#3273DB;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2)}
+#menu1 a:hover{border:1px solid #DDD;background-color:#E3E3E3;}
+#menu1 a.selected {border:1px solid #DDD;background-color:#E3E3E3;}
+#contenido1{text-align:left;}
+
+.table3{border:1px solid #A8A8A8; font-size:0.8em;}
+.table3 td,.table3 th {border:1px solid #A8A8A8;padding:0.2em;}
+.table3 th{font-weight:bold; background-color:#c3c3c3;}
+.table3 tr:hover{background-color:#9bd19b;}
+.table3 input[type=text]{width:5em;}
+a.rowclick{color:#000;}
+a.rowclick:hover{text-decoration:none;}
+
+span.note{font-weight:lighter;font-size:0.8em;}
+strong{font-weight:bold;}
+.warn{color:Red;}
+
+a.highlight {font-size:1.2em;font-weight:bold;padding:0.5em 0.5em 0 0;display:block;}
+a.button {border:1px solid #A8A8A8;padding:0.7em; display:block;text-decoration: none;border-radius: 10px;
+          background-color:#F4F4F4;text-shadow: 0 -1px 0 #DCDCDC;color:#3273DB;width:19em;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);}
+a.buttoninline {border:1px solid #A8A8A8;padding:0.7em; display:inline;text-decoration: none;border-radius: 10px;
+          background-color:#F4F4F4;text-shadow: 0 -1px 0 #DCDCDC;color:#3273DB;width:19em;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);}
+a.button:hover {border:1px solid #DDD;background-color:#E3E3E3;}
+label.button {border:1px solid #A8A8A8;padding:0.7em;background-color:#F4F4F4;text-shadow: 0 -1px 0 #DCDCDC;color:#3273DB;width:15em;font-weight:normal;
+              box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);float:left;border-radius: 10px;margin:0.1em;}
+label.button input {margin:0;}
+label.button:hover{border:1px solid #DDD;background-color:#E3E3E3;}
+
+input {padding:0.5em 1em; width:30em;}
+input[type=submit] {color:#3273DB;width:32em;}
+input[type=checkbox] {width:1em;}
+.nestedlist li {font-size:1.2em; font-weight:bold;}
+.nestedlist li ul {margin-left:1em;}
+.nestedlist li form {font-size:0.7em;}
+.nestedlist li form input {width:15em;}
+ .nestedlist li form input[type=checkbox] {width:auto;}
+input[type=submit].normalinput {padding:0;width:auto;}
+#notifications {margin-bottom:1em;font-style:italic;font-weight:bold;}

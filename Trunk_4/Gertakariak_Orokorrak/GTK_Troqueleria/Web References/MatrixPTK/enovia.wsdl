@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="emailgestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="emailgestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailgestorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaindicesOF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaindicesOFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaindicesOFResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="emailgestorSoapIn">
+    <wsdl:part name="parameters" element="tns:emailgestor" />
+  </wsdl:message>
+  <wsdl:message name="emailgestorSoapOut">
+    <wsdl:part name="parameters" element="tns:emailgestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaindicesOFSoapIn">
+    <wsdl:part name="parameters" element="tns:listaindicesOF" />
+  </wsdl:message>
+  <wsdl:message name="listaindicesOFSoapOut">
+    <wsdl:part name="parameters" element="tns:listaindicesOFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EnoviaSoap">
+    <wsdl:operation name="emailgestor">
+      <wsdl:input message="tns:emailgestorSoapIn" />
+      <wsdl:output message="tns:emailgestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaindicesOF">
+      <wsdl:input message="tns:listaindicesOFSoapIn" />
+      <wsdl:output message="tns:listaindicesOFSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EnoviaSoap" type="tns:EnoviaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="emailgestor">
+      <soap:operation soapAction="http://tempuri.org/emailgestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaindicesOF">
+      <soap:operation soapAction="http://tempuri.org/listaindicesOF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EnoviaSoap12" type="tns:EnoviaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="emailgestor">
+      <soap12:operation soapAction="http://tempuri.org/emailgestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaindicesOF">
+      <soap12:operation soapAction="http://tempuri.org/listaindicesOF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Enovia">
+    <wsdl:port name="EnoviaSoap" binding="tns:EnoviaSoap">
+      <soap:address location="https://intranet2.batz.es/ServicioEnovia/enovia.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EnoviaSoap12" binding="tns:EnoviaSoap12">
+      <soap12:address location="https://intranet2.batz.es/ServicioEnovia/enovia.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,25 @@
+#menu1 h1{color:#AEAEAE;}
+.field-validation-error{color: #ff0000;}    
+.input-validation-error{    border: 1px solid #ff0000;    background-color: #ffeeee;}
+.validation-summary-errors{font-weight: bold;    color: #ff0000;}
+#contenido2{min-height:350px;}
+form.touch{float:left;width:25%; margin:0.3% 0;}
+form.touch input[type=submit]{width:95%; height:50px;font-size:25px; text-align:center;}
+form.touch input[type=text],form.touch input[type=password]{font-size:25px;}
+a.touch{font-size:25px;min-width:170px; background-color:#E0EAF1;border-right:1px solid #7F9FB6; border-bottom:1px solid #3E6D8E;
+        color:#3E6D8E;text-decoration:none; display:inline-block; text-align:center; display:inline-block;padding:10px;margin:5px 30px;}
+a.touch h3{font-size:25px; font-weight:normal;margin:0;}
+a.touch2{background-color:White;border:1px solid #7F9FB6;padding:3px;}
+a.touch2 h3{background-color:#E0EAF1;border-right:1px solid #7F9FB6; border-bottom:1px solid #3E6D8E; padding:10px 0;}
+a.touch3 {min-width:45%;}
+h3.touch{margin-left:30px;}
+form{width:100%;}
+fieldset label{font-weight:bold;}
+fieldset textarea{width:350px; height:80px;}
+.cancelanchor a {font-size:16px; font-weight:bold; padding:0 100px 0 10px;}
+form.login{display:block;}
+form.login label{display:block; font-weight:bold;}
+label.touch{margin-top:20px;}
+img{border:none;}
+a.touch2 img{height:115px; width:115px;}
+.table1 tr td a{display:inline-block; width:auto;}

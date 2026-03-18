@@ -1,0 +1,2 @@
+start osk.exe
+exit

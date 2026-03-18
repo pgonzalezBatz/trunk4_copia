@@ -1,0 +1,77 @@
+test
+    <add key="RecursoWeb" value="397" />   <!-- recurso de aplicacion  380 en extranet 377 intranet Y 312 windowsAuthentication = true intranet 397 pero 145 para solicitudes -->
+    <add key="RecursoGrupoWeb" value="312" /> <!-- recurso del grupo generico 312 en extranet. sirve para darle permisos extranet por eso el de intranet 310 no lo pongo. Se lo asigno a los usuarios que quieran tener el icono  -->
+        
+    <add key="CurrentStatus" value="Debug" />
+
+    <add key="PathFicherosTarjeta" value="\\ubixeta.batz.es\Dorlet DASS\ADOKNET\" />	
+    <add key="PathFicherosBajar" value="https://extranet.batz.es/ADOKNET/" />
+    <add key="PathFicherosSubir" value="\\svm_cifs\AreaWeb\APPS\PRO\EXT\ADOKNET\Web\" />
+            
+    <add key="EmpresaETT" value="99999" />			
+    <add key="sitioAvisos" value="https://intranet2.batz.es/ADOKNET" />
+    <add key="LinkInicioExtranet" value="https://extranet.batz.es/extranetlogin/" />
+    <add key="LinkInicioIntranet" value="https://intranet2.batz.es/homeintranet/" />
+    
+    <add key="extranet" value="0" /> 
+	
+
+
+EXTRANET
+	<add key="RecursoWeb" value="398" />   <!-- recurso de aplicacion  380 en extranet 377 intranet Y 312 windowsAuthentication = true intranet  -->
+    <add key="RecursoGrupoWeb" value="336" /> <!-- recurso del grupo generico 312 en extranet. sirve para darle permisos extranet por eso el de intranet 310 no lo pongo. Se lo asigno a los usuarios que quieran tener el icono  -->
+        
+    <add key="CurrentStatus" value="Live" />
+  
+  <add key="PathFicherosTarjeta" value="\\ubixeta.batz.es\Dorlet DASS\ADOKNET\" />
+  <add key="PathFicherosBajar" value="https://extranet.batz.es/ADOKNET/" />
+    <add key="PathFicherosSubir" value="\\svm_cifs\AreaWeb\APPS\PRO\EXT\ADOKNET\Web\" />
+
+    <add key="EmpresaETT" value="99999" />    
+    <add key="sitioAvisos" value="https://intranet2.batz.es/ADOKNET" />
+    <add key="LinkInicioExtranet" value="https://extranet.batz.es/extranetlogin/" />
+    <add key="LinkInicioIntranet" value="https://intranet2.batz.es/homeintranet/" />
+    
+    <add key="extranet" value="1" />   
+	
+	
+       <windowsAuthentication enabled="false" />
+        <anonymousAuthentication enabled="true" />	
+		
+		
+		
+PRO INT
+    <add key="RecursoWeb" value="145" />   <!-- recurso de aplicacion  380 en extranet 377 intranet Y 312 windowsAuthentication = true intranet 397 pero 145 para solicitudes -->
+    <add key="RecursoGrupoWeb" value="336" /> <!-- recurso del grupo generico 312 en extranet. sirve para darle permisos extranet por eso el de intranet 310 no lo pongo. Se lo asigno a los usuarios que quieran tener el icono  -->
+        
+    <add key="CurrentStatus" value="Live" />
+
+    <add key="PathFicherosTarjeta" value="\\ubixeta.batz.es\Dorlet DASS\ADOKNET\" />	
+    <add key="PathFicherosBajar" value="https://extranet.batz.es/ADOKNET/" />
+    <add key="PathFicherosSubir" value="\\svm_cifs\AreaWeb\APPS\PRO\EXT\ADOKNET\Web\" />
+            
+    <add key="EmpresaETT" value="99999" />			
+    <add key="sitioAvisos" value="https://intranet2.batz.es/ADOKNET" />
+    <add key="LinkInicioExtranet" value="https://extranet.batz.es/extranetlogin/" />
+    <add key="LinkInicioIntranet" value="https://intranet2.batz.es/homeintranet/" />
+    
+    <add key="extranet" value="0" />   
+
+
+PRE INT
+    <add key="RecursoWeb" value="145" />   <!-- recurso de aplicacion  380 en extranet 377 intranet Y 312 windowsAuthentication = true intranet 397 pero 145 para solicitudes -->
+    <add key="RecursoGrupoWeb" value="336" /> <!-- recurso del grupo generico 312 en extranet. sirve para darle permisos extranet por eso el de intranet 310 no lo pongo. Se lo asigno a los usuarios que quieran tener el icono  -->
+        
+    <add key="CurrentStatus" value="Live" />
+
+    <add key="PathFicherosTarjeta" value="\\ubixeta.batz.es\Dorlet DASS\ADOKNET\" />	
+    <add key="PathFicherosBajar" value="https://extranet.batz.es/ADOKNET/" />
+    <add key="PathFicherosSubir" value="\\svm_cifs\AreaWeb\APPS\PRO\EXT\ADOKNET\Web\" />
+            
+    <add key="EmpresaETT" value="99999" />			
+    <add key="sitioAvisos" value="https://intranet2.batz.es/ADOKNET" />
+    <add key="LinkInicioExtranet" value="https://extranet.batz.es/extranetlogin/" />
+    <add key="LinkInicioIntranet" value="https://intranet2.batz.es/homeintranet/" />
+    
+    <add key="extranet" value="0" />  
+	

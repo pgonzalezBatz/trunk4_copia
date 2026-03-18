@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bd_epsilonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="CATEGORIAS">
+          <Key>
+            <PropertyRef Name="ID_CONVENIO" />
+            <PropertyRef Name="ID_CATEGORIA" />
+          </Key>
+          <Property Name="ID_CONVENIO" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ID_CATEGORIA" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="D_CATEGORIA" Type="char" MaxLength="25" />
+          <Property Name="GR_COT" Type="char" MaxLength="2" />
+          <Property Name="ID_EPIGRAFE" Type="char" MaxLength="3" />
+          <Property Name="CL_TRABAJO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_COTIZACION" Type="char" MaxLength="1" />
+          <Property Name="T_ANTIGUEDAD" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="O_ANTIG" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ID_CATEGORIA_RH" Type="char" MaxLength="5" />
+          <Property Name="Grupo" Type="char" MaxLength="2" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" />
+          <Property Name="TANT_F_INDEP" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COD_TRA">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_TRABAJADOR" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ID_TRABAJADOR" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="NIF" Type="char" MaxLength="14" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CONVENIOS">
+          <Key>
+            <PropertyRef Name="ID_CONVENIO" />
+          </Key>
+          <Property Name="ID_CONVENIO" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ID_PAR" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="D_CONVENIO" Type="char" MaxLength="25" Nullable="false" />
+          <Property Name="F_ULTREV" Type="datetime" />
+          <Property Name="F_PROXVTO" Type="datetime" />
+          <Property Name="HORAS_ANUALES" Type="numeric" Precision="7" Scale="3" />
+          <Property Name="HORAS_SEMANALES" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="NUM_MENSUAL" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="CL_ANTIGUEDAD" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="MES_ANTIGCOMP" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="M_OBS_CONV" Type="varchar" MaxLength="2000" />
+          <Property Name="M_CALENDLAB" Type="varchar" MaxLength="2000" />
+          <Property Name="T_ANTIGUEDAD" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CONV_COLECTIVO" Type="char" MaxLength="14" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" />
+          <Property Name="TANT_F_INDEP" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CONV_ADMIN" Type="char" MaxLength="7" />
+          <Property Name="Jornadas_Semana" Type="numeric" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="NIV_ORG">
+          <Key>
+            <PropertyRef Name="ID_ORGANIG" />
+            <PropertyRef Name="ID_NIVEL" />
+          </Key>
+          <Property Name="ID_ORGANIG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ID_NIVEL" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="CATEG_NIVEL" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ES_PUESTO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="D_NIVEL" Type="char" MaxLength="120" Nullable="false" />
+          <Property Name="F_INHABILITACION" Type="datetime" />
+          <Property Name="F_CREACION" Type="datetime" Nullable="false" />
+          <Property Name="IDENT_NIVEL" Type="char" MaxLength="12" />
+          <Property Name="NPLAZAS" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="ID_EMPRESA" Type="char" MaxLength="5" />
+          <Property Name="ID_PUESTO" Type="char" MaxLength="5" />
+          <Property Name="N_PLAZA" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="COD_ELEM" Type="char" MaxLength="6" />
+          <Property Name="RSV_PUESTO" Type="char" MaxLength="1" />
+          <Property Name="ID_EMP_RSV" Type="char" MaxLength="5" />
+          <Property Name="ID_PUE_RSV" Type="char" MaxLength="5" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" />
+          <Property Name="ID_COMBI" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="T_RESPONSABLE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="ORDEN">
+          <Key>
+            <PropertyRef Name="ID_ORGANIG" />
+            <PropertyRef Name="ID_NIVEL_HIJO" />
+          </Key>
+          <Property Name="ID_ORGANIG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ID_NIVEL_HIJO" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="NIVEL" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="CAMINO" Type="varchar" MaxLength="240" Nullable="false" />
+          <Property Name="N1" Type="char" MaxLength="5" />
+          <Property Name="N2" Type="char" MaxLength="5" />
+          <Property Name="N3" Type="char" MaxLength="5" />
+          <Property Name="N4" Type="char" MaxLength="5" />
+          <Property Name="N5" Type="char" MaxLength="5" />
+          <Property Name="N6" Type="char" MaxLength="5" />
+          <Property Name="N7" Type="char" MaxLength="5" />
+          <Property Name="N8" Type="char" MaxLength="5" />
+          <Property Name="N9" Type="char" MaxLength="5" />
+          <Property Name="N10" Type="char" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="PERSONAS">
+          <Key>
+            <PropertyRef Name="NIF" />
+          </Key>
+          <Property Name="NIF" Type="char" MaxLength="14" Nullable="false" />
+          <Property Name="ID_PF" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="APELLIDO1" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="APELLIDO2" Type="char" MaxLength="20" />
+          <Property Name="NOMBRE" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="SIGLAS" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="DOMICILIO" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="NUM" Type="char" MaxLength="8" />
+          <Property Name="KM" Type="char" MaxLength="4" />
+          <Property Name="ESCALERA" Type="char" MaxLength="2" />
+          <Property Name="PISO" Type="char" MaxLength="2" />
+          <Property Name="PUERTA" Type="char" MaxLength="2" />
+          <Property Name="CPOSTAL" Type="char" MaxLength="5" />
+          <Property Name="ID_PROVINCIA" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="ID_POBLACION" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="PREFIJO1" Type="char" MaxLength="5" />
+          <Property Name="TELEFONO1" Type="char" MaxLength="10" />
+          <Property Name="PREFIJO2" Type="char" MaxLength="5" />
+          <Property Name="TELEFONO2" Type="char" MaxLength="10" />
+          <Property Name="ID_PAIS" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="SEXO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="MINUSV" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="E_CIVIL" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="F_NAC" Type="datetime" />
+          <Property Name="ID_PROVINCIA_NAC" Type="char" MaxLength="2" />
+          <Property Name="ID_POBLACION_NAC" Type="char" MaxLength="3" />
+          <Property Name="ID_N_ESTUDIOS" Type="char" MaxLength="2" />
+          <Property Name="NASS" Type="char" MaxLength="12" />
+          <Property Name="ID_S_MILITAR" Type="char" MaxLength="1" />
+          <Property Name="CURSO" Type="char" MaxLength="2" />
+          <Property Name="ID_SIT_FAM" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ID_SIT_LAB_PER" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="F_N_ESTUDIOS" Type="datetime" />
+          <Property Name="MATRICULA" Type="char" MaxLength="10" />
+          <Property Name="FAX" Type="char" MaxLength="10" />
+          <Property Name="PREFAX" Type="char" MaxLength="5" />
+          <Property Name="VEHICULO" Type="char" MaxLength="2" />
+          <Property Name="NIVOTRO" Type="char" MaxLength="2" />
+          <Property Name="NIVEXP" Type="char" MaxLength="1" />
+          <Property Name="NIVIDIOM" Type="char" MaxLength="1" />
+          <Property Name="NIVINF" Type="char" MaxLength="1" />
+          <Property Name="NIVCUR" Type="char" MaxLength="1" />
+          <Property Name="EMAIL" Type="char" MaxLength="64" />
+          <Property Name="RESIDENTE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NIVEL_R" Type="char" MaxLength="1" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" />
+          <Property Name="F_ALTA_PP" Type="datetime" />
+          <Property Name="DOMIC_PP" Type="char" MaxLength="32" />
+          <Property Name="F_DOMIC_PP" Type="datetime" />
+          <Property Name="N_MUFACE" Type="char" MaxLength="9" />
+          <Property Name="TELEF_EMERG" Type="char" MaxLength="15" />
+          <Property Name="ID_ATEP" Type="char" MaxLength="3" />
+          <Property Name="ID_PAIS_NAC" Type="char" MaxLength="3" />
+          <Property Name="N_ASANIT" Type="char" MaxLength="15" />
+          <Property Name="Ejec_Hipoteca" Type="char" MaxLength="1" />
+          <Property Name="email2" Type="char" MaxLength="64" />
+          <Property Name="clv_pdf" Type="char" MaxLength="64" />
+          <Property Name="GRADO_MINUSVALIA" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="ES_FAMILIA_NUMEROSA" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="PUES_TRAB">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_TRABAJADOR" />
+            <PropertyRef Name="ID_ORGANIG" />
+            <PropertyRef Name="ID_NIVEL" />
+            <PropertyRef Name="ID_SECUENCIA" />
+            <PropertyRef Name="F_INI_PUE" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ID_TRABAJADOR" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="ID_ORGANIG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ID_NIVEL" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="P_PUESTO" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="ID_SECUENCIA" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="PUES_DEFECTO" Type="char" MaxLength="1" />
+          <Property Name="F_INI_PUE" Type="datetime" Nullable="false" />
+          <Property Name="F_FIN_PUE" Type="datetime" />
+          <Property Name="I_HORAS" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="T_OPERARIO" Type="char" MaxLength="2" />
+          <Property Name="COMENTARIO" Type="varchar" MaxLength="2000" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" />
+          <Property Name="ID_TRAB_SUST" Type="char" MaxLength="6" />
+          <Property Name="ID_EMP_SUST" Type="char" MaxLength="5" />
+          <Property Name="N_APUNTE" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="ID_OBSERV_COD" Type="char" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="TRABAJADORES">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_TRABAJADOR" />
+            <PropertyRef Name="ID_SECUENCIA" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="ID_TRABAJADOR" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="ID_SECUENCIA" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="CCC" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="ID_CENTRO" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="MATRICULA" Type="char" MaxLength="8" />
+          <Property Name="HORAS_TC2" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="PER_IT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="PUESTO" Type="char" MaxLength="40" />
+          <Property Name="ID_CONVENIO" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ID_CATEGORIA" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ID_CAT_ALT" Type="char" MaxLength="4" />
+          <Property Name="GR_COT" Type="char" MaxLength="2" />
+          <Property Name="ID_EPIGRAFE" Type="char" MaxLength="3" />
+          <Property Name="CL_DES_EPI" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NUM_HIJOS" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="P_RED" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="CL_ACT_IRPF" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_CAL_IRPF" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="P_DIN" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="P_ESP" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="F_ANTIG" Type="datetime" />
+          <Property Name="F_C_ANTIG" Type="datetime" />
+          <Property Name="IMP_ANT" Type="numeric" Precision="9" Scale="3" />
+          <Property Name="GR_COT_PLUR" Type="char" MaxLength="2" />
+          <Property Name="PLU_CCMIN" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="PLU_CCMAX" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="PLU_ACCMIN" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="PLU_ACCMAX" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="NUM_PLUR" Type="char" MaxLength="10" />
+          <Property Name="D_EMPPLUR" Type="char" MaxLength="50" />
+          <Property Name="P_JORNADA" Type="numeric" Precision="7" Scale="4" />
+          <Property Name="DIAS_JOR" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="JOR_LUNES" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="JOR_MARTES" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="JOR_MIERCOLES" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="JOR_JUEVES" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="JOR_VIERNES" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="JOR_SABADO" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="JOR_DOMINGO" Type="numeric" Precision="4" Scale="2" />
+          <Property Name="AFECTA_JOR" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AFECTA_HOR" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NUM_CAL" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="GUARDA_LEGAL" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ID_TPAGAS" Type="char" MaxLength="2" />
+          <Property Name="GPO_PROFES" Type="char" MaxLength="15" />
+          <Property Name="CL_REGTRA" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="CL_AGRCOO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_TRABAJO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_COTIZACION" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_RETRIBUCION" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_COBRO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_COBRO_ANT" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ID_DIVISA" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ID_C_SIND" Type="char" MaxLength="2" />
+          <Property Name="CL_AUSENCIAS" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_COMPL_NEG" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_P_IRPF" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="F_ALTA" Type="datetime" />
+          <Property Name="F_INI_SEC" Type="datetime" Nullable="false" />
+          <Property Name="F_BAJA" Type="datetime" />
+          <Property Name="ID_BAJA" Type="char" MaxLength="3" />
+          <Property Name="SITUACION" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="char" MaxLength="5" />
+          <Property Name="F_BONIF" Type="datetime" />
+          <Property Name="F_RESOL" Type="datetime" />
+          <Property Name="F_INI_SUB" Type="datetime" />
+          <Property Name="F_FIN_SUB" Type="datetime" />
+          <Property Name="LOCAL_OFEMP" Type="char" MaxLength="15" />
+          <Property Name="N_REGISTRO" Type="char" MaxLength="16" />
+          <Property Name="F_OFEMP" Type="datetime" />
+          <Property Name="F_INDEFINIDO" Type="datetime" />
+          <Property Name="C_CONTRATO" Type="char" MaxLength="25" />
+          <Property Name="TRAB_OBSERV" Type="varchar" MaxLength="2000" />
+          <Property Name="ID_BANCO" Type="char" MaxLength="4" />
+          <Property Name="ID_SUCURSAL" Type="char" MaxLength="4" />
+          <Property Name="ID_CUENTA" Type="char" MaxLength="10" />
+          <Property Name="CL_REC_FIN" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_DESG_FIN" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_PERIODO_CONT" Type="char" MaxLength="1" />
+          <Property Name="HORAS_CONTRATO" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="HORA_INIC_SEC" Type="datetime" />
+          <Property Name="CL_SAL_IT" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="F_AUT_PLUR" Type="datetime" />
+          <Property Name="TIP_DES" Type="char" MaxLength="1" />
+          <Property Name="CL_RET_ATRASOS" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ID_PER_ADM" Type="char" MaxLength="2" />
+          <Property Name="ID_ORGANICA" Type="char" MaxLength="10" />
+          <Property Name="ID_FUNCION" Type="char" MaxLength="10" />
+          <Property Name="ID_TURNO" Type="char" MaxLength="3" />
+          <Property Name="N_TARJETA" Type="char" MaxLength="14" />
+          <Property Name="GRUPO" Type="char" MaxLength="2" />
+          <Property Name="NIVEL" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="ID_CPL_ESPECIFICO" Type="char" MaxLength="3" />
+          <Property Name="CL_COT_DUR" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="COLECTIVO1" Type="char" MaxLength="3" />
+          <Property Name="COLECTIVO2" Type="char" MaxLength="3" />
+          <Property Name="COLECTIVO3" Type="char" MaxLength="3" />
+          <Property Name="COLECTIVO4" Type="char" MaxLength="3" />
+          <Property Name="P_IRPF_SOLIC" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="MESES_ANTIG" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="DIAS_ANTIG" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="EJERS_ANTIG" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="CL_JORNADA" Type="char" MaxLength="1" />
+          <Property Name="ID_PROYECTO" Type="char" MaxLength="14" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GCROWVER" Type="datetime" />
+          <Property Name="ID_HABILITACION" Type="char" MaxLength="3" />
+          <Property Name="ID_EMBARCACION" Type="char" MaxLength="5" />
+          <Property Name="ID_MAREA" Type="char" MaxLength="5" />
+          <Property Name="ORDEN_EMBARCO" Type="char" MaxLength="2" />
+          <Property Name="ID_CL_NOMINA" Type="char" MaxLength="2" />
+          <Property Name="ID_AGRNOM" Type="char" MaxLength="6" />
+          <Property Name="TRI_RC_1" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_2" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_3" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_4" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_5" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="TRI_LAB" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="CL_APLPORCENTAJE" Type="char" MaxLength="1" />
+          <Property Name="CL_COBRO_MES" Type="char" MaxLength="1" />
+          <Property Name="HOR_COMPL" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="RESIDENTE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CL_GESTANTFUN" Type="char" MaxLength="1" />
+          <Property Name="OCUPACION_INEM" Type="char" MaxLength="4" />
+          <Property Name="TRI_RC_6" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="F_FIN_PRUEBA" Type="datetime" />
+          <Property Name="id_t_lagunaro" Type="char" MaxLength="3" />
+        </EntityType>
+        <Association Name="FK_CATEGOR_CONVEN">
+          <End Role="CONVENIOS" Type="Self.CONVENIOS" Multiplicity="1" />
+          <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONVENIOS">
+              <PropertyRef Name="ID_CONVENIO" />
+            </Principal>
+            <Dependent Role="CATEGORIAS">
+              <PropertyRef Name="ID_CONVENIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COD_TRA_PERSONA">
+          <End Role="PERSONAS" Type="Self.PERSONAS" Multiplicity="1" />
+          <End Role="COD_TRA" Type="Self.COD_TRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONAS">
+              <PropertyRef Name="NIF" />
+            </Principal>
+            <Dependent Role="COD_TRA">
+              <PropertyRef Name="NIF" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ORDEN_NIV_ORG">
+          <End Role="NIV_ORG" Type="Self.NIV_ORG" Multiplicity="1" />
+          <End Role="ORDEN" Type="Self.ORDEN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="NIV_ORG">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL" />
+            </Principal>
+            <Dependent Role="ORDEN">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL_HIJO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PUE_TRA_NIV_ORG">
+          <End Role="NIV_ORG" Type="Self.NIV_ORG" Multiplicity="1" />
+          <End Role="PUES_TRAB" Type="Self.PUES_TRAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NIV_ORG">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL" />
+            </Principal>
+            <Dependent Role="PUES_TRAB">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PUE_TRA_TRABAJ">
+          <End Role="TRABAJADORES" Type="Self.TRABAJADORES" Multiplicity="1" />
+          <End Role="PUES_TRAB" Type="Self.PUES_TRAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRABAJADORES">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+              <PropertyRef Name="ID_SECUENCIA" />
+            </Principal>
+            <Dependent Role="PUES_TRAB">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+              <PropertyRef Name="ID_SECUENCIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRABAJ_CATEGOR">
+          <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="1" />
+          <End Role="TRABAJADORES" Type="Self.TRABAJADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIAS">
+              <PropertyRef Name="ID_CONVENIO" />
+              <PropertyRef Name="ID_CATEGORIA" />
+            </Principal>
+            <Dependent Role="TRABAJADORES">
+              <PropertyRef Name="ID_CONVENIO" />
+              <PropertyRef Name="ID_CATEGORIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRABAJ_COD_TRA">
+          <End Role="COD_TRA" Type="Self.COD_TRA" Multiplicity="1" />
+          <End Role="TRABAJADORES" Type="Self.TRABAJADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COD_TRA">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+            </Principal>
+            <Dependent Role="TRABAJADORES">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bd_epsilonModelStoreContainer">
+          <EntitySet Name="CATEGORIAS" EntityType="Self.CATEGORIAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COD_TRA" EntityType="Self.COD_TRA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CONVENIOS" EntityType="Self.CONVENIOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NIV_ORG" EntityType="Self.NIV_ORG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORDEN" EntityType="Self.ORDEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PUES_TRAB" EntityType="Self.PUES_TRAB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRABAJADORES" EntityType="Self.TRABAJADORES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CATEGOR_CONVEN" Association="Self.FK_CATEGOR_CONVEN">
+            <End Role="CONVENIOS" EntitySet="CONVENIOS" />
+            <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COD_TRA_PERSONA" Association="Self.FK_COD_TRA_PERSONA">
+            <End Role="PERSONAS" EntitySet="PERSONAS" />
+            <End Role="COD_TRA" EntitySet="COD_TRA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDEN_NIV_ORG" Association="Self.FK_ORDEN_NIV_ORG">
+            <End Role="NIV_ORG" EntitySet="NIV_ORG" />
+            <End Role="ORDEN" EntitySet="ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PUE_TRA_NIV_ORG" Association="Self.FK_PUE_TRA_NIV_ORG">
+            <End Role="NIV_ORG" EntitySet="NIV_ORG" />
+            <End Role="PUES_TRAB" EntitySet="PUES_TRAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PUE_TRA_TRABAJ" Association="Self.FK_PUE_TRA_TRABAJ">
+            <End Role="TRABAJADORES" EntitySet="TRABAJADORES" />
+            <End Role="PUES_TRAB" EntitySet="PUES_TRAB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRABAJ_CATEGOR" Association="Self.FK_TRABAJ_CATEGOR">
+            <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
+            <End Role="TRABAJADORES" EntitySet="TRABAJADORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRABAJ_COD_TRA" Association="Self.FK_TRABAJ_COD_TRA">
+            <End Role="COD_TRA" EntitySet="COD_TRA" />
+            <End Role="TRABAJADORES" EntitySet="TRABAJADORES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Epsilon_BBDD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="CATEGORIAS">
+          <Key>
+            <PropertyRef Name="ID_CONVENIO" />
+            <PropertyRef Name="ID_CATEGORIA" />
+          </Key>
+          <Property Name="ID_CONVENIO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_CATEGORIA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="D_CATEGORIA" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="GR_COT" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_EPIGRAFE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CL_TRABAJO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_COTIZACION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="T_ANTIGUEDAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="O_ANTIG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_CATEGORIA_RH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="Grupo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" Precision="3" />
+          <Property Name="TANT_F_INDEP" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CONVENIOS" Relationship="Self.FK_CATEGOR_CONVEN" FromRole="CATEGORIAS" ToRole="CONVENIOS" />
+          <NavigationProperty Name="TRABAJADORES" Relationship="Self.FK_TRABAJ_CATEGOR" FromRole="CATEGORIAS" ToRole="TRABAJADORES" />
+        </EntityType>
+        <EntityType Name="COD_TRA">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_TRABAJADOR" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_TRABAJADOR" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NIF" Type="String" MaxLength="14" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="TRABAJADORES" Relationship="Self.FK_TRABAJ_COD_TRA" FromRole="COD_TRA" ToRole="TRABAJADORES" />
+          <NavigationProperty Name="PERSONAS" Relationship="Epsilon_BBDD.FK_COD_TRA_PERSONA" FromRole="COD_TRA" ToRole="PERSONAS" />
+        </EntityType>
+        <EntityType Name="CONVENIOS">
+          <Key>
+            <PropertyRef Name="ID_CONVENIO" />
+          </Key>
+          <Property Name="ID_CONVENIO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_PAR" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="D_CONVENIO" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="F_ULTREV" Type="DateTime" Precision="3" />
+          <Property Name="F_PROXVTO" Type="DateTime" Precision="3" />
+          <Property Name="HORAS_ANUALES" Type="Decimal" Precision="7" Scale="3" />
+          <Property Name="HORAS_SEMANALES" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="NUM_MENSUAL" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="CL_ANTIGUEDAD" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MES_ANTIGCOMP" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="M_OBS_CONV" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="M_CALENDLAB" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="T_ANTIGUEDAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CONV_COLECTIVO" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" Precision="3" />
+          <Property Name="TANT_F_INDEP" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CONV_ADMIN" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Jornadas_Semana" Type="Decimal" Precision="4" Scale="2" />
+          <NavigationProperty Name="CATEGORIAS" Relationship="Self.FK_CATEGOR_CONVEN" FromRole="CONVENIOS" ToRole="CATEGORIAS" />
+        </EntityType>
+        <EntityType Name="TRABAJADORES">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_TRABAJADOR" />
+            <PropertyRef Name="ID_SECUENCIA" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_TRABAJADOR" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_SECUENCIA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CCC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_CENTRO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MATRICULA" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="HORAS_TC2" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="PER_IT" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="PUESTO" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="ID_CONVENIO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_CATEGORIA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_CAT_ALT" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="GR_COT" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_EPIGRAFE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CL_DES_EPI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NUM_HIJOS" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="P_RED" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CL_ACT_IRPF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_CAL_IRPF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="P_DIN" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="P_ESP" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="F_ANTIG" Type="DateTime" Precision="3" />
+          <Property Name="F_C_ANTIG" Type="DateTime" Precision="3" />
+          <Property Name="IMP_ANT" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="GR_COT_PLUR" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PLU_CCMIN" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="PLU_CCMAX" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="PLU_ACCMIN" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="PLU_ACCMAX" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="NUM_PLUR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="D_EMPPLUR" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="P_JORNADA" Type="Decimal" Precision="7" Scale="4" />
+          <Property Name="DIAS_JOR" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="JOR_LUNES" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="JOR_MARTES" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="JOR_MIERCOLES" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="JOR_JUEVES" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="JOR_VIERNES" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="JOR_SABADO" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="JOR_DOMINGO" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="AFECTA_JOR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AFECTA_HOR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NUM_CAL" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="GUARDA_LEGAL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_TPAGAS" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="GPO_PROFES" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="CL_REGTRA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_AGRCOO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_TRABAJO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_COTIZACION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_RETRIBUCION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_COBRO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_COBRO_ANT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_DIVISA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_C_SIND" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CL_AUSENCIAS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_COMPL_NEG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_P_IRPF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="F_ALTA" Type="DateTime" Precision="3" />
+          <Property Name="F_INI_SEC" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="F_BAJA" Type="DateTime" Precision="3" />
+          <Property Name="ID_BAJA" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="SITUACION" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="F_BONIF" Type="DateTime" Precision="3" />
+          <Property Name="F_RESOL" Type="DateTime" Precision="3" />
+          <Property Name="F_INI_SUB" Type="DateTime" Precision="3" />
+          <Property Name="F_FIN_SUB" Type="DateTime" Precision="3" />
+          <Property Name="LOCAL_OFEMP" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="N_REGISTRO" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="F_OFEMP" Type="DateTime" Precision="3" />
+          <Property Name="F_INDEFINIDO" Type="DateTime" Precision="3" />
+          <Property Name="C_CONTRATO" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="TRAB_OBSERV" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ID_BANCO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ID_SUCURSAL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ID_CUENTA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CL_REC_FIN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_DESG_FIN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_PERIODO_CONT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="HORAS_CONTRATO" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="HORA_INIC_SEC" Type="DateTime" Precision="3" />
+          <Property Name="CL_SAL_IT" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="F_AUT_PLUR" Type="DateTime" Precision="3" />
+          <Property Name="TIP_DES" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CL_RET_ATRASOS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_PER_ADM" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_ORGANICA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ID_FUNCION" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ID_TURNO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="N_TARJETA" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="GRUPO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NIVEL" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="ID_CPL_ESPECIFICO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="CL_COT_DUR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="COLECTIVO1" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="COLECTIVO2" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="COLECTIVO3" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="COLECTIVO4" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="P_IRPF_SOLIC" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MESES_ANTIG" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="DIAS_ANTIG" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="EJERS_ANTIG" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="CL_JORNADA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PROYECTO" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" Precision="3" />
+          <Property Name="ID_HABILITACION" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ID_EMBARCACION" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_MAREA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ORDEN_EMBARCO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_CL_NOMINA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_AGRNOM" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="TRI_RC_1" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_3" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_4" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRI_RC_5" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TRI_LAB" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CL_APLPORCENTAJE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CL_COBRO_MES" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="HOR_COMPL" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="RESIDENTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CL_GESTANTFUN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OCUPACION_INEM" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="TRI_RC_6" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="F_FIN_PRUEBA" Type="DateTime" Precision="3" />
+          <Property Name="id_t_lagunaro" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="CATEGORIAS" Relationship="Self.FK_TRABAJ_CATEGOR" FromRole="TRABAJADORES" ToRole="CATEGORIAS" />
+          <NavigationProperty Name="COD_TRA" Relationship="Self.FK_TRABAJ_COD_TRA" FromRole="TRABAJADORES" ToRole="COD_TRA" />
+          <NavigationProperty Name="PUES_TRAB" Relationship="Epsilon_BBDD.FK_PUE_TRA_TRABAJ" FromRole="TRABAJADORES" ToRole="PUES_TRAB" />
+        </EntityType>
+        <Association Name="FK_CATEGOR_CONVEN">
+          <End Role="CONVENIOS" Type="Self.CONVENIOS" Multiplicity="1" />
+          <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONVENIOS">
+              <PropertyRef Name="ID_CONVENIO" />
+            </Principal>
+            <Dependent Role="CATEGORIAS">
+              <PropertyRef Name="ID_CONVENIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRABAJ_CATEGOR">
+          <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="1" />
+          <End Role="TRABAJADORES" Type="Self.TRABAJADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIAS">
+              <PropertyRef Name="ID_CONVENIO" />
+              <PropertyRef Name="ID_CATEGORIA" />
+            </Principal>
+            <Dependent Role="TRABAJADORES">
+              <PropertyRef Name="ID_CONVENIO" />
+              <PropertyRef Name="ID_CATEGORIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRABAJ_COD_TRA">
+          <End Role="COD_TRA" Type="Self.COD_TRA" Multiplicity="1" />
+          <End Role="TRABAJADORES" Type="Self.TRABAJADORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COD_TRA">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+            </Principal>
+            <Dependent Role="TRABAJADORES">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities_Epsilon" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CATEGORIAS" EntityType="Self.CATEGORIAS" />
+          <EntitySet Name="COD_TRA" EntityType="Self.COD_TRA" />
+          <EntitySet Name="CONVENIOS" EntityType="Self.CONVENIOS" />
+          <EntitySet Name="TRABAJADORES" EntityType="Self.TRABAJADORES" />
+          <AssociationSet Name="FK_CATEGOR_CONVEN" Association="Self.FK_CATEGOR_CONVEN">
+            <End Role="CONVENIOS" EntitySet="CONVENIOS" />
+            <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRABAJ_CATEGOR" Association="Self.FK_TRABAJ_CATEGOR">
+            <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
+            <End Role="TRABAJADORES" EntitySet="TRABAJADORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRABAJ_COD_TRA" Association="Self.FK_TRABAJ_COD_TRA">
+            <End Role="COD_TRA" EntitySet="COD_TRA" />
+            <End Role="TRABAJADORES" EntitySet="TRABAJADORES" />
+          </AssociationSet>
+          <EntitySet Name="PERSONAS" EntityType="Epsilon_BBDD.PERSONAS" />
+          <AssociationSet Name="FK_COD_TRA_PERSONA" Association="Epsilon_BBDD.FK_COD_TRA_PERSONA">
+            <End Role="PERSONAS" EntitySet="PERSONAS" />
+            <End Role="COD_TRA" EntitySet="COD_TRA" />
+          </AssociationSet>
+          <EntitySet Name="ORDEN" EntityType="Epsilon_BBDD.ORDEN" />
+          <EntitySet Name="PUES_TRAB" EntityType="Epsilon_BBDD.PUES_TRAB" />
+          <AssociationSet Name="FK_PUE_TRA_TRABAJ" Association="Epsilon_BBDD.FK_PUE_TRA_TRABAJ">
+            <End Role="TRABAJADORES" EntitySet="TRABAJADORES" />
+            <End Role="PUES_TRAB" EntitySet="PUES_TRAB" />
+          </AssociationSet>
+          <EntitySet Name="NIV_ORG" EntityType="Epsilon_BBDD.NIV_ORG" />
+          <AssociationSet Name="FK_ORDEN_NIV_ORG" Association="Epsilon_BBDD.FK_ORDEN_NIV_ORG">
+            <End Role="NIV_ORG" EntitySet="NIV_ORG" />
+            <End Role="ORDEN" EntitySet="ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PUE_TRA_NIV_ORG" Association="Epsilon_BBDD.FK_PUE_TRA_NIV_ORG">
+            <End Role="NIV_ORG" EntitySet="NIV_ORG" />
+            <End Role="PUES_TRAB" EntitySet="PUES_TRAB" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="PERSONAS">
+          <Key>
+            <PropertyRef Name="NIF" />
+          </Key>
+          <Property Name="NIF" Type="String" Nullable="false" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PF" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="APELLIDO1" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="APELLIDO2" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="SIGLAS" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="DOMICILIO" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="NUM" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="KM" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ESCALERA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PISO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PUERTA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CPOSTAL" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PROVINCIA" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_POBLACION" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PREFIJO1" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="TELEFONO1" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PREFIJO2" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="TELEFONO2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PAIS" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="SEXO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MINUSV" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="E_CIVIL" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="F_NAC" Type="DateTime" />
+          <Property Name="ID_PROVINCIA_NAC" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_POBLACION_NAC" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ID_N_ESTUDIOS" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NASS" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="ID_S_MILITAR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CURSO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ID_SIT_FAM" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ID_SIT_LAB_PER" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="F_N_ESTUDIOS" Type="DateTime" />
+          <Property Name="MATRICULA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FAX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PREFAX" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="VEHICULO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NIVOTRO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NIVEXP" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NIVIDIOM" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NIVINF" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NIVCUR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="64" FixedLength="true" Unicode="false" />
+          <Property Name="RESIDENTE" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NIVEL_R" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" />
+          <Property Name="F_ALTA_PP" Type="DateTime" />
+          <Property Name="DOMIC_PP" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="F_DOMIC_PP" Type="DateTime" />
+          <Property Name="N_MUFACE" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="TELEF_EMERG" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="ID_ATEP" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PAIS_NAC" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="N_ASANIT" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="Ejec_Hipoteca" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="email2" Type="String" MaxLength="64" FixedLength="true" Unicode="false" />
+          <Property Name="clv_pdf" Type="String" MaxLength="64" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="COD_TRA" Relationship="Epsilon_BBDD.FK_COD_TRA_PERSONA" FromRole="PERSONAS" ToRole="COD_TRA" />
+          <Property Name="GRADO_MINUSVALIA" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ES_FAMILIA_NUMEROSA" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_COD_TRA_PERSONA">
+          <End Type="Epsilon_BBDD.PERSONAS" Role="PERSONAS" Multiplicity="1" />
+          <End Type="Epsilon_BBDD.COD_TRA" Role="COD_TRA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONAS">
+              <PropertyRef Name="NIF" />
+            </Principal>
+            <Dependent Role="COD_TRA">
+              <PropertyRef Name="NIF" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ORDEN">
+          <Key>
+            <PropertyRef Name="ID_ORGANIG" />
+            <PropertyRef Name="ID_NIVEL_HIJO" />
+          </Key>
+          <Property Name="ID_ORGANIG" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_NIVEL_HIJO" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="NIVEL" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="CAMINO" Type="String" Nullable="false" MaxLength="240" FixedLength="false" Unicode="false" />
+          <Property Name="N1" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N2" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N3" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N4" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N5" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N6" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N7" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N8" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N9" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N10" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="NIV_ORG" Relationship="Epsilon_BBDD.FK_ORDEN_NIV_ORG" FromRole="ORDEN" ToRole="NIV_ORG" />
+        </EntityType>
+        <EntityType Name="PUES_TRAB">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+            <PropertyRef Name="ID_TRABAJADOR" />
+            <PropertyRef Name="ID_ORGANIG" />
+            <PropertyRef Name="ID_NIVEL" />
+            <PropertyRef Name="ID_SECUENCIA" />
+            <PropertyRef Name="F_INI_PUE" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_TRABAJADOR" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="ID_ORGANIG" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_NIVEL" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="P_PUESTO" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="ID_SECUENCIA" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PUES_DEFECTO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="F_INI_PUE" Type="DateTime" Nullable="false" />
+          <Property Name="F_FIN_PUE" Type="DateTime" />
+          <Property Name="I_HORAS" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="T_OPERARIO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="COMENTARIO" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" />
+          <Property Name="ID_TRAB_SUST" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="ID_EMP_SUST" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N_APUNTE" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="ID_OBSERV_COD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="TRABAJADORES" Relationship="Epsilon_BBDD.FK_PUE_TRA_TRABAJ" FromRole="PUES_TRAB" ToRole="TRABAJADORES" />
+          <NavigationProperty Name="NIV_ORG" Relationship="Epsilon_BBDD.FK_PUE_TRA_NIV_ORG" FromRole="PUES_TRAB" ToRole="NIV_ORG" />
+        </EntityType>
+        <Association Name="FK_PUE_TRA_TRABAJ">
+          <End Type="Epsilon_BBDD.TRABAJADORES" Role="TRABAJADORES" Multiplicity="1" />
+          <End Type="Epsilon_BBDD.PUES_TRAB" Role="PUES_TRAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRABAJADORES">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+              <PropertyRef Name="ID_SECUENCIA" />
+            </Principal>
+            <Dependent Role="PUES_TRAB">
+              <PropertyRef Name="ID_EMPRESA" />
+              <PropertyRef Name="ID_TRABAJADOR" />
+              <PropertyRef Name="ID_SECUENCIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NIV_ORG">
+          <Key>
+            <PropertyRef Name="ID_ORGANIG" />
+            <PropertyRef Name="ID_NIVEL" />
+          </Key>
+          <Property Name="ID_ORGANIG" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_NIVEL" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="CATEG_NIVEL" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ES_PUESTO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="D_NIVEL" Type="String" Nullable="false" MaxLength="120" FixedLength="true" Unicode="false" />
+          <Property Name="F_INHABILITACION" Type="DateTime" />
+          <Property Name="F_CREACION" Type="DateTime" Nullable="false" />
+          <Property Name="IDENT_NIVEL" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="NPLAZAS" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="ID_EMPRESA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PUESTO" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="N_PLAZA" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="COD_ELEM" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="RSV_PUESTO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ID_EMP_RSV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID_PUE_RSV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GCROWVER" Type="DateTime" />
+          <Property Name="ID_COMBI" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="T_RESPONSABLE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="ORDEN" Relationship="Epsilon_BBDD.FK_ORDEN_NIV_ORG" FromRole="NIV_ORG" ToRole="ORDEN" />
+          <NavigationProperty Name="PUES_TRAB" Relationship="Epsilon_BBDD.FK_PUE_TRA_NIV_ORG" FromRole="NIV_ORG" ToRole="PUES_TRAB" />
+        </EntityType>
+        <Association Name="FK_ORDEN_NIV_ORG">
+          <End Type="Epsilon_BBDD.NIV_ORG" Role="NIV_ORG" Multiplicity="1" />
+          <End Type="Epsilon_BBDD.ORDEN" Role="ORDEN" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="NIV_ORG">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL" />
+            </Principal>
+            <Dependent Role="ORDEN">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL_HIJO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PUE_TRA_NIV_ORG">
+          <End Type="Epsilon_BBDD.NIV_ORG" Role="NIV_ORG" Multiplicity="1" />
+          <End Type="Epsilon_BBDD.PUES_TRAB" Role="PUES_TRAB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NIV_ORG">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL" />
+            </Principal>
+            <Dependent Role="PUES_TRAB">
+              <PropertyRef Name="ID_ORGANIG" />
+              <PropertyRef Name="ID_NIVEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bd_epsilonModelStoreContainer" CdmEntityContainer="Entities_Epsilon">
+          <EntitySetMapping Name="CATEGORIAS">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.CATEGORIAS">
+              <MappingFragment StoreEntitySet="CATEGORIAS">
+                <ScalarProperty Name="ID_CONVENIO" ColumnName="ID_CONVENIO" />
+                <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+                <ScalarProperty Name="D_CATEGORIA" ColumnName="D_CATEGORIA" />
+                <ScalarProperty Name="GR_COT" ColumnName="GR_COT" />
+                <ScalarProperty Name="ID_EPIGRAFE" ColumnName="ID_EPIGRAFE" />
+                <ScalarProperty Name="CL_TRABAJO" ColumnName="CL_TRABAJO" />
+                <ScalarProperty Name="CL_COTIZACION" ColumnName="CL_COTIZACION" />
+                <ScalarProperty Name="T_ANTIGUEDAD" ColumnName="T_ANTIGUEDAD" />
+                <ScalarProperty Name="O_ANTIG" ColumnName="O_ANTIG" />
+                <ScalarProperty Name="ID_CATEGORIA_RH" ColumnName="ID_CATEGORIA_RH" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+                <ScalarProperty Name="TANT_F_INDEP" ColumnName="TANT_F_INDEP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COD_TRA">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.COD_TRA">
+              <MappingFragment StoreEntitySet="COD_TRA">
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ID_TRABAJADOR" ColumnName="ID_TRABAJADOR" />
+                <ScalarProperty Name="NIF" ColumnName="NIF" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONVENIOS">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.CONVENIOS">
+              <MappingFragment StoreEntitySet="CONVENIOS">
+                <ScalarProperty Name="ID_CONVENIO" ColumnName="ID_CONVENIO" />
+                <ScalarProperty Name="ID_PAR" ColumnName="ID_PAR" />
+                <ScalarProperty Name="D_CONVENIO" ColumnName="D_CONVENIO" />
+                <ScalarProperty Name="F_ULTREV" ColumnName="F_ULTREV" />
+                <ScalarProperty Name="F_PROXVTO" ColumnName="F_PROXVTO" />
+                <ScalarProperty Name="HORAS_ANUALES" ColumnName="HORAS_ANUALES" />
+                <ScalarProperty Name="HORAS_SEMANALES" ColumnName="HORAS_SEMANALES" />
+                <ScalarProperty Name="NUM_MENSUAL" ColumnName="NUM_MENSUAL" />
+                <ScalarProperty Name="CL_ANTIGUEDAD" ColumnName="CL_ANTIGUEDAD" />
+                <ScalarProperty Name="MES_ANTIGCOMP" ColumnName="MES_ANTIGCOMP" />
+                <ScalarProperty Name="M_OBS_CONV" ColumnName="M_OBS_CONV" />
+                <ScalarProperty Name="M_CALENDLAB" ColumnName="M_CALENDLAB" />
+                <ScalarProperty Name="T_ANTIGUEDAD" ColumnName="T_ANTIGUEDAD" />
+                <ScalarProperty Name="CONV_COLECTIVO" ColumnName="CONV_COLECTIVO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+                <ScalarProperty Name="TANT_F_INDEP" ColumnName="TANT_F_INDEP" />
+                <ScalarProperty Name="CONV_ADMIN" ColumnName="CONV_ADMIN" />
+                <ScalarProperty Name="Jornadas_Semana" ColumnName="Jornadas_Semana" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRABAJADORES">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.TRABAJADORES">
+              <MappingFragment StoreEntitySet="TRABAJADORES">
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ID_TRABAJADOR" ColumnName="ID_TRABAJADOR" />
+                <ScalarProperty Name="ID_SECUENCIA" ColumnName="ID_SECUENCIA" />
+                <ScalarProperty Name="CCC" ColumnName="CCC" />
+                <ScalarProperty Name="ID_CENTRO" ColumnName="ID_CENTRO" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="HORAS_TC2" ColumnName="HORAS_TC2" />
+                <ScalarProperty Name="PER_IT" ColumnName="PER_IT" />
+                <ScalarProperty Name="PUESTO" ColumnName="PUESTO" />
+                <ScalarProperty Name="ID_CONVENIO" ColumnName="ID_CONVENIO" />
+                <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+                <ScalarProperty Name="ID_CAT_ALT" ColumnName="ID_CAT_ALT" />
+                <ScalarProperty Name="GR_COT" ColumnName="GR_COT" />
+                <ScalarProperty Name="ID_EPIGRAFE" ColumnName="ID_EPIGRAFE" />
+                <ScalarProperty Name="CL_DES_EPI" ColumnName="CL_DES_EPI" />
+                <ScalarProperty Name="NUM_HIJOS" ColumnName="NUM_HIJOS" />
+                <ScalarProperty Name="P_RED" ColumnName="P_RED" />
+                <ScalarProperty Name="CL_ACT_IRPF" ColumnName="CL_ACT_IRPF" />
+                <ScalarProperty Name="CL_CAL_IRPF" ColumnName="CL_CAL_IRPF" />
+                <ScalarProperty Name="P_DIN" ColumnName="P_DIN" />
+                <ScalarProperty Name="P_ESP" ColumnName="P_ESP" />
+                <ScalarProperty Name="F_ANTIG" ColumnName="F_ANTIG" />
+                <ScalarProperty Name="F_C_ANTIG" ColumnName="F_C_ANTIG" />
+                <ScalarProperty Name="IMP_ANT" ColumnName="IMP_ANT" />
+                <ScalarProperty Name="GR_COT_PLUR" ColumnName="GR_COT_PLUR" />
+                <ScalarProperty Name="PLU_CCMIN" ColumnName="PLU_CCMIN" />
+                <ScalarProperty Name="PLU_CCMAX" ColumnName="PLU_CCMAX" />
+                <ScalarProperty Name="PLU_ACCMIN" ColumnName="PLU_ACCMIN" />
+                <ScalarProperty Name="PLU_ACCMAX" ColumnName="PLU_ACCMAX" />
+                <ScalarProperty Name="NUM_PLUR" ColumnName="NUM_PLUR" />
+                <ScalarProperty Name="D_EMPPLUR" ColumnName="D_EMPPLUR" />
+                <ScalarProperty Name="P_JORNADA" ColumnName="P_JORNADA" />
+                <ScalarProperty Name="DIAS_JOR" ColumnName="DIAS_JOR" />
+                <ScalarProperty Name="JOR_LUNES" ColumnName="JOR_LUNES" />
+                <ScalarProperty Name="JOR_MARTES" ColumnName="JOR_MARTES" />
+                <ScalarProperty Name="JOR_MIERCOLES" ColumnName="JOR_MIERCOLES" />
+                <ScalarProperty Name="JOR_JUEVES" ColumnName="JOR_JUEVES" />
+                <ScalarProperty Name="JOR_VIERNES" ColumnName="JOR_VIERNES" />
+                <ScalarProperty Name="JOR_SABADO" ColumnName="JOR_SABADO" />
+                <ScalarProperty Name="JOR_DOMINGO" ColumnName="JOR_DOMINGO" />
+                <ScalarProperty Name="AFECTA_JOR" ColumnName="AFECTA_JOR" />
+                <ScalarProperty Name="AFECTA_HOR" ColumnName="AFECTA_HOR" />
+                <ScalarProperty Name="NUM_CAL" ColumnName="NUM_CAL" />
+                <ScalarProperty Name="GUARDA_LEGAL" ColumnName="GUARDA_LEGAL" />
+                <ScalarProperty Name="ID_TPAGAS" ColumnName="ID_TPAGAS" />
+                <ScalarProperty Name="GPO_PROFES" ColumnName="GPO_PROFES" />
+                <ScalarProperty Name="CL_REGTRA" ColumnName="CL_REGTRA" />
+                <ScalarProperty Name="CL_AGRCOO" ColumnName="CL_AGRCOO" />
+                <ScalarProperty Name="CL_TRABAJO" ColumnName="CL_TRABAJO" />
+                <ScalarProperty Name="CL_COTIZACION" ColumnName="CL_COTIZACION" />
+                <ScalarProperty Name="CL_RETRIBUCION" ColumnName="CL_RETRIBUCION" />
+                <ScalarProperty Name="CL_COBRO" ColumnName="CL_COBRO" />
+                <ScalarProperty Name="CL_COBRO_ANT" ColumnName="CL_COBRO_ANT" />
+                <ScalarProperty Name="ID_DIVISA" ColumnName="ID_DIVISA" />
+                <ScalarProperty Name="ID_C_SIND" ColumnName="ID_C_SIND" />
+                <ScalarProperty Name="CL_AUSENCIAS" ColumnName="CL_AUSENCIAS" />
+                <ScalarProperty Name="CL_COMPL_NEG" ColumnName="CL_COMPL_NEG" />
+                <ScalarProperty Name="CL_P_IRPF" ColumnName="CL_P_IRPF" />
+                <ScalarProperty Name="F_ALTA" ColumnName="F_ALTA" />
+                <ScalarProperty Name="F_INI_SEC" ColumnName="F_INI_SEC" />
+                <ScalarProperty Name="F_BAJA" ColumnName="F_BAJA" />
+                <ScalarProperty Name="ID_BAJA" ColumnName="ID_BAJA" />
+                <ScalarProperty Name="SITUACION" ColumnName="SITUACION" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="F_BONIF" ColumnName="F_BONIF" />
+                <ScalarProperty Name="F_RESOL" ColumnName="F_RESOL" />
+                <ScalarProperty Name="F_INI_SUB" ColumnName="F_INI_SUB" />
+                <ScalarProperty Name="F_FIN_SUB" ColumnName="F_FIN_SUB" />
+                <ScalarProperty Name="LOCAL_OFEMP" ColumnName="LOCAL_OFEMP" />
+                <ScalarProperty Name="N_REGISTRO" ColumnName="N_REGISTRO" />
+                <ScalarProperty Name="F_OFEMP" ColumnName="F_OFEMP" />
+                <ScalarProperty Name="F_INDEFINIDO" ColumnName="F_INDEFINIDO" />
+                <ScalarProperty Name="C_CONTRATO" ColumnName="C_CONTRATO" />
+                <ScalarProperty Name="TRAB_OBSERV" ColumnName="TRAB_OBSERV" />
+                <ScalarProperty Name="ID_BANCO" ColumnName="ID_BANCO" />
+                <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+                <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+                <ScalarProperty Name="CL_REC_FIN" ColumnName="CL_REC_FIN" />
+                <ScalarProperty Name="CL_DESG_FIN" ColumnName="CL_DESG_FIN" />
+                <ScalarProperty Name="CL_PERIODO_CONT" ColumnName="CL_PERIODO_CONT" />
+                <ScalarProperty Name="HORAS_CONTRATO" ColumnName="HORAS_CONTRATO" />
+                <ScalarProperty Name="HORA_INIC_SEC" ColumnName="HORA_INIC_SEC" />
+                <ScalarProperty Name="CL_SAL_IT" ColumnName="CL_SAL_IT" />
+                <ScalarProperty Name="F_AUT_PLUR" ColumnName="F_AUT_PLUR" />
+                <ScalarProperty Name="TIP_DES" ColumnName="TIP_DES" />
+                <ScalarProperty Name="CL_RET_ATRASOS" ColumnName="CL_RET_ATRASOS" />
+                <ScalarProperty Name="ID_PER_ADM" ColumnName="ID_PER_ADM" />
+                <ScalarProperty Name="ID_ORGANICA" ColumnName="ID_ORGANICA" />
+                <ScalarProperty Name="ID_FUNCION" ColumnName="ID_FUNCION" />
+                <ScalarProperty Name="ID_TURNO" ColumnName="ID_TURNO" />
+                <ScalarProperty Name="N_TARJETA" ColumnName="N_TARJETA" />
+                <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="ID_CPL_ESPECIFICO" ColumnName="ID_CPL_ESPECIFICO" />
+                <ScalarProperty Name="CL_COT_DUR" ColumnName="CL_COT_DUR" />
+                <ScalarProperty Name="COLECTIVO1" ColumnName="COLECTIVO1" />
+                <ScalarProperty Name="COLECTIVO2" ColumnName="COLECTIVO2" />
+                <ScalarProperty Name="COLECTIVO3" ColumnName="COLECTIVO3" />
+                <ScalarProperty Name="COLECTIVO4" ColumnName="COLECTIVO4" />
+                <ScalarProperty Name="P_IRPF_SOLIC" ColumnName="P_IRPF_SOLIC" />
+                <ScalarProperty Name="MESES_ANTIG" ColumnName="MESES_ANTIG" />
+                <ScalarProperty Name="DIAS_ANTIG" ColumnName="DIAS_ANTIG" />
+                <ScalarProperty Name="EJERS_ANTIG" ColumnName="EJERS_ANTIG" />
+                <ScalarProperty Name="CL_JORNADA" ColumnName="CL_JORNADA" />
+                <ScalarProperty Name="ID_PROYECTO" ColumnName="ID_PROYECTO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+                <ScalarProperty Name="ID_HABILITACION" ColumnName="ID_HABILITACION" />
+                <ScalarProperty Name="ID_EMBARCACION" ColumnName="ID_EMBARCACION" />
+                <ScalarProperty Name="ID_MAREA" ColumnName="ID_MAREA" />
+                <ScalarProperty Name="ORDEN_EMBARCO" ColumnName="ORDEN_EMBARCO" />
+                <ScalarProperty Name="ID_CL_NOMINA" ColumnName="ID_CL_NOMINA" />
+                <ScalarProperty Name="ID_AGRNOM" ColumnName="ID_AGRNOM" />
+                <ScalarProperty Name="TRI_RC_1" ColumnName="TRI_RC_1" />
+                <ScalarProperty Name="TRI_RC_2" ColumnName="TRI_RC_2" />
+                <ScalarProperty Name="TRI_RC_3" ColumnName="TRI_RC_3" />
+                <ScalarProperty Name="TRI_RC_4" ColumnName="TRI_RC_4" />
+                <ScalarProperty Name="TRI_RC_5" ColumnName="TRI_RC_5" />
+                <ScalarProperty Name="TRI_LAB" ColumnName="TRI_LAB" />
+                <ScalarProperty Name="CL_APLPORCENTAJE" ColumnName="CL_APLPORCENTAJE" />
+                <ScalarProperty Name="CL_COBRO_MES" ColumnName="CL_COBRO_MES" />
+                <ScalarProperty Name="HOR_COMPL" ColumnName="HOR_COMPL" />
+                <ScalarProperty Name="RESIDENTE" ColumnName="RESIDENTE" />
+                <ScalarProperty Name="CL_GESTANTFUN" ColumnName="CL_GESTANTFUN" />
+                <ScalarProperty Name="OCUPACION_INEM" ColumnName="OCUPACION_INEM" />
+                <ScalarProperty Name="TRI_RC_6" ColumnName="TRI_RC_6" />
+                <ScalarProperty Name="F_FIN_PRUEBA" ColumnName="F_FIN_PRUEBA" />
+                <ScalarProperty Name="id_t_lagunaro" ColumnName="id_t_lagunaro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONAS">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.PERSONAS">
+              <MappingFragment StoreEntitySet="PERSONAS">
+                <ScalarProperty Name="ES_FAMILIA_NUMEROSA" ColumnName="ES_FAMILIA_NUMEROSA" />
+                <ScalarProperty Name="GRADO_MINUSVALIA" ColumnName="GRADO_MINUSVALIA" />
+                <ScalarProperty Name="clv_pdf" ColumnName="clv_pdf" />
+                <ScalarProperty Name="email2" ColumnName="email2" />
+                <ScalarProperty Name="Ejec_Hipoteca" ColumnName="Ejec_Hipoteca" />
+                <ScalarProperty Name="N_ASANIT" ColumnName="N_ASANIT" />
+                <ScalarProperty Name="ID_PAIS_NAC" ColumnName="ID_PAIS_NAC" />
+                <ScalarProperty Name="ID_ATEP" ColumnName="ID_ATEP" />
+                <ScalarProperty Name="TELEF_EMERG" ColumnName="TELEF_EMERG" />
+                <ScalarProperty Name="N_MUFACE" ColumnName="N_MUFACE" />
+                <ScalarProperty Name="F_DOMIC_PP" ColumnName="F_DOMIC_PP" />
+                <ScalarProperty Name="DOMIC_PP" ColumnName="DOMIC_PP" />
+                <ScalarProperty Name="F_ALTA_PP" ColumnName="F_ALTA_PP" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NIVEL_R" ColumnName="NIVEL_R" />
+                <ScalarProperty Name="RESIDENTE" ColumnName="RESIDENTE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="NIVCUR" ColumnName="NIVCUR" />
+                <ScalarProperty Name="NIVINF" ColumnName="NIVINF" />
+                <ScalarProperty Name="NIVIDIOM" ColumnName="NIVIDIOM" />
+                <ScalarProperty Name="NIVEXP" ColumnName="NIVEXP" />
+                <ScalarProperty Name="NIVOTRO" ColumnName="NIVOTRO" />
+                <ScalarProperty Name="VEHICULO" ColumnName="VEHICULO" />
+                <ScalarProperty Name="PREFAX" ColumnName="PREFAX" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+                <ScalarProperty Name="F_N_ESTUDIOS" ColumnName="F_N_ESTUDIOS" />
+                <ScalarProperty Name="ID_SIT_LAB_PER" ColumnName="ID_SIT_LAB_PER" />
+                <ScalarProperty Name="ID_SIT_FAM" ColumnName="ID_SIT_FAM" />
+                <ScalarProperty Name="CURSO" ColumnName="CURSO" />
+                <ScalarProperty Name="ID_S_MILITAR" ColumnName="ID_S_MILITAR" />
+                <ScalarProperty Name="NASS" ColumnName="NASS" />
+                <ScalarProperty Name="ID_N_ESTUDIOS" ColumnName="ID_N_ESTUDIOS" />
+                <ScalarProperty Name="ID_POBLACION_NAC" ColumnName="ID_POBLACION_NAC" />
+                <ScalarProperty Name="ID_PROVINCIA_NAC" ColumnName="ID_PROVINCIA_NAC" />
+                <ScalarProperty Name="F_NAC" ColumnName="F_NAC" />
+                <ScalarProperty Name="E_CIVIL" ColumnName="E_CIVIL" />
+                <ScalarProperty Name="MINUSV" ColumnName="MINUSV" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="TELEFONO2" ColumnName="TELEFONO2" />
+                <ScalarProperty Name="PREFIJO2" ColumnName="PREFIJO2" />
+                <ScalarProperty Name="TELEFONO1" ColumnName="TELEFONO1" />
+                <ScalarProperty Name="PREFIJO1" ColumnName="PREFIJO1" />
+                <ScalarProperty Name="ID_POBLACION" ColumnName="ID_POBLACION" />
+                <ScalarProperty Name="ID_PROVINCIA" ColumnName="ID_PROVINCIA" />
+                <ScalarProperty Name="CPOSTAL" ColumnName="CPOSTAL" />
+                <ScalarProperty Name="PUERTA" ColumnName="PUERTA" />
+                <ScalarProperty Name="PISO" ColumnName="PISO" />
+                <ScalarProperty Name="ESCALERA" ColumnName="ESCALERA" />
+                <ScalarProperty Name="KM" ColumnName="KM" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+                <ScalarProperty Name="SIGLAS" ColumnName="SIGLAS" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+                <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+                <ScalarProperty Name="ID_PF" ColumnName="ID_PF" />
+                <ScalarProperty Name="NIF" ColumnName="NIF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDEN">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.ORDEN">
+              <MappingFragment StoreEntitySet="ORDEN">
+                <ScalarProperty Name="N10" ColumnName="N10" />
+                <ScalarProperty Name="N9" ColumnName="N9" />
+                <ScalarProperty Name="N8" ColumnName="N8" />
+                <ScalarProperty Name="N7" ColumnName="N7" />
+                <ScalarProperty Name="N6" ColumnName="N6" />
+                <ScalarProperty Name="N5" ColumnName="N5" />
+                <ScalarProperty Name="N4" ColumnName="N4" />
+                <ScalarProperty Name="N3" ColumnName="N3" />
+                <ScalarProperty Name="N2" ColumnName="N2" />
+                <ScalarProperty Name="N1" ColumnName="N1" />
+                <ScalarProperty Name="CAMINO" ColumnName="CAMINO" />
+                <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+                <ScalarProperty Name="ID_NIVEL_HIJO" ColumnName="ID_NIVEL_HIJO" />
+                <ScalarProperty Name="ID_ORGANIG" ColumnName="ID_ORGANIG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUES_TRAB">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.PUES_TRAB">
+              <MappingFragment StoreEntitySet="PUES_TRAB">
+                <ScalarProperty Name="ID_OBSERV_COD" ColumnName="ID_OBSERV_COD" />
+                <ScalarProperty Name="N_APUNTE" ColumnName="N_APUNTE" />
+                <ScalarProperty Name="ID_EMP_SUST" ColumnName="ID_EMP_SUST" />
+                <ScalarProperty Name="ID_TRAB_SUST" ColumnName="ID_TRAB_SUST" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+                <ScalarProperty Name="T_OPERARIO" ColumnName="T_OPERARIO" />
+                <ScalarProperty Name="I_HORAS" ColumnName="I_HORAS" />
+                <ScalarProperty Name="F_FIN_PUE" ColumnName="F_FIN_PUE" />
+                <ScalarProperty Name="F_INI_PUE" ColumnName="F_INI_PUE" />
+                <ScalarProperty Name="PUES_DEFECTO" ColumnName="PUES_DEFECTO" />
+                <ScalarProperty Name="ID_SECUENCIA" ColumnName="ID_SECUENCIA" />
+                <ScalarProperty Name="P_PUESTO" ColumnName="P_PUESTO" />
+                <ScalarProperty Name="ID_NIVEL" ColumnName="ID_NIVEL" />
+                <ScalarProperty Name="ID_ORGANIG" ColumnName="ID_ORGANIG" />
+                <ScalarProperty Name="ID_TRABAJADOR" ColumnName="ID_TRABAJADOR" />
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NIV_ORG">
+            <EntityTypeMapping TypeName="Epsilon_BBDD.NIV_ORG">
+              <MappingFragment StoreEntitySet="NIV_ORG">
+                <ScalarProperty Name="T_RESPONSABLE" ColumnName="T_RESPONSABLE" />
+                <ScalarProperty Name="ID_COMBI" ColumnName="ID_COMBI" />
+                <ScalarProperty Name="GCROWVER" ColumnName="GCROWVER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_PUE_RSV" ColumnName="ID_PUE_RSV" />
+                <ScalarProperty Name="ID_EMP_RSV" ColumnName="ID_EMP_RSV" />
+                <ScalarProperty Name="RSV_PUESTO" ColumnName="RSV_PUESTO" />
+                <ScalarProperty Name="COD_ELEM" ColumnName="COD_ELEM" />
+                <ScalarProperty Name="N_PLAZA" ColumnName="N_PLAZA" />
+                <ScalarProperty Name="ID_PUESTO" ColumnName="ID_PUESTO" />
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="NPLAZAS" ColumnName="NPLAZAS" />
+                <ScalarProperty Name="IDENT_NIVEL" ColumnName="IDENT_NIVEL" />
+                <ScalarProperty Name="F_CREACION" ColumnName="F_CREACION" />
+                <ScalarProperty Name="F_INHABILITACION" ColumnName="F_INHABILITACION" />
+                <ScalarProperty Name="D_NIVEL" ColumnName="D_NIVEL" />
+                <ScalarProperty Name="ES_PUESTO" ColumnName="ES_PUESTO" />
+                <ScalarProperty Name="CATEG_NIVEL" ColumnName="CATEG_NIVEL" />
+                <ScalarProperty Name="ID_NIVEL" ColumnName="ID_NIVEL" />
+                <ScalarProperty Name="ID_ORGANIG" ColumnName="ID_ORGANIG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+        <DesignerProperty Name="SynchronizePropertyFacets" Value="False" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToSQL10.tt" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

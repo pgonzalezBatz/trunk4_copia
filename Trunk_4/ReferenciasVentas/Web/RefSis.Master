@@ -1,0 +1,95 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="RefSis.Master.vb" Inherits="ReferenciasVentas.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Referencias de Venta</title>
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />--%>
+	<%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />--%>	
+
+	<link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+	<link href="App_Themes/Batz/MenuBatz.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Batz/style.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Batz/AjaxControlToolKit.css" type="text/css" rel="Stylesheet" />
+	<link href="App_Themes/Batz/ControlesWeb/DetailsView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Batz/ControlesWeb/GridView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Batz/ControlesWeb/FormView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Batz/ControlesWeb/PanelCargandoDatos.css" rel="stylesheet" type="text/css" />	
+	<!-------------------------------------------------------------------->
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server" defaultbutton="btnFake">
+	<asp:ScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True" EnablePartialRendering="True">
+         <Scripts>
+            <asp:ScriptReference Path="//intranet2.batz.es/baliabideorokorrak/jquery-1.11.0.min.js" /> 
+        </Scripts>
+	</asp:ScriptManager>
+    <asp:HyperLink ID="hlHomeIntranet" runat="server" title="Ir a la intranet" CssClass="cabApp" NavigateUrl="/HomeIntranet" />
+        <div>
+		    <table width="100%" cellpadding="0" cellspacing="0">
+			    <tr>
+				    <td class="cabeceraIzquierda">
+					    <asp:Literal ID="ltlUsuario" runat="server" Text="usuarioConectado"></asp:Literal>:
+					    <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+				    </td>
+				    <td class="cabeceraDerecha">
+					    <asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal>
+				    </td>
+			    </tr>
+		    </table>
+		    <div id="menu2" runat="server">
+                <asp:XmlDataSource ID="XmlDataSource" runat="server" EnableCaching="false"></asp:XmlDataSource>
+			    <table style="width:100%">
+				    <tr>
+					    <td style="width: 250px">
+                            <asp:Menu runat="server" DataSourceID="XmlDataSource" Orientation="Horizontal" ID="menu" DisappearAfter="30000" MaximumDynamicDisplayLevels="6" RenderingMode="Table">
+                                <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" ItemSpacing="0"
+                                    CssClass="StaticMenuItemStyle" />
+                                <StaticHoverStyle CssClass="StaticHoverStyle" />
+                                <DynamicMenuItemStyle CssClass="DynamicMenuItemStyle" HorizontalPadding="8px" VerticalPadding="3px"
+                                    ItemSpacing="0" />
+                                <DynamicMenuStyle CssClass="DynamicMenuStyle" />
+                                <DynamicHoverStyle CssClass="DynamicHoverStyle" />                            
+                                <DataBindings>
+                                    <asp:MenuItemBinding TextField="title" NavigateUrlField="url" ValueField="id" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif"
+                                        PopOutImageUrl="~/App_Themes/Batz/Imagenes/arrow.gif" />
+                                </DataBindings>
+                            </asp:Menu>
+					    </td>
+				    </tr>
+			    </table>
+		    </div>
+		    <div id="contenido1">
+			    <table width="100%">
+				    <tr>
+					    <td align="left">
+						    <asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+							    <ContentTemplate>
+								    <asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+									    <asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+									    <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+								    </asp:Panel>
+							    </ContentTemplate>
+						    </asp:UpdatePanel>
+					    </td>
+				    </tr>
+			    </table>
+			    <div id="contenido2">
+				    <asp:ContentPlaceHolder ID="cuerpoPrincipal" runat="server">
+				    </asp:ContentPlaceHolder>
+			    </div>
+		    </div>
+		    <div id="pie">
+			    <asp:ContentPlaceHolder ID="cphPie" runat="server">
+				    <asp:Literal ID="Literal1" runat="server" text="In case of any problem, please contact to"></asp:Literal>&nbsp 
+                    <asp:HyperLink id="hlnkHelp" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk" Target="_blank"/>
+			    </asp:ContentPlaceHolder>
+		    </div>
+	    </div>
+        <asp:Button ID="btnFake" runat="server" style="display:none" UseSubmitBehavior="false" Enabled="false" />	
+	</form>
+</body>
+</html>

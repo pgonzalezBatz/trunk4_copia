@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Informes>
+
+  <Informe name="KTROL_HOJA_REGISTROS">        
+    <![CDATA[ibmcognos/bi/?objRef=iFD310E6DBA974E1598EEE52BD8A71294&ui.action=run&p_idioma=[CULTURA]&p_Desde=[FECHA_DESDE]&p_Hasta=[FECHA_HASTA]&p_Referencia=[REFERENCIA]&p_Operacion=[COD_OPERACION]&p_IdControl=[ID_CONTROL]&prompt=false]]>
+  </Informe>
+  
+  <Informe name="KTROL_ESTADISTICAS">        
+    <![CDATA[ibmcognos/bi/?objRef=i9E1799D958AF484798FB3104AA8572F1&p_idioma=[CULTURA]&p_Desde=[FECHA_DESDE]&p_Hasta=[FECHA_HASTA]&p_Referencia=[REFERENCIA]&p_Operacion=[COD_OPERACION]&prompt=false]]>
+  </Informe>
+  
+</Informes>

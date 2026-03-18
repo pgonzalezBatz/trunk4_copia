@@ -1,0 +1,115 @@
+﻿.Panel_CollapsiblePanelExtender
+{
+	font-size:13px;
+	cursor: pointer;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+.ListSearchExtenderPrompt
+{
+	font-style:italic;
+	color:Gray;
+	background-color:white;
+}
+.TextBoxWatermarkExtender
+{
+	font-style:italic;
+	color:Gray;
+}
+
+/******************************************************************/
+/* AutoCompleteExtender *******************************************/
+/******************************************************************/
+/******************************************************************/
+/* AutoCompleteExtender *******************************************/
+/******************************************************************/
+.CompletionListCssClass
+{
+    width: auto !important; /*Con IE7 sale scroll horizontal.*/ 
+    max-height: 9300px;
+    margin-left: 0px; 
+    margin-top: 1px;
+    padding: 1px; 
+    font-size: 12px;
+    border: 1px solid #C0C0C0;
+    background-color: #CEE7FF;
+    text-align: left;
+    overflow: auto;
+    z-index:100009 !important;
+}
+
+.CompletionListItemCssClass, .CompletionListHighlightedItemCssClass
+{
+    margin: 1px;
+    border: 1px solid #C0C0C0;
+    list-style-type: none;
+    font-size:12px;
+}
+
+.CompletionListHighlightedItemCssClass
+{
+    background-color: #FFFF00;
+    font-size:12px;
+}
+/******************************************************************/
+/* Tabs *******************************************/
+/******************************************************************/
+.tabs {
+ /*margin-top:20px;*/
+}
+
+.tabs .ajax__tab_header
+{
+    font-family: "Helvetica Neue" , Arial, Sans-Serif;
+    font-size: 14px;
+    font-weight:bold;
+    display: block;
+    background-color: #91A0A7;
+}
+
+.tabs a.ajax__tab_tab{ color: #fff !important; }
+
+.tabs .ajax__tab_header .ajax__tab_outer
+{
+    border-color: #222;
+    color: #ffffff;
+    padding-left: 10px;
+    margin-right: 3px;
+    border:solid 1px #ffffff;
+    color:red;
+}
+.tabs .ajax__tab_header .ajax__tab_inner
+{
+    border-color: #666;
+    padding: 3px 10px 2px 0px;
+}
+.tabs .ajax__tab_hover .ajax__tab_outer
+{
+    background-color:#9c3;
+}
+.tabs .ajax__tab_hover .ajax__tab_inner
+{
+    color: #fff;
+}
+.tabs .ajax__tab_active .ajax__tab_outer
+{
+    border-bottom-color: #ffffff;
+    background-color: #5D7B9D;
+    
+}
+.tabs .ajax__tab_active .ajax__tab_inner
+{
+    color: #ffffff;
+    border-color: #333;
+}
+.tabs .ajax__tab_body
+{
+    font-family: verdana,tahoma,helvetica;
+    font-size: 12px;
+    background-color: #fff;
+    border-top-width: 0;
+    border: solid 1px #d7d7d7;
+    border-top-color: #ffffff;
+}

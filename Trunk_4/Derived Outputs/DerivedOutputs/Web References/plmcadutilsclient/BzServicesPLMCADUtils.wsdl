@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://bzServices" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://bzServices" targetNamespace="http://bzServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://bzServices">
+      <xsd:element name="CADCheckoutFile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+            <xsd:element name="in2" type="xsd:string" />
+            <xsd:element name="in3" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CADCheckoutFileResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CADCheckoutFileReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CADCheckinFile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+            <xsd:element name="in2" type="xsd:string" />
+            <xsd:element name="in3" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CADCheckinFileResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CADCheckinFileReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CADCheckoutRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+            <xsd:element name="in2" type="xsd:string" />
+            <xsd:element name="in3" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CADCheckoutRequestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CADCheckoutRequestReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CADCheckinFileRequest">
+    <wsdl:part name="parameters" element="impl:CADCheckinFile" />
+  </wsdl:message>
+  <wsdl:message name="CADCheckoutFileRequest">
+    <wsdl:part name="parameters" element="impl:CADCheckoutFile" />
+  </wsdl:message>
+  <wsdl:message name="CADCheckoutRequestRequest">
+    <wsdl:part name="parameters" element="impl:CADCheckoutRequest" />
+  </wsdl:message>
+  <wsdl:message name="CADCheckoutFileResponse">
+    <wsdl:part name="parameters" element="impl:CADCheckoutFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CADCheckoutRequestResponse">
+    <wsdl:part name="parameters" element="impl:CADCheckoutRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CADCheckinFileResponse">
+    <wsdl:part name="parameters" element="impl:CADCheckinFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PLMCADUtils">
+    <wsdl:operation name="CADCheckoutFile">
+      <wsdl:input name="CADCheckoutFileRequest" message="impl:CADCheckoutFileRequest" />
+      <wsdl:output name="CADCheckoutFileResponse" message="impl:CADCheckoutFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CADCheckinFile">
+      <wsdl:input name="CADCheckinFileRequest" message="impl:CADCheckinFileRequest" />
+      <wsdl:output name="CADCheckinFileResponse" message="impl:CADCheckinFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CADCheckoutRequest">
+      <wsdl:input name="CADCheckoutRequestRequest" message="impl:CADCheckoutRequestRequest" />
+      <wsdl:output name="CADCheckoutRequestResponse" message="impl:CADCheckoutRequestResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BzServicesPLMCADUtilsSoapBinding" type="impl:PLMCADUtils">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CADCheckoutFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CADCheckoutFileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CADCheckoutFileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CADCheckinFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CADCheckinFileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CADCheckinFileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CADCheckoutRequest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CADCheckoutRequestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CADCheckoutRequestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PLMCADUtilsService">
+    <wsdl:port name="BzServicesPLMCADUtils" binding="impl:BzServicesPLMCADUtilsSoapBinding">
+      <wsdlsoap:address location="http://zanburu.batz.es:7001/enovia/services/BzServicesPLMCADUtils" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,27 @@
+body{margin:1em;font-size:12px;}
+body {line-height:1.5em;}
+strong{font-weight:bold;}
+h3{font-weight:bold;padding:0.5em 0;}
+fieldset { border:1px solid #A8A8A8;padding:1em;}
+legend {border:1px solid #A8A8A8; font-size:0.8em;}
+.field-validation-error{color: #ff0000;}
+.field-validation-valid{display: none;}
+.input-validation-error{border: 1px solid #ff0000;background-color: #ffeeee;}
+.validation-summary-errors{font-weight: bold;color: #ff0000; margin:1em 0;}
+.validation-summary-valid{display: none;}
+.weekend td {background-color:#FEC2B0;}
+.table3{border:1px solid #A8A8A8; font-size:0.8em;}
+.table3 td,.table3 th {border:1px solid #A8A8A8;padding:0.2em;}
+.table3 th{font-weight:bold; background-color:#c3c3c3;}
+.table3 tr:hover{background-color:#9bd19b;}
+.table3 input[type=text]{width:5em;}
+.extracollapse th, .extracollapse td{padding:0}
+.txtwide {width:25em;}
+.selected {background-color:#B3B3B3;}
+
+ul.tree ul{padding-left:4em;background-color:#FFF;}
+ul.tree li li li{color:black;border-top: 1px solid #A8A8A8;}
+ul.tree li li li:hover {background-color:#9bd19b; color:#FFF;}
+
+div.formula form{display:inline;}
+div.formula form span{font-size:1.5em;}

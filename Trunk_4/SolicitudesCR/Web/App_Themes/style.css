@@ -1,0 +1,318 @@
+﻿.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+
+.MensajeError
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Red;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+/*MIS ESTILOS*/
+.estiloBono {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 40%; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+.estiloBono TH {
+	LETTER-SPACING: 1px; FONT: bold 12px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #cccccc; COLOR: #000000
+}
+.estiloBono TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; FONT: 11px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #fff; COLOR: #000000; PADDING-TOP: 5px
+}
+
+.estiloBono2 {
+	BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.estiloBono2 TH {
+	FONT: bold 12px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #cccccc; COLOR: #000000
+}
+.estiloBono2 TD {
+	FONT: 11px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #fff; COLOR: #000000; PADDING-TOP: 2px
+}
+
+.estiloLanzarProceso {
+	BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.estiloLanzarProceso TH {
+	FONT: bold 12px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #cccccc; COLOR: #000000
+}
+.estiloLanzarProceso TD {
+	FONT: 11px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #fff; COLOR: #000000; PADDING-TOP: 2px
+}
+
+/*Proponer este estilo para los GridView*/
+
+/* Estilo general de la tabla 2*/
+.GridViewASP2						{BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 40%; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid}
+.GridViewASP2 .th               {padding:4px; border-width:0px;LETTER-SPACING: 1px; FONT: bold 12px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #cccccc; COLOR: #000000}
+.GridViewASP2 td	            {PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; FONT: 11px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #fff; COLOR: #000000; PADDING-TOP: 5px}
+.GridViewASP2 .Caption				{font-weight: bold;	background-color: #CCCCCC;}
+.GridViewASP2 .a						{width:100%;display:block;}
+.ControlStyle						{width:98%;}
+
+/*Estilo de la cabecera 2*/
+.GridViewASP2 .HeaderStyle 			{width:75px;}
+.GridViewASP2 .HeaderStyle th			{padding:4px; border-width:0px;LETTER-SPACING: 1px; FONT: bold 12px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #cccccc; COLOR: #000000}
+.GridViewASP2 .HeaderStyle th a		{font-weight:bold;color:White;text-transform:uppercase;}
+
+/*Estilo general de las filas 2*/
+.GridViewASP2 .RowStyle 					{PADDING-BOTTOM: 3px; PADDING-LEFT: 10px; FONT: 11px Verdana, Arial, Helvetica,sans-serif; BACKGROUND: #fff; COLOR: #000000; PADDING-TOP: 5px}
+.GridViewASP2 .RowStyle td a				{font-weight:bold;color:#5D7B9D;}
+.GridViewASP2 .AlternatingRowStyle		{background-color:#FFFFFF; color:#284775;}
+.GridViewASP2 .AlternatingRowStyle td a	{font-weight:bold;color:#5D7B9D;}
+.GridViewASP2 .RowStyle:hover, .AlternatingRowStyle:hover, .RowStyleAdvertencia:hover, .AlternatingRowStyleAdvertencia:hover	{background-color:#EAEAFF;}
+/*Estilo de estados para remarcar las filas*/
+.GridViewASP2 .RowStyleAdvertencia{background-color: #FF0000;	color: #333333;}
+.GridViewASP2 .AlternatingRowStyleAdvertencia{background-color: #FF5555;	color: #333333;}
+
+
+/*Estilo de las filas en modo edición*/
+.GridViewASP2 .EditRowStyle			{background-color:#999999;}
+
+/*Estilo de las filas en modo seleccionadas*/
+.GridViewASP2 .SelectedRowStyle		{background-color:#E2DED6; font-weight:bold;color:#333333;}/*background-color:#E2DED6*/
+
+.GridViewASP2 .SelectedRowStyle a {font-weight:bold;color:white;}
+
+/*Estilo de Paginación */
+.GridViewASP2 .PagerStyle				{background-color:#5D7B9D; color:#FFFFFF; text-align:center;}
+
+/*Estilo del pie*/
+.GridViewASP2 .FooterStyle			{background-color:#5D7B9D;font-weight:bold; color:#FFFFFF;}
+
+.invisible { display:none }
+.visible { display:block }
+
+.imagen-desplegar {background: url(./Imagenes/signo_mas.jpg) no-repeat; float:left; width:9px; height:9px;margin:3px 4px 0 0;}  
+.imagen-plegar {background: url(./Imagenes/signo_menos.jpg) no-repeat; float:left; width:9px; height:9px;margin:3px 4px 0 0;}  
+.clear-float {clear:both;/*font-size:0;*/}
+.bloque-filtrado {padding:10px 0 10px 30px; display:none;}
+.fuente-negrita {font-weight:bold}
+.MensajeAdvertencia {color:Red; font-size:10px;}
+.Extension_Fichero_Error {color:Red}
+.label_cursorHand {cursor: pointer}
+.mayusculas {text-transform:uppercase;}
+
+div.imagen-seleccionado {background: url('./Imagenes/seleccionado.png') no-repeat;width:16px; height:16px; float:left; margin-right:3px;}
+div.imagen-no-seleccionado {background: url('./Imagenes/noSeleccionado.png') no-repeat;width:16px; height:16px;float:left;margin-right:3px;}
+
+
+.lblInfoSeparacion {font-weight:bold; padding-right:5px}
+
+.boton {
+    font: 10pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+	padding:2px 2px 2px 2px;
+}
+
+.demo {
+-moz-border-radius:15px 55px 5px;
+-webkit-border-radius: 15px 55px 5px;
+}
+
+.t {background: url(dot.gif) 0 0 repeat-x; width: 20em}
+.b {background: url(dot.gif) 0 100% repeat-x}
+.l {background: url(dot.gif) 0 0 repeat-y}
+.r {background: url(dot.gif) 100% 0 repeat-y}
+.bl {background: url(bl.gif) 0 100% no-repeat}
+.br {background: url(br.gif) 100% 100% no-repeat}
+.tl {background: url(tl.gif) 0 0 no-repeat}
+.tr {background: url(tr.gif) 100% 0 no-repeat; padding:10px}
+
+/*Modal Popup Extender Validación*/ 
+.modalPopup
+{
+    background-color: #FFFFFF;
+    width: 300px;
+    border: 3px solid rgb(93, 123, 157);    
+}
+.modalPopup .header
+{
+    background-color: rgb(93, 123, 157);
+    height: 30px;
+    color: White;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.modalPopup .body
+{
+    min-height: 50px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.modalPopup .footer
+{
+    padding: 3px;
+}
+.modalPopup .si, .modalPopup .no
+{
+    color: White;
+    /*width:30px;*/
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(93, 123, 157);
+    border: 1px solid #0DA9D0;
+}
+
+.anchoTextbox {
+    width:99%;
+}
+
+.definicion {
+    width:10%;
+    background-color:#5D7B9D; 
+    text-align:center; 
+    color:White;
+}
+
+.definicion15 {
+    width:15%;
+    background-color:#5D7B9D; 
+    text-align:center; 
+    color:White;
+}
+
+.campoTextoNormal {
+    background-color:#F7F6F3;
+}
+
+.width100 {width: 100%;}
+.width35 {width:35%;}
+.width25 {width:25%;}
+.width20 {width:20%;}
+.width15 {width:15%;}
+.width10 {width:10%;}
+.width5 {width:5%;}
+.widthAuto {width:auto;}
+
+.cpHeader {
+    background-color: rgb(199,199,199);
+    width: 100%;
+    height: 24px;    
+}
+
+.cpBody {
+    width: 100%;
+    margin-bottom:5px;
+    height: 0;
+    overflow: hidden;
+}
+
+.incidenciaTratada {
+    background-color: rgb(167,222,96);
+    color:#ffffff;
+    font-weight:bold;     
+}
+
+/*Modal popup*/
+.modalPopup {background-color: #FFFFFF;width: 800px;border: 3px solid rgb(93, 123, 157);}
+.modalPopup .header {background-color: rgb(93, 123, 157);height: 30px;color: White;line-height: 30px;text-align: center;font-weight: bold;}
+.modalPopup .body 
+{
+    text-align: center;
+    font-weight: bold;
+
+}
+.modalPopup .footer {padding: 3px;}
+.modalPopup .si, .modalPopup .no {color: White;text-align: center;font-weight: bold;cursor: pointer;}/*width:35px;*/
+.modalPopup .si {background-color: rgb(93, 123, 157); border: 1px solid #5C5C5C;}
+.modalPopup .no {background-color: rgb(93, 123, 157);border: 1px solid #5C5C5C;}
+.topbar {padding:5px 5px 5px 30px; text-align:left; border:1px solid #000; display:block; margin-bottom:5px; display:none; background-color:rgb(60, 184, 18)}
+
+/*Estilo de la página de éxito de usuario anónimo*/
+.MensajeInfoAdvertencia{text-align:left;text-transform:uppercase;background:#F3F3F3;color:Blue;font-weight:bold;}
+
+.PaddingLeftBorderBottom {padding-left:5px; border-bottom:1px solid black}
+.PaddingLeft {padding-left: 5px;}
+.margin10 {margin-bottom:10px;}
+
+.GridViewCaption .Caption {font-size:25px}
+
+.titulo {
+    width: auto;
+    color: #000;
+    background-color: #F1F1F1;
+    padding: 7px;
+    line-height: 1.15em;
+    word-wrap: break-word;
+    margin-bottom: 15px;
+    margin-top: 12px;
+    text-align: center;
+    /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);*/
+    box-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.24);
+    border-top:1px solid rgba(0, 0, 0, 0.24);
+    border-left:1px solid rgba(0, 0, 0, 0.24);    
+}
+
+.checkboxList {
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.checkboxList input 
+{ 
+    /*margin-left: -20px;*/ 
+}
+.checkboxList td 
+{ 
+    padding-left: 20px; 
+}
+
+.otroUsuarioInvisible {
+    width:auto; 
+    display:none;
+    margin-bottom:20px; 
+    font-size:14px;
+}
+
+.otroUsuarioVisible {
+    width:auto; 
+    display:inline;
+    font-size:14px;
+}
+
+.otroUsuarioVisible fieldset{ border:1px solid #91A0A7; }
+.otroUsuarioVisible legend{background-color: #5D7B9D; color:white; font-size:14px; padding-left:10px; padding-right: 10px }
+
+.alertaSeleccionUsuario {
+    background-color:rgb(255,238,159);    
+    color:black;
+}
+
+.usuarioSeleccionado {
+    background-color:green;
+    color:white;
+}
+
+.floatRight {
+    float: right;
+}
+
+.BotonVolverListado {text-align:center; padding-top:20px; padding-bottom: 10px}
+.botonPrincipal {
+    font: 20px Verdana, Arial, Helvetica,sans-serif;
+    color:#fff;
+	border:solid 1px #000000;
+	background:#0DA9D0;
+	padding:2px 2px 2px 2px;
+}
+
+.tabla-formulario {border: 1px solid #A8A8A8; padding: 0; margin: 0; margin-bottom: 5px; margin-top:5px; width:auto; font-size:12px;}
+.tabla-formulario td {padding:5px 5px 5px 5px; vertical-align:middle;}
+.tabla-formulario td.label { background-color:#5D7B9D; text-align:center; color:White;}
+.tabla-formulario td.campoTexto {background-color:#F7F6F3;}
+.tabla-formulario td.label-cabecera {padding-right:15px; background-color:rgb(213, 242, 249); }
+.tabla-formulario td.cabecera {font-weight: bold; background-color: #CCCCCC; padding:7px 0 7px 0; text-transform:uppercase;font-size:12px; text-align:center; }
+
+.watermark {
+    font-style:italic;    
+    font-size:12px;
+}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Solicitudes" roles="" id="">    
+    <Item title="Mis solicitudes" controller="Solicitud" action="MisSolicitudes" roles="" id=""></Item>
+  </Item>
+  <Item title="Permisos" roles="" id="1">
+    <Item title="Solicitudes permiso" controller="Permiso" action="SolicitudesPermiso" roles="" id="1"></Item>
+  </Item>
+  <Item title="Administración" roles="10" id="">
+    <Item title="Datos alternativos" controller="DatosAlternativos" action="Index" roles="10" id=""></Item>
+    <Item title="Histórico solicitudes de tarjetas" controller="Solicitud" action="Historico" roles="10" id=""></Item>
+    <Item title="Histórico solicitudes de permiso" controller="Permiso" action="Historico" roles="10" id=""></Item>
+  </Item>
+</Root>

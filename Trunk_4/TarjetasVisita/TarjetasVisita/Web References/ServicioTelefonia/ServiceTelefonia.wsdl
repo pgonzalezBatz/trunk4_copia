@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getTelefonos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUser" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTelefonosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTelefonosResult" type="tns:ArrayOfTelephone" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTelephone">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Telephone" nillable="true" type="tns:Telephone" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Telephone">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Planta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionFija" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fijo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionInalambrica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Inalambrico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionMovil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Movil" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zoiper" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSabPlanta" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getTelefonosSoapIn">
+    <wsdl:part name="parameters" element="tns:getTelefonos" />
+  </wsdl:message>
+  <wsdl:message name="getTelefonosSoapOut">
+    <wsdl:part name="parameters" element="tns:getTelefonosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceTelefonia1Soap">
+    <wsdl:operation name="getTelefonos">
+      <wsdl:input message="tns:getTelefonosSoapIn" />
+      <wsdl:output message="tns:getTelefonosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceTelefonia1Soap" type="tns:ServiceTelefonia1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTelefonos">
+      <soap:operation soapAction="http://tempuri.org/getTelefonos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceTelefonia1Soap12" type="tns:ServiceTelefonia1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTelefonos">
+      <soap12:operation soapAction="http://tempuri.org/getTelefonos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceTelefonia1">
+    <wsdl:port name="ServiceTelefonia1Soap" binding="tns:ServiceTelefonia1Soap">
+      <soap:address location="https://intranet2.batz.es/Telefonia/Services/ServiceTelefonia.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceTelefonia1Soap12" binding="tns:ServiceTelefonia1Soap12">
+      <soap12:address location="https://intranet2.batz.es/Telefonia/Services/ServiceTelefonia.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

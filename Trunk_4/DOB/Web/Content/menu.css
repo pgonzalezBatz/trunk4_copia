@@ -1,0 +1,136 @@
+﻿ul.pureCssMenu ul {
+    display: none;
+}
+
+ul.pureCssMenu li:hover > ul {
+    display: block;
+}
+
+ul.pureCssMenu ul {
+    position: absolute;
+    left: -1px;
+    top: 98%;
+}
+
+ul.pureCssMenu ul ul {
+    position: absolute;
+    left: 98%;
+    top: -2px;
+}
+
+ul.pureCssMenu, ul.pureCssMenu ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0px 2px 2px 0px;
+    background-color: #f4f4f4;
+    background-repeat: repeat;
+    border-color: #AAAAAA;
+    border-width: 1px;
+    border-style: solid;
+}
+
+ul.pureCssMenu table {
+    border-collapse: collapse;
+}
+
+ul.pureCssMenu {
+    display: block;
+    zoom: 1;
+    float: left;
+}
+
+ul.pureCssMenu ul {
+    width: 160.65px;
+}
+
+ul.pureCssMenu li {
+    display: block;
+    margin: 2px 0px 0px 2px;
+    font-size: 0px;
+}
+
+ul.pureCssMenu a:active, ul.pureCssMenu a:focus {
+    outline-style: none;
+}
+
+ul.pureCssMenu a {
+    display: block;
+    vertical-align: middle;
+    background-color: #f4f4f4;
+    border-width: 0px;
+    border-color: #6655ff;
+    border-style: solid;
+    text-align: left;
+    text-decoration: none;
+    padding: 4px;
+    _padding-left: 0;
+    font: normal 12px Verdana;
+    color: #284e98;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul.pureCssMenu span {
+    overflow: hidden;
+}
+
+ul.pureCssMenu li {
+    float: left;    
+}
+
+ul.pureCssMenu > li {
+    border-right: 1px solid #AAAAAA; 
+}
+
+ul.pureCssMenu > li:last-child {
+    border-right: none; 
+}
+
+ul.pureCssMenu ul li {
+    float: none;
+}
+
+ul.pureCssMenu ul a {
+    text-align: left;
+    white-space: nowrap;
+    color: #284e98;
+}
+
+ul.pureCssMenu li:hover {
+    position: relative;
+}
+
+ul.pureCssMenu li:hover > a {
+    background-color: #cccccc;
+    border-color: #665500;
+    border-style: solid;
+    font: normal 12px Verdana;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul.pureCssMenu li a:hover {
+    position: relative;
+    background-color: #cccccc;
+    border-color: #665500;
+    border-style: solid;
+    font: 12px Verdana;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul.pureCssMenu a:hover ul, ul.pureCssMenu a:hover a:hover ul, ul.pureCssMenu a:hover a:hover a:hover ul {
+    display: block;
+}
+
+ul.pureCssMenu a:hover ul ul, ul.pureCssMenu a:hover a:hover ul ul {
+    display: none;
+}
+
+ul.pureCssMenu span {
+    display: block;
+    background-image: url('Images/arrow.gif');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+}

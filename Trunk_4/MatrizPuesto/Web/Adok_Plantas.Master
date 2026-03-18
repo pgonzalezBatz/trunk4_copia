@@ -1,0 +1,210 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Adok_Plantas.master.vb" Inherits="AdokWeb.Adok_Plantas" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--<meta charset="utf-8" />
+    <meta http-equiv="refresh" content="1000" />--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>MatrizPuesto</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./App_Themes/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="./App_Themes/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+
+    
+    <link href="./App_Themes/ToastNotification/jquery.toastmessage.css" type="text/css" rel="Stylesheet" />
+    
+
+    <script src="./jquery/jquery-1.11.2.min.js"></script>
+    <link href="./jquery/jquery-ui.css" rel="stylesheet" />
+    <script src="./jquery/jquery-1.10.2.js"></script>
+    <script src="./jquery/jquery-ui.js"></script>
+
+
+    <script src="./App_Themes/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>  <%--el jquery debe estar antes--%>
+
+
+    <!--BOOTSTRAP INCLUDES -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <%--<link rel="stylesheet" href="bootstrap/3.3.6/css/bootstrap.min.css"/>--%>
+    <%--<script src="jquery/jquery-1.11.2.min.js"></script>--%>
+    <%--<script src="bootstrap/3.3.6/js/bootstrap.min.js"></script>--%>
+    <!--END BOOTSTRAP INCLUDES -->
+
+    <!--DATEPICKER -->
+    <link rel="stylesheet" href="bootstrap/bootstrap-datetimepicker.css" />
+    <script type="text/javascript" src="bootstrap/moment-with-locales.js"></script>
+    <script type="text/javascript" src="bootstrap/js/transition.js"></script>
+    <script type="text/javascript" src="bootstrap/js/collapse.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-datetimepicker.js"></script>
+    <!--END DATEPICKER-->
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+        var _confirm = false;
+        function Confirmacion(titulo, texto, button) {
+            if (_confirm == false) {
+                jQuery('<div>')
+                    .html("<span class='glyphicon glyphicon-question-sign' style='float:left; margin:0 20px 20px 0; color:#ff9400; font-size:4em'></span>" + texto)
+                    .dialog({
+                        autoOpen: true,
+                        draggable: false,
+                        resizable: false,
+                        modal: true,
+                        title: titulo,
+                        width: 350,
+                        hide: "slide",
+
+                        buttons: {
+                            "No": function () {
+                                $(this).dialog("close");
+                            },
+
+                            "Si": function () {
+                                $(this).dialog("close");
+                                _confirm = true;
+                                button.click();
+                            }
+                        },
+
+                        close: function () {
+                            jQuery(this).remove();
+                        }
+                    });
+            }
+            return _confirm;
+        }
+
+
+
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <script type="text/javascript">
+        function showToast(pTexto, pType, pSticky) {
+            $().toastmessage('showToast', {
+                text: pTexto,
+                sticky: pSticky,
+                position: 'middle-center',
+                type: pType,
+                closeText: '',
+            });
+        }
+    </script>
+    <form id="form1" runat="server" name="form1">
+
+
+        <asp:ScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">
+            <Scripts>
+                <asp:ScriptReference Path="~/App_Themes/jquery.js" />
+                <asp:ScriptReference Path="~/App_Themes/jquery.toastmessage.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+
+        <%--<div id="menu2" runat="server">--%>
+        <asp:XmlDataSource ID="XmlDataSource" runat="server" EnableCaching="false"></asp:XmlDataSource>
+        <%--    <table style="width:100%">
+				    <tr>
+		
+					    <td style="width: 250px">--%>
+        <asp:Menu Visible="false" runat="server" DataSourceID="XmlDataSource" Orientation="Horizontal" ID="menu" DisappearAfter="30000" MaximumDynamicDisplayLevels="6" RenderingMode="Table">
+            <%--                    <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="1px" ItemSpacing="0"
+                                    CssClass="StaticMenuItemStyle" />
+                                <StaticHoverStyle CssClass="StaticHoverStyle" />
+                                <DynamicMenuItemStyle CssClass="DynamicMenuItemStyle" HorizontalPadding="8px" VerticalPadding="3px"
+                                    ItemSpacing="0" />
+                                <DynamicMenuStyle CssClass="DynamicMenuStyle" />
+                                <DynamicHoverStyle CssClass="DynamicHoverStyle" /> --%>
+            <DataBindings>
+                <asp:MenuItemBinding TextField="title" NavigateUrlField="url" ValueField="id" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif"
+                    PopOutImageUrl="~/App_Themes/Batz/Imagenes/arrow.gif" />
+            </DataBindings>
+        </asp:Menu>
+        <%--			    </td>
+				    </tr>
+			    </table>--%>
+        <%--</div>--%>
+
+
+
+        <%--<div id="contenido1">--%>
+
+        <%--<asp:TextBox ID="txtMensajeTop" runat="server" Text="Prueba" />--%>
+        <%-- <asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+							    <ContentTemplate>--%>
+        <%--					    <asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+									    <asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+									    <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+								    </asp:Panel>--%>
+        <%--    </ContentTemplate>
+						    </asp:UpdatePanel>--%>
+
+
+        <%--</div>--%>
+
+
+        <%--menu--%>
+
+
+
+        <!-- Fixed navbar -->
+
+
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="navbar-brand" src="https://intranet2.batz.es/baliabideorokorrak/logo_batz_menu.png" />
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+
+
+
+
+                        <%=elementos %>
+                    </ul>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <br />
+        <br />
+
+        <div id="contenido2">
+            <asp:ContentPlaceHolder ID="cuerpoPrincipal" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+    </form>
+
+</body>
+</html>

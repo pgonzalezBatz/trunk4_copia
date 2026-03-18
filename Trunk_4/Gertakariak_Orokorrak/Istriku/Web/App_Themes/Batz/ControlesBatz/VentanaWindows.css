@@ -1,0 +1,27 @@
+﻿/*******************************************************************/
+/* "Barra de Titulo" para las ventanas.*/
+/* Aplicar sobre el TR */
+/*******************************************************************/
+.BarraTitulo
+{
+	background-color: #0066CC;
+	border: 1px solid #7DBEFF;
+	width: 100%;
+	border-spacing: 0px; margin: 0px; padding: 0px;
+}
+
+/*En el "TH" posicionamos la descripcion de la ventana.*/
+.BarraTitulo th
+{
+		text-align: left;
+		vertical-align:middle;
+		text-transform:capitalize;
+		color:White;
+}
+
+/*En el "TD" posicionamos los botones de la ventana.*/
+.BarraTitulo td
+{
+	text-align:right;	
+}
+/*******************************************************************/

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa4beff70a304b1dbc1f7b314a6f10de" Name="Gertakariak" ZoomLevel="35">
+        <EntityTypeShape EntityType="Gertakariak_BBDD.ACCIONES_OBSERVACIONES" Width="2.25" PointX="19.875" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.USUARIOS" Width="1.75" PointX="22.25" PointY="0.5" FillColor="0, 122, 204" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.RESPONSABLES_GERTAKARIAK" Width="2.375" PointX="19.5" PointY="12.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.ESTRUCTURA" Width="1.5" PointX="10.875" PointY="0.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CAUSASNC" Width="1.5" PointX="15.25" PointY="16.25" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CAUSASNCKUKTURA" Width="1.875" PointX="19" PointY="15.75" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CAUSASNCPROC" Width="1.625" PointX="17.25" PointY="17.375" />
+        <AssociationConnector Association="Gertakariak_BBDD.CAUSASNCKUKTURA_CAUSASNC_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.CAUSASNCPROC_CAUSASNC_FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.GRUPOS" Width="1.5" PointX="32.875" PointY="4.375" FillColor="255, 128, 128" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.PROYECTO" Width="1.75" PointX="30.625" PointY="3.375" FillColor="255, 128, 128" />
+        <AssociationConnector Association="Gertakariak_BBDD.GRUPOS_FKGRUPO" />
+        <AssociationConnector Association="Gertakariak_BBDD.PROYECTO_GRUPOS_FK" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.G8D" Width="1.75" PointX="11.375" PointY="18.25" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.BONOS" Width="1.5" PointX="35.375" PointY="8.125" FillColor="255, 128, 128" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.BONOS_LINEA" Width="1.5" PointX="33.25" PointY="8.125" FillColor="255, 128, 128" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_BONOS_LINEAS" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_PROYECTO_LINEAS" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.DETECCION" Width="1.75" PointX="16.625" PointY="13.75" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CAPACIDADES" Width="1.625" PointX="28.125" PointY="13.375" FillColor="128, 255, 128" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.GCPROVEE" Width="1.625" PointX="24.875" PointY="21.25" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.BONOSIS_PROYECTOS" Width="1.875" PointX="8" PointY="18.25" FillColor="128, 128, 255" />
+        <AssociationConnector Association="Gertakariak_BBDD.G8D_BONOSIS_FK" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.PARTICIPANTES" Width="1.5" PointX="32.875" PointY="2" FillColor="255, 128, 128" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_PROYECTO_PARTICIPANTES" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.USUARIOSGRUPOS" Width="1.75" PointX="24.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CLASIFICACION" Width="1.625" PointX="8.5" PointY="0.5" />
+        <AssociationConnector Association="Gertakariak_BBDD.CLASIFICACION_ESTRUTURA_FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.AVISOSEMAIL" Width="1.5" PointX="26.75" PointY="0.5" />
+        <AssociationConnector Association="Gertakariak_BBDD.ESTRUCTURAESTRUCTURA" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_MBL_PROYECTO_CLIENTE_OF_T" Width="2.625" PointX="5.375" PointY="10.125" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CPMAQSEC" Width="1.5" PointX="29.75" PointY="19.5" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.FAPERSONAL" Width="1.5" PointX="27.5" PointY="19.125" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_FAPERSONAL_GCPROVEE" />
+        <AssociationConnector Association="Gertakariak_BBDD.FAPERSONALCPMAQSEC" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.LECCIONES" Width="2" PointX="8.375" PointY="11.625" FillColor="255, 192, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.EMPRESAS" Width="1.5" PointX="30.125" PointY="13.25" FillColor="128, 255, 128" />
+        <AssociationConnector Association="Gertakariak_BBDD.EMPRESAS_CAPACIDADES" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CPBONOS" Width="1.5" PointX="29.75" PointY="24" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_FAPERSONAL_CPBONOS" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CPSECCIO" Width="1.5" PointX="32" PointY="21.875" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_CPSECCIO_CPBONOS" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_CPSECCIO_CPMAQSEC" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.PLANTAS_SAB_RH" Width="1.75" PointX="34.25" PointY="13.125" FillColor="128, 255, 128" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.PLANTAS" Width="1.625" PointX="32.125" PointY="13.125" FillColor="128, 255, 128" />
+        <AssociationConnector Association="Gertakariak_BBDD.EMPRESAS_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_PLANTASAB_PLANTAS" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Gertakariak_BBDD.ACTAS_MS" Width="2.25" PointX="17.625" PointY="8.625" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACTAS_MS_ACCIONES_OBSERVA_FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.AGRUPACION_LC" Width="2.25" PointX="6.125" PointY="5.25" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_ASSET" Width="2" PointX="0.5" PointY="12.875" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.FCPWTAC" Width="1.5" PointX="29.875" PointY="0.625" FillColor="0, 192, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_BONOS_LINEA_EMPRESA" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CPCABEC" Width="1.5" PointX="18.125" PointY="23.875" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.ISTRIKU_PARTE" Width="2" PointX="15.5" PointY="19.875" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_CPCABEC" Width="1.5" PointX="2.25" PointY="18.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_CPLISMAT" Width="1.5" PointX="0.5" PointY="18.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.CPLANTEGI" Width="1.5" PointX="16" PointY="23.875" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.CPLANTEGICPCABEC" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_OF_LAC" Width="1.5" PointX="11.125" PointY="4.25" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.GCALBARA" Width="1.5" PointX="18.125" PointY="19.75" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_GCLINPED" Width="1.5" PointX="3.125" PointY="0.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.GERTAKARIAK" Width="2.75" PointX="13.625" PointY="4.5" />
+        <AssociationConnector Association="Gertakariak_BBDD.GERTAKARIAK_PROYECTOSIKS_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACTAS_MS_GERTAKARIAK_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.DETECCION_GERTAKARIAK_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.G8D_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_GERTAKARIAK_LECCIONES" />
+        <AssociationConnector Association="Gertakariak_BBDD.GERTAKARIAK_FK2" />
+        <AssociationConnector Association="Gertakariak_BBDD.ISTRIKU_DOC_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.RESPONSABLES_GERTAKARIAK__FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_PROYECTO_CLIENTE_OF_TODAS" Width="2.625" PointX="2.875" PointY="12.875" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_GCPROVEE" Width="1.75" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="Gertakariak_BBDD.W_GCPROVEEW_GCLINPED" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_PROYECTO_CLIENTE_OF" Width="2.125" PointX="0.5" PointY="10.125" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.OFMARCA" Width="1.5" PointX="11.125" PointY="6.625" />
+        <AssociationConnector Association="Gertakariak_BBDD.OFMARCA_GERTAKARIAK_FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.W_MBL_PROYECTO_CLIENTE_OF" Width="2.375" PointX="2.875" PointY="10.125" />
+        <AssociationConnector Association="Gertakariak_BBDD.W_OF_LACOFMARCA" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.SAB_USUARIOS" Width="2.125" PointX="24.375" PointY="3.875" FillColor="128, 255, 128" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACCIONES_OBSERVACIONES_US_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACTAS_MS_USUARIOS_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.AVISOSEMAIL_USUARIOS_FK1" ManuallyRouted="true" >
+          <ConnectorPoint PointX="26.441509187942405" PointY="3.875" />
+          <ConnectorPoint PointX="26.75" PointY="1.297841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="Gertakariak_BBDD.DETECCION_SAB_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.GERTAKARIAK_USUARIOS_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.RESP_GERTAKARIAK_SAB_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.USUARIOS_SAB_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.USUARIOSGRUPOS_FK_SAB" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_USUARIOSIDEMPRESAS" />
+        <AssociationConnector Association="Gertakariak_BBDD.USUARIOS_FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.LINEASCOSTE" Width="1.5" PointX="8.75" PointY="5.125" />
+        <AssociationConnector Association="Gertakariak_BBDD.LINEASCOSTE_AGRUPACION_LC" />
+        <AssociationConnector Association="Gertakariak_BBDD.LINEASCOSTE_GERTAKARIAK_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.LINEASCOSTE_OFMARCA_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.CARACTERISTICAS_LC" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.G8D_E14" Width="1.5" PointX="9.75" PointY="24.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.G8D_E56" Width="1.5" PointX="11.625" PointY="24.5" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.G8D_E78" Width="1.5" PointX="13.5" PointY="24.5" />
+        <AssociationConnector Association="Gertakariak_BBDD.G8D_G8D_E14_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.G8D_G8D_E56_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.G8D_G8D_E78_FK1" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.GCCABPED" Width="1.625" PointX="22.75" PointY="19.625" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.GCLINPED" Width="1.5" PointX="20.625" PointY="19.625" FillColor="255, 255, 192" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.SCPEDCAB" Width="1.625" PointX="22.625" PointY="27.875" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_GCCABPED_GERTAKARIAK" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_GCCABPED_GCLINPED" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_GCPROVEE_GCCABPED" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_GCPROVEE_SCPEDCAB" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.DOCUMENTOS" Width="1.5" PointX="13.625" PointY="0.5" />
+        <AssociationConnector Association="Gertakariak_BBDD.DOCUMENTOS_ESTRUCTURA" />
+        <AssociationConnector Association="Gertakariak_BBDD.DOCUMENTOS_GERTAKARIAK" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.SCPEDLIN" Width="1.5" PointX="25" PointY="32.375" FillColor="255, 255, 192" />
+        <AssociationConnector Association="Gertakariak_BBDD.FK_SCPEDCAB_SCPEDLIN" />
+        <EntityTypeShape EntityType="Gertakariak_BBDD.ACCIONES" Width="1.5" PointX="17.5" PointY="4.25" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACCIONES_OBSERVACIONES_AC_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACTAS_MS_ACCIONES_FK1" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACCIONES_EJECUCION" />
+        <AssociationConnector Association="Gertakariak_BBDD.ACCIONES_USUARIOS" />
+        <AssociationConnector Association="Gertakariak_BBDD.DOCUMENTOS_ACCIONES" />
+        <AssociationConnector Association="Gertakariak_BBDD.GERTAKARIAK_ACCIONES" />
+        <AssociationConnector Association="Gertakariak_BBDD.EQUIPORESOLUCION" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

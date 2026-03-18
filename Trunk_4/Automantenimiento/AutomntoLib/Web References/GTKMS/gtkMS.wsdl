@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearIncidencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCreador" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DescProblema" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdActivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEstructura" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DescAccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearIncidenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CrearIncidenciaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearIncidenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearIncidencia" />
+  </wsdl:message>
+  <wsdl:message name="CrearIncidenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearIncidenciaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="gtkMSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearIncidencia">
+      <wsdl:input message="tns:CrearIncidenciaSoapIn" />
+      <wsdl:output message="tns:CrearIncidenciaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="gtkMSSoap" type="tns:gtkMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearIncidencia">
+      <soap:operation soapAction="http://tempuri.org/CrearIncidencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="gtkMSSoap12" type="tns:gtkMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearIncidencia">
+      <soap12:operation soapAction="http://tempuri.org/CrearIncidencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="gtkMS">
+    <wsdl:port name="gtkMSSoap" binding="tns:gtkMSSoap">
+      <soap:address location="https://intranet2.batz.es/GertakariakMS/Controles/ServiciosWeb/gtkMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="gtkMSSoap12" binding="tns:gtkMSSoap12">
+      <soap12:address location="https://intranet2.batz.es/GertakariakMS/Controles/ServiciosWeb/gtkMS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

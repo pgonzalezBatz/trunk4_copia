@@ -1,0 +1,48 @@
+body{line-height:1.5em;}
+a {color:#00a8dc;}
+#menu1{line-height:2em;}
+#menu1 h1{color:#AEAEAE;}
+#menu1 ul li{float:left; display:block; background-color:#fff;padding:0.3em 0.3em; }
+#menu1 ul li:hover{background-color:#b3b3b3;}
+div#menu1 ul li *{display:inherit;width:100%; height:100%; padding:0;}
+div#menu1 ul li a{background-image:none;}
+#menu2{min-height:0.5em;}
+.field-validation-error{color: #ff0000;}    
+.input-validation-error{    border: 1px solid #ff0000;    background-color: #ffeeee;outline: 1px solid #ff0000;}
+.validation-summary-errors{font-weight: bold;    color: #ff0000;}
+#contenido1{text-align:left;}
+#contenido1 h2{margin-top:0;}
+#contenido2{min-height:350px;}
+.table1 tr td a{display:inline-block; width:auto;}
+.editable input[type="text"]{width:6em;min-width:0;}
+.table2{font-size:0.9em;}
+.table2 tbody{font-size:0.8em;}
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+

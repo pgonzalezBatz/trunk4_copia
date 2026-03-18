@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8EBAEE9-2DFE-402B-B0B0-3066003E61E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SABLib_Z</RootNamespace>
+    <AssemblyName>SABLib_Z</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Istriku_Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Istriku_Debug\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SABLib.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Istriku_Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Istriku_Release\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SABLib.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GertakariakMS|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\GertakariakMS\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SABLib.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Extranet|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release_Extranet\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Extranet|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug_Extranet\</OutputPath>
+    <DocumentationFile>SABLib_Z.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="LocalizationLib2" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Oracle.ManagedDataAccess.Client" />
+    <Import Include="Oracle.ManagedDataAccess.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatzException\BatzException.vb" />
+    <Compile Include="BLL\EjecucionProcComponent.vb" />
+    <Compile Include="BLL\EstadisticasComponent.vb" />
+    <Compile Include="BLL\CulturasComponent.vb" />
+    <Compile Include="BLL\DepartamentosComponent.vb" />
+    <Compile Include="BLL\EmpresasComponent.vb" />
+    <Compile Include="BLL\GruposComponent.vb" />
+    <Compile Include="BLL\Interface\IEstadisticasComponent.vb" />
+    <Compile Include="BLL\Interface\ILoginComponent.vb" />
+    <Compile Include="BLL\Interface\IPlantasComponent.vb" />
+    <Compile Include="BLL\Interface\IDepartamentosComponent.vb" />
+    <Compile Include="BLL\Interface\ICulturasComponent.vb" />
+    <Compile Include="BLL\Interface\IEmpresasComponent.vb" />
+    <Compile Include="BLL\Interface\IGruposComponent.vb" />
+    <Compile Include="BLL\Interface\IRecursosComponent.vb" />
+    <Compile Include="BLL\Interface\IUsuariosComponent.vb" />
+    <Compile Include="BLL\LoginComponent.vb" />
+    <Compile Include="BLL\PlantasComponent.vb" />
+    <Compile Include="BLL\RecursosComponent.vb" />
+    <Compile Include="BLL\UsuariosComponent.vb" />
+    <Compile Include="BLL\Utils.vb" />
+    <Compile Include="DAL\Generado\CULTURAS.vb" />
+    <Compile Include="DAL\Generado\DEPARTAMENTOS.vb" />
+    <Compile Include="DAL\Generado\EJECUCION_PROCESOS.vb" />
+    <Compile Include="DAL\Generado\EMPRESAS.vb" />
+    <Compile Include="DAL\Generado\GRUPOS.vb" />
+    <Compile Include="DAL\Generado\GRUPOSCULTURAS.vb" />
+    <Compile Include="DAL\Generado\GRUPOSPLANTAS.vb" />
+    <Compile Include="DAL\Generado\GRUPOSRECURSOS.vb" />
+    <Compile Include="DAL\Generado\PLANTAS.vb" />
+    <Compile Include="DAL\Generado\RANGOKULTURA.vb" />
+    <Compile Include="DAL\Generado\RECURSOS.vb" />
+    <Compile Include="DAL\Generado\RECURSOSADMINISTRADORES.vb" />
+    <Compile Include="DAL\Generado\RECURSOSCULTURAS.vb" />
+    <Compile Include="DAL\Generado\RECURSOSPEDIDOS.vb" />
+    <Compile Include="DAL\Generado\SiteStadistic\usuarios.vb" />
+    <Compile Include="DAL\Generado\TICKETS.vb" />
+    <Compile Include="DAL\Generado\USUARIOS.vb" />
+    <Compile Include="DAL\Generado\USUARIOSGRUPOS.vb" />
+    <Compile Include="DAL\Generado\USUARIOS_PLANTAS.vb" />
+    <Compile Include="DAL\Generado\Views\GRUPOSCULTURASACTIVOS.vb" />
+    <Compile Include="DAL\Generado\Views\RECURSOSCULTURASACTIVOS.vb" />
+    <Compile Include="DAL\Generado\Views\W_FCPWTRA.vb" />
+    <Compile Include="DAL\Generado\Views\W_GRUPOS_RECURSO.vb" />
+    <Compile Include="DAL\Generado\Views\W_GRUPOS_USUARIO.vb" />
+    <Compile Include="DAL\Generado\Views\W_GRUPOS_USUARIO_ALL.vb" />
+    <Compile Include="DAL\Generado\Views\W_RECURSOS_EMPRESA.vb" />
+    <Compile Include="DAL\Generado\Views\W_RECURSOS_GRUPO.vb" />
+    <Compile Include="DAL\Generado\Views\W_RECURSOS_USUARIO.vb" />
+    <Compile Include="DAL\Personalizado\EJECUCION_PROCESOS.vb" />
+    <Compile Include="DAL\Personalizado\DEPARTAMENTOS.vb" />
+    <Compile Include="DAL\Personalizado\GRUPOSPLANTAS.vb" />
+    <Compile Include="DAL\Personalizado\SiteStadistic\usuarios.vb" />
+    <Compile Include="DAL\Personalizado\USUARIOS_PLANTAS.vb" />
+    <Compile Include="DAL\Personalizado\PLANTAS.vb" />
+    <Compile Include="DAL\Personalizado\CULTURAS.vb" />
+    <Compile Include="DAL\Personalizado\EMPRESAS.vb" />
+    <Compile Include="DAL\Personalizado\GRUPOS.vb" />
+    <Compile Include="DAL\Personalizado\GRUPOSCULTURAS.vb" />
+    <Compile Include="DAL\Personalizado\GRUPOSRECURSOS.vb" />
+    <Compile Include="DAL\Personalizado\RANGOKULTURA.vb" />
+    <Compile Include="DAL\Personalizado\RECURSOS.vb" />
+    <Compile Include="DAL\Personalizado\RECURSOSADMINISTRADORES.vb" />
+    <Compile Include="DAL\Personalizado\RECURSOSCULTURAS.vb" />
+    <Compile Include="DAL\Personalizado\RECURSOSPEDIDOS.vb" />
+    <Compile Include="DAL\Personalizado\TICKETS.vb" />
+    <Compile Include="DAL\Personalizado\USUARIOS.vb" />
+    <Compile Include="DAL\Personalizado\USUARIOSGRUPOS.vb" />
+    <Compile Include="DAL\SQLServerDirectAccess.vb" />
+    <Compile Include="ELL\EjecucionProc.vb" />
+    <Compile Include="ELL\cultura.vb" />
+    <Compile Include="ELL\Departamento.vb" />
+    <Compile Include="ELL\empresa.vb" />
+    <Compile Include="ELL\grupo.vb" />
+    <Compile Include="ELL\Planta.vb" />
+    <Compile Include="ELL\recurso.vb" />
+    <Compile Include="ELL\Ticket.vb" />
+    <Compile Include="ELL\usuario.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj">
+      <Project>{d8dfd338-036c-4472-8611-59566f4e37fb}</Project>
+      <Name>AccesoAutomaticoBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Memcached\Memcached.vbproj">
+      <Project>{1F46E55D-906C-4588-99CC-E81C4B4E373E}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assemblies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

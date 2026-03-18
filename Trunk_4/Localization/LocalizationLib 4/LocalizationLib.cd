@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LocalizationLib.Idiomas">
+    <Position X="0.5" Y="4.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAgAAAAAAAAAAAQgAAAACBAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Idiomas.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LocalizationLib.AccesoGenerico">
+    <Position X="3" Y="4.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="LocalizationLib.AccesoGenerico.Tipo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AccesoGenerico.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAEYAAAIAAQAgACAAAAAAAQAAAAAAIBAAAACg=</HashCode>
+      <FileName>AccesoGenerico.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalizationLib2.LanguageAdministration">
+    <Position X="7.25" Y="4.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="LocalizationLib2.LanguageAdministration.Termino" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>LanguageAdministration.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAUECAAUADAAAAAAEAAAEAAAAgAEAAAIAIgA=</HashCode>
+      <FileName>LanguageAdministration.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalizationLib2.Itzultzaile">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAEAEAAAAAACAAAAAAAAAAAAAAQAAAAgAE=</HashCode>
+      <FileName>C:\Users\aarrondo\Documents\Proyectos\Repositorio_Batz\Codigo_Compartido\SBatz\localization\Itzultzaile.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalizationLib2.Itzultzaile_Google">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Itzultzaile_Google.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LocalizationLib.IIdiomas">
+    <Position X="5.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IIdiomas.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Module Name="LocalizationLib2.ExtensionesWebControl">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAUIAEAAAAAACACAAACAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>C:\Users\aarrondo\Documents\Proyectos\Repositorio_Batz\Codigo_Compartido\SBatz\localization\Extensiones\ExtensionesWebControl.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="LocalizationLib2.ItzultzaileModulo">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>C:\Users\aarrondo\Documents\Proyectos\Repositorio_Batz\Codigo_Compartido\SBatz\localization\Extensiones\ExtensionesItzultzaile.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

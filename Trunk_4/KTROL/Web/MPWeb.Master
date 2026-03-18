@@ -1,0 +1,150 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPWeb.master.vb" Inherits="WebRaiz.MPWeb" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title>KTROL</title>
+	<!--Forzar la cabecera de compatibilidad para IE7 -->
+	<!--El comportamiento de algunas propiedades de no son iguales en IE7 y IE8
+	Ej.:Text-Aling:Center: El IE8 solo centra el texto. El resto de elementos no los centra. -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-------------------------------------------------------------------->
+	<link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+	<link href="App_Themes/Tema1/MenuBatz.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/style.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/AjaxControlToolKit.css" type="text/css" rel="Stylesheet" />
+	<link href="App_Themes/Tema1/DetailsView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/GridView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/FormView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/PanelCargandoDatos.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/Tema1/Ktrol.css" rel="stylesheet" type="text/css" />
+  
+	<asp:ContentPlaceHolder ID="head" runat="server">                
+        <script language="javascript" type="text/javascript">                
+            function close_window()
+            {
+                var Browser = navigator.appName;
+                var indexB = Browser.indexOf('Explorer');
+
+                if (indexB > 0) {
+                    var indexV = navigator.userAgent.indexOf('MSIE') + 5;
+                    var Version = navigator.userAgent.substring(indexV, indexV + 1);
+
+                    if (Version >= 7) {
+                        window.open('', '_self', '');
+                        window.close();
+                    }
+                    else if (Version == 6) {
+                        window.opener = null;
+                        window.close();
+                    }
+                    else {
+                        window.opener = '';
+                        window.close();
+                    }
+                }
+                else {
+                    window.close();
+                }
+			}
+
+			
+			//$(".datepicker").datepicker();
+        </script>
+
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" enctype="multipart/form-data" method="post" runat="server" defaultButton="btnPrueba">
+	<asp:ScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True" EnablePartialRendering="True">
+	</asp:ScriptManager>
+	<div>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="cabeceraIzquierda">
+					<asp:Literal ID="ltlUsuario" runat="server" Text="usuarioConectado"></asp:Literal>:
+					<asp:Label ID="lblUsuario" runat="server"></asp:Label>
+				</td>
+				<td class="cabeceraDerecha">
+					<asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal>
+				</td>
+			</tr>
+		</table>
+		<div id="menu2" runat="server">
+			<%--<asp:XmlDataSource ID="XmlDataSource" runat="server" DataFile="~/App_Data/menu.xml"></asp:XmlDataSource>--%>
+            <!-- El cache del xmldatasource está quitado porque a la hora de generar el menú dinámicamente es necesario que esté quitado -->
+            <asp:XmlDataSource ID="XmlDataSource" runat="server" EnableCaching="false"></asp:XmlDataSource>
+			<table width="100%">
+				<tr>
+					<td style="width: 15px">
+						<asp:Image ID="imgLogo" runat="server" ImageUrl="~/App_Themes/Tema1/Imagenes/logo_ktrol.png" />
+					</td>
+					<td style="width: 250px">
+                        <asp:Menu runat="server" DataSourceID="XmlDataSource" Orientation="Horizontal" ID="menu" DisappearAfter="30000" MaximumDynamicDisplayLevels="6">
+                            <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" ItemSpacing="0"
+                                CssClass="StaticMenuItemStyle" />
+                            <StaticHoverStyle CssClass="StaticHoverStyle" />
+                            <DynamicMenuItemStyle CssClass="DynamicMenuItemStyle" HorizontalPadding="8px" VerticalPadding="3px"
+                                ItemSpacing="0" />
+                            <DynamicMenuStyle CssClass="DynamicMenuStyle" />
+                            <DynamicHoverStyle CssClass="DynamicHoverStyle" />                            
+                            <DataBindings>
+                                <asp:MenuItemBinding TextField="title" NavigateUrlField="url" ValueField="id" ImageUrl="~/App_Themes/Tema1/Imagenes/bullet_hl.gif"
+                                    PopOutImageUrl="~/App_Themes/Tema1/Imagenes/arrow.gif" />
+                            </DataBindings>
+                        </asp:Menu>
+					</td>
+					<td style="text-align:right">
+						&nbsp;&nbsp;&nbsp;
+						<asp:DropDownList ID="ddlIdioma" runat="server" AutoPostBack="True" align="absmiddle" Visible="false">
+							<asp:ListItem Value="es-ES" Text="Castellano" />
+							<asp:ListItem Value="eu-ES" Text="Euskara" />
+							<asp:ListItem Value="en-GB" Text="English" />
+						</asp:DropDownList>
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="btnPrueba" runat="server" style="display:none" Enabled="false" UseSubmitBehavior="false" />
+                        <asp:ImageButton runat="server" ID="imgSalir" Tooltip="Cerrar Sesión" ImageUrl="App_Themes/Tema1/Imagenes/Log-Out.png" CausesValidation="false" OnClick="imgSalir_Click" />
+                        &nbsp;&nbsp;&nbsp;
+                        <%--<asp:ImageButton runat="server" ID="imgCerrar" Tooltip="Salir" ImageUrl="App_Themes/Tema1/Imagenes/cerrar.png"  CausesValidation="false" OnClientClick="close_window();return false;"  />--%>
+                        <asp:ImageButton runat="server" ID="imgCerrar" Tooltip="Salir" ImageUrl="App_Themes/Tema1/Imagenes/cerrar.png"  CausesValidation="false" OnClientClick="window.close();return false;"  />
+                        <%--<asp:Image ID="TopImage" runat="server" style="cursor:pointer" ImageUrl="App_Themes/Tema1/Imagenes/cerrar.gif" ImageAlign="Middle" onclick="return TopImageClicked();" />
+                        <asp:Button ID="ButtonTopImage" runat="server" CausesValidation="false" UseSubmitBehavior="false" style="display:none;" Text="" onclick="imgCerrar_Click" />--%>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="contenido1">
+			<table width="100%">
+				<tr>
+					<td align="left">
+						<asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+							<ContentTemplate>
+								<asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+									<asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+									<asp:Label ID="lblMensaje" runat="server"></asp:Label>
+								</asp:Panel>
+							</ContentTemplate>
+						</asp:UpdatePanel>
+					</td>
+					<%--<td>
+						Sección para añadir botones.
+					</td>--%>
+				</tr>
+			</table>
+			<div id="contenido2">
+				<asp:ContentPlaceHolder ID="cp" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<div id="pie">
+			<asp:ContentPlaceHolder ID="cphPie" runat="server">
+				<asp:Literal ID="Literal1" runat="server" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>&nbsp
+                <%--<a href="mailto:intranet@batz.es">intranet@batz.es</a>--%>
+                <asp:HyperLink id="hlnkHelp" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk" Target="_blank"/>
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+
+		<ascx:Mensajes runat="server" ID="ascx_Mensajes" />
+	</form>
+</body>
+</html>

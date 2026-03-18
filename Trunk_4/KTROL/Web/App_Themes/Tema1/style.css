@@ -1,0 +1,280 @@
+﻿.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+
+.MensajeError
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Red;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+.popupTable{border-collapse:collapse;width:650px;}
+.popupTable tr {background: #FCFDFE;}  /*Si se quita esta, en algunas partes, se ve transparente*/
+.popupTable tr th{text-align: center;background: #D3DFED;color: #4F76A3;padding: 2px;}
+.popupTable tr.alt td{background: #F1F5FA;color: #4F76A3;padding: 2px;cursor:pointer;}
+.popupTable tr td {border: 1px solid #D4E0EE;color: #555;padding: 2px;cursor:pointer;}
+.popupTable tr:hover td{background-color: #98B1CD;color: #FFFFFF;}
+
+/* Ajax Control Toolkit Calendar */
+.ajax__calendar_container{background-color:#fff; border:solid 1px #a6c9e2 !important;}
+.ajax__calendar_header{background-color: #A8CAE3;margin-bottom: 5px;}
+.ajax__calendar_title{height:20px; color:#fff; line-height:1.7em;}
+.ajax__calendar_hover .ajax__calendar_title {color:#eee !important;}
+.ajax__calendar_prev,.ajax__calendar_next{background-color:#dce6f4; height:20px !important; color:#fff !important;}
+.ajax__calendar_days table thead tr td{background-color:#fff; color:#000; font-weight:bold;}
+.ajax__calendar_dayname{border:0 !important;}
+.ajax__calendar_day {border:1px solid #c5dbec !important; background:#eaf4fd; margin:1px !important; height:15px !important; width:16px !important;}
+.ajax__calendar_month, .ajax__calendar_day {color:#2e6e9e; font-weight:bold; }
+.ajax__calendar_footer{border-top:1px solid #c5dbec !important; line-height:1.2em;}
+.ajax__calendar_today{border:1px solid #c5dbec; background-color:#e1effb;}
+td.ajax__calendar_hover div{background:#d2e6f5 !important; border:1px solid #79b7e7 !important;}
+td.ajax__calendar_active div{background:#fbec88 !important; border:1px solid #fad42e !important;}
+.ajax__calendar_other .ajax__calendar_day{font-weight:normal !important; color:#bbb !important; border:1px solid #eee !important;}
+.ajax__calendar_hover.ajax__calendar_other .ajax__calendar_day{background:#efefef !important; color:#aaa !important; border:1px solid #ddd !important;}
+
+.centrado
+{
+	text-align:center;
+}
+
+
+/*Mensajes de error y advertencia por reparación*/
+.MensajeErrorControl {
+    border: 1px solid;
+    margin: 10px 10px 10px 10px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('./Imagenes/error.gif');
+}
+
+.MensajeAdvertenciaControl {
+    border: 1px solid;
+    margin: 10px 10px 10px 10px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('./Imagenes/warningControl.png');
+}
+
+
+/* DIVS */
+.clear-float {clear:both;font-size:0}
+
+/* DIVS */
+
+/****LOGIN*****/
+
+.login
+{
+	background:#FFFFFF;
+	padding:4px;
+	border:0px;
+	font-family:Verdana;
+	font-size:12px;
+	color:#333333;		
+}
+
+.loginTextBoxStyle
+{
+	Font-Size:0.8em;
+	background-color: #d5e1e7;
+	border-width:1;	
+}
+
+
+.loginInstructionTextStyle
+{
+	font-style:italic;
+	color:#000000;	 
+}
+
+.loginTitleTextStyle
+{
+	background:#5D7B9D;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#FFFFFF;
+}
+
+.loginButtonStyle
+{
+	/*background:#FFFBFF;*/
+	background: #D5E1E7;
+	font-family: Verdana;
+	font-size: 0.8em;
+	color: #284775;
+	border-right: #cccccc 1px solid;
+	border-top: #cccccc 1px solid;
+	border-left: #cccccc 1px solid;
+	border-bottom: #cccccc 1px solid;
+}
+
+loginButtonStyle
+{
+	vertical-align: middle;
+	position: static;
+}
+
+/*********Fin login****/
+
+/*Inicio Usuarios*/
+
+div.imagen-seleccionado {background: url('./Imagenes/seleccionado.png') no-repeat;width:16px; height:16px; float:left; margin-right:3px;} 
+div.imagen-no-seleccionado {background: url('./Imagenes/noSeleccionado.png') no-repeat;width:16px; height:16px;float:left;margin-right:3px;}
+
+/*Fin usuarios*/
+
+.btnAceptarReferencia {
+    margin-top:10px;
+    width:32px;
+	height:32px;
+	vertical-align:middle;
+	text-align:center;
+	padding:7px 27px 7px 27px;
+	background-image:url('./Imagenes/fondoBoton.gif');
+}
+
+.botonHistoricos {
+    font: 10pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+	padding:2px 2px 2px 2px;}
+
+.botonAceptar {
+    font: 12pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+	padding:2px 2px 2px 2px;}
+
+/*FILTRADO HISTORICOS PANTALLA*/
+
+.definicionNoWidth {
+    padding-left:10px;
+    padding-right:10px;
+    background-color:#5D7B9D; 
+    text-align:center; 
+    color:White;
+}
+
+.definicion {
+    width:10%;
+    background-color:#5D7B9D; 
+    text-align:center; 
+    color:White;
+}
+
+.definicion15 {
+    width:15%;
+    background-color:#5D7B9D; 
+    text-align:center; 
+    color:White;
+}
+
+.campoTextoNormal {
+    background-color:#F7F6F3;
+}
+
+.width15 {
+    width:15%;
+}
+
+.width10 {
+    width:10%;
+}
+
+.cpHeader {
+    background-color: rgb(199,199,199);
+    cursor: pointer;
+    width: 100%;
+    height: 24px;
+}
+
+.cpBody {
+    width: 100%;
+}
+
+.vceCaracteristicas div, .vceCaracteristicas td{ 
+    color: Black;
+    font-weight: bold;
+    background-color: rgb(255, 250, 205);
+    border-color: black;
+}
+
+/*Modal popup*/
+.modalPopup {background-color: #FFFFFF;width: 300px;border: 3px solid rgb(93, 123, 157);}
+.modalPopup .header {background-color: rgb(93, 123, 157);height: 30px;color: White;line-height: 30px;text-align: center;font-weight: bold;}
+.modalPopup .body 
+{
+    min-height: 50px;
+    margin-top:10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.modalPopup .footer {padding: 3px;}
+.modalPopup .si, .modalPopup .no {color: White;width:35px;text-align: center;font-weight: bold;cursor: pointer;}
+.modalPopup .si, .modalPopup .no {background-color: rgb(93, 123, 157); border: 1px solid #5C5C5C;}
+
+.boton {
+    font: 10pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+	padding:2px 2px 2px 2px;
+}
+
+.controlGestorActivo {background-color: green; font-weight:bold; color:white; border:1px solid green}
+
+
+/*.hoverInfo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+    .hoverInfo p {
+        display: none;
+        color: #000000;
+    }
+
+    .hoverInfo:hover p {
+        background-color: rgba(255, 255, 255, 0.7);
+        display: block;
+    }*/
+
+
+
+
+#infoDiv {
+    background-color: lightgrey;
+    border: 2px solid grey;
+    visibility:hidden;
+    padding: 15px;
+}
+
+
+.innerTiptext:hover + #infoDiv {
+    visibility: visible;
+}
+
+.innerTiptext:not(:hover) + #infoDiv {
+    visibility: hidden;
+}
+
+#divInfoPieza #infoDiv {
+    visibility: hidden;
+}

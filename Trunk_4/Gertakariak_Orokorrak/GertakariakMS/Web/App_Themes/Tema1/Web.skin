@@ -1,0 +1,61 @@
+<%--
+Plantilla de máscara predeterminada. Las siguientes máscaras se proporcionan sólo como ejemplos.
+
+1. Máscara de control con nombre. SkinId debería definirse de forma única porque
+no se permite que haya varios SkinId por tipo de control en el mismo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Máscara predeterminada. Skinid no está definido Sólo se permite 
+   una máscara de control por tipo de control en el mismo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:SiteMapPath SkinID="SiteMapPath" runat="server" PathDirection="RootToCurrent">
+	<PathSeparatorTemplate>
+		<asp:Image ID="imgTitulo" runat="server" ImageUrl="~/App_Themes/Tema1/Imagenes/arrow.gif" ImageAlign="AbsMiddle" />
+	</PathSeparatorTemplate>
+	<NodeStyle Font-Names="verdana" BorderColor="#CCCCCC" BorderStyle="Double" BorderWidth="3" BackColor="#F4F4F4" />
+	<CurrentNodeStyle Font-Bold="True" BackColor="#CCCCCC" BorderStyle="Double" BorderWidth="3px" BorderColor="Black" />
+</asp:SiteMapPath>
+<%-- 
+<asp:Menu runat="server" SkinID="MenuHorizontal" Orientation="Horizontal"  RenderingMode="List">
+	<StaticMenuStyle Font-Names="Verdana,Arial,Times New Roman" BackColor="#E6E6E6" />
+	<DynamicMenuStyle BackColor="#E6E6E6" Font-Names="Verdana,Arial,Times New Roman"/>
+
+	<StaticMenuItemStyle BorderColor="#a8a8a8" BorderStyle="Solid" BorderWidth="1" HorizontalPadding="5" VerticalPadding="2" />
+	<DynamicMenuItemStyle BorderColor="#a8a8a8" BorderStyle="Solid" BorderWidth="1" HorizontalPadding="5" VerticalPadding="2" />
+
+	<StaticHoverStyle BackColor="#b3b3b3" />
+	<DynamicHoverStyle BackColor="#b3b3b3" />
+	
+	<StaticSelectedStyle />
+	<DynamicSelectedStyle />
+</asp:Menu>
+--%>
+<asp:GridView runat="server" CssClass="GridViewASP" GridLines="None" AutoGenerateColumns="False" PagerSettings-Position="Bottom" PagerSettings-Mode="NumericFirstLast" >
+	<RowStyle CssClass="RowStyle" />
+	<FooterStyle CssClass="FooterStyle" />
+	<PagerStyle CssClass="PagerStyle" />
+	<SelectedRowStyle CssClass="SelectedRowStyle" />
+	<HeaderStyle CssClass="HeaderStyle" />
+	<EditRowStyle CssClass="EditRowStyle" />
+	<AlternatingRowStyle CssClass="AlternatingRowStyle" />
+	<EmptyDataRowStyle CssClass="FooterStyle" />
+	<EmptyDataTemplate>
+		<asp:Label ID="lblSinDatos" runat="server" Text="Sin Datos"></asp:Label>
+	</EmptyDataTemplate>
+</asp:GridView>
+
+<asp:DetailsView runat="server" CssClass="DetailsView">
+	<HeaderStyle CssClass="HeaderStyleDetailsView" />
+	<FieldHeaderStyle CssClass="FieldHeaderStyle" />
+	<AlternatingRowStyle CssClass="AlternatingRowStyleDetailsView" />
+	<RowStyle CssClass="RowStyleDetailsView" />
+	<FooterStyle CssClass="FooterStyle" />
+	<PagerStyle CssClass="PagerStyle" />
+	<EditRowStyle CssClass="EditRowStyle" />
+	<CommandRowStyle CssClass="CommandRowStyleDetailsView" />
+</asp:DetailsView>

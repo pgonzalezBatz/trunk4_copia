@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{694E5787-9942-4390-88B4-E1C180685F36}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebRaiz</RootNamespace>
+    <AssemblyName>WebEnsamblado</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebEnsamblado.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebEnsamblado.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\Assemblies\GenerateExcel\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.24.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\HtmlAgilityPack.1.11.24\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSXML">
+      <HintPath>Assemblies\Interop.MSXML.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SABLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SABLib\bin\Debug\SABLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="AjaxControlToolkit" />
+    <Import Include="KtrolLib" />
+    <Import Include="LocalizationLib" />
+    <Import Include="log4net" />
+    <Import Include="Memcached" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MSXML" />
+    <Import Include="Oracle.DataAccess" />
+    <Import Include="Sablib" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\Mensajes.ascx.designer.vb">
+      <DependentUpon>Mensajes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Mensajes.ascx.vb">
+      <DependentUpon>Mensajes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\SelectorOperacion_Historial.ascx.designer.vb">
+      <DependentUpon>SelectorOperacion_Historial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\SelectorOperacion_Historial.ascx.vb">
+      <DependentUpon>SelectorOperacion_Historial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\SelectorReferencia_Historial.ascx.designer.vb">
+      <DependentUpon>SelectorReferencia_Historial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\SelectorReferencia_Historial.ascx.vb">
+      <DependentUpon>SelectorReferencia_Historial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\PasosGestor.aspx.designer.vb">
+      <DependentUpon>PasosGestor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\PasosGestor.aspx.vb">
+      <DependentUpon>PasosGestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\PasosCalidad.aspx.designer.vb">
+      <DependentUpon>PasosCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\PasosCalidad.aspx.vb">
+      <DependentUpon>PasosCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DescargarAyudaVisual.aspx.designer.vb">
+      <DependentUpon>DescargarAyudaVisual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DescargarAyudaVisual.aspx.vb">
+      <DependentUpon>DescargarAyudaVisual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Calidad\ModificarCaracteristicas.aspx.designer.vb">
+      <DependentUpon>ModificarCaracteristicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Calidad\ModificarCaracteristicas.aspx.vb">
+      <DependentUpon>ModificarCaracteristicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Calidad\HistoricosInforme.aspx.designer.vb">
+      <DependentUpon>HistoricosInforme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Calidad\HistoricosInforme.aspx.vb">
+      <DependentUpon>HistoricosInforme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Calidad\HistoricosPantalla.aspx.designer.vb">
+      <DependentUpon>HistoricosPantalla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Calidad\HistoricosPantalla.aspx.vb">
+      <DependentUpon>HistoricosPantalla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DescargarArchivo.aspx.designer.vb">
+      <DependentUpon>DescargarArchivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DescargarArchivo.aspx.vb">
+      <DependentUpon>DescargarArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\OperacionKaplanPrisma.aspx.designer.vb">
+      <DependentUpon>OperacionKaplanPrisma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\OperacionKaplanPrisma.aspx.vb">
+      <DependentUpon>OperacionKaplanPrisma.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Pruebas.aspx.designer.vb">
+      <DependentUpon>Pruebas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Pruebas.aspx.vb">
+      <DependentUpon>Pruebas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\ResumenGestor.aspx.designer.vb">
+      <DependentUpon>ResumenGestor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\ResumenGestor.aspx.vb">
+      <DependentUpon>ResumenGestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\SeleccionRefOp.aspx.designer.vb">
+      <DependentUpon>SeleccionRefOp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\SeleccionRefOp.aspx.vb">
+      <DependentUpon>SeleccionRefOp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\ResumenCalidad.aspx.designer.vb">
+      <DependentUpon>ResumenCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\ResumenCalidad.aspx.vb">
+      <DependentUpon>ResumenCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\ResumenOperario.aspx.designer.vb">
+      <DependentUpon>ResumenOperario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\ResumenOperario.aspx.vb">
+      <DependentUpon>ResumenOperario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\PasosOperario.aspx.designer.vb">
+      <DependentUpon>PasosOperario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\PasosOperario.aspx.vb">
+      <DependentUpon>PasosOperario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Calidad\Historicos.aspx.designer.vb">
+      <DependentUpon>Historicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Calidad\Historicos.aspx.vb">
+      <DependentUpon>Historicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\ImagenCroquis.aspx.designer.vb">
+      <DependentUpon>ImagenCroquis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\ImagenCroquis.aspx.vb">
+      <DependentUpon>ImagenCroquis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\BuscarUsuarios.aspx.designer.vb">
+      <DependentUpon>BuscarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\BuscarUsuarios.aspx.vb">
+      <DependentUpon>BuscarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Departamentos.aspx.designer.vb">
+      <DependentUpon>Departamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Departamentos.aspx.vb">
+      <DependentUpon>Departamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Publico\ImagenAyudaVisual.aspx.designer.vb">
+      <DependentUpon>ImagenAyudaVisual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Publico\ImagenAyudaVisual.aspx.vb">
+      <DependentUpon>ImagenAyudaVisual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Usuarios.aspx.designer.vb">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Usuarios.aspx.vb">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Busqueda.aspx.designer.vb">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda.aspx.vb">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\PageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\PanelCargandoDatos.ascx.designer.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PanelCargandoDatos.ascx.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Titulo.ascx.designer.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Titulo.ascx.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MPSinMenu.Master.designer.vb">
+      <DependentUpon>MPSinMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPSinMenu.Master.vb">
+      <DependentUpon>MPSinMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPWeb.Master.designer.vb">
+      <DependentUpon>MPWeb.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPWeb.Master.vb">
+      <DependentUpon>MPWeb.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Paginas\VerArchivo.aspx.designer.vb">
+      <DependentUpon>VerArchivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\VerArchivo.aspx.vb">
+      <DependentUpon>VerArchivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Servicio\ServiciosWeb.asmx.vb">
+      <DependentUpon>ServiciosWeb.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilidades\Utils.aspx.designer.vb">
+      <DependentUpon>Utils.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\Utils.aspx.vb">
+      <DependentUpon>Utils.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\InformesCognos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Tema1\ControlesBatz\VentanaWindows.css" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Descargar.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Guardar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Ver24.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\info-icon16.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\info-icon24.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\Marvin.jpg" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\warning-icon16.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\warning-icon24.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_cambio_referencia.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_guardar.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_NOK_NoSeleccionado.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_NOK_Seleccionado.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_OK_NoSeleccionado.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_OK_Seleccionado.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_reparacion.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_validacion.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\btnAceptar.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\btnCancelarValidacion.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\btnGuardarValidacion.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\cerrar.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\error_big.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\Log-Out.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\logo_helpdesk_grande.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\logo_Ktrol_grande.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\warningControl.png" />
+    <Content Include="App_Themes\Tema1\jquery-ui.css" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Actualizar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Actualizar32.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\addFile24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Ayuda16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Ayuda24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Ayuda32.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cambiar32.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_active.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_hover.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_Inactive.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_left_active.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_left_hover.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_left_inactive.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_right_active.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_right_hover.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TabExtender\tab_right_inactive.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\boton_siguiente_paso.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\caracteristica_bien.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\caracteristica_mal.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\clock.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\Finalizar_paso.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\fondoBoton.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\imagen_no_disponible.jpg" />
+    <Content Include="App_Themes\Tema1\Imagenes\imgAnterior.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\imgSiguiente.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\infoPieza.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\logo_ktrol.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\minus.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\ok-resumen.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\plus.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\sortascending.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\sortdescending.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\usuarioCalidad.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\usuarioOperario.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\warning-resumen.png" />
+    <Content Include="App_Themes\Tema1\images\animated-overlay.gif" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="App_Themes\Tema1\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_056b93_256x240.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="App_Themes\Tema1\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="App_Themes\Tema1\Keyboard\Keyboard.css" />
+    <Content Include="App_Themes\Tema1\Keyboard\keyboard.png" />
+    <Content Include="App_Themes\Tema1\Keyboard\keyboard_small.png" />
+    <Content Include="App_Themes\Tema1\Ktrol.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Themes\Tema1\ThickBox\loadingAnimation.gif" />
+    <Content Include="App_Themes\Tema1\ThickBox\thickbox-compressed.js" />
+    <Content Include="App_Themes\Tema1\ThickBox\thickbox.css" />
+    <Content Include="Assemblies\Interop.MSXML.dll" />
+    <Content Include="Controles\Mensajes.ascx" />
+    <Content Include="Controles\SelectorOperacion_Historial.ascx" />
+    <Content Include="Controles\SelectorReferencia_Historial.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="js\jQuery\jquery-1.7.2.min.js" />
+    <Content Include="js\jQuery\jquery-ui.js" />
+    <Content Include="js\jQuery\jquery.cookie.js" />
+    <Content Include="js\jQuery\jquery.numeric-1.4.1.js" />
+    <Content Include="js\jQuery\Keyboard\jquery.keyboard.js" />
+    <Content Include="js\jQuery\UsuariosCalidad.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="js\jQuery\jquery.numeric.js" />
+    <Content Include="Paginas\Publico\PasosGestor.aspx" />
+    <Content Include="Paginas\Publico\PasosCalidad.aspx" />
+    <Content Include="Paginas\DescargarAyudaVisual.aspx" />
+    <Content Include="Paginas\Calidad\ModificarCaracteristicas.aspx" />
+    <Content Include="Paginas\Calidad\HistoricosInforme.aspx" />
+    <Content Include="Paginas\Calidad\HistoricosPantalla.aspx" />
+    <Content Include="Paginas\DescargarArchivo.aspx" />
+    <Content Include="Paginas\Administracion\OperacionKaplanPrisma.aspx" />
+    <Content Include="Paginas\Administracion\Pruebas.aspx" />
+    <Content Include="Paginas\Publico\ResumenGestor.aspx" />
+    <Content Include="Paginas\Publico\SeleccionRefOp.aspx" />
+    <Content Include="Paginas\Publico\ResumenCalidad.aspx" />
+    <Content Include="Paginas\Publico\ResumenOperario.aspx" />
+    <Content Include="Paginas\Publico\PasosOperario.aspx" />
+    <Content Include="Paginas\Calidad\Historicos.aspx" />
+    <Content Include="Paginas\Publico\ImagenCroquis.aspx" />
+    <Content Include="Paginas\BuscarUsuarios.aspx" />
+    <Content Include="Paginas\Administracion\Departamentos.aspx" />
+    <Content Include="Paginas\Publico\ImagenAyudaVisual.aspx" />
+    <Content Include="Paginas\Administracion\Usuarios.aspx" />
+    <Content Include="App_Data\menu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Tema1\AjaxControlToolKit.css" />
+    <Content Include="App_Themes\Tema1\DetailsView.css" />
+    <Content Include="App_Themes\Tema1\FormView.css" />
+    <Content Include="App_Themes\Tema1\GridView.css" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Aceptar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Aceptar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Aceptar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Atras.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\EliminarFiltro16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\EliminarFlitro24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\Filtrar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\Filtrar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cancelar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cancelar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cancelar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Copiar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Copiar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Editar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Editar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Editar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Eliminar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\EliminarFiltro.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\Flitrar.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Eliminar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Eliminar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\login.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\mail.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Nuevo.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Nuevo16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Nuevo24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\PanelExtensible\Contraer.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\PanelExtensible\Extender.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\PanelExtensible\Original.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Seleccionar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Seleccionar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Seleccionar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Siguiente.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\CalendarExtender\Calendario.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\CollapsiblePanelExtender\collapse_blue.jpg" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\CollapsiblePanelExtender\expand_blue.jpg" />
+    <Content Include="App_Themes\Tema1\Imagenes\advertencia.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\arrow.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\borrar.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\bullet_hl.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\Cargando.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\cerrar.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\error.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\info.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\noSeleccionado.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\seleccionado.png" />
+    <Content Include="App_Themes\Tema1\MenuBatz.css" />
+    <Content Include="App_Themes\Tema1\PanelCargandoDatos.css" />
+    <Content Include="App_Themes\Tema1\style.css" />
+    <Content Include="Busqueda.aspx" />
+    <Content Include="Controles\PanelCargandoDatos.ascx" />
+    <Content Include="Controles\Titulo.ascx" />
+    <Content Include="js\jQuery\usuarios.js" />
+    <Content Include="Global.asax" />
+    <Content Include="MPWeb.Master" />
+    <Content Include="App_Themes\Tema1\Fuentes\Batz_Font.TTF" />
+    <Content Include="MPSinMenu.Master" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\Info Icon  Aesthetica 2 Iconset  DryIcons.website" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\VentanaMensajes\Warning Icon  Aesthetica 2 Iconset  DryIcons.website" />
+    <Content Include="App_Themes\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Tema1\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="js\jQuery\Web.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Paginas\VerArchivo.aspx" />
+    <Content Include="PermisoDenegado.aspx" />
+    <Content Include="Servicio\ServiciosWeb.asmx" />
+    <Content Include="Utilidades\Utils.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\KaPlan\KaPlanLib 4\KaPlanLib 4.vbproj">
+      <Project>{9fbd65f9-188e-48ef-98bf-fe37528df89c}</Project>
+      <Name>KaPlanLib 4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Localization\LocalizationLib\LocalizationLib 4.vbproj">
+      <Project>{0e619969-8585-4d6c-a20b-9848826a4f1d}</Project>
+      <Name>LocalizationLib 4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KtrolLib\KtrolLib.vbproj">
+      <Project>{ce9809a2-ae38-4fda-88c1-0e3cd1483178}</Project>
+      <Name>KtrolLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\SlowCheetah.2.5.15\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36959</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+</Project>

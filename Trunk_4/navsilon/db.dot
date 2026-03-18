@@ -1,0 +1,27 @@
+digraph db{
+	fontsize = 8;
+	node [shape = "record"];
+        edge [arrowhead = "none"];
+
+	negocio[label="{negocio | id \l nombre\l}"];
+	mano_obra[label="{mano_obra | id\l nombre\l}"];
+	departamento[label="{departamento | id\l id_negocio\l id_mano_obra\l nombre\l fecha_baja\l}"];
+	epsilon_contabilidad[label="{epsilon_contabilidad | id_epsilon\l id_departamento\l}"];
+	departamentos_epsilon[label="departamentos_epsilon" shape="ellipse" color="orange" style="filled"]
+	
+	aplicacion[label="{aplicacion | id\l id_aplicacion\l}"];
+	tipo_cuenta[label="{tipo_cuenta | id\l id_aplicacion\l nombre\l}"];
+	cuenta[label="{cuenta | id\l id_tipo_cuenta\l nombre\l }"];
+	departamento_cuenta[label="{departamento_cuenta | id_cuenta\l id_departamento\l}"];
+
+	negocio -> mano_obra;
+	mano_obra -> departamento;
+	departamento -> departamentos_epsilon;
+	departamento -> epsilon_contabilidad;
+	aplicacion -> tipo_cuenta;
+	tipo_cuenta -> cuenta;
+	cuenta -> departamento_cuenta;
+	departamento -> departamento_cuenta;
+
+	
+}

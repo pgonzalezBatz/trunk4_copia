@@ -1,0 +1,24 @@
+﻿/*Proponer este estilo para los FormView*/
+/* Estilo general de la tabla */
+.FormView Caption	{font-weight:bold;}
+
+/*Estilo de la cabecera */
+.HeaderStyleFormView	{background:#5D7B9D; font-weight:bold; color:White; }
+
+/*Estilo general de las filas*/
+.RowStyleFormView		{background:#F7F6F3;}
+
+/*Estilo de las filas en modo edición*/
+.EditRowStyleFormView	{background:#999999;}
+
+/*Estilo de Paginación */
+.PagerStyleFormView		{background:#284775; text-align:center; color:White;}
+.PagerStyleFormView	a	{color:White;}
+
+/*Estilo del pie*/
+.FooterStyleFormView	{background:#5D7B9D; font-weight:bold; color:White; }
+
+
+
+
+

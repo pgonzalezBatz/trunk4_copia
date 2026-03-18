@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <link href="//intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+    <link href="Content/StyleSheet1.css" rel="stylesheet" type="text/css" />
+    <title>Ayuda</title>
+</head>
+<body>
+    <div id="menu1"></div>
+    <div id="menu2"></div>
+    <div id="contenido1">
+        <div id="contenido2">
+        <h1>NAVSILON</h1>    
+            <p> La aplicación Navsilon, ha sido diseñada para mantener las relaciones entre departamentos que existen en el sistema de Recursos Humanos (Epsilon) y
+                Administración (Navision). Dentro de la aplicación, tenemos 4 subprocessos que son necesarios completar para mantener todas las relaciones.
+            </p>
+            <ul>
+                <li><a href="#organigrama">Paso 1: Creación del organigrama de administración</a></li>
+                <li><a href="#relaciones">Paso 2: Relacionar organigrama de Recursos Humanos con Administración</a></li>
+                <li><a href="#cuentas">Paso 3: Creación del arbol de cuentas</a></li>
+                <li><a href="#cuentasoraganigrama">Paso 4: Asignación de las cuentas al organigrama de administración</a></li>
+                <li><a href="#db">Diseño de base de datos</a></li>
+            </ul>
+            <h3 id="organigrama">Paso 1: Creación del organigrama de administración</h3>
+            <p>
+                El organigrama de administración consta de 3 niveles: Negocio, mano de obra y departamento.
+                </p>
+            <p>
+                Primero tenemos que crear los negocios. Cada negocio tendra automaticamente una mano de obra directa y una indirecta.
+                </p>
+            <p>
+                Por último, tenemos que crear los departamentos de administración en las respectivas manos de obra.
+                </p>
+            <h3 id="relaciones">Paso 2: Relacionar organigrama de Recursos Humanos con Administración</h3>
+            <p>
+               Una vez tengamos el organigrama finalizado, procedemos a relacionarlo con el organigrama de Recursos Humanos.
+            </p>	
+            <p>
+                Aquí tenemos un listado de todos los departamentos de Recursos Humanos y tenemos que relacionar cada uno de ellos con los departamentos que acabamos de introducir.
+            </p>
+            <h3 id="cuentas">Paso 3: Creación del arbol de cuentas</h3>								
+            <p>
+                Por otra parte, tambien tenemos las cuentas contables que se organizara por aplicación. De ahi que primero tengamos que crear la aplicación a la cual las cuentas pertenecerán.
+            </p>
+            <p> 
+                Una vez creada la aplicación, tenemos que crear los tipos de cuenta que tendra esa aplicación. Estas son las agrupaciones de cuentas que cada departamento tendra que tener.
+            </p>
+            <p> 
+                Por último, dentro de cada tipo de cuenta, crearemos todas las cuentas necesarias.
+            </p>
+            <h3 id="cuentasoraganigrama">Paso 4: Asignación de las cuentas al organigrama de administración</h3>
+            <p>
+                Para finalizar con las cuentas, tenemos que relacionar para cada departamento dentro de cada aplicacion, las cuentas a las que se inputaran los gastos.
+            </p>
+            <h3 id="db">Diseño de base de datos</h3>
+            <p><img src="Content/db.png" /></p>
+        </div>
+    </div>
+</body>
+</html>

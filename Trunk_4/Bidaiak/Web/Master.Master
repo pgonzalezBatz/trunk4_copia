@@ -1,0 +1,95 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Master.Master.vb" Inherits="WebRaiz.Master" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Bidaiak</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1;maximum-scale=1, user-scalable=no" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <link href="Content/ToastNotification/jquery.toastmessage.css" type="text/css" rel="Stylesheet" />
+    <link href="Content/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />	    
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />	
+</head>   
+<body onload="top.document.title = 'Bidaiak'">  
+    <script type="text/javascript">
+         function showToast(pTexto, pType, pSticky) {
+             $().toastmessage('showToast', {
+                 text: pTexto,
+                 sticky: pSticky,
+                 position: 'middle-center',
+                 type: pType,
+                 closeText: ''
+             });
+         }
+     </script> 
+	<form id="form1" runat="server">        
+	<ajax:ToolkitScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">   
+        <Scripts>            
+            <asp:ScriptReference Path="~/Scripts/jquery-1.9.1.min.js" />  
+            <asp:ScriptReference Path="~/Scripts/bootstrap-pagination.js" />
+            <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />            
+            <asp:ScriptReference Path="~/Scripts/moment-with-locales.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery.toastmessage.js" />
+            <asp:ScriptReference Path="~/Scripts/bootstrap-datetimepicker.js" />
+            <asp:ScriptReference Path="~/Scripts/typeahead.bundle.min.js" /> 
+        </Scripts>
+     </ajax:ToolkitScriptManager>     
+    <asp:ContentPlaceHolder ID="cphHeader" runat="server">        
+        <a href="/HomeIntranet" title='<%=Traducir("Ir a la pagina de la intranet")%>' class="cabApp"></a>        
+    </asp:ContentPlaceHolder>
+    <div class="navbar navbar-default">
+        <div class="container-fluid resourcemenu">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" runat="server" id="btnMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                                        
+                <asp:Image ID="imgLogo" runat="server" AlternateText="Bidaiak" CssClass="navbar-brand" />
+            </div>
+            <div class="navbar-collapse collapse" runat="server" id="divMenu">
+                <asp:Label runat="server" ID="labelMenu"></asp:Label>
+                <ul class="nav navbar-nav navbar-right">                                       
+                    <li>
+                        <a href='#' id='aSalir'><span class='glyphicon glyphicon-off'></span>&nbsp;<%=Traducir("Salir")%></a>
+                    </li>                  
+                </ul>    
+                <p class="navbar-text navbar-right nombreUser hidden-xs hidden-sm" runat="server" id="liUserCon">
+                    <a>
+                        <span class="glyphicon glyphicon-user"></span>&nbsp;                                    
+                        <asp:Label runat="server" ID="lblUserConnected2" Text="Usuario"></asp:Label>
+                    </a>
+                </p>              
+            </div> 
+        </div>
+        <div class="container-fluid hidden-md hidden-lg" style="background-color:#ebebeb" runat="server" id="divName">
+            <div class="navbar-header"><asp:Label runat="server" style="color:#337ab7;" ID="lblUserConnected" CssClass="navbar-brand"></asp:Label>
+            </div>
+        </div> 	      
+    </div>
+    <asp:Button runat="server" UseSubmitBehavior="false" ID="btnLogOff" class="logOff" style="display:none" />  <!--Si no se pone el usesubmitbehaviour, al pulsar en algunas paginas el enter, se lanza este evento y se cierra la sesion-->
+    <div class="container">
+        <div class="page-header">
+            <h3><asp:Label runat="server" ID="lblTitulo"></asp:Label></h3>
+        </div>        
+        <asp:ContentPlaceHolder ID="cp" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="footer">
+                <br /><center>				    
+				<asp:Label id="labelFooter" runat="server" Text="encasodeteneralgunproblema contactarcon" />
+				<asp:HyperLink id="hlnkAdmin" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk"/>
+            </center><br />
+        </div>
+    </div>	
+    <script language="javascript" type="text/javascript">
+        <!--Necesario para añadirlo a la derecha-->
+         $(document).ready(function () {            
+             $('#aSalir').click(function () {                 
+                 $(".logOff").click();
+             });
+         });
+    </script>		
+	</form>
+</body>
+</html>

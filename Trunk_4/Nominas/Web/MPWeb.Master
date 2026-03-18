@@ -1,0 +1,92 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPWeb.Master.vb" Inherits="Nominas.MPWeb" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html>
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>	    
+    <meta name="viewport" content="width=device-width, initial-scale=1;maximum-scale=1, user-scalable=no" />
+	<link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+	<link href="App_Themes/Tema1/style.css" type="text/css" rel="Stylesheet" />	
+	<link href="App_Themes/Tema1/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/Tema1/summernote.css" rel="stylesheet"/>
+    <link href="App_Themes/Tema1/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+    <%--<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="Stylesheet" />--%>
+</head>
+<body onload="top.document.title = '<%=Traducir("Nominas")%>';">
+	<form id="form1" runat="server">
+	<div>
+    <ASP:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True" EnableScriptLocalization="True" EnablePageMethods="true">
+        <Scripts>   
+                    <asp:ScriptReference Path="~/js/jQuery/moment.min.js" />
+                    <%--<asp:ScriptReference Path="~/js/jQuery/jquery-3.2.1.min.js" />--%>
+                    <asp:ScriptReference Path="~/js/jQuery/jquery-2.2.3.min.js" />
+                    <%--<asp:ScriptReference Path="~/js/jQuery/jquery-ui.min.js" />--%>               
+                    <asp:ScriptReference Path="~/js/jQuery/jquery-ui-1.11.4.min.js" />                  
+                    <asp:ScriptReference Path="~/App_Themes/Tema1/bootstrap/3.3.7/js/bootstrap.min.js" />
+                    <asp:ScriptReference Path="~/App_Themes/Tema1/ClueTip/jquery.cluetip.js" />    
+                    <asp:ScriptReference Path="~/js/summernote.min.js" />                                 
+                    <asp:ScriptReference Path="~/js/lang/summernote-es-ES.js"/>
+                    <asp:ScriptReference Path="~/js/lang/summernote-eu-ES.js"/>
+                    <asp:ScriptReference Path="~/js/lang/summernote-de-DE.js"/>
+                    <asp:ScriptReference Path="~/js/lang/summernote-cs-CZ.js"/>
+                    <asp:ScriptReference Path="~/js/lang/summernote-pt-PT.js"/>
+                    <asp:ScriptReference Path="~/js/lang/summernote-it-IT.js"/>
+                    <asp:ScriptReference Path="~/js/lang/summernote-fr-FR.js"/> 
+                    <asp:ScriptReference Path="~/Scripts/moment.min.js"/> 
+                    <asp:ScriptReference Path="~/js/bootstrap-datetimepicker.min.js" />                                 
+        </Scripts>
+    </ASP:ScriptManager>         
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" runat="server" id="btnMenu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <asp:Image ID="imgLogo" runat="server" AlternateText="SAB" ImageUrl="~/App_Themes/Tema1/Images/logo.png" CssClass="navbar-brand" />
+                </div>
+                <div class="navbar-collapse collapse" runat="server" id="divMenu">
+                    <asp:Label runat="server" ID="labelMenu"></asp:Label>                                
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href='#' id='aSalir'><span class='glyphicon glyphicon-off'></span>&nbsp;<%=Traducir("Salir")%></a>
+                        </li>
+                    </ul>
+                    <p class="navbar-text navbar-right"><span class="glyphicon glyphicon-user"></span>&nbsp;<asp:Label runat="server" ID="lblUserCon"></asp:Label></p>
+                </div>
+            </div>             
+            <div class="container-fluid" style="background-color:#ebebeb;">
+                <div class="navbar-header">                    
+                    <div class="navbar-brand"><asp:Label runat="server" style="color:#337ab7" ID="lblTitulo"></asp:Label></div>
+                </div>
+            </div>             
+        </div>         
+        <%--<asp:Button runat="server" ID="btnLogOff" class="logOff" style="visibility:hidden" />--%>
+        <asp:Button runat="server" ID="btnLogOff" class="logOff" style="display:none" />           
+        <asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+                    <asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+                    <asp:Label ID="lblMensaje" runat="server">
+                    </asp:Label>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel> 
+        <div class="container">
+            <asp:ContentPlaceHolder ID="cp" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>   						
+	</div>
+	</form>
+     <script language="javascript" type="text/javascript">
+        <!--Necesario para añadirlo a la derecha-->
+         $(document).ready(function () {            
+             $('#aSalir').click(function () {                 
+                 $(".logOff").click();
+             });
+         });
+    </script>
+</body>
+</html>

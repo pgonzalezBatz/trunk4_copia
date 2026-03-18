@@ -1,0 +1,101 @@
+alter table etiqueta add descripcion varchar2(300)
+
+2013-05-10
+==========
+
+--SAB
+grant select on plantas to inventario
+grant select on usuarios_plantas to inventario
+grant select on usuarios to inventario
+grant select on usuariosgrupos  to inventario
+grant select on gruposrecursos to inventario
+--Baliabidef
+grant select,insert,update on tipo to inventario
+grant select,insert,update on marca to inventario
+grant select,insert,update on modelo to inventario
+grant select,insert,delete,update on etiqueta to inventario
+grant select,insert,update on usuario_etiqueta to inventario
+grant select on tipo_seq to inventario
+grant select on marca_seq to inventario
+grant select on modelo_seq to inventario
+create sequence id_etiqueta_seq start with 000001 increment by 3 nocache
+grant select on id_etiqueta_seq to inventario
+2013-01-21
+==========
+drop table etiqueta
+drop table atributo
+drop table tipo
+drop sequence tipo_seq 
+create table tipo(
+       id		number not null,
+       nombre		varchar2(70) not null,
+       fecha_baja	date,
+       constraint pk_tipo primary key(id)
+)
+create table marca(
+       id		number not null,
+       id_tipo		number not null,
+       nombre		varchar2(70) not null,
+       fecha_baja	date,
+       constraint pk_marca primary key(id),
+       constraint fk_marca_tipo foreign key(id_tipo) references tipo(id)
+)
+create table modelo(
+       id		number not null,
+       id_marca		number not null,
+       nombre		varchar2(70) not null,
+       precio		number,
+       fecha_baja	date,
+       constraint pk_modelo primary key(id),
+       constraint fk_modelo_marca foreign key(id_marca) references marca(id)
+)
+create table etiqueta(
+       id		number not null,
+       id_modelo	number not null,
+       fecha_baja	date,
+       numero_serie		varchar2(200),
+       constraint pk_etiqueta primary key(id),
+       constraint fk_etiqueta_modelo foreign key(id_modelo) references modelo(id)
+)
+create table usuario_etiqueta(
+       id_sab			number not null,
+       id_etiqueta		number not null,
+       fecha_alta		date,
+       fecha_baja		date,
+       asignado_departamento	number,
+       constraint pk_usuario_etiqueta primary key(id_sab,id_etiqueta,fecha_alta)
+)
+create sequence tipo_seq start with 1 increment by 1    nocache
+create sequence marca_seq start with 1 increment by 1	nocache
+create sequence modelo_seq start with 1 increment by 1	nocache
+==============
+create table tipo(
+       id		number not null,
+       nombre		varchar(70) not null,
+       fecha_baja	date,
+       constraint pk_tipo primary key(id)
+)
+
+create table atributo(
+       id		number not null,
+       nombre		varchar(70) not null,
+       fecha_baja	date,
+       constraint pk_atributo primary key(id)
+)
+
+create table etiqueta(
+       id		number not null,
+       id_tipo		number not null,
+       id_atributo	number not null,
+       texto		nvarchar2(200),
+       fecha_baja	date,
+       constraint pk_etiqueta primary key(id,id_tipo,id_atributo),
+       constraint fk_etiqueta_tipo foreign key(id_tipo) references tipo(id),
+       constraint fk_etiqueta_atributo foreign key(id_atributo) references atributo(id)
+)
+
+
+create sequence tipo_seq start with 1 increment by 1	nocache
+create sequence etiqueta_seq start with 1 increment by 1	nocache
+
+grant select,references on usuariosgrupos to baliabidef

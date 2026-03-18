@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="XBATLib.GCCilindros_ELL">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAgAAAABACABIgAAAAAAQEAgAAAAAFADA=</HashCode>
+      <FileName>ELL\XBAT_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Entidades.GCCilindros_DAL">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\GCCilindros_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Transaccion">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAABAAACAAAAAAAAAACAAAQAAAAAAAAAAAg=</HashCode>
+      <FileName>DAL\GCCilindros_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.GCBulones_ELL">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAgAAAABACABIgAAAAAAQEAgAAAAAFADA=</HashCode>
+      <FileName>ELL\XBAT_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Entidades.GCBulones_DAL">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\GCBulones_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.FaPersonal_ELL">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAQAEAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELL\XBAT_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBATLib.Entidades.FaPersonal_DAL">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\FaPersonal_DAL.vb</FileName>
+      <NewMemberFileName>DAL\GCBulones_DAL.vb</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F51F0CDA-6FA2-4DA6-94FD-FCC969E1B1E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>web</RootNamespace>
+    <AssemblyName>web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpressiveAnnotations, Version=2.7.4.0, Culture=neutral, PublicKeyToken=d3e372f3c1e83cec, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\ExpressiveAnnotations.dll.2.7.4\lib\net45\ExpressiveAnnotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\assemblies\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.1.15.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\LinqKit.1.1.15\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Neodynamic.SDK.ThermalLabel, Version=4.0.3500.0, Culture=neutral, PublicKeyToken=0630b9b3415848af, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\Neodynamic.SDK.ThermalLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel.DataAnnotations" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Codigo_Compartido\localization\AccesoGenerico.vb">
+      <Link>Codigo_Compartido\AccesoGenerico.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\localization\traduccion_con_cookies.vb">
+      <Link>Codigo_Compartido\traduccion_con_cookies.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\Memcached\OracleManagedDirectAccess.vb">
+      <Link>Codigo_Compartido\OracleManagedDirectAccess.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\utils\mvc_querystring.vb">
+      <Link>Codigo_Compartido\mvc_querystring.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\utils\searchFilter.vb">
+      <Link>Codigo_Compartido\searchFilter.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\utils\SimpleRoleProvider.vb">
+      <Link>Codigo_Compartido\SimpleRoleProvider.vb</Link>
+    </Compile>
+    <Compile Include="Controllers\accessController.vb" />
+    <Compile Include="Controllers\agrupacionController.vb" />
+    <Compile Include="Controllers\AlbaranController.vb" />
+    <Compile Include="Controllers\busquedaController.vb" />
+    <Compile Include="Controllers\EstadoController.vb" />
+    <Compile Include="Controllers\jsonController.vb" />
+    <Compile Include="Controllers\movimientosmaterialController.vb" />
+    <Compile Include="Controllers\recogidaController.vb" />
+    <Compile Include="Controllers\revisionController.vb" />
+    <Compile Include="Controllers\rutaController.vb" />
+    <Compile Include="Controllers\taxiController.vb" />
+    <Compile Include="Controllers\TransporteController.vb" />
+    <Compile Include="Controllers\viajeController.vb" />
+    <Compile Include="Controllers\zebraController.vb" />
+    <Compile Include="DP\DBAccess.vb" />
+    <Compile Include="DP\DBAccessController.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="h.vb" />
+    <Compile Include="Models\Class1.vb" />
+    <Compile Include="Models\ViewModels.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Views\Shared\Site1.Master.designer.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Site1.Master.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Content Include="accesodenegado.htm" />
+    <Content Include="Content\a1.png" />
+    <Content Include="Content\b1.png" />
+    <Content Include="Content\b2.png" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\etiketa.png" />
+    <Content Include="Content\header.png" />
+    <Content Include="Content\logo_batz.png" />
+    <Content Include="Content\mbtooling.png" />
+    <Content Include="Content\mbtoolinglogo.png" />
+    <Content Include="Content\mm1.png" />
+    <Content Include="Content\mondragonlogo.png" />
+    <Content Include="Content\SAS_small.png" />
+    <Content Include="Content\sello.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\t1.png" />
+    <Content Include="Content\v1.png" />
+    <Content Include="Content\valoracion1.png" />
+    <Content Include="error.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="help.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\helbide.js" />
+    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\JScript1.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\tablefilter.js" />
+    <Content Include="Scripts\textbox_search.js" />
+    <Content Include="Views\access\index.aspx" />
+    <Content Include="Views\agrupacion\addmovimiento.aspx" />
+    <Content Include="Views\agrupacion\editpeso.aspx" />
+    <Content Include="Views\agrupacion\edit.aspx" />
+    <Content Include="Views\agrupacion\errordirecciones.aspx" />
+    <Content Include="Views\agrupacion\EmbedBulto.aspx" />
+    <Content Include="Views\agrupacion\list.aspx" />
+    <Content Include="Views\agrupacion\Pesar.aspx" />
+    <Content Include="Views\albaran\addbulto.aspx" />
+    <Content Include="Views\albaran\create.aspx" />
+    <Content Include="Views\albaran\edit.aspx" />
+    <Content Include="Views\albaran\helbide.aspx" />
+    <Content Include="Views\albaran\list.aspx" />
+    <Content Include="Views\busqueda\albaran.aspx" />
+    <Content Include="Views\busqueda\index.aspx" />
+    <Content Include="Views\busqueda\noproductivas.aspx" />
+    <Content Include="Views\busqueda\listadomensual.aspx" />
+    <Content Include="Views\busqueda\Productivas.aspx" />
+    <Content Include="Views\movimientosmaterial\CreateDesdePedido1.aspx" />
+    <Content Include="Views\movimientosmaterial\CreateDesdePedido.aspx" />
+    <Content Include="Views\movimientosmaterial\listgrouped.aspx" />
+    <Content Include="Views\movimientosmaterial\create0.aspx" />
+    <Content Include="Views\movimientosmaterial\create1.aspx" />
+    <Content Include="Views\movimientosmaterial\delete.aspx" />
+    <Content Include="Views\movimientosmaterial\edit.aspx" />
+    <Content Include="Views\movimientosmaterial\list.aspx" />
+    <Content Include="Views\recogida\details.aspx" />
+    <Content Include="Views\recogida\divide.aspx" />
+    <Content Include="Views\recogida\create.aspx" />
+    <Content Include="Views\recogida\delete.aspx" />
+    <Content Include="Views\recogida\list.aspx" />
+    <Content Include="Views\recogida\viaje.aspx" />
+    <Content Include="Views\revision\productivas.aspx" />
+    <Content Include="Views\ruta\rutaViaje.aspx" />
+    <Content Include="Views\ruta\index.aspx" />
+    <Content Include="Views\Estado\AddMovimientoStep2.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMMovimientoFinal.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMRecogidaFinal.vbhtml" />
+    <Content Include="Views\Shared\EditorTemplates\VMVectorViaje.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMPuntoViaje.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMVectorViaje.vbhtml" />
+    <Content Include="Views\Estado\AddRecogidaCabecera.vbhtml" />
+    <Content Include="Views\Estado\AddRecogidaLinea.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMRecogidaLinea.vbhtml" />
+    <Content Include="Views\Estado\ListMovimientoIndividuales.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMMarca.vbhtml" />
+    <Content Include="Views\Shared\EditorTemplates\Boolean.vbhtml" />
+    <Content Include="Views\Estado\ListMovimientosRecogidasSinAsignarAgrupado.vbhtml" />
+    <Content Include="Views\Estado\AgruparMovimiento.vbhtml" />
+    <Content Include="Views\Estado\CrearViajeRecogida.vbhtml" />
+    <Content Include="Views\Estado\ListMovimientosSinAsignar.vbhtml" />
+    <Content Include="Views\Estado\ListMovimientosSinAsignarAgrupado.vbhtml" />
+    <Content Include="Views\Estado\ListBultosSinAsignar.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMAgrupacion.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMMovimientoFinalParaBulto.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMVectorViajeParaBulto.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMPuntoViaje - Copy.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMMarcaParaBulto.vbhtml" />
+    <Content Include="Views\Shared\DisplayTemplates\VMAgrupacionSinAsignar.vbhtml" />
+    <Content Include="Views\Estado\CrearAlbaran.vbhtml" />
+    <None Include="Views\Shared\EditorTemplates\Date.vbhtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.ascx" />
+    <Content Include="Views\Shared\filter.aspx" />
+    <Content Include="Views\taxi\editnegocio.aspx" />
+    <Content Include="Views\taxi\create.aspx" />
+    <Content Include="Views\taxi\list.aspx" />
+    <Content Include="Views\transporte\filter.aspx" />
+    <Content Include="Views\transporte\edithorasextradiario.aspx" />
+    <Content Include="Views\transporte\listhorasextradiario.aspx" />
+    <Content Include="Views\transporte\list.aspx" />
+    <Content Include="Views\viaje\addalbaran.aspx" />
+    <Content Include="Views\viaje\create.aspx" />
+    <Content Include="Views\viaje\edit.aspx" />
+    <Content Include="Views\viaje\list.aspx" />
+    <Content Include="Views\viaje\subcontratacion.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\RMaster.vbhtml" />
+    <Content Include="Views\access\landingPage.vbhtml" />
+    <Content Include="Views\Estado\ListMovimientosRecogidasSinAsignar.vbhtml" />
+    <Content Include="Views\Shared\DireccionesFecha.vbhtml" />
+    <Content Include="Views\Estado\AddMovimientoStep1.vbhtml" />
+    <Content Include="Views\Shared\EditorTemplates\VMPuntoViaje.vbhtml" />
+    <Content Include="Views\Shared\EditorTemplates\VMRecogidaLinea.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="log4netConfig.config">
+      <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="log4netConfig.Debug.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="log4netConfig.Release.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\agrupacion\displayBultoPartial.vbhtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\a1.xcf" />
+    <Content Include="Content\t1.xcf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site1.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.15\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54892</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44371/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <Import Project="..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

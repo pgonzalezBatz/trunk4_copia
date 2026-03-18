@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD04D2FB-DF88-4507-A926-EE621DA4A235}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IstrikuWebRaiz</RootNamespace>
+    <AssemblyName>IstrikuWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Text</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>..\..\..\Soluciones_VS2015\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Istriku_Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\WebEnsamblado.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Istriku_Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\IstrikuWebEnsamblado.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GertakariakMS|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\IstrikuWebEnsamblado.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Archivos de programa\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Codigo_Compartido\NugetPackages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="eWorld.UI">
+      <HintPath>..\..\..\Assemblies\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.60.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Codigo_Compartido\NugetPackages\HtmlAgilityPack.1.11.60\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Codigo_Compartido\NugetPackages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="LocalizationLib" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Net.Mail" />
+    <Import Include="System.Transactions" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Batz\AjaxControlToolKit.css" />
+    <Content Include="App_Themes\Batz\ControlesBatz\PanelBotones.css" />
+    <Content Include="App_Themes\Batz\ControlesBatz\PanelCargandoDatos.css" />
+    <Content Include="App_Themes\Batz\ControlesBatz\VentanaWindows.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\DetailsView.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\FormView.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\GridView.css" />
+    <Content Include="App_Themes\Batz\IconoAplicacion\Dryicons-Aesthetica-2-Warning.ico" />
+    <Content Include="App_Themes\Batz\IconoAplicacion\Dryicons-Aesthetica-2-Warning_128.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Aceptar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Aceptar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Aceptar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Atras.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFiltro16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFlitro24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Filtrar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Filtrar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Floppy-Small-icon24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Opciones16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Opciones24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\OpcionesCerrar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\OpcionesCerrar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\check-box-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\check-box-icon24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Copiar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Copiar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Imprimir24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\login.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\mail.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Nuevo.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Nuevo16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Nuevo24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\PanelExtensible\Contraer.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\PanelExtensible\Extender.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\PanelExtensible\Original.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Siguiente.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Traducir\Traductor.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\CalendarExtender\Calendario.gif" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\CollapsiblePanelExtender\collapse_blue.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\CollapsiblePanelExtender\expand_blue.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\info-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\info-icon24.png" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\Marvin.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\warning-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\warning-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\advertencia.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\arrow.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\borrar.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\bullet_hl.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\Cargando.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\error.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\Esculapio\VaraEsculapio.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Esculapio\VaraEsculapio16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-disabled-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-disabled-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-disabled-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-disabled-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-disabled-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-disabled-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\help-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\info.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\Logo.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\bmp-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\bmp-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document-Blank-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document-Blank-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document-Blank-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\docx-win-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\docx-win-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\jpeg-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\jpeg-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pdf-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pdf-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\png-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\png-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pptx-win-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pptx-win-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\text-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\text-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\xlsx-win-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\xlsx-win-icon32.png" />
+    <Content Include="App_Themes\Batz\style.css" />
+    <Content Include="App_Themes\Batz\Utilidades.js" />
+    <Content Include="App_Themes\Tema1\cssIntranet\estiloIntranet.css" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Aceptar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Aceptar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\application-edit-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\application-edit-icon24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\EliminarFiltro16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\EliminarFiltro24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\Filtrar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\Filtrar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cancelar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cancelar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Copiar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Copiar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Editar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Editar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Eliminar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Eliminar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Nuevo16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Nuevo24.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\PanelExtensible\Contraer.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\Flitrar.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Buscador\EliminarFiltro.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\PanelExtensible\Extender.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\PanelExtensible\Original.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Seleccionar16.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Seleccionar24.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TimePicker\clock-icon_16x16.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\TimePicker\clock-icon_24x24.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\advertencia.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\arrow.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\borrar.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\bullet_hl.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\error.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\EstadoParte\Aceptado-icon.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\EstadoParte\Denegado-icon.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\EstadoParte\Pendiente-icon.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\info.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\Logo\Alert-icon32.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\Logo\Alert-icon48.png" />
+    <Content Include="App_Themes\Tema1\style.css" />
+    <Content Include="Content\include\jquery-1.9.0.min.js" />
+    <Content Include="Content\include\ui-1.10.0\jquery.ui.core.min.js" />
+    <Content Include="Content\include\ui-1.10.0\jquery.ui.position.min.js" />
+    <Content Include="Content\include\ui-1.10.0\jquery.ui.tabs.min.js" />
+    <Content Include="Content\include\ui-1.10.0\jquery.ui.widget.min.js" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\include\ui-1.10.0\ui-lightness\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Content\jquery.ui.timepicker.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Controles\Mensajes.ascx" />
+    <Content Include="Controles\SeleccionUsuarios.ascx" />
+    <Content Include="Controles\ServiciosWeb\ServiciosWeb.asmx" />
+    <Content Include="Controles\ServiciosWeb\swSAB.asmx" />
+    <Content Include="Mantenimiento\ListadoNotificaciones.aspx" />
+    <Content Include="ParteAccidente\Detalle.aspx" />
+    <Content Include="Informe\Detalle.aspx" />
+    <Content Include="Informe\EnviarCorreo.aspx" />
+    <Content Include="Informe\EstadoAfectado.aspx" />
+    <Content Include="Informe\Formulario.aspx" />
+    <Content Include="Guber\IndiceFecuencia.aspx" />
+    <Content Include="ParteAccidente\fileTooBig.gif" />
+    <Content Include="ParteAccidente\Froga.aspx" />
+    <Content Include="ParteAccidente\uploading.gif" />
+    <Content Include="Mantenimiento\Plantas.aspx" />
+    <Content Include="Scripts\jquery.ui.timepicker.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Mantenimiento\Usuarios\Listado.aspx" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.min.js" />
+    <Content Include="SqlServerSpatial150.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\Hora.ascx.designer.vb">
+      <DependentUpon>Hora.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Hora.ascx.vb">
+      <DependentUpon>Hora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Mensajes.ascx.designer.vb">
+      <DependentUpon>Mensajes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Mensajes.ascx.vb">
+      <DependentUpon>Mensajes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\PanelCargandoDatos.ascx.designer.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PanelCargandoDatos.ascx.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\SeleccionUsuarios.ascx.designer.vb">
+      <DependentUpon>SeleccionUsuarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\SeleccionUsuarios.ascx.vb">
+      <DependentUpon>SeleccionUsuarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ServiciosWeb\ServiciosWeb.asmx.vb">
+      <DependentUpon>ServiciosWeb.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ServiciosWeb\swSAB.asmx.vb">
+      <DependentUpon>swSAB.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Titulo.ascx.designer.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Titulo.ascx.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ListadoNotificaciones.aspx.designer.vb">
+      <DependentUpon>ListadoNotificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\ListadoNotificaciones.aspx.vb">
+      <DependentUpon>ListadoNotificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ParteAccidente\Detalle.aspx.designer.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParteAccidente\Detalle.aspx.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Informe\Detalle.aspx.designer.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informe\Detalle.aspx.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informe\EnviarCorreo.aspx.designer.vb">
+      <DependentUpon>EnviarCorreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informe\EnviarCorreo.aspx.vb">
+      <DependentUpon>EnviarCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informe\EstadoAfectado.aspx.designer.vb">
+      <DependentUpon>EstadoAfectado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informe\EstadoAfectado.aspx.vb">
+      <DependentUpon>EstadoAfectado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informe\Formulario.aspx.designer.vb">
+      <DependentUpon>Formulario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informe\Formulario.aspx.vb">
+      <DependentUpon>Formulario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guber\IndiceFecuencia.aspx.designer.vb">
+      <DependentUpon>IndiceFecuencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guber\IndiceFecuencia.aspx.vb">
+      <DependentUpon>IndiceFecuencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Usuarios\Listado.aspx.designer.vb">
+      <DependentUpon>Listado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Usuarios\Listado.aspx.vb">
+      <DependentUpon>Listado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPWeb.Master.designer.vb">
+      <DependentUpon>MPWeb.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPWeb.Master.vb">
+      <DependentUpon>MPWeb.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ParteAccidente\Froga.aspx.designer.vb">
+      <DependentUpon>Froga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParteAccidente\Froga.aspx.vb">
+      <DependentUpon>Froga.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Plantas.aspx.designer.vb">
+      <DependentUpon>Plantas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Plantas.aspx.vb">
+      <DependentUpon>Plantas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Tema1\AjaxControlToolKit.css" />
+    <Content Include="App_Themes\Tema1\ControlesWeb\DetailsView.css" />
+    <Content Include="App_Themes\Tema1\ControlesWeb\FormView.css" />
+    <Content Include="App_Themes\Tema1\ControlesWeb\GridView.css" />
+    <Content Include="App_Themes\Tema1\Control_Hora\clock.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-icons_454545_256x240.png" />
+    <Content Include="App_Themes\Tema1\Control_Hora\ui-icons_888888_256x240.png" />
+    <Content Include="App_Themes\Tema1\cssJQuery\jquery.ptTimeSelect.css" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Aceptar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Atras.png" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Cancelar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Editar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Eliminar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\login.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\mail.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Nuevo.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Seleccionar.gif" />
+    <Content Include="App_Themes\Tema1\IconosAcciones\Siguiente.png" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\CalendarExtender\Calendario.gif" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\CollapsiblePanelExtender\collapse_blue.jpg" />
+    <Content Include="App_Themes\Tema1\IconosAjaxControl\CollapsiblePanelExtender\expand_blue.jpg" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\clock.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-icons_454545_256x240.png" />
+    <Content Include="App_Themes\Tema1\IconosJQuery\ui-icons_888888_256x240.png" />
+    <Content Include="App_Themes\Tema1\Imagenes\Cargando.gif" />
+    <Content Include="App_Themes\Tema1\Imagenes\loadin.gif" />
+    <Content Include="App_Themes\Tema1\MenuBatz.css" />
+    <Content Include="App_Themes\Tema1\ControlesBatz\PanelCargandoDatos.css" />
+    <Content Include="Controles\Hora.ascx" />
+    <Content Include="Controles\PanelCargandoDatos.ascx" />
+    <Content Include="Controles\Titulo.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="js\jQuery\jquery.js" />
+    <Content Include="js\jQuery\jquery.ptTimeSelect.js" />
+    <Content Include="MPWeb.Master" />
+    <Content Include="PermisoDenegado.aspx" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Floppy Small Icon  i Iconset  Treetog ArtWork.website" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Icono EliminarFiltro.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Icono Filtrar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Iconos.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\Check box Icon  Farm Fresh Iconset  Fatcow Web Hosting.website" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Aceptar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Cancelar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Copiar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Eliminar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Nuevo.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Seleccionar.url" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\Info Icon  Aesthetica 2 Iconset  DryIcons.website" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\Warning Icon  Aesthetica 2 Iconset  DryIcons.website" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document Blank Icon  Soft Scraps Iconset  Deleket.website" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\File Type Iconset %2840 icons%29  Treetog ArtWork.website" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail Icon  Plump Iconset  zerode.website" />
+    <Content Include="App_Themes\Batz\Mascara.skin" />
+    <Content Include="App_Code\Web.sitemap" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document Blank Icon  Soft Scraps Iconset  Hopstarter.website" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Buscador\Icono EliminarFiltro.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Buscador\Icono Filtrar.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Buscador\Iconos.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Icono Aceptar.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Icono Cancelar.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Icono Copiar.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Icono Eliminar.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Icono Nuevo.url" />
+    <None Include="App_Themes\Tema1\IconosAcciones\Icono Seleccionar.url" />
+    <None Include="App_Themes\Tema1\IconosAjaxControl\TimePicker\IconArchive.url" />
+    <None Include="App_Themes\Tema1\Imagenes\EstadoParte\Iconos.url" />
+    <None Include="App_Themes\Tema1\Imagenes\Icono Logo.url" />
+    <Content Include="App_Themes\Tema1\Imagenes\Logo\Alert Icon  Ravenna 3D Iconset  Double-J Design.website" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\PublishProfiles\Legoaldi - Debug.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BatzBBDD\BatzBBDD\BatzBBDD.vbproj">
+      <Project>{3dc7bc8f-0e06-4a67-a135-8ad4366a9aed}</Project>
+      <Name>BatzBBDD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Localization\LocalizationLib\LocalizationLib 4.vbproj">
+      <Project>{0e619969-8585-4d6c-a20b-9848826a4f1d}</Project>
+      <Name>LocalizationLib 4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Memcached\Memcached.vbproj">
+      <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Gertakariak2.0\GertakariakLib\GertakariakLib.vbproj">
+      <Project>{26638d41-3358-4504-bda9-09e509c6b3f7}</Project>
+      <Name>GertakariakLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assemblies\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Extranet|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Extranet|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>IstrikuWeb.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7718</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

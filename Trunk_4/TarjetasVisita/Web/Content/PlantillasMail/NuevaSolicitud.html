@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Los estilos llevan doble llave porque al realizar un string.format daba error -->
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {{
+            font-family: Verdana,Arial,Times New Roman;
+            font-size: 12px;
+        }}
+        p
+        {{
+            margin-bottom: 10px;
+        }}
+    </style>
+</head>
+<body>
+    <p>El usuario {0} ha generado una nueva solicitud de tarjetas de visita con los siguientes datos:</p>
+    <ul>
+        <li>Nombre: {1}</li>
+        <li>Puesto: {2}</li>
+        <li>Móvil: {3}</li>
+        <li>Direccion: {4}</li>
+        <li>Fijo: {5}</li>
+        <li>Email: {6}</li>
+        <li>Nº cajas: {7}</li>
+    </ul>
+    <br />
+    <hr />
+    <br />
+    <p>User {0} has made a new visit card request with the following data:</p>
+    <ul>
+        <li>Name: {1}</li>
+        <li>Job: {2}</li>
+        <li>Cellphone: {3}</li>
+        <li>Adress: {4}</li>
+        <li>Telephone: {5}</li>
+        <li>Email: {6}</li>
+        <li>Boxes: {7}</li>
+    </ul>
+</body>
+</html>

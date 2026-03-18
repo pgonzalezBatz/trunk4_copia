@@ -1,0 +1,94 @@
+﻿.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+
+.MensajeError
+{
+    font: oblique bold 120% cursive; 
+    text-shadow: 0.1em 0.1em 0.2em gray;
+    font-size: x-large;
+}
+
+.collapsedPanel
+{
+	font-size:13px;
+	cursor: pointer;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+/************************************************************************/
+/* Estilos para el filtro.												*/
+/************************************************************************/
+.tablaBuscador
+{
+	width: 50%;
+	text-align:left;
+}
+
+.recuadro
+{
+	/*
+	text-align:left;
+	border-top:solid 1px #dcdcdc;
+	border-bottom:solid 1px #dcdcdc;
+	border-left:solid 1px #dcdcdc;
+	border-right:solid 1px #dcdcdc;
+	background-color: #C0C0C0;*/
+	width: 98%;
+	border: 1px outset #EBEBEB; 
+	display: inline-block;
+	background-color: #EBEBEB;
+	margin:2px;
+	vertical-align: middle;
+}
+.recuadro fieldset {border-width:1px;}
+.recuadro legend {
+	background-color:#949292;
+	border-width:1px;
+	border-style:solid;
+	border-color:#777576;
+	color:#E6E5E5;	
+}
+
+.ImageButton input[type="image"], .ImageButton div > img
+{
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 0px;
+	margin-left: 3px;
+}
+
+.ImageButton input[type="image"]:hover, .ImageButton div > img:hover
+{
+	border: 1px solid #00468C;
+	background-color: #BBDDFF;
+	margin-top: 2px; /*Calculamos el margin con "input(margin-top) - input:hover(border-width)"*/
+	margin-right: 2px; /*Calculamos el margin con "input(margin-right) - input:hover(border-width)"*/
+	margin-bottom: -1px; /*Calculamos el margin con "input(margin-bottom) - input:hover(border-width)"*/
+	margin-left: 2px; /*Calculamos el margin con "input(margin-left) - input:hover(border-width)"*/ 
+}
+/************************************************************************/
+
+/************************************************************************/
+/* Estilo para el elemento de "Contactar con.." del pie de la "Master"  */
+/************************************************************************/
+.ContactarCon
+{
+	margin: 4px 0px 0px 0px;
+}
+	.ContactarCon li
+{
+	display: inline;
+	margin-right: 10px;
+	padding: 3px 0px;
+	border: 1px solid lightgray;
+}
+    .ContactarCon li a {
+        padding: 3px 3px;
+    }
+		.ContactarCon li a:hover
+		{
+			background-color: lightgray;
+		}
+/************************************************************************/

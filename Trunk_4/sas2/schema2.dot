@@ -1,0 +1,68 @@
+digraph SAS {
+	start->arrival[label="n times"];
+	arrival->comp;
+	comp->konpentzatuak;
+	compound=true;
+	node [style=filled];
+	subgraph cluster1{
+		c0[label="Helbide lista"];
+		c1[label="Helbidea sortu"];
+		c2[label="Helbidea editatu"];
+		label = "Helbide";
+	}
+
+		sas->a1[label="/albaran/list"];
+		sas->bidai1;
+		sas->mu0[label="/movimientosmaterial/list"];
+		sas->ag0;
+		sas->b0[label="?"];
+		mu0->mu1[label="/movimientosmaterial/create"];		
+		mu0->mu2[label="/movimientosmaterial/edit?id=xx"];
+		mu0->ag1[label="/agrupacion/create"];
+		ag1->ag0[label="/agrupacion/list"];
+		ag0->ag2[label="/agrupacion/edit"];
+		ag2->ag2;
+		ag2->ag0;
+		ag0->a0[label="/albaran/create"];
+		
+		a0->a1[label="/albaran/savealbaran"];
+		a1->a2[label="/albaran/edit?albaran=x"];
+
+		a1->bidai0[label="/viaje/create"];
+		bidai0->bidai1[label="/viaje/saveenvio"];
+		bidai1->garrai;
+		bidai1->bidai2;
+		bidai1->inprimatu;
+		garrai->subkontratazio;
+		garrai->garrai2;
+		a0->c0->a0;
+		a2->c0->a2;
+		a0->c1->a0;
+		a2->c1->a2;
+		
+		start[label="Start",shape=Mdiamond];
+		sas[label="SAS2",shape=Mdiamond,style=filled];
+		mu0[label="Material mugimendu zerrenda"];
+		mu1[label="Mat. Mugi. sortu"];
+		mu2[label="Mat. Mugi. editatu"];
+		ag0[label="Agrupazio zerrenda"];
+	ag1[label="Agrupazioa sortu"];
+	ag2[label="Agrupazioa editatu"];
+	arrival[label="Materiala iritzi"];
+	comp[label="Konpentzatu"];
+	konpentzatuak[label="Zuzenean movimiento_material eskaera sortu?\n zelan jakin zer doan kanpora eta zer ez?\nIratxe?",shape=box,color="darksalmon",style=filled];
+	a0[label="Albarana sortu"];
+	a1[label="Albaran zerrenda"];
+	a2[label="Albarana editatu",color="darksalmon"];
+	
+	garrai2[label="Eskaera bat hileko hornitzaileko? ta detailerik ez\nEskera bat garraioko eta lineatan markak",shape="box",color="darksalmon",style=filled];
+	b0[label="Cognos kontsultak",shape="box",color="linen",style=filled];
+	subkontratazio[label="Subkontratazio eskaera sortu?\nZein kasutean? Roberto?",shape="box",color="darksalmon",style=filled];
+	bidai0[label="Bidaia sortu"];
+	bidai1[label="Bidai zerrenda (bidali gabe)"];
+	bidai2[label="Bidaia editatu",color="darksalmon"];
+	garrai[label="Garraio eskaera",color="darksalmon"];
+	inprimatu[label="Imprimatu bidalitako albaranak"];
+	
+	
+}

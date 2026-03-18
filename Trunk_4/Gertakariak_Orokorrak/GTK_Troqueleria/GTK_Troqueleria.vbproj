@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{83F7B6B3-917C-48D1-960A-3A3ED4DEE196}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GTK_Troqueleria</RootNamespace>
+    <AssemblyName>GTK_Troqueleria</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>GTK_Troqueleria.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>GTK_Troqueleria.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.10.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\HtmlAgilityPack.1.8.10\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Newtonsoft.Json.13.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <HintPath>..\..\Assemblies\Oracle\UltimaVersion\Oracle.DataAccess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="LocalizationLib" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Transactions" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Batz\bootstrapmodal.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\TreeView.css" />
+    <Content Include="App_Themes\Batz\core.css" />
+    <Content Include="App_Themes\Batz\dialog.css" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\check-box-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\check-box-icon24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Euro-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\printer-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Send-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\IconoAplicacion\favicon.ico" />
+    <Content Include="App_Themes\Batz\Imagenes\LeccionesAprendidas16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pptx-win-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pptx-win-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\warning-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\LeccionesAprendidas48.png" />
+    <Content Include="App_Themes\Batz\AjaxControlToolKit.css" />
+    <Content Include="App_Themes\Batz\ControlesBatz\PanelBotones.css" />
+    <Content Include="App_Themes\Batz\ControlesBatz\PanelCargandoDatos.css" />
+    <Content Include="App_Themes\Batz\ControlesBatz\VentanaWindows.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\DetailsView.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\FormView.css" />
+    <Content Include="App_Themes\Batz\ControlesWeb\GridView.css" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Aceptar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Aceptar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Aceptar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Atras.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFiltro16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\EliminarFlitro24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Filtrar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Filtrar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Floppy-Small-icon24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Opciones16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Opciones24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\OpcionesCerrar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\OpcionesCerrar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Cancelar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\check-box-icon.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Copiar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Copiar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Editar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Eliminar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Imprimir24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\login.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\mail.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Nuevo.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Nuevo16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Nuevo24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\PanelExtensible\Contraer.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\PanelExtensible\Extender.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\PanelExtensible\Original.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar.gif" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar16.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Seleccionar24.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Siguiente.png" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Traducir\Traductor.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\CalendarExtender\Calendario.gif" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\CollapsiblePanelExtender\collapse_blue.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\CollapsiblePanelExtender\expand_blue.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\info-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\info-icon24.png" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\Marvin.jpg" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\warning-icon16.png" />
+    <Content Include="App_Themes\Batz\IconosAjaxControl\VentanaMensajes\warning-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\advertencia.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\arrow.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\borrar.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\bullet_hl.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\Cargando.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\error.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-disabled-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-disabled-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-disabled-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-disabled-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-disabled-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-disabled-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Estado\lock-off-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-edit-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-edit-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-lock-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-next-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-ok-icon_16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-ok-icon_24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\application-remove-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\Industry-Factory-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\info.gif" />
+    <Content Include="App_Themes\Batz\Imagenes\Logo.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\bmp-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\bmp-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document-Blank-icon16.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document-Blank-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document-Blank-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\docx-win-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\docx-win-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\jpeg-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\jpeg-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pdf-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\pdf-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\png-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\png-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\text-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\text-icon32.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\xlsx-win-icon24.png" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\xlsx-win-icon32.png" />
+    <Content Include="App_Themes\Batz\style.css" />
+    <Content Include="App_Themes\Batz\theme.css" />
+    <Content Include="cambiarUsuario.aspx" />
+    <Content Include="Controles\Mensajes.ascx" />
+    <Content Include="Controles\PanelCargandoDatos.ascx" />
+    <Content Include="Controles\ServiciosWeb.asmx" />
+    <Content Include="Controles\Titulo.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="FrogaExtranet.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Incidencia\8D\Etapas\E14.aspx" />
+    <Content Include="Incidencia\8D\Etapas\E56.aspx" />
+    <Content Include="Incidencia\8D\Etapas\E56_5PQ.aspx" />
+    <Content Include="Incidencia\8D\Etapas\E56_Acciones.aspx" />
+    <Content Include="Incidencia\8D\Etapas\E78.aspx" />
+    <Content Include="Incidencia\Correos\PlantillaAviso.aspx" />
+    <Content Include="Incidencia\Correos\ResponsablesRechazo.aspx" />
+    <Content Include="Incidencia\Correos\Responsables.aspx" />
+    <Content Include="Incidencia\Detalle.aspx" />
+    <Content Include="Incidencia\Mantenimiento\DatosGenerales.aspx" />
+    <Content Include="Incidencia\Mantenimiento\Documento.aspx" />
+    <Content Include="Controles\DocumentoBBDD.aspx" />
+    <Content Include="Incidencia\Mantenimiento\GertakariakWeb\ConfirmacionEmail.aspx" />
+    <Content Include="Incidencia\Mantenimiento\GertakariakWeb\Facturacion.aspx" />
+    <Content Include="Incidencia\Mantenimiento\LineaCoste.aspx" />
+    <Content Include="Incidencia\Mantenimiento\ListadoLC.aspx" />
+    <Content Include="Incidencia\Mantenimiento\TotalAcordado.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Mantenimiento\Caracteristicas\DetalleCarac.aspx" />
+    <Content Include="Mantenimiento\Caracteristicas\ListadoCarac.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\ListadoPE.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\ListadoNotificaciones.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\UsuarioPE.aspx" />
+    <Content Include="Mantenimiento\Notificaciones\Usuario.aspx" />
+    <Content Include="Mantenimiento\Relaciones\Inicio.aspx" />
+    <Content Include="Mantenimiento\Relaciones\Relacionar.aspx" />
+    <Content Include="Mantenimiento\Usuarios\Listado.aspx" />
+    <Content Include="PermisoDenegado.aspx" />
+    <Content Include="Incidencia\Correos\Web.config" />
+    <Content Include="App_Themes\Batz\Imagenes\IconoAplicacion\Space Shuttle Icon  Swarm App Sticker Iconset  Sonya.website" />
+    <Content Include="Controles\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Themes\Batz\IconosAcciones\Euro Icon - Flatastic 4 Iconset - Custom Icon Design.url" />
+    <None Include="My Project\PublishProfiles\Intranet-Test.pubxml" />
+    <Content Include="Scripts\AjaxControlToolkit_Fixed.js" />
+    <Content Include="Scripts\defaultaspxScript.js" />
+    <Content Include="Scripts\html5-dataset.js" />
+    <Content Include="README.md" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\modal.js" />
+    <Content Include="Scripts\Utiles.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <None Include="Web.Debug_Extranet.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release_Extranet.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cambiarUsuario.aspx.designer.vb">
+      <DependentUpon>cambiarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cambiarUsuario.aspx.vb">
+      <DependentUpon>cambiarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Mensajes.ascx.designer.vb">
+      <DependentUpon>Mensajes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Mensajes.ascx.vb">
+      <DependentUpon>Mensajes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\PanelCargandoDatos.ascx.designer.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PanelCargandoDatos.ascx.vb">
+      <DependentUpon>PanelCargandoDatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ServiciosWeb.asmx.vb">
+      <DependentUpon>ServiciosWeb.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Titulo.ascx.designer.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Titulo.ascx.vb">
+      <DependentUpon>Titulo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E14.aspx.designer.vb">
+      <DependentUpon>E14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E14.aspx.vb">
+      <DependentUpon>E14.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E56.aspx.designer.vb">
+      <DependentUpon>E56.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E56.aspx.vb">
+      <DependentUpon>E56.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E56_5PQ.aspx.designer.vb">
+      <DependentUpon>E56_5PQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E56_5PQ.aspx.vb">
+      <DependentUpon>E56_5PQ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E56_Acciones.aspx.designer.vb">
+      <DependentUpon>E56_Acciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E56_Acciones.aspx.vb">
+      <DependentUpon>E56_Acciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E78.aspx.designer.vb">
+      <DependentUpon>E78.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\8D\Etapas\E78.aspx.vb">
+      <DependentUpon>E78.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Correos\PlantillaAviso.aspx.designer.vb">
+      <DependentUpon>PlantillaAviso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Correos\PlantillaAviso.aspx.vb">
+      <DependentUpon>PlantillaAviso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Correos\ResponsablesRechazo.aspx.designer.vb">
+      <DependentUpon>ResponsablesRechazo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Correos\ResponsablesRechazo.aspx.vb">
+      <DependentUpon>ResponsablesRechazo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Correos\Responsables.aspx.designer.vb">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Correos\Responsables.aspx.vb">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Detalle.aspx.designer.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Detalle.aspx.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\DatosGenerales.aspx.designer.vb">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\DatosGenerales.aspx.vb">
+      <DependentUpon>DatosGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\Documento.aspx.designer.vb">
+      <DependentUpon>Documento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\Documento.aspx.vb">
+      <DependentUpon>Documento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controles\DocumentoBBDD.aspx.designer.vb">
+      <DependentUpon>DocumentoBBDD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\DocumentoBBDD.aspx.vb">
+      <DependentUpon>DocumentoBBDD.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\GertakariakWeb\ConfirmacionEmail.aspx.designer.vb">
+      <DependentUpon>ConfirmacionEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\GertakariakWeb\ConfirmacionEmail.aspx.vb">
+      <DependentUpon>ConfirmacionEmail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\GertakariakWeb\Facturacion.aspx.designer.vb">
+      <DependentUpon>Facturacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\GertakariakWeb\Facturacion.aspx.vb">
+      <DependentUpon>Facturacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\LineaCoste.aspx.designer.vb">
+      <DependentUpon>LineaCoste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\LineaCoste.aspx.vb">
+      <DependentUpon>LineaCoste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\ListadoLC.aspx.designer.vb">
+      <DependentUpon>ListadoLC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\ListadoLC.aspx.vb">
+      <DependentUpon>ListadoLC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\TotalAcordado.aspx.designer.vb">
+      <DependentUpon>TotalAcordado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Mantenimiento\TotalAcordado.aspx.vb">
+      <DependentUpon>TotalAcordado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Caracteristicas\DetalleCarac.aspx.designer.vb">
+      <DependentUpon>DetalleCarac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Caracteristicas\DetalleCarac.aspx.vb">
+      <DependentUpon>DetalleCarac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Caracteristicas\ListadoCarac.aspx.designer.vb">
+      <DependentUpon>ListadoCarac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Caracteristicas\ListadoCarac.aspx.vb">
+      <DependentUpon>ListadoCarac.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\ListadoPE.aspx.designer.vb">
+      <DependentUpon>ListadoPE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\ListadoPE.aspx.vb">
+      <DependentUpon>ListadoPE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\ListadoNotificaciones.aspx.designer.vb">
+      <DependentUpon>ListadoNotificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\ListadoNotificaciones.aspx.vb">
+      <DependentUpon>ListadoNotificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\UsuarioPE.aspx.designer.vb">
+      <DependentUpon>UsuarioPE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\UsuarioPE.aspx.vb">
+      <DependentUpon>UsuarioPE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\Usuario.aspx.designer.vb">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Notificaciones\Usuario.aspx.vb">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Relaciones\Inicio.aspx.designer.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Relaciones\Inicio.aspx.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Relaciones\Relacionar.aspx.designer.vb">
+      <DependentUpon>Relacionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Relaciones\Relacionar.aspx.vb">
+      <DependentUpon>Relacionar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Usuarios\Listado.aspx.designer.vb">
+      <DependentUpon>Listado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Usuarios\Listado.aspx.vb">
+      <DependentUpon>Listado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\MatrixPTK\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Icono EliminarFiltro.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Icono Filtrar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Iconos.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\CheckBox\Check box Icon  Farm Fresh Iconset  Fatcow Web Hosting.website" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Aceptar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Cancelar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Copiar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Eliminar.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Nuevo.url" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Icono Seleccionar.url" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document Blank Icon  Soft Scraps Iconset  Deleket.website" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\File Type Iconset %2840 icons%29  Treetog ArtWork.website" />
+    <Content Include="App_Themes\Batz\Mascara.skin" />
+    <Content Include="App_Themes\Batz\IconosAcciones\Buscador\Floppy Small Icon  i Iconset  Treetog ArtWork.website" />
+    <Content Include="App_Themes\Batz\Imagenes\EtapasEstado\Aesthetica 2 Iconset %28181 icons%29 - DryIcons.url" />
+    <Content Include="App_Themes\Batz\Imagenes\IconoAplicacion\Personalización del icono del sitio %28Windows%29.website" />
+    <Content Include="App_Themes\Batz\Imagenes\IconoAplicacion\X-Icon Editor.website" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Document Blank Icon  Soft Scraps Iconset  Hopstarter.website" />
+    <Content Include="App_Themes\Batz\Imagenes\TipoArchivos\Mail Icon  Plump Iconset  zerode.website" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Legoaldi - Release.pubxml" />
+    <None Include="My Project\PublishProfiles\XBI - Release.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Resources\MANUAL_SA.pptx" />
+    <Content Include="packages.config" />
+    <None Include="Web References\MatrixPTK\enovia.wsdl" />
+    <None Include="Web References\MatrixPTK\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="App_Code\Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AccesoAutomaticoBD\AccesoAutomaticoBD.vbproj">
+      <Project>{d8dfd338-036c-4472-8611-59566f4e37fb}</Project>
+      <Name>AccesoAutomaticoBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BatzBBDD\BatzBBDD\BatzBBDD.vbproj">
+      <Project>{3dc7bc8f-0e06-4a67-a135-8ad4366a9aed}</Project>
+      <Name>BatzBBDD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Memcached\Memcached.vbproj">
+      <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TraduccionesLib\TraduccionesLib.vbproj">
+      <Project>{c6bcb6d1-678b-4c12-99c3-df57c9c28cae}</Project>
+      <Name>TraduccionesLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Zaharrak\GertakariakLib\GertakariakLib2.vbproj">
+      <Project>{a516b847-d992-444c-85b8-4dff9c551242}</Project>
+      <Name>GertakariakLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Zaharrak\XBAT\XBATLib.vbproj">
+      <Project>{ee385823-84d3-4731-9f9a-22d453115965}</Project>
+      <Name>XBATLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gertakariak2.0\GertakariakLib\GertakariakLib.vbproj">
+      <Project>{26638d41-3358-4504-bda9-09e509c6b3f7}</Project>
+      <Name>GertakariakLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://intranet2.batz.es/ServicioEnovia/enovia.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MatrixPTK\</RelPath>
+      <UpdateFromURL>https://intranet2.batz.es/ServicioEnovia/enovia.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GTK_Troqueleria_es_batz_intranet2_Enovia</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Extranet|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>GTK_Troqueleria.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Extranet|AnyCPU'">
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>GTK_Troqueleria.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineDebug>true</DefineDebug>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45230</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45232/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" />
+  <Target Name="BeforeBuild" Condition="'$(PublishProfileName)' == '' And '$(WebPublishProfileFile)' == ''">
+    <TransformXml Source="Web.config" Transform="Web.$(Configuration).config" Destination="Web.config" />
+  </Target>-->
+</Project>

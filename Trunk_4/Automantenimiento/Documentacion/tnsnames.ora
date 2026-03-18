@@ -1,0 +1,36 @@
+# Every line that begins with # is a comment line
+#
+# Create Oracle net service names, or aliases, for each database server 
+# you need to connect to.
+#
+# TNSNames.ora sample entry
+#
+# alias =
+#  (DESCRIPTION =
+#    (ADDRESS = (PROTOCOL = TCP)(HOST = myserver.mycompany.com)(PORT = 1521))
+#    (CONNECT_DATA =
+#      (SERVER = DEDICATED)
+#      (SERVICE_NAME = orcl)
+#    )
+#  )
+#
+
+XBAT=
+  (DESCRIPTION=
+    (LOAD_BALANCE=on)
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=oracle-cluster)
+      (PORT=1523)
+    )
+    (CONNECT_DATA=
+      (FAILOVER_MODE=
+        (TYPE=select)
+        (METHOD=basic)
+        (RETRIES=10)
+        (DELAY=1)
+      )
+      (SERVER=dedicated)
+      (SERVICE_NAME=xbat)
+    )
+  )

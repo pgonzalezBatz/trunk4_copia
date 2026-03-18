@@ -1,0 +1,11 @@
+﻿/*Proponer este estilo para el menu*/
+.MenuASP {margin-bottom:20px;}
+.StaticMenuItemStyle, .DynamicMenuItemStyle
+{
+	font: 10pt Verdana, Arial, Helvetica,sans-serif;
+	color:#284E98;
+	border:solid 1px #A8A8A8;
+	background:#F4F4F4;
+	padding:2px 2px 2px 2px;
+}
+.StaticHoverStyle, .DynamicHoverStyle {background:#CCCCCC;}

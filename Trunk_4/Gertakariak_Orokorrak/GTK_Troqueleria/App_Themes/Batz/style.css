@@ -1,0 +1,194 @@
+﻿.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+
+.MensajeError
+{
+	text-align:left;
+	text-transform:uppercase;
+	background:#F3F3F3;
+	color:Red;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:12px;
+}
+
+.collapsedPanel
+{
+	font-size:13px;
+	cursor: pointer;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+/************************************************************************/
+/* Estilos para el filtro.												*/
+/************************************************************************/
+.tablaBuscador
+{
+	width: 50%;
+	text-align:left;
+}
+
+.recuadro
+{
+	width: 98%;
+	border: 1px outset #EBEBEB; 
+	display: inline-block;
+	background-color: #EBEBEB;
+	margin:2px;
+	vertical-align: middle;
+}
+.recuadro fieldset {border-width:1px;}
+.recuadro legend {
+	background-color:#949292;
+	border-width:1px;
+	border-style:solid;
+	border-color:#777576;
+	color:#E6E5E5;	
+}
+
+.ImageButton input[type="image"], .ImageButton div > img
+{
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 0px;
+	margin-left: 3px;
+}
+
+.ImageButton input[type="image"]:hover, .ImageButton div > img:hover
+{
+	border: 1px solid #00468C;
+	background-color: #BBDDFF;
+	margin-top: 2px; /*Calculamos el margin con "input(margin-top) - input:hover(border-width)"*/
+	margin-right: 2px; /*Calculamos el margin con "input(margin-right) - input:hover(border-width)"*/
+	margin-bottom: -1px; /*Calculamos el margin con "input(margin-bottom) - input:hover(border-width)"*/
+	margin-left: 2px; /*Calculamos el margin con "input(margin-left) - input:hover(border-width)"*/ 
+}
+/************************************************************************/
+
+/************************************************************************/
+/* Estilo para el elemento de "Contactar con.." del pie de la "Master"  */
+/************************************************************************/
+.ContactarCon
+{
+	margin: 4px 0px 0px 0px;
+}
+	.ContactarCon li
+{
+	display: inline;
+	margin-right: 10px;
+	padding: 3px 0px;
+	border: 1px solid lightgray;   
+}
+    .ContactarCon li a {
+        padding: 3px 3px;
+    }
+		.ContactarCon li a:hover
+		{
+			background-color: lightgray;
+		}
+/************************************************************************/
+
+/** Estilo para los Comentarios Aclaratorios ********************************/
+.Comentario
+{
+    border: 1px solid #CCCCCC;
+    font-weight: normal;
+    font-style: italic;
+    color: #567A9E;
+    text-shadow: #CCCCCC 0px 0px 5px;
+    background-color: #F0F0F0;
+    text-align: center;
+    text-decoration:wavy;
+    white-space: nowrap;
+    width: 100%;
+}
+/****************************************************************************/
+
+/****************************************************************************/
+/** Estilo para 'Truncar' texto muy grandes */
+/****************************************************************************/
+span.TruncarTexto {
+    display: block;
+}
+
+.TruncarTexto {
+    white-space: nowrap;
+    width: 25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+    /*.TruncarTexto:hover {
+        border: 1px solid #000000;
+        background-color: white;
+        color: black;
+        text-overflow: initial;
+        overflow: initial;
+        white-space: normal;
+        position: absolute;
+    }*/
+/****************************************************************************/
+
+/****************************************************************************/
+/** Estilo para crear ToolTip */
+/****************************************************************************/
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/ /* If you want dots under the hoverable text */
+
+    /*white-space: nowrap;*/
+    /*width: 25em;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 100%;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+
+        bottom: 100%;
+        /*left: 50%;*/
+        /*margin-left: -60px;*/ /* Use half of the width (120/2 = 60), to center the tooltip */
+    }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+/****************************************************************************/
+
+
+#ContentPlaceHolder_FORM_pnlCambioUsuario > fieldset > table > tbody > tr > td:first-child {
+    text-align: right;
+    width: 50%;
+    padding: 5px;
+}
+
+#ContentPlaceHolder_FORM_pnlCambioUsuario > fieldset > table > tbody > tr > td:last-child {
+    text-align: left;
+    width: 50%;
+    padding: 5px;
+}

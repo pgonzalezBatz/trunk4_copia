@@ -1,0 +1,92 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPTelefoniaAdm.Master.vb" Inherits="Telefonia.MPTelefoniaAdm" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Telefonia</title>
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />	
+    <link href="../App_Themes/Tema1/ToastNotification/jquery.toastmessage.css" type="text/css" rel="Stylesheet" />
+	<link href="../App_Themes/Tema1/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script type="text/javascript">
+         function showToast(pTexto, pType, pSticky) {
+             $().toastmessage('showToast', {
+                 text: pTexto,
+                 sticky: pSticky,
+                 position: 'middle-center',
+                 type: pType,
+                 closeText: '',
+             });
+         }
+     </script> 
+    <form id="form1" runat="server">
+    <ajax:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">
+        <Scripts>            
+            <asp:ScriptReference Path="~/js/jQuery/jquery.js" />
+            <asp:ScriptReference Path="~/js/jQuery/jquery.toastmessage.js" />
+        </Scripts>
+    </ajax:ToolkitScriptManager>
+    <asp:ContentPlaceHolder ID="cphHeader" runat="server">        
+        <a href="/HomeIntranet" title='<%=Traducir("Ir a la pagina de la intranet")%>' class="cabApp"></a>        
+    </asp:ContentPlaceHolder> 
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="cabeceraIzquierda">
+                <asp:Literal ID="ltlUsuario" runat="server" EnableViewState="true" text="usuarioConectado"></asp:Literal>:
+                <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+            </td>
+            <td class="cabeceraDerecha"><asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal></td>
+        </tr>
+    </table>
+    <div class="separador"></div>
+    <asp:Panel runat="server" ID="pnlMenu">
+        <asp:XmlDataSource ID="XmlDataSource" runat="server"></asp:XmlDataSource>
+        <table>
+            <tr>
+                <td><asp:Image ID="imgLogo" runat="server" ImageUrl="~/App_Themes/Tema1/Images/TelefonoLogo.png" /></td>
+                <td>
+                    <asp:Menu runat="server" DataSourceID="XmlDataSource" Orientation="Horizontal" ID="menu">
+                        <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" ItemSpacing="0" CssClass="StaticMenuItemStyle" />
+                        <StaticHoverStyle CssClass="StaticHoverStyle" />
+                        <DynamicMenuItemStyle CssClass="DinamicMenuItemStyle" HorizontalPadding="8px" VerticalPadding="3px" ItemSpacing="0" />
+                        <DynamicHoverStyle CssClass="DynamicHoverStyle" />
+                        <DynamicMenuStyle CssClass="DynamicMenuStyle" />
+                        <DataBindings>
+                            <asp:MenuItemBinding TextField="title" NavigateUrlField="url" ValueField="id" ImageUrl="~/App_Themes/Tema1/Images/bullet_hl.gif" PopOutImageUrl="~/App_Themes/Tema1/Images/arrow.gif" />
+                        </DataBindings>
+                    </asp:Menu>
+                </td>
+            </tr>
+        </table>
+    </asp:Panel>
+    <asp:Panel runat="server" ID="pnlCerrarSession" Visible="false"><asp:ImageButton runat="server" ID="imgCerrarSession" tooltip="cerrarSesion" ImageUrl="~/App_Themes/Tema1/Images/cerrar.gif" /></asp:Panel>
+    <div class="separador"></div>
+     <asp:Panel runat="server" ID="pnlPlantaAdm">
+    <div>
+        <asp:Label runat="server" CssClass="negrita" ID="labelPlanta" text="plantaAdministracion"></asp:Label><b>:</b>&nbsp;
+        <asp:Label runat="server" ID="lblPlantaAdm"></asp:Label><br /><br />
+    </div>    
+    </asp:Panel>
+    <div class="linea">
+        <div class="principal">            
+            <div class="linea">
+                <br /><div id="contenido">
+                    <asp:ContentPlaceHolder ID="cp" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div><br />
+            </div>
+        </div>
+    </div>
+    <div class="separador"></div>
+    <div class="linea">
+        <div class="pie">
+            <asp:ContentPlaceHolder ID="cphPie" runat="server">
+                <asp:Literal runat="server" ID="labelPie" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>
+                &nbsp;<asp:HyperLink id="hlnkHelp" runat="server" text="Helpdesk" NavigateUrl="/Helpdesk" Target="_blank"/>
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

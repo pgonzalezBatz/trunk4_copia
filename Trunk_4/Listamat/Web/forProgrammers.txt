@@ -1,0 +1,10 @@
+Lista Frabicacion y Adelanto
+----------------------------
+
+* Si ottipmarca=2 se muestra proveedor y codigo en vez de la lista de materiales.
+* El diametro depende del material elegido. Si inner join cplismat.otmardes con 
+  gcmarpun.id_otmardes da algun resultado el diametro es obligatorio.
+* Si otmatespe=29 o otmatespe=71 quiere decir que el material seleccionado es 
+  OXICORTE y por lo tanto el grueso es obligatorio.
+* Cuando ottipmarca =2 o se elige diametro o se elige largo,acho y grueso pero no los dos.
+* Cuando ottipmarca =3 o se elige diametro o se elige ancho y grueso. Largo va con los dos.

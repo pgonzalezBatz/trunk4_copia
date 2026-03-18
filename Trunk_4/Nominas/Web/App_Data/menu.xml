@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+	<Item title="Mis nominas" description="Visualiza un listado de las nominas del usuario" url="ConsultarNominas.aspx" id="" />
+	<Item title="Encriptar" description="Encripta las nominas" url="Admin\Encriptar.aspx" id="encrip" />	
+  <Item title="Consulta de nominas" description="" url="Admin\ConsultarNominasAdmin.aspx" id="encripIgorre" />
+  <Item title="Procesar 10T" description="Procesa los documentos 10T" url="Admin\Doc10T.aspx" id="doc10T" />
+  <Item title="Procesar Intereses" description="Procesa los documentos de intereses" url="Admin\DocIntereses.aspx" id="docInt" />
+  <Item title="Administracion" description="Menu para los administradores" url="" id="adm">
+    <Item title="Plantas Epsilon" description="Configura los directorios de las nominas" url="Admin\PlantasNominas.aspx" id="" />
+    <Item title="Roles" description="" url="Admin\Roles.aspx" id="" />
+  </Item> 
+</Root>

@@ -1,0 +1,83 @@
+﻿/*#body {border:1px solid #a8a8a8;  padding: 50px 10px 10px 10px; font-size:12px;}
+.header {background-color: #F3F3F3; width: 100%;} 
+.header-left {text-align:left; float:left}
+.header-right {text-align:right; float:right;}
+.footer {margin-top: 5px; padding:15px; border:1px solid #a8a8a8; background-color:#e6e6e6; text-align:center; }
+.clear-float {clear:both;font-size:0;}
+.bold {font-weight: bold;}
+
+.mensaje-info{text-transform:uppercase;color:Blue;font-weight:bold;}
+
+fieldset {padding: 5px; margin-bottom:10px;}
+legend {padding: 5px; border:1px solid #CCCCCC; background-color: #CCCCCC; font-weight: bold; cursor: pointer; }
+
+.datagrid {background: #fff; overflow: hidden; border: 1px solid #006699; float:left; }
+.datagrid table { border-collapse: collapse; text-align: left; } 
+.datagrid table td, .datagrid table th { padding: 3px 10px; }
+.datagrid table thead th, .datagrid table thead th a {background-color:#006699; color:#FFFFFF; font-weight: bold; border-left: 1px solid #0070A8; } 
+.datagrid table thead th:first-child { border: none; }
+.datagrid table tbody td { color: #00496B; border-left: 1px solid #E1EEF4;font-weight: normal; }
+.datagrid table tbody tr.alt {background-color:#eaeae8;}
+.datagrid table tbody td:first-child { border-left: none; }
+.datagrid table tbody tr:hover { background-color: #eaeaff; }
+.datagrid table tbody tr:last-child td { border-bottom: none; }
+
+.tabla-formulario {border-collapse: collapse; text-align: left; border: 1px solid #006699;}
+.tabla-formulario td, th {padding: 3px 10px; vertical-align:central;}
+.tabla-formulario td.label {background-color:#0066bb; color:#FFFFFF; font-weight: bold; border-bottom: 1px solid #fff; }
+.tabla-formulario th {background-color:#006699; color:#FFFFFF; font-weight: bold;}*/
+
+input[type='text'].auto-seleccionado {border:2px solid #31a93b; } 
+input[type='text'].auto-no-seleccionado {border:2px solid #fe2626;}
+
+/* INICIO - Estos estilos son necesarios para el menú multinivle del bootstrap*/
+
+/*.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}*/
+
+/* FIN - Estos estilos son necesarios para el menú multinivle del bottstrap*/

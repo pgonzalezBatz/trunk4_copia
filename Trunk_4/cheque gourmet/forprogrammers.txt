@@ -1,0 +1,56 @@
+Partiendo de la lectura con pistola:
+
+0-9 Numero de cheque
+11-16 Precio cheque
+
+
+2012/03/28
+==========
+create table devolucion_cheques(
+	id		number not null,
+	codtra		number not null,
+	numero_cheques	number not null,
+	tipo		number not null,
+	fecha		date not null,
+	redistribuido	number(1),
+	constraint pk_devolucion_cheques primary key (id),
+	constraint fk_devolucion_tipos foreign key (tipo) references tipo_cheque(id))
+create sequence devoluciones_seq start with 1 increment by 1	
+
+2012/02/21
+==========
+grant select,references on sab.usuarios to gestionhoras
+grant insert on dbizaro.fcpwtac to gestionhoras
+create table distribucion_cheques(
+       empresa		number,
+	desde		number,
+	hasta		number,
+	codtra		number,
+	tipo		number,
+	fecha		date,
+	constraint pk_distribucion_cheques primary key (desde,hasta),
+	constraint fk_ditribucion_tipos foreign key (tipo) references tipo_cheque(id))
+
+create table tipo_cheque(
+       empresa		number,
+       id		number,
+       precio		number,
+       nombre		varchar(30),
+       num_cheques	number,
+       tipo		varchar(1),
+       obsoleto		number,
+       constraint pk_tipo_cheque primary key (id))
+
+COMMENT ON COLUMN tipo_cheque.tipo IS 'S= suvencionado o C= cargo trabajador'
+
+create table param_gourmet(
+       empresa		number,
+	dia_corte        number	
+)
+
+insert into tipo_cheque values(1,1,2.07,'Batz para GASKA',20,'S',0)
+insert into tipo_cheque values(1,2,3,'Batz para restaurante',20,'S',0)
+insert into tipo_cheque values(1,3,3,'Personal para GASKA',20,'C',0)
+insert into tipo_cheque values(1,4,5.5,'Personal para restaurante',20,'C',0)
+insert into param_gourmet values(1,25)
+

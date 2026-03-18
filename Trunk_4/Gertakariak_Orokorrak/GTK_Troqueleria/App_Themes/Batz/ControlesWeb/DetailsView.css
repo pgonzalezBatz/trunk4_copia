@@ -1,0 +1,18 @@
+﻿/*Proponer este estilo para los DetailsView*/
+/*El resto de clases se cogen del GridView*/
+/* Estilo general de la tabla */
+.DetailsView			{border-style:outset;border-collapse:collapse;border-width:1px;}
+.DetailsView Caption	{font-weight:bold;}
+
+/*Estilo de la cabecera */
+.HeaderStyleDetailsView 	{width:75px;}
+.HeaderStyleDetailsView TD	{background-color:#5D7B9D; text-align:center; color:White; font-weight:bold;}  			 
+
+/*Estilo general de las filas*/
+.FieldHeaderStyle						{background-color:#E9ECF1;font-weight:bold;}
+.RowStyleDetailsView					{background-color:#F7F6F3;}
+.AlternatingRowStyleDetailsView			{background-color:#FFFFFF; color:#333333;}
+.AlternatingRowStyleDetailsView td a	{font-weight:bold;color:#5D7B9D;}
+
+/*Estilo de la linea de Comandos (Botones de Acciones)*/
+.CommandRowStyleDetailsView	{background-color:#E2DED6; text-align:center;}

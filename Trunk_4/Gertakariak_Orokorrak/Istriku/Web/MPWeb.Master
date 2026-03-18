@@ -1,0 +1,121 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPWeb.master.vb" Inherits="IstrikuWebRaiz.MPWeb" %>
+
+<%--HTML 4.01--%>
+<%--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">--%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%--HTML5--%>
+<%--<!DOCTYPE html>--%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Batz S. Koop.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <!--Forzar la cabecera de compatibilidad a la mas alta posible -->
+    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge" />--%>
+    <!-- ---------------------------------------------------------------- -->
+    <!--Forzamos el refresco de la pagian antes de que caduque la sesion (20 min = 1200 seg) -->
+    <meta http-equiv="refresh" content="1195" />
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/App_Themes/Batz/IconoAplicacion/Dryicons-Aesthetica-2-Warning.ico" />
+    <link rel="apple-touch-icon" sizes="128x128" href="~/App_Themes/Batz/IconoAplicacion/warning-icon_128.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="~/App_Themes/Batz/IconoAplicacion/warning-icon_128.png" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <%--<%: System.Web.Optimization.Styles.Render("~/Content/AjaxControlToolkit/Styles/Bundle") %>--%>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="act_ToolkitScriptManager" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-1.12.4.min.js" />
+                <%--<asp:ScriptReference Name="jquery" />--%>
+                <asp:ScriptReference Path="~/App_Themes/Batz/Utilidades.js" />
+
+                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.12.0.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.ui.timepicker.js?v=0.3.3" />
+
+                <%--<asp:ScriptReference Path="~/Scripts/AjaxControlToolkit/Bundle" />--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div>
+            <asp:HyperLink runat="server" ID="lnkIntranet" NavigateUrl="\HomeIntranet" CssClass="cabApp" ToolTip="Ir a la página principal de la intranet" />
+            <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="cabeceraIzquierda">
+                        <asp:Literal ID="ltlUsuario" runat="server" Text="Usuario Conectado:"></asp:Literal>
+					<asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                        <asp:Literal ID="literalPlanta" runat="server" Text="Planta:"></asp:Literal>
+					<asp:Label ID="labelPlanta" runat="server"></asp:Label>
+                    </td>
+                    <td class="cabeceraDerecha">
+                        <asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal>
+                    </td>
+                </tr>
+            </table>
+            <div id="contenido1" style="text-align: left;">
+                <table width="100%">
+                    <tr>
+                        <td align="left">
+                            <asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+                                        <asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+                                        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                                    </asp:Panel>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </td>
+                    </tr>
+                </table>
+                <asp:UpdatePanel ID="upContenido" runat="server">
+                    <ContentTemplate>
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:Panel ID="pnlCerrarSesion" runat="server" CssClass="PanelBotones">
+                                        <asp:ImageButton ID="btnCerrarSession" runat="server" ImageUrl="~/App_Themes/Batz/IconosAcciones/Cancelar16.png" ToolTip="Cerrar Sesion" AlternateText="Cerrar Sesion" />
+                                    </asp:Panel>
+                                </td>
+                                <td style="vertical-align: central">
+                                    <asp:SiteMapPath ID="SiteMapPath" runat="server" SkinID="SiteMapPath" SiteMapProvider="WebSiteMap" ParentLevelsDisplayed="3" />
+                                </td>
+                                <td style="vertical-align: central">
+                                    <asp:Menu ID="mnOpciones" runat="server" SkinID="MenuHorizontal">
+                                        <Items>
+                                            <asp:MenuItem ImageUrl="~/App_Themes/Batz/IconosAcciones/Buscador/Opciones16.png" ToolTip="Opciones">
+                                                <asp:MenuItem Text="Usuarios" ToolTip="Gestion de Usuarios" NavigateUrl="~/Mantenimiento/Usuarios/Listado.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Notificaciones" ToolTip="Listado de Usuarios a notificar" NavigateUrl="~/Mantenimiento/ListadoNotificaciones.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Cruz Verde" ToolTip="Cruz Verde" NavigateUrl="~/Guber/IndiceFecuencia.aspx" />
+                                                <asp:MenuItem Text="Plantas" ToolTip="Plantas" NavigateUrl="~/Mantenimiento/Plantas.aspx" />
+                                            </asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="contenido2">
+                            <asp:ContentPlaceHolder ID="cp" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <br />
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div id="pie">
+                <asp:ContentPlaceHolder ID="cphPie" runat="server">
+                    <asp:Literal ID="Literal1" runat="server" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>
+                    <asp:BulletedList ID="blContactos" runat="server" DisplayMode="HyperLink" Target="_blank" CssClass="ContactarCon">
+                        <asp:ListItem Value="mailto:jrevuelta@batz.es" Text="Jonathan Revuelta" />
+                        <asp:ListItem Value="https://intranet2.batz.es/homeintranet/cargacontenido.aspx?enlace=/helpdesk&tituloapp=Helpdesk" Text="HelpDesk" />
+                    </asp:BulletedList>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <PanelCargandoDatos:PanelCargandoDatos ID="PanelCargandoDatos1" runat="server" />
+        <ascx:Mensajes runat="server" ID="ascx_Mensajes" />
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root>		
+	<Item title="usuarios" description="" url="~\Usuarios\Usuarios.aspx" id="" />
+	<Item title="departamentos" description="" url="~\Departamentos\Departamentos.aspx" id="" />
+	<Item title="ayuda" description="" url="~\Documentos\Kem.pdf" id="ayuda" />
+</Root>

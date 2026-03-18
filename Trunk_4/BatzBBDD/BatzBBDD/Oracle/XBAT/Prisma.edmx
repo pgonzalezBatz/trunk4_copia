@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PrismaBBDD.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PrismaBBDDStoreContainer">
+          <EntitySet Name="ASSET" EntityType="PrismaBBDD.Store.ASSET" store:Type="Tables" Schema="PRISMA3" />
+          <AssociationSet Name="ASSET_ASSET" Association="PrismaBBDD.Store.ASSET_ASSET">
+            <End Role="ASSET" EntitySet="ASSET" />
+            <End Role="ASSET1" EntitySet="ASSET" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ASSET">
+          <Key>
+            <PropertyRef Name="COMPANY" />
+            <PropertyRef Name="ASSET" />
+          </Key>
+          <Property Name="COMPANY" Type="nvarchar2" Nullable="false" MaxLength="10" />
+          <Property Name="ASSET" Type="nvarchar2" Nullable="false" MaxLength="16" />
+          <Property Name="ASSETNAME" Type="nvarchar2" Nullable="false" MaxLength="40" />
+          <Property Name="EQUIPMENTTYPE" Type="nvarchar2" Nullable="false" MaxLength="10" />
+          <Property Name="BUSINESSUNIT" Type="nvarchar2" Nullable="false" MaxLength="10" />
+          <Property Name="PARENTASSET" Type="nvarchar2" MaxLength="16" />
+          <Property Name="COMPANYLEVEL" Type="number" Nullable="false" Precision="2" />
+          <Property Name="LOCATION" Type="nvarchar2" MaxLength="40" />
+          <Property Name="CUSTOMER" Type="nvarchar2" MaxLength="10" />
+          <Property Name="PRIORITY" Type="number" Nullable="false" Precision="2" />
+          <Property Name="EQUIPMENT" Type="nvarchar2" MaxLength="16" />
+          <Property Name="EQUIPMENTASSOCDATE" Type="date" />
+          <Property Name="EQUIPMENTSTATE" Type="nvarchar2" Nullable="false" MaxLength="10" />
+          <Property Name="CALENDAR" Type="nvarchar2" MaxLength="10" />
+          <Property Name="DEFAULTWORKSHOP" Type="nvarchar2" MaxLength="10" />
+          <Property Name="DOWNTIMEHOURRATE" Type="number" Precision="15" Scale="5" />
+          <Property Name="SAFETYPLAN" Type="nvarchar2" MaxLength="10" />
+          <Property Name="RECORDSTATE" Type="nvarchar2" Nullable="false" MaxLength="10" />
+          <Property Name="CREATIONUSER" Type="nvarchar2" MaxLength="20" />
+          <Property Name="CREATIONDATA" Type="date" />
+          <Property Name="LASTUPDATEUSER" Type="nvarchar2" MaxLength="20" />
+          <Property Name="LASTUPDATEDATA" Type="date" />
+        </EntityType>
+        <Association Name="ASSET_ASSET">
+          <End Role="ASSET" Type="PrismaBBDD.Store.ASSET" Multiplicity="0..1" />
+          <End Role="ASSET1" Type="PrismaBBDD.Store.ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="COMPANY" />
+              <PropertyRef Name="ASSET" />
+            </Principal>
+            <Dependent Role="ASSET1">
+              <PropertyRef Name="COMPANY" />
+              <PropertyRef Name="PARENTASSET" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="XBAT_BBDD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities_Prisma" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ASSET" EntityType="XBAT_BBDD.ASSET" />
+          <AssociationSet Name="ASSET_ASSET" Association="XBAT_BBDD.ASSET_ASSET">
+            <End Role="ASSET" EntitySet="ASSET" />
+            <End Role="ASSET1" EntitySet="ASSET" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ASSET">
+          <Key>
+            <PropertyRef Name="COMPANY" />
+            <PropertyRef Name="ASSET1" />
+          </Key>
+          <Property Name="COMPANY" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ASSET1" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="ASSETNAME" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="EQUIPMENTTYPE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="BUSINESSUNIT" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="PARENTASSET" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="COMPANYLEVEL" Type="Int16" Nullable="false" />
+          <Property Name="LOCATION" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="CUSTOMER" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="PRIORITY" Type="Int16" Nullable="false" />
+          <Property Name="EQUIPMENT" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="EQUIPMENTASSOCDATE" Type="DateTime" />
+          <Property Name="EQUIPMENTSTATE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CALENDAR" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DEFAULTWORKSHOP" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DOWNTIMEHOURRATE" Type="Decimal" Precision="15" Scale="5" />
+          <Property Name="SAFETYPLAN" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="RECORDSTATE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="CREATIONUSER" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CREATIONDATA" Type="DateTime" />
+          <Property Name="LASTUPDATEUSER" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LASTUPDATEDATA" Type="DateTime" />
+          <NavigationProperty Name="ASSET11" Relationship="XBAT_BBDD.ASSET_ASSET" FromRole="ASSET" ToRole="ASSET1" />
+          <NavigationProperty Name="ASSET2" Relationship="XBAT_BBDD.ASSET_ASSET" FromRole="ASSET1" ToRole="ASSET" />
+        </EntityType>
+        <Association Name="ASSET_ASSET">
+          <End Role="ASSET" Type="XBAT_BBDD.ASSET" Multiplicity="0..1" />
+          <End Role="ASSET1" Type="XBAT_BBDD.ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="COMPANY" />
+              <PropertyRef Name="ASSET1" />
+            </Principal>
+            <Dependent Role="ASSET1">
+              <PropertyRef Name="COMPANY" />
+              <PropertyRef Name="PARENTASSET" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PrismaBBDDStoreContainer" CdmEntityContainer="Entities_Prisma">
+          <EntitySetMapping Name="ASSET">
+            <EntityTypeMapping TypeName="XBAT_BBDD.ASSET">
+              <MappingFragment StoreEntitySet="ASSET">
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+                <ScalarProperty Name="ASSET1" ColumnName="ASSET" />
+                <ScalarProperty Name="ASSETNAME" ColumnName="ASSETNAME" />
+                <ScalarProperty Name="EQUIPMENTTYPE" ColumnName="EQUIPMENTTYPE" />
+                <ScalarProperty Name="BUSINESSUNIT" ColumnName="BUSINESSUNIT" />
+                <ScalarProperty Name="PARENTASSET" ColumnName="PARENTASSET" />
+                <ScalarProperty Name="COMPANYLEVEL" ColumnName="COMPANYLEVEL" />
+                <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+                <ScalarProperty Name="CUSTOMER" ColumnName="CUSTOMER" />
+                <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+                <ScalarProperty Name="EQUIPMENT" ColumnName="EQUIPMENT" />
+                <ScalarProperty Name="EQUIPMENTASSOCDATE" ColumnName="EQUIPMENTASSOCDATE" />
+                <ScalarProperty Name="EQUIPMENTSTATE" ColumnName="EQUIPMENTSTATE" />
+                <ScalarProperty Name="CALENDAR" ColumnName="CALENDAR" />
+                <ScalarProperty Name="DEFAULTWORKSHOP" ColumnName="DEFAULTWORKSHOP" />
+                <ScalarProperty Name="DOWNTIMEHOURRATE" ColumnName="DOWNTIMEHOURRATE" />
+                <ScalarProperty Name="SAFETYPLAN" ColumnName="SAFETYPLAN" />
+                <ScalarProperty Name="RECORDSTATE" ColumnName="RECORDSTATE" />
+                <ScalarProperty Name="CREATIONUSER" ColumnName="CREATIONUSER" />
+                <ScalarProperty Name="CREATIONDATA" ColumnName="CREATIONDATA" />
+                <ScalarProperty Name="LASTUPDATEUSER" ColumnName="LASTUPDATEUSER" />
+                <ScalarProperty Name="LASTUPDATEDATA" ColumnName="LASTUPDATEDATA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToOracle.tt" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

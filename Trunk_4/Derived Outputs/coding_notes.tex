@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+\title{Derived Outputs}
+\author{Asier Azkuenaga}
+\maketitle
+
+
+\section {UG/NX getsession y X86}
+El problema con el que nos encontramos llegados a este punto es que para recoger la sesión de UG/NX en código, necesitamos que el proyecto se compile en 64 bits. 
+
+Si hacemos esto, nos encontramos con que el proveedor de oracle que utilizamos para acceder a la base de datos (cosa necesaria para acceder a los datos de la cola) no funciona.
+
+Intalando ``64-bit ODAC 12c Release 2 (12.1.0.1.2) for Windows x64'' y compilando el proyecto con x64 solucionamos el problema.
+
+\section {Servicios Catia y TNS listener}
+La única forma en la que conseguimos ejecutar el servicio y que funcione con Catia, es activando la casilla de ``Cuenta del sistema local''
+
+Esto a su vez nos causa un problema a la hora de adquirir el TNS listener desde la red. Para que esto último funcione dentro de un servicio, necesitamos que este se ejecute con una cuenta concreta para que pueda acceder a la red.
+
+En el futuro si se decide publicar lo programado en otra/s máquina/s, el problema podría solucionarse activando el servicio como cuenta local y accediendo al TNS localmente.
+
+\section {Problemas cuando no se puede adquirir licencia (STEP)}
+Catia levanta un error de que no se ha podido adquir la licencia requerida pero ese error no llega a nuestro programa. Por lo que el programa se queda a la espera de que Catia termine y Catia esta bloqueada esperando que se acepte el errer levantado.
+\end{document}

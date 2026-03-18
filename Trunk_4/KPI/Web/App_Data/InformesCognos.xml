@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Informes>
+  <Informe name="KPI_REPORT_BMS">
+    <![CDATA[https://cognos.batz.es/ibmcognos/bi/?objRef=i84843367D6954F44916CE0AC067A446C&ui_appbar=false&ui_navbar=false&format=spreadsheetML]]>
+  </Informe>
+  <Informe name="KPI_REPORT_COMMITTEE">
+	<![CDATA[https://cognos.batz.es/ibmcognos/bi/?pathRef=.public_folders%2FINTRANET%2BAPP%2FREPORTS%2BAPP%2FKPI%2FKPI%2BREPORT%2BV2&ui_navbar=false]]>
+	<!--https://cognos.batz.es/ibmcognos/bi/?objRef=i03C0C1EDB1EE49AE84DB339C3D465A9B&ui_appbar=false&ui_navbar=false&format=spreadsheetML-->
+  </Informe>
+</Informes>

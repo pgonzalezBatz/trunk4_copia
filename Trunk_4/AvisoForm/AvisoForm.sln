@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AvisoForm", "AvisoForm.vbproj", "{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		GertakariakMS|Any CPU = GertakariakMS|Any CPU
+		GertakariakMS|Mixed Platforms = GertakariakMS|Mixed Platforms
+		GertakariakMS|x86 = GertakariakMS|x86
+		Istriku_Debug|Any CPU = Istriku_Debug|Any CPU
+		Istriku_Debug|Mixed Platforms = Istriku_Debug|Mixed Platforms
+		Istriku_Debug|x86 = Istriku_Debug|x86
+		Istriku_Release|Any CPU = Istriku_Release|Any CPU
+		Istriku_Release|Mixed Platforms = Istriku_Release|Mixed Platforms
+		Istriku_Release|x86 = Istriku_Release|x86
+		Release_Extranet|Any CPU = Release_Extranet|Any CPU
+		Release_Extranet|Mixed Platforms = Release_Extranet|Mixed Platforms
+		Release_Extranet|x86 = Release_Extranet|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Debug|Any CPU.Build.0 = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Debug|x86.ActiveCfg = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Debug|x86.Build.0 = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.GertakariakMS|Any CPU.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.GertakariakMS|Mixed Platforms.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.GertakariakMS|Mixed Platforms.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.GertakariakMS|x86.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.GertakariakMS|x86.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Debug|Any CPU.ActiveCfg = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Debug|x86.ActiveCfg = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Debug|x86.Build.0 = Debug|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Release|Any CPU.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Release|Mixed Platforms.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Release|x86.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Istriku_Release|x86.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release_Extranet|Any CPU.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release_Extranet|Any CPU.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release_Extranet|Mixed Platforms.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release_Extranet|Mixed Platforms.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release_Extranet|x86.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release_Extranet|x86.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release|Any CPU.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release|Any CPU.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release|x86.ActiveCfg = Release|x86
+		{CFF1BBA5-3DCB-4216-9928-CAA69B20AB29}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

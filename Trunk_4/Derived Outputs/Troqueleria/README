@@ -1,0 +1,5 @@
+Para el registro inicial de las ddls en la maquina
+1. Open command-line and change to your local CATIA-Install-Path (..intel_a\code\bin)
+2. execute cnext /unregserver  'Clears all settings
+3. execute cnext /regserver 'registers CATIA as a COM-Server
+

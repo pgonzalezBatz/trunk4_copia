@@ -1,0 +1,146 @@
+﻿.numeric {
+    text-align: right;
+}
+
+form label.error {
+    color: red;
+    display: block;
+    width: auto;
+}
+
+.input-text{
+    width:50px;
+}
+
+input[type='text'].auto-seleccionado {
+    border: 2px solid #31a93b;
+}
+
+input[type='text'].auto-no-seleccionado {
+    border: 2px solid #ffd800;
+}
+
+.contenedor-cargando {
+    width: 100%;
+    height: 100%;
+    margin: 0em;
+    left: 0em;
+    top: 0em;
+    background: black;
+    position: fixed;
+    opacity: 0.3;
+}
+
+.contenedor-imagen-cargando {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px; /* ancho de la imagen */ 
+    height: 64px; /* alto de la imagen */
+    margin-left: -32px; /* mitad del ancho de la imagen */
+    margin-top: -32px; /* mitad del alto de la imagen */
+}
+
+.contenido-celda {
+    position: relative;
+}
+
+.contenido-celda span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+ /*Inicio estilos de las tarjetas*/
+
+.container-tarjeta-group {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(22,58,106);
+}
+
+.nombre-group {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(0.3em + 0.9vw);
+}
+
+.puesto-group {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.email-group {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.direccion-group {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.container-tarjeta-troq-sist {
+    position: relative;
+    text-align:  left;
+    font-size: 14px;
+    color: black;
+}
+
+.nombre-troq-sist {
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    text-align: left;
+    font-size: calc(0.3em + 0.9vw);}
+
+.puesto-troq-sist {
+    position: absolute;
+    top: 48%;
+    left: 3%;
+    text-align: left;
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.email-troq-sist {
+    position: absolute;
+    top: 60%;
+    left: 3%;
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.movil-troq-sist {
+    position: absolute;
+    top: 68%;
+    left: 3%;
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.fijo-troq-sist {
+    position: absolute;
+    top: 76%;
+    left: 3%;
+    font-size: calc(0.1em + 0.7vw);
+}
+
+.direccion-troq-sist {
+    position: absolute;
+    top: 90%;
+    right: 45%;
+    text-align:right;
+    font-size: calc(0.1em + 0.7vw);
+}
+
+/*Fin estilos de las tarjetas*/

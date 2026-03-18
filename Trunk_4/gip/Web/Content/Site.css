@@ -1,0 +1,40 @@
+tr.linethrough {text-decoration:line-through;}
+.baja {
+    text-decoration: line-through;
+}
+
+.validation-summary-errors, .field-validation-error{color:red;}
+.input-validation-error{border:solid 1px red;}
+.warning{border:solid 2px #00ffff;}
+.urgent{font-size:3em;color:red; position:absolute; left:0;}
+pre{margin:0 0 0 1em;;padding:0;text-align:left;}
+.editor-field input{width:25em;}
+.search input{font-size:1.5em;}
+.search input[type=text] {width:32em;}
+.editor-field{margin:0.2em 0 0 0.6em;}
+.editor-label{margin:0.4em 0 0 0;}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+input[type=checkbox] {
+    margin-left: 0px!important;
+}

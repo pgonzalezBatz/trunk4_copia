@@ -1,0 +1,69 @@
+<%--
+Plantilla de máscara predeterminada. Las siguientes máscaras se proporcionan sólo como ejemplos.
+
+1. Máscara de control con nombre. SkinId debería definirse de forma única porque
+no se permite que haya varios SkinId por tipo de control en el mismo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Máscara predeterminada. Skinid no está definido Sólo se permite 
+   una máscara de control por tipo de control en el mismo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<%-- Intentar crear las "Mascaras" sin usar CSS para que si la forma de pintar el control en HTML cambia no haya que cambiar tambien el CSS --%>
+
+<asp:Menu runat="server" SkinID="MenuHorizontal" Orientation="Horizontal"  RenderingMode="List">
+	<StaticMenuStyle Font-Names="Verdana,Arial,Times New Roman" BackColor="#E6E6E6" />
+	<DynamicMenuStyle BackColor="#E6E6E6" Font-Names="Verdana,Arial,Times New Roman"/>
+
+	<StaticMenuItemStyle ForeColor="#0066cc" BorderColor="#a8a8a8" BorderStyle="Solid" BorderWidth="1" HorizontalPadding="5" VerticalPadding="2" />
+	<DynamicMenuItemStyle ForeColor="#0066cc" BorderColor="#a8a8a8" BorderStyle="Solid" BorderWidth="1" HorizontalPadding="5" VerticalPadding="2" />
+
+	<StaticHoverStyle ForeColor="#F0F8FF" BackColor="#b3b3b3" />
+	<DynamicHoverStyle ForeColor="#F0F8FF" BackColor="#b3b3b3" />
+
+	<StaticSelectedStyle />
+	<DynamicSelectedStyle />
+</asp:Menu>
+
+<asp:GridView SkinID="GridView" runat="server" CssClass="GridViewASP" GridLines="None"
+AutoGenerateColumns="False" AllowSorting="True"
+PageSize="15" 
+PagerSettings-Position="Bottom" 
+AllowPaging="True" 
+PagerSettings-Mode="NumericFirstLast" 
+ShowFooter="true">
+	<RowStyle CssClass="RowStyle" />
+	<FooterStyle CssClass="FooterStyle" />
+	<SelectedRowStyle CssClass="SelectedRowStyle" />
+	<HeaderStyle CssClass="HeaderStyle" />
+	<EditRowStyle CssClass="EditRowStyle" />
+	<AlternatingRowStyle CssClass="AlternatingRowStyle" />
+	<EmptyDataRowStyle CssClass="FooterStyle" />
+	<EmptyDataTemplate>
+		<asp:Label ID="lblSinDatos" runat="server" Text="Sin Datos"></asp:Label>
+	</EmptyDataTemplate>
+
+    <PagerSettings Mode="NumericFirstLast" PageButtonCount="7" Position="Bottom" />
+    <PagerStyle HorizontalAlign="Center" CssClass="PagerStyle" />
+
+</asp:GridView>
+
+<asp:SiteMapPath SkinID="SiteMapPath" runat="server" PathDirection="RootToCurrent">
+	<PathSeparatorTemplate>
+		<asp:Image ID="imgTitulo" runat="server" ImageUrl="~/App_Themes/Batz/Imagenes/arrow.gif" ImageAlign="AbsMiddle" />
+	</PathSeparatorTemplate>
+	<NodeStyle Font-Names="verdana" BorderColor="#CCCCCC" BorderStyle="Double" BorderWidth="3" BackColor="#F4F4F4" />
+	<CurrentNodeStyle Font-Bold="True" BackColor="#CCCCCC" BorderStyle="Double" BorderWidth="3px" BorderColor="Black" />
+</asp:SiteMapPath>
+
+<asp:TreeView SkinID="TreeView" runat="server" ShowLines="True" BorderColor="Black" BorderWidth="1" BorderStyle="Solid" Width="100%" ExpandDepth="1" NodeWrap="false">
+	<NodeStyle ForeColor="Black" BorderStyle="Solid" BorderWidth="1" BorderColor="Transparent" CssClass="NodeStyle"/>
+	<RootNodeStyle ForeColor="WindowText" BackColor="ActiveCaption" BorderColor="ActiveCaption" Width="100%"  />
+	<ParentNodeStyle ForeColor="WindowText" BorderWidth="1" BackColor="#C9D7E7" BorderColor="#C9D7E7" Width="100%" />
+	<SelectedNodeStyle Font-Bold="true" BorderColor="#8585E2" BorderStyle="Double" BorderWidth="2" />
+	<HoverNodeStyle BorderColor="ActiveBorder" ForeColor="#F4F4F4" Font-Bold="true" BorderStyle="Outset" BorderWidth="1" BackColor="#345374" />
+</asp:TreeView>

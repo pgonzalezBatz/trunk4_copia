@@ -1,0 +1,24 @@
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error{color: #ff0000;}
+.field-validation-valid{display: none;}
+.input-validation-error{border: 1px solid #ff0000;background-color: #ffeeee;}
+.validation-summary-errors{font-weight: bold;color: #ff0000;}
+.validation-summary-valid{display: none;}
+fieldset input[type=text]{width:250px;}
+.table1{text-align:center;margin:1%; font-size:0.9em;}
+.table1 a{display:inline;}
+.table1 thead th a{padding:0 1px;}
+#contenido1{text-align:center;}
+#contenido2 h2{text-align:center;}
+fieldset input[type=text].small-box{width:50px;}
+.formbuttons a{font-weight:bold; margin-right:1%;}
+h3{margin-left:1%;}
+.recogida td{background-color:#CF9696;}
+td.recogida{background-color:#CF9696;}
+li.recogida{background-color:#CF9696;}
+li {clear:left;}
+.ag{padding-left:0.8em;}
+.mm{padding-left:0.5em; font-size:0.8em;}
+
+.vector_viaje p{display:inline;}

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:impl="http://bzServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://bzServices" targetNamespace="http://bzServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://bzServices">
+      <xsd:element name="getCausaECO">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCausaECOResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getCausaECOReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCustomers">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getCustomersResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getCustomersReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjects">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+            <xsd:element name="in2" type="xsd:string" />
+            <xsd:element name="in3" type="xsd:string" />
+            <xsd:element name="in4" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getProjectsReturn" type="intf:com.batz.Services.BonosProject" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="com.batz.Services.BonosProject">
+        <xsd:sequence>
+          <xsd:element name="OF" nillable="true" type="xsd:string" />
+          <xsd:element name="PGYear" nillable="true" type="xsd:string" />
+          <xsd:element name="causaECO" nillable="true" type="xsd:string" />
+          <xsd:element name="coOwner" nillable="true" type="xsd:string" />
+          <xsd:element name="customer" nillable="true" type="xsd:string" />
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="gate3Approved" nillable="true" type="xsd:boolean" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="idFather" nillable="true" type="xsd:string" />
+          <xsd:element name="idProyectoConceptoReal" nillable="true" type="xsd:string" />
+          <xsd:element name="indicator" nillable="true" type="xsd:boolean" />
+          <xsd:element name="isECO" nillable="true" type="xsd:boolean" />
+          <xsd:element name="isPotencial" nillable="true" type="xsd:boolean" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="offerNumber" nillable="true" type="xsd:string" />
+          <xsd:element name="plantToCharge" nillable="true" type="xsd:string" />
+          <xsd:element name="policy" nillable="true" type="xsd:string" />
+          <xsd:element name="policyProyectoConcepto" nillable="true" type="xsd:string" />
+          <xsd:element name="product" nillable="true" type="xsd:string" />
+          <xsd:element name="program" nillable="true" type="xsd:string" />
+          <xsd:element name="responsible" nillable="true" type="xsd:string" />
+          <xsd:element name="startDate" nillable="true" type="xsd:string" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getProducts">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getProductsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getProductsReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getProjectInfoReturn" type="intf:com.batz.Services.BonosProject" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectConceptRelatedRealProject">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectConceptRelatedRealProjectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getProjectConceptRelatedRealProjectReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProjectCostCarrier">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProjectCostCarrierResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateProjectCostCarrierReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAllProjectStates">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getAllProjectStatesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAllProjectStatesReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectMembersWithRole">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectMembersWithRoleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getProjectMembersWithRoleReturn" type="intf:com.batz.Services.ProjectMember" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="com.batz.Services.ProjectMember">
+        <xsd:sequence>
+          <xsd:element name="projectRole" nillable="true" type="xsd:string" />
+          <xsd:element name="userName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="updateProjectOfferNumber">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+            <xsd:element name="in1" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProjectOfferNumberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateProjectOfferNumberReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectsByProduct">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectsByProductResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getProjectsByProductReturn" type="intf:com.batz.Services.BonosProject" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectSerieAffected">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProjectSerieAffectedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getProjectSerieAffectedReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCausaECORequest">
+    <wsdl:part name="parameters" element="intf:getCausaECO" />
+  </wsdl:message>
+  <wsdl:message name="getCausaECOResponse">
+    <wsdl:part name="parameters" element="intf:getCausaECOResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersRequest">
+    <wsdl:part name="parameters" element="intf:getCustomers" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersResponse">
+    <wsdl:part name="parameters" element="intf:getCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsRequest">
+    <wsdl:part name="parameters" element="intf:getProjects" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsResponse">
+    <wsdl:part name="parameters" element="intf:getProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductsRequest">
+    <wsdl:part name="parameters" element="intf:getProducts" />
+  </wsdl:message>
+  <wsdl:message name="getProductsResponse">
+    <wsdl:part name="parameters" element="intf:getProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectInfoRequest">
+    <wsdl:part name="parameters" element="intf:getProjectInfo" />
+  </wsdl:message>
+  <wsdl:message name="getProjectInfoResponse">
+    <wsdl:part name="parameters" element="intf:getProjectInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectConceptRelatedRealProjectRequest">
+    <wsdl:part name="parameters" element="intf:getProjectConceptRelatedRealProject" />
+  </wsdl:message>
+  <wsdl:message name="getProjectConceptRelatedRealProjectResponse">
+    <wsdl:part name="parameters" element="intf:getProjectConceptRelatedRealProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateProjectCostCarrierRequest">
+    <wsdl:part name="parameters" element="intf:updateProjectCostCarrier" />
+  </wsdl:message>
+  <wsdl:message name="updateProjectCostCarrierResponse">
+    <wsdl:part name="parameters" element="intf:updateProjectCostCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllProjectStatesRequest">
+    <wsdl:part name="parameters" element="intf:getAllProjectStates" />
+  </wsdl:message>
+  <wsdl:message name="getAllProjectStatesResponse">
+    <wsdl:part name="parameters" element="intf:getAllProjectStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectMembersWithRoleRequest">
+    <wsdl:part name="parameters" element="intf:getProjectMembersWithRole" />
+  </wsdl:message>
+  <wsdl:message name="getProjectMembersWithRoleResponse">
+    <wsdl:part name="parameters" element="intf:getProjectMembersWithRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateProjectOfferNumberRequest">
+    <wsdl:part name="parameters" element="intf:updateProjectOfferNumber" />
+  </wsdl:message>
+  <wsdl:message name="updateProjectOfferNumberResponse">
+    <wsdl:part name="parameters" element="intf:updateProjectOfferNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByProductRequest">
+    <wsdl:part name="parameters" element="intf:getProjectsByProduct" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByProductResponse">
+    <wsdl:part name="parameters" element="intf:getProjectsByProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectSerieAffectedRequest">
+    <wsdl:part name="parameters" element="intf:getProjectSerieAffected" />
+  </wsdl:message>
+  <wsdl:message name="getProjectSerieAffectedResponse">
+    <wsdl:part name="parameters" element="intf:getProjectSerieAffectedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BonosService">
+    <wsdl:operation name="getCausaECO">
+      <wsdl:input name="getCausaECORequest" message="intf:getCausaECORequest" />
+      <wsdl:output name="getCausaECOResponse" message="intf:getCausaECOResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <wsdl:input name="getCustomersRequest" message="intf:getCustomersRequest" />
+      <wsdl:output name="getCustomersResponse" message="intf:getCustomersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjects">
+      <wsdl:input name="getProjectsRequest" message="intf:getProjectsRequest" />
+      <wsdl:output name="getProjectsResponse" message="intf:getProjectsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProducts">
+      <wsdl:input name="getProductsRequest" message="intf:getProductsRequest" />
+      <wsdl:output name="getProductsResponse" message="intf:getProductsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectInfo">
+      <wsdl:input name="getProjectInfoRequest" message="intf:getProjectInfoRequest" />
+      <wsdl:output name="getProjectInfoResponse" message="intf:getProjectInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectConceptRelatedRealProject">
+      <wsdl:input name="getProjectConceptRelatedRealProjectRequest" message="intf:getProjectConceptRelatedRealProjectRequest" />
+      <wsdl:output name="getProjectConceptRelatedRealProjectResponse" message="intf:getProjectConceptRelatedRealProjectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateProjectCostCarrier">
+      <wsdl:input name="updateProjectCostCarrierRequest" message="intf:updateProjectCostCarrierRequest" />
+      <wsdl:output name="updateProjectCostCarrierResponse" message="intf:updateProjectCostCarrierResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllProjectStates">
+      <wsdl:input name="getAllProjectStatesRequest" message="intf:getAllProjectStatesRequest" />
+      <wsdl:output name="getAllProjectStatesResponse" message="intf:getAllProjectStatesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectMembersWithRole">
+      <wsdl:input name="getProjectMembersWithRoleRequest" message="intf:getProjectMembersWithRoleRequest" />
+      <wsdl:output name="getProjectMembersWithRoleResponse" message="intf:getProjectMembersWithRoleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateProjectOfferNumber">
+      <wsdl:input name="updateProjectOfferNumberRequest" message="intf:updateProjectOfferNumberRequest" />
+      <wsdl:output name="updateProjectOfferNumberResponse" message="intf:updateProjectOfferNumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByProduct">
+      <wsdl:input name="getProjectsByProductRequest" message="intf:getProjectsByProductRequest" />
+      <wsdl:output name="getProjectsByProductResponse" message="intf:getProjectsByProductResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectSerieAffected">
+      <wsdl:input name="getProjectSerieAffectedRequest" message="intf:getProjectSerieAffectedRequest" />
+      <wsdl:output name="getProjectSerieAffectedResponse" message="intf:getProjectSerieAffectedResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BzServicesBonosServiceSoapBinding" type="intf:BonosService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCausaECO">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCausaECORequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCausaECOResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCustomersRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCustomersResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjects">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProjectsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProjectsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProducts">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProductsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProductsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProjectInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProjectInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectConceptRelatedRealProject">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProjectConceptRelatedRealProjectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProjectConceptRelatedRealProjectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProjectCostCarrier">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateProjectCostCarrierRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateProjectCostCarrierResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllProjectStates">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAllProjectStatesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAllProjectStatesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectMembersWithRole">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProjectMembersWithRoleRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProjectMembersWithRoleResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProjectOfferNumber">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateProjectOfferNumberRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateProjectOfferNumberResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByProduct">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProjectsByProductRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProjectsByProductResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectSerieAffected">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getProjectSerieAffectedRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getProjectSerieAffectedResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BonosServiceService">
+    <wsdl:port name="BzServicesBonosService" binding="intf:BzServicesBonosServiceSoapBinding">
+      <wsdlsoap:address location="http://plmv6.batz.es:7001/enovia/services/BzServicesBonosService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

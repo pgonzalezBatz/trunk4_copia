@@ -1,0 +1,172 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPLogin.master.vb" Inherits="AdokWeb.MPLogin" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>MatrizPuesto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1;maximum-scale=1, user-scalable=no" />
+    <link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./App_Themes/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="./App_Themes/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+
+    
+    <link href="./App_Themes/ToastNotification/jquery.toastmessage.css" type="text/css" rel="Stylesheet" />
+    
+
+    <script src="./jquery/jquery-1.11.2.min.js"></script>
+    <link href="./jquery/jquery-ui.css" rel="stylesheet" />
+    <script src="./jquery/jquery-1.10.2.js"></script>
+    <script src="./jquery/jquery-ui.js"></script>
+
+
+    <script src="./App_Themes/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>  <%--el jquery debe estar antes--%>
+
+
+    <!--BOOTSTRAP INCLUDES -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <%--<link rel="stylesheet" href="bootstrap/3.3.6/css/bootstrap.min.css"/>--%>
+    <%--<script src="jquery/jquery-1.11.2.min.js"></script>--%>
+    <%--<script src="bootstrap/3.3.6/js/bootstrap.min.js"></script>--%>
+    <!--END BOOTSTRAP INCLUDES -->
+
+    <!--DATEPICKER -->
+    <link rel="stylesheet" href="bootstrap/bootstrap-datetimepicker.css" />
+    <script type="text/javascript" src="bootstrap/moment-with-locales.js"></script>
+    <script type="text/javascript" src="bootstrap/js/transition.js"></script>
+    <script type="text/javascript" src="bootstrap/js/collapse.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-datetimepicker.js"></script>
+    <!--END DATEPICKER-->
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+        var _confirm = false;
+        function Confirmacion(titulo, texto, button) {
+            if (_confirm == false) {
+                jQuery('<div>')
+                    .html("<span class='glyphicon glyphicon-question-sign' style='float:left; margin:0 20px 20px 0; color:#ff9400; font-size:4em'></span>" + texto)
+                    .dialog({
+                        autoOpen: true,
+                        draggable: false,
+                        resizable: false,
+                        modal: true,
+                        title: titulo,
+                        width: 350,
+                        hide: "slide",
+
+                        buttons: {
+                            "No": function () {
+                                $(this).dialog("close");
+                            },
+
+                            "Si": function () {
+                                $(this).dialog("close");
+                                _confirm = true;
+                                button.click();
+                            }
+                        },
+
+                        close: function () {
+                            jQuery(this).remove();
+                        }
+                    });
+            }
+            return _confirm;
+        }
+
+
+
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">	
+        <Scripts>            
+            <asp:ScriptReference Path="~/js/jquery-1.12.4.min.js" />                 
+            <asp:ScriptReference Path="~/App_Themes/Tema1/bootstrap/3.3.7/js/bootstrap.min.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <asp:Image runat="server" ID="imgLogo" AlternateText="Portal del empleado" CssClass="navbar-brand" />
+            </div>
+
+
+            <div class="navbar-collapse collapse">               
+                <ul class="nav navbar-nav navbar">
+                    <%--<li runat="server" id="li1"><a><span class="glyphicon glyphicon-user"></span>&nbsp;<asp:Label runat="server" ID="Label1"></asp:Label></a></li>--%>
+                    <li runat="server" id="li2">
+                        <a runat="server" id="a1" href="Solicitud2.aspx?id=1">
+                           <%-- <span class='glyphicon glyphicon-off'></span>--%>
+                            <asp:Label runat="server" ID="Label2" Text="Crear Solicitud"></asp:Label>
+                        </a>
+                    </li>                    
+                    <li runat="server" id="li3" >
+                        <a runat="server" id="a2" href="Solicitud2.aspx?id=0">
+                          <%--  <span class='glyphicon glyphicon-off'></span>--%>
+                            <asp:Label runat="server" ID="Label3" Text="Modificar Solicitud"></asp:Label>
+                        </a>
+                    </li>  
+                    <li runat="server" id="li1" >
+                        <a runat="server" id="a3" href="MatrizFormacionSolicitud.aspx?id=0">
+                          <%--  <span class='glyphicon glyphicon-off'></span>--%>
+                            <asp:Label runat="server" ID="Label1" Text="Matriz de Trabajadores Formación"></asp:Label>
+                        </a>
+                    </li>                     
+                </ul>                
+             
+                <ul class="nav navbar-nav navbar-right">
+                    <li runat="server" id="liUserCon"><a><span class="glyphicon glyphicon-user"></span>&nbsp;<asp:Label runat="server" ID="lblUserCon"></asp:Label></a></li>
+                    <li runat="server" id="liHome">
+                        <a runat="server" id="aHome" href="#">
+                            <span class='glyphicon glyphicon-off'></span>
+                            <asp:Label runat="server" ID="lblSalir" Text="Salir"></asp:Label>
+                        </a>
+                    </li>                    
+                    <li runat="server" id="liSessionOff">
+                        <a runat="server" id="aSessionOff" href="#">
+                            <span class='glyphicon glyphicon-off'></span>
+                            <asp:Label runat="server" ID="lblSessionOff" Text="Cerrar"></asp:Label>
+                        </a>
+                    </li>                     
+                </ul>                
+             </div>
+         </div>         
+    </div>          
+    <asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <div class="container">
+                <asp:Panel runat="server" ID="pnlMensaje">                        
+                    <asp:Label ID="lblMensaje" runat="server" />
+                </asp:Panel>
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>        
+    <div class="container">
+        <asp:ContentPlaceHolder ID="cphContenido" runat="server" />                
+    </div>
+    </form>
+</body>
+</html>

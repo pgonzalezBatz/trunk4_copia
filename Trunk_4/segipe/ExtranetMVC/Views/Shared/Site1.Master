@@ -1,0 +1,63 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="ExtranetMVC" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="//intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Extranet.css" rel="Stylesheet" type="text/css"  />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <a href="/extranetlogin/access/resources" title="<%= h.traducir("Ir a la página principal de la intranet")%>" class="cabApp"></a>
+    <div class="topleft">
+    
+    </div>
+    <ul id="menutop">
+        <% If Url.Action("nuevoscabecera", "pedidos") = Request.Path OrElse Url.Action("nuevoslinea", "pedidos") = Request.Path Then%>
+            <li class="selected">
+        <%Else%>
+            <li>
+        <%End If%>
+        <a href="<%=Url.Action("nuevoscabecera","pedidos") %>"><%=h.Traducir("Nuevos")%> </a></li>
+        <% If Url.Action("leidoscabecera", "pedidos") = Request.Path OrElse Url.Action("leidoslinea", "pedidos") = Request.Path Then%>
+            <li class="selected">
+        <%Else%>
+            <li>
+        <%End If%>
+        <a href="<%=Url.Action("leidoscabecera","pedidos") %>"><%=h.Traducir("Leidos")%> </a></li>
+        <% If Url.Action("propuestoscabecera", "pedidos") = Request.Path OrElse Url.Action("propuestoslinea", "pedidos") = Request.Path Then%>
+            <li class="selected">
+        <%Else%>
+            <li>
+        <%End If%>
+        <a href="<%=Url.Action("propuestoscabecera","pedidos") %>"><%=h.Traducir("Propuestos")%> </a></li>
+        <% If Url.Action("aceptadoscabecera", "pedidos") = Request.Path OrElse Url.Action("aceptadoslinea", "pedidos") = Request.Path Then%>
+            <li class="selected">
+        <%Else%>
+            <li>
+        <%End If%>
+        <a href="<%=Url.Action("aceptadoscabecera","pedidos") %>"><%=h.traducir("Aceptados")%> </a></li>
+        
+
+        <% If Url.Action("buscador", "pedidos") = Request.Path OrElse Url.Action("buscadorporpedido", "pedidos") = Request.Path OrElse Url.Action("buscadorporfecha", "pedidos") = Request.Path Then%>
+            <li class="selected">
+        <%Else%>
+            <li>
+        <%End If%>
+        <a href="<%=Url.Action("buscador","pedidos") %>"><%=h.Traducir("Buscador")%> </a></li>
+<li>
+    <a href="<%= url.action("CerrarSession", "access")%>" ><%=h.Traducir("Salir")%></a>
+</li>
+    </ul>
+    <div style="clear:left;">
+        <asp:ContentPlaceHolder ID="cphContent1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <br />
+</body>
+</html>

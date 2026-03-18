@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Portadores de coste" controller="CostCarriers" action="Index" roles=""></Item>
+  <Item title="Plantillas" controller="Plantilla" action="Index" roles=""></Item>
+  <Item title="Validaciones" roles="1,2">
+    <Item title="Gestionar validaciones" controller="Validaciones" action="Index" roles="1,2"></Item>
+    <Item title="Historico validaciones" controller="Validaciones" action="IndexHistorico" roles="1,2"></Item>
+  </Item>
+  <Item title="Financiero" controller="Financiero" action="Index" roles="3"></Item>
+  <Item title="Metadatos portadores de coste" controller="Metadata" action="Index" roles=""></Item>
+</Root>

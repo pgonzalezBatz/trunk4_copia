@@ -1,0 +1,11 @@
+Añadir el campo RECIBO as number(1,0)
+Antes: Tipo de gasto. 1:Metalico Recibo,2:Metalico Sin recibo,3:Kilometraje
+Ahora: Tipo de gasto. 1:Metalico,2:Kilometraje,3:Visas
+
+update lineas_hoja_gastos set recibo=1 where id_tipo_gasto=1
+update lineas_hoja_gastos set recibo=0 where id_tipo_gasto=2 or id_tipo_gasto=3
+
+update lineas_hoja_gastos set id_tipo_gasto=1 where id_tipo_gasto=2
+update lineas_hoja_gastos set id_tipo_gasto=2 where id_tipo_gasto=3
+
+Modificar la tabla TIPO_GASTOS

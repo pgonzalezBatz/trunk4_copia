@@ -1,0 +1,76 @@
+﻿    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="//intranet2.batz.es/baliabideorokorrak/estilointranet.css" rel="stylesheet" type="text/css" />
+        <link href="Content/StyleSheet1.css" rel="stylesheet" type="text/css" />
+        <title>Ayuda</title>
+        <style type="text/css">
+            img{display:block; margin-top:1em;border:1px solid #A8A8A8;}
+            .imagefooter{font-size:0.8em; display:block;margin-bottom:1em;}
+        </style>
+    </head>
+    <body>
+        <div id="menu1"></div>
+        <div id="menu2"></div>
+        <div id="contenido1">
+            <div id="contenido2">
+            <h1>SAS2</h1>    
+            <p> La aplicación SAS2, ha sido diseñada para el control de movimientos de material que salen desde el almacén a los proveedores.El flujo de la aplicación es el siguiente:
+            </p>
+            <ul>
+                <li><a href="#movimientomaterial">Paso 1: Movimiento Material</a></li>
+                <li><a href="#grupos">Paso 2: Agrupaciones de movimientos</a></li>
+                <li><a href="#albaran">Paso 3: Albaranes </a></li>
+                <li><a href="#viaje">Paso 4: Viajes</a></li>
+                <li><a href="#transporte">Paso 5: Transporte</a></li>
+                <li><a href="#valoracion">Paso 6: Valoración</a></li>
+            </ul>
+            <h3 id="movimientomaterial">Paso 1: Movimientos de material</h3>
+                En el momento en que necesitemos enviar una marca al proveedor para cualquier tipo de tratamiento, creamos un movimiento de material. Como mostramos en la imagen
+                1.1, la creación de movimientos de material se compone de 2 pasos: 
+                    <ol>
+                        <li>La selección de OF, operación, transportista y fecha</li>
+                        <li>La selección de marcas. Las marcas se seleccionan introduciendo cantidades. El peso aunque obligatorio, no tiene por que ser exacto. En los casos
+                        en los que no exista, el sistema introducirá 1 por defecto.</li>
+                    </ol>
+                <img src="Content/mm1.png" alt="Imagen de movimiento material" />
+                <span class="imagefooter">imagen 1.1</span>
+                 Una vez introducida la cantidad de las marcas que queremos enviar y haber guardado, se nos mostrara el listado de movimientos.
+            <h3 id="grupos">Paso 2: Agrupaciones</h3>
+                Desde el listado de movimientos, podemos hacer grupos como indicamos en la imagen 2.1. Estos, equivaldrían a las cajas físicas en las que se enviara el material. 
+                <img src="Content/b2.png" alt="Imagen de agrupación" />
+                <span class="imagefooter">imagen 2.1</span>
+                Una vez seleccionados y clicado el boton "grupo" tenemos 3 opciones: 
+                <ol>
+                    <li>Crear un bulto. Para ello tendremos que introducir el peso de la caja</li>
+                    <li>Eliminar todos los movimientos que hemos seleccionado</li>
+                    <li>Editar todos los elementos que hemos seleccionado. Podemos editar el proveedor o la empresa de salida</li>
+                </ol>
+                <img src="Content/b1.png" alt="Imagen de agrupación" />
+                <span class="imagefooter">imagen 2.2</span>
+                Después de guardar el bulto la aplicación redirecciona al listado de bultos actuales.
+            <h3 id="albaran">Paso 3: Albaranes</h3>
+                Desde el listado de bultos, podemos agrupar los bultos en un albarán. El criterio para crear un albarán es la de destino por camión. Es decir un camión va a llevar tantos 
+                albaranes como destinos visite en un viaje. Los pasos a seguir para agrupar los bultos en un albarán, se muestran en la imagen 3.1.
+                <img src="Content/a1.png" alt="Imagen de albaran" />
+                <span class="imagefooter">imagen 3.1</span>
+                Una vez guardado el albarán, la aplicación redirige al listado de albaranes.
+            <h3 id="viaje">Paso 4: Viajes</h3>
+                Desde el listado de albaranes, podemos agrupar los albaranes en viajes. Los albaranes que agrupemos en un mismo viaje, deben de partir en el mismo camión. El criterio 
+                para crear albaranes esta explicado en <a href="#albaran">el punto anterior</a>. Para proceder a crear el viaje, seguiremos los pasos que se indican en la imagen 4.1.
+                <img src="Content/v1.png" alt="Imagen de viaje" />
+                <span class="imagefooter">imagen 4.1</span>
+            <h3 id="transporte">Transporte</h3>
+                Desde el listado de viajes, podemos abrir el Pdf para la impresión de albaranes. También podemos marcar un viaje como enviado. Esto indicara que el viaje ya salio del almacén 
+                y la fecha en la que lo hizo. 
+                <img src="Content/t1.png" alt="Imagen de viajes" />
+                <span class="imagefooter">imagen 5.1</span>
+           <h3 id="valoracion">Valoración</h3>
+                El último paso es el de valorar los envíos realizados. El reparto del precio por operación, se calcula partiendo del la suma de los pesos de los bultos y
+                dividiendo estos equitativamente por peso de movimiento de material.
+                <img src="Content/valoracion1.png" alt="Imagen de viajes" />
+                <span class="imagefooter">imagen 6.1</span>
+            </div>
+         </div>
+    </body>
+    </html>

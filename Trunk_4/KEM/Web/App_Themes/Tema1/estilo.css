@@ -1,0 +1,29 @@
+﻿body{}
+.font13{font: 13px Verdana, Arial, Helvetica,sans-serif;}
+.cabeceraIzquierda{background-color: #F3F3F3;text-align:left;}
+.cabeceraDerecha {background-color: #F3F3F3;text-align:right;}
+.Titulo{font-size:11pt;font-weight:bold;text-transform:uppercase;}
+.centrado{text-align:center;}
+.noWrap{white-space:nowrap;}
+.minusculas{text-transform:lowercase;}
+.trOver{background:#ccccff;cursor:pointer;color: #000000;}
+.trOverArrow{background:#ccccff;color: #000000;text-align:center;}
+.trRojo{background:#FF9B9B;}
+.negrita{font-weight:bold;}
+.tablaMediana{width: 75%;}
+.tablaMediana th {font: bold 12px Verdana, Arial, Helvetica,sans-serif;color: #000000;border:1px solid White;letter-spacing: 1px;text-transform: uppercase;text-align: center;background: #cccccc;}
+.tablaMediana td{font: 13px Verdana, Arial, Helvetica,sans-serif;border:1px solid #cccccc;background: #fff;color: #000000;text-align:center;}
+.tablaMediana2 th {font: bold 12px Verdana, Arial, Helvetica,sans-serif;color: #000000;border:1px solid White;letter-spacing: 1px;text-transform: uppercase;text-align: center;background: #cccccc;}
+.tablaMediana2 td{font: 13px Verdana, Arial, Helvetica,sans-serif;border:1px solid #cccccc;background: #fff;color: #000000;text-align:left;}
+.modalBackground {background-color: Gray;filter: alpha(opacity=50);opacity: 0.5;}
+.modalBox {background-color : #f5f5f5;border-width: 1px;border-style: solid;border-color: Black;padding: 3px;}
+.modalBackground2 {background-color: Gray;filter: alpha(opacity=25);opacity: 0.25;}
+.updateProgress{border-width: 1px;border-style: solid;background-color: #FFFFFF;position: absolute;width: 180px;height: 65px;}
+.MensajeError{text-align:left;text-transform:uppercase;background:#F3F3F3;color:Red;font-weight:bold;font-family:Verdana;font-size:12px;}
+.MensajeInfoAdvertencia{text-align:left;text-transform:uppercase;background:#F3F3F3;color:Blue;font-weight:bold;font-family:Verdana;font-size:12px;}
+.popupTable{border-collapse:collapse;width:650px;}
+.popupTable tr {background: #FCFDFE;}  /*Si se quita esta, en algunas partes, se ve transparente*/
+.popupTable tr th{text-align: center;background: #D3DFED;color: #4F76A3;padding: 2px;}
+.popupTable tr.alt td{background: #F1F5FA;color: #4F76A3;padding: 2px;cursor:pointer;}
+.popupTable tr td {border: 1px solid #D4E0EE;color: #555;padding: 2px;cursor:pointer;}
+.popupTable tr:hover td{background-color: #98B1CD;color: #FFFFFF;}

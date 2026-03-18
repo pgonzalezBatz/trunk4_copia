@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetProducts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="owner" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjects">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="product" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="owner" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectFactories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idOffer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectFactoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectFactoriesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveOffer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveOfferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveOfferResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStepsFromTechnicalOffer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idOffer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPlantaSab" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCostGroup" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStepsFromTechnicalOfferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStepsFromTechnicalOfferResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatoReal_XPERT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlantaSab" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="costCarrier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="finalCurrency" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatoReal_XPERTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatoReal_XPERTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatoReal_Bonos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlantaSab" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idProject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCostGroupBonos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idFinalCurrency" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatoReal_BonosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatoReal_BonosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQuantityInOtherCurrency">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="changeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrencyOrigen" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrencyDestino" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQuantityInOtherCurrencyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuantityInOtherCurrencyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfferExchange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="changeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrencyOrigen" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrencyDestino" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfferExchangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOfferExchangeResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFactoryCurrencyOffer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlanta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFactoryCurrencyOfferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFactoryCurrencyOfferResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyExchangeRateInDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCurrency" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="changeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrencyExchangeRateInDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrencyExchangeRateInDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsIsProductManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUserSab" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsIsProductManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductsIsProductManagerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductManagers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="producto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductManagersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductManagersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFactoriesIsGerente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUserSab" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFactoriesIsGerenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFactoriesIsGerenteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGerente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPlantaSab" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGerenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGerenteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGerentes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGerentesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGerentesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="decimal" type="s:decimal" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjects" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectFactoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectFactories" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectFactoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectFactoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveOfferSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveOffer" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveOfferSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveOfferResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStepsFromTechnicalOfferSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStepsFromTechnicalOffer" />
+  </wsdl:message>
+  <wsdl:message name="GetStepsFromTechnicalOfferSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStepsFromTechnicalOfferResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_XPERTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatoReal_XPERT" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_XPERTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatoReal_XPERTResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_BonosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatoReal_Bonos" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_BonosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatoReal_BonosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQuantityInOtherCurrencySoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuantityInOtherCurrency" />
+  </wsdl:message>
+  <wsdl:message name="GetQuantityInOtherCurrencySoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuantityInOtherCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferExchangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOfferExchange" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferExchangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOfferExchangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryCurrencyOfferSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFactoryCurrencyOffer" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryCurrencyOfferSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFactoryCurrencyOfferResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyExchangeRateInDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrencyExchangeRateInDate" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyExchangeRateInDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrencyExchangeRateInDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsIsProductManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductsIsProductManager" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsIsProductManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductsIsProductManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductManagersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductManagers" />
+  </wsdl:message>
+  <wsdl:message name="GetProductManagersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductManagersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoriesIsGerenteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFactoriesIsGerente" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoriesIsGerenteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFactoriesIsGerenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGerenteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGerente" />
+  </wsdl:message>
+  <wsdl:message name="GetGerenteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGerenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGerentesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGerentes" />
+  </wsdl:message>
+  <wsdl:message name="GetGerentesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGerentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsHttpGetIn">
+    <wsdl:part name="tipo" type="s:string" />
+    <wsdl:part name="owner" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpGetIn">
+    <wsdl:part name="product" type="s:string" />
+    <wsdl:part name="tipo" type="s:string" />
+    <wsdl:part name="owner" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectFactoriesHttpGetIn">
+    <wsdl:part name="idProject" type="s:string" />
+    <wsdl:part name="idOffer" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectFactoriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveOfferHttpGetIn">
+    <wsdl:part name="idProject" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveOfferHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStepsFromTechnicalOfferHttpGetIn">
+    <wsdl:part name="idOffer" type="s:string" />
+    <wsdl:part name="idPlantaSab" type="s:string" />
+    <wsdl:part name="idCostGroup" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStepsFromTechnicalOfferHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_XPERTHttpGetIn">
+    <wsdl:part name="idPlantaSab" type="s:string" />
+    <wsdl:part name="costCarrier" type="s:string" />
+    <wsdl:part name="finalCurrency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_XPERTHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_BonosHttpGetIn">
+    <wsdl:part name="idPlantaSab" type="s:string" />
+    <wsdl:part name="idProject" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="idCostGroupBonos" type="s:string" />
+    <wsdl:part name="idFinalCurrency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_BonosHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuantityInOtherCurrencyHttpGetIn">
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="changeDate" type="s:string" />
+    <wsdl:part name="idCurrencyOrigen" type="s:string" />
+    <wsdl:part name="idCurrencyDestino" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuantityInOtherCurrencyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferExchangeHttpGetIn">
+    <wsdl:part name="changeDate" type="s:string" />
+    <wsdl:part name="idCurrencyOrigen" type="s:string" />
+    <wsdl:part name="idCurrencyDestino" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferExchangeHttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryCurrencyOfferHttpGetIn">
+    <wsdl:part name="idPlanta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryCurrencyOfferHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyExchangeRateInDateHttpGetIn">
+    <wsdl:part name="idCurrency" type="s:string" />
+    <wsdl:part name="changeDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyExchangeRateInDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsIsProductManagerHttpGetIn">
+    <wsdl:part name="idUserSab" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsIsProductManagerHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductManagersHttpGetIn">
+    <wsdl:part name="producto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductManagersHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoriesIsGerenteHttpGetIn">
+    <wsdl:part name="idUserSab" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoriesIsGerenteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGerenteHttpGetIn">
+    <wsdl:part name="idPlantaSab" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGerenteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGerentesHttpGetIn" />
+  <wsdl:message name="GetGerentesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsHttpPostIn">
+    <wsdl:part name="tipo" type="s:string" />
+    <wsdl:part name="owner" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpPostIn">
+    <wsdl:part name="product" type="s:string" />
+    <wsdl:part name="tipo" type="s:string" />
+    <wsdl:part name="owner" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectFactoriesHttpPostIn">
+    <wsdl:part name="idProject" type="s:string" />
+    <wsdl:part name="idOffer" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectFactoriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveOfferHttpPostIn">
+    <wsdl:part name="idProject" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveOfferHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStepsFromTechnicalOfferHttpPostIn">
+    <wsdl:part name="idOffer" type="s:string" />
+    <wsdl:part name="idPlantaSab" type="s:string" />
+    <wsdl:part name="idCostGroup" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStepsFromTechnicalOfferHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_XPERTHttpPostIn">
+    <wsdl:part name="idPlantaSab" type="s:string" />
+    <wsdl:part name="costCarrier" type="s:string" />
+    <wsdl:part name="finalCurrency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_XPERTHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_BonosHttpPostIn">
+    <wsdl:part name="idPlantaSab" type="s:string" />
+    <wsdl:part name="idProject" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="idCostGroupBonos" type="s:string" />
+    <wsdl:part name="idFinalCurrency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDatoReal_BonosHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuantityInOtherCurrencyHttpPostIn">
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="changeDate" type="s:string" />
+    <wsdl:part name="idCurrencyOrigen" type="s:string" />
+    <wsdl:part name="idCurrencyDestino" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuantityInOtherCurrencyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferExchangeHttpPostIn">
+    <wsdl:part name="changeDate" type="s:string" />
+    <wsdl:part name="idCurrencyOrigen" type="s:string" />
+    <wsdl:part name="idCurrencyDestino" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferExchangeHttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryCurrencyOfferHttpPostIn">
+    <wsdl:part name="idPlanta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryCurrencyOfferHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyExchangeRateInDateHttpPostIn">
+    <wsdl:part name="idCurrency" type="s:string" />
+    <wsdl:part name="changeDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrencyExchangeRateInDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsIsProductManagerHttpPostIn">
+    <wsdl:part name="idUserSab" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsIsProductManagerHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductManagersHttpPostIn">
+    <wsdl:part name="producto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductManagersHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoriesIsGerenteHttpPostIn">
+    <wsdl:part name="idUserSab" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoriesIsGerenteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGerenteHttpPostIn">
+    <wsdl:part name="idPlantaSab" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGerenteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetGerentesHttpPostIn" />
+  <wsdl:message name="GetGerentesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceCostCarriersSoap">
+    <wsdl:operation name="GetProducts">
+      <wsdl:input message="tns:GetProductsSoapIn" />
+      <wsdl:output message="tns:GetProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:input message="tns:GetProjectsSoapIn" />
+      <wsdl:output message="tns:GetProjectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <wsdl:input message="tns:GetProjectFactoriesSoapIn" />
+      <wsdl:output message="tns:GetProjectFactoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <wsdl:input message="tns:GetActiveOfferSoapIn" />
+      <wsdl:output message="tns:GetActiveOfferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <wsdl:input message="tns:GetStepsFromTechnicalOfferSoapIn" />
+      <wsdl:output message="tns:GetStepsFromTechnicalOfferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <wsdl:input message="tns:GetDatoReal_XPERTSoapIn" />
+      <wsdl:output message="tns:GetDatoReal_XPERTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <wsdl:input message="tns:GetDatoReal_BonosSoapIn" />
+      <wsdl:output message="tns:GetDatoReal_BonosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <wsdl:input message="tns:GetQuantityInOtherCurrencySoapIn" />
+      <wsdl:output message="tns:GetQuantityInOtherCurrencySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <wsdl:input message="tns:GetOfferExchangeSoapIn" />
+      <wsdl:output message="tns:GetOfferExchangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <wsdl:input message="tns:GetFactoryCurrencyOfferSoapIn" />
+      <wsdl:output message="tns:GetFactoryCurrencyOfferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <wsdl:input message="tns:GetCurrencyExchangeRateInDateSoapIn" />
+      <wsdl:output message="tns:GetCurrencyExchangeRateInDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <wsdl:input message="tns:GetProductsIsProductManagerSoapIn" />
+      <wsdl:output message="tns:GetProductsIsProductManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <wsdl:input message="tns:GetProductManagersSoapIn" />
+      <wsdl:output message="tns:GetProductManagersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <wsdl:input message="tns:GetFactoriesIsGerenteSoapIn" />
+      <wsdl:output message="tns:GetFactoriesIsGerenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <wsdl:input message="tns:GetGerenteSoapIn" />
+      <wsdl:output message="tns:GetGerenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <wsdl:input message="tns:GetGerentesSoapIn" />
+      <wsdl:output message="tns:GetGerentesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceCostCarriersHttpGet">
+    <wsdl:operation name="GetProducts">
+      <wsdl:input message="tns:GetProductsHttpGetIn" />
+      <wsdl:output message="tns:GetProductsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:input message="tns:GetProjectsHttpGetIn" />
+      <wsdl:output message="tns:GetProjectsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <wsdl:input message="tns:GetProjectFactoriesHttpGetIn" />
+      <wsdl:output message="tns:GetProjectFactoriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <wsdl:input message="tns:GetActiveOfferHttpGetIn" />
+      <wsdl:output message="tns:GetActiveOfferHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <wsdl:input message="tns:GetStepsFromTechnicalOfferHttpGetIn" />
+      <wsdl:output message="tns:GetStepsFromTechnicalOfferHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <wsdl:input message="tns:GetDatoReal_XPERTHttpGetIn" />
+      <wsdl:output message="tns:GetDatoReal_XPERTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <wsdl:input message="tns:GetDatoReal_BonosHttpGetIn" />
+      <wsdl:output message="tns:GetDatoReal_BonosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <wsdl:input message="tns:GetQuantityInOtherCurrencyHttpGetIn" />
+      <wsdl:output message="tns:GetQuantityInOtherCurrencyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <wsdl:input message="tns:GetOfferExchangeHttpGetIn" />
+      <wsdl:output message="tns:GetOfferExchangeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <wsdl:input message="tns:GetFactoryCurrencyOfferHttpGetIn" />
+      <wsdl:output message="tns:GetFactoryCurrencyOfferHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <wsdl:input message="tns:GetCurrencyExchangeRateInDateHttpGetIn" />
+      <wsdl:output message="tns:GetCurrencyExchangeRateInDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <wsdl:input message="tns:GetProductsIsProductManagerHttpGetIn" />
+      <wsdl:output message="tns:GetProductsIsProductManagerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <wsdl:input message="tns:GetProductManagersHttpGetIn" />
+      <wsdl:output message="tns:GetProductManagersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <wsdl:input message="tns:GetFactoriesIsGerenteHttpGetIn" />
+      <wsdl:output message="tns:GetFactoriesIsGerenteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <wsdl:input message="tns:GetGerenteHttpGetIn" />
+      <wsdl:output message="tns:GetGerenteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <wsdl:input message="tns:GetGerentesHttpGetIn" />
+      <wsdl:output message="tns:GetGerentesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceCostCarriersHttpPost">
+    <wsdl:operation name="GetProducts">
+      <wsdl:input message="tns:GetProductsHttpPostIn" />
+      <wsdl:output message="tns:GetProductsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:input message="tns:GetProjectsHttpPostIn" />
+      <wsdl:output message="tns:GetProjectsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <wsdl:input message="tns:GetProjectFactoriesHttpPostIn" />
+      <wsdl:output message="tns:GetProjectFactoriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <wsdl:input message="tns:GetActiveOfferHttpPostIn" />
+      <wsdl:output message="tns:GetActiveOfferHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <wsdl:input message="tns:GetStepsFromTechnicalOfferHttpPostIn" />
+      <wsdl:output message="tns:GetStepsFromTechnicalOfferHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <wsdl:input message="tns:GetDatoReal_XPERTHttpPostIn" />
+      <wsdl:output message="tns:GetDatoReal_XPERTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <wsdl:input message="tns:GetDatoReal_BonosHttpPostIn" />
+      <wsdl:output message="tns:GetDatoReal_BonosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <wsdl:input message="tns:GetQuantityInOtherCurrencyHttpPostIn" />
+      <wsdl:output message="tns:GetQuantityInOtherCurrencyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <wsdl:input message="tns:GetOfferExchangeHttpPostIn" />
+      <wsdl:output message="tns:GetOfferExchangeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <wsdl:input message="tns:GetFactoryCurrencyOfferHttpPostIn" />
+      <wsdl:output message="tns:GetFactoryCurrencyOfferHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <wsdl:input message="tns:GetCurrencyExchangeRateInDateHttpPostIn" />
+      <wsdl:output message="tns:GetCurrencyExchangeRateInDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <wsdl:input message="tns:GetProductsIsProductManagerHttpPostIn" />
+      <wsdl:output message="tns:GetProductsIsProductManagerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <wsdl:input message="tns:GetProductManagersHttpPostIn" />
+      <wsdl:output message="tns:GetProductManagersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <wsdl:input message="tns:GetFactoriesIsGerenteHttpPostIn" />
+      <wsdl:output message="tns:GetFactoriesIsGerenteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <wsdl:input message="tns:GetGerenteHttpPostIn" />
+      <wsdl:output message="tns:GetGerenteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <wsdl:input message="tns:GetGerentesHttpPostIn" />
+      <wsdl:output message="tns:GetGerentesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceCostCarriersSoap" type="tns:ServiceCostCarriersSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <soap:operation soapAction="http://tempuri.org/GetProjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <soap:operation soapAction="http://tempuri.org/GetProjectFactories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <soap:operation soapAction="http://tempuri.org/GetActiveOffer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <soap:operation soapAction="http://tempuri.org/GetStepsFromTechnicalOffer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <soap:operation soapAction="http://tempuri.org/GetDatoReal_XPERT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <soap:operation soapAction="http://tempuri.org/GetDatoReal_Bonos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <soap:operation soapAction="http://tempuri.org/GetQuantityInOtherCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <soap:operation soapAction="http://tempuri.org/GetOfferExchange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <soap:operation soapAction="http://tempuri.org/GetFactoryCurrencyOffer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <soap:operation soapAction="http://tempuri.org/GetCurrencyExchangeRateInDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <soap:operation soapAction="http://tempuri.org/GetProductsIsProductManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <soap:operation soapAction="http://tempuri.org/GetProductManagers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <soap:operation soapAction="http://tempuri.org/GetFactoriesIsGerente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <soap:operation soapAction="http://tempuri.org/GetGerente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <soap:operation soapAction="http://tempuri.org/GetGerentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceCostCarriersSoap12" type="tns:ServiceCostCarriersSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProducts">
+      <soap12:operation soapAction="http://tempuri.org/GetProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <soap12:operation soapAction="http://tempuri.org/GetProjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectFactories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveOffer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <soap12:operation soapAction="http://tempuri.org/GetStepsFromTechnicalOffer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <soap12:operation soapAction="http://tempuri.org/GetDatoReal_XPERT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <soap12:operation soapAction="http://tempuri.org/GetDatoReal_Bonos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <soap12:operation soapAction="http://tempuri.org/GetQuantityInOtherCurrency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <soap12:operation soapAction="http://tempuri.org/GetOfferExchange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <soap12:operation soapAction="http://tempuri.org/GetFactoryCurrencyOffer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrencyExchangeRateInDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <soap12:operation soapAction="http://tempuri.org/GetProductsIsProductManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <soap12:operation soapAction="http://tempuri.org/GetProductManagers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <soap12:operation soapAction="http://tempuri.org/GetFactoriesIsGerente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <soap12:operation soapAction="http://tempuri.org/GetGerente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <soap12:operation soapAction="http://tempuri.org/GetGerentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceCostCarriersHttpGet" type="tns:ServiceCostCarriersHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetProducts">
+      <http:operation location="/GetProducts" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <http:operation location="/GetProjects" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <http:operation location="/GetProjectFactories" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <http:operation location="/GetActiveOffer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <http:operation location="/GetStepsFromTechnicalOffer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <http:operation location="/GetDatoReal_XPERT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <http:operation location="/GetDatoReal_Bonos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <http:operation location="/GetQuantityInOtherCurrency" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <http:operation location="/GetOfferExchange" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <http:operation location="/GetFactoryCurrencyOffer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <http:operation location="/GetCurrencyExchangeRateInDate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <http:operation location="/GetProductsIsProductManager" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <http:operation location="/GetProductManagers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <http:operation location="/GetFactoriesIsGerente" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <http:operation location="/GetGerente" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <http:operation location="/GetGerentes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceCostCarriersHttpPost" type="tns:ServiceCostCarriersHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetProducts">
+      <http:operation location="/GetProducts" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <http:operation location="/GetProjects" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectFactories">
+      <http:operation location="/GetProjectFactories" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveOffer">
+      <http:operation location="/GetActiveOffer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStepsFromTechnicalOffer">
+      <http:operation location="/GetStepsFromTechnicalOffer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_XPERT">
+      <http:operation location="/GetDatoReal_XPERT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatoReal_Bonos">
+      <http:operation location="/GetDatoReal_Bonos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityInOtherCurrency">
+      <http:operation location="/GetQuantityInOtherCurrency" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferExchange">
+      <http:operation location="/GetOfferExchange" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoryCurrencyOffer">
+      <http:operation location="/GetFactoryCurrencyOffer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyExchangeRateInDate">
+      <http:operation location="/GetCurrencyExchangeRateInDate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsIsProductManager">
+      <http:operation location="/GetProductsIsProductManager" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductManagers">
+      <http:operation location="/GetProductManagers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFactoriesIsGerente">
+      <http:operation location="/GetFactoriesIsGerente" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerente">
+      <http:operation location="/GetGerente" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerentes">
+      <http:operation location="/GetGerentes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceCostCarriers">
+    <wsdl:port name="ServiceCostCarriersSoap" binding="tns:ServiceCostCarriersSoap">
+      <soap:address location="https://intranet2.batz.es/OfertaTecsis/Publico/ServiceCostCarriers.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceCostCarriersSoap12" binding="tns:ServiceCostCarriersSoap12">
+      <soap12:address location="https://intranet2.batz.es/OfertaTecsis/Publico/ServiceCostCarriers.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceCostCarriersHttpGet" binding="tns:ServiceCostCarriersHttpGet">
+      <http:address location="https://intranet2.batz.es/OfertaTecsis/Publico/ServiceCostCarriers.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceCostCarriersHttpPost" binding="tns:ServiceCostCarriersHttpPost">
+      <http:address location="https://intranet2.batz.es/OfertaTecsis/Publico/ServiceCostCarriers.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

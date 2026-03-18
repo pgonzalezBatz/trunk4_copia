@@ -1,0 +1,222 @@
+﻿#Botonera, .Botonera
+{
+	position: static;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.MensajeInfoAdvertencia
+{
+	text-align: left;
+	text-transform: uppercase;
+	background: #F3F3F3;
+	color: Blue;
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.MensajeError
+{
+	text-align: left;
+	text-transform: uppercase;
+	background: #F3F3F3;
+	color: Red;
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.ListSearchExtenderPrompt
+{
+	font-style: italic;
+	color: Gray;
+	background-color: white;
+}
+
+.table2
+{
+	border: solid 1px #5D7B9D;
+}
+
+	.table2 caption
+	{
+		font-weight: bold;
+	}
+
+	.table2 thead tr
+	{
+		background-color: #5D7B9D;
+	}
+
+		.table2 thead tr th
+		{
+			text-align: center;
+			color: #FFFFFF;
+		}
+
+	.table2 tbody tr
+	{
+		background-color: #ffffff;
+	}
+
+	.table2 a
+	{
+		width: 100%;
+		display: block;
+	}
+
+	.table2 tfoot tr
+	{
+		background-color: #F4F4F4;
+	}
+
+		.table2 tfoot tr th
+		{
+			text-align: center;
+			font-size: 11px;
+			font-style: italic;
+			color: #999999;
+		}
+
+.table3
+{
+	border: 0px;
+}
+
+	.table3 caption
+	{
+		font-weight: bold;
+	}
+
+	.table3 thead tr th
+	{
+		background-color: #F4F4F4;
+		border: 0px;
+		padding: 7px;
+	}
+
+	.table3 tbody tr td
+	{
+		background-color: #ffffff;
+		border: 0px;
+		padding: 7px;
+	}
+
+	.table3 a
+	{
+		width: 100%;
+		display: block;
+	}
+
+.negrita
+{
+	font-weight: bold;
+}
+
+.mayusculasNegrita
+{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.mayusculas
+{
+	text-transform: uppercase;
+}
+
+.trOver
+{
+	background-color: #ccccff;
+	cursor: pointer;
+}
+
+.trOverPointer
+{
+	background-color: #ccccff;
+}
+
+.trVerde
+{
+	background-color: #DBFE89;
+}
+
+.trRojo
+{
+	background: #ff6666;
+}
+
+.boton
+{
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 7px 27px 7px 27px;
+	background-image: url('Imagenes/fondoBoton.gif');
+	border-color: white;
+}
+
+.usuarioFecha
+{
+	background-color: #F3F3F3;
+	height: 10px;
+}
+
+.izquierda
+{
+	text-align: left;
+}
+
+.derecha
+{
+	text-align: right;
+}
+
+.recuadroLabel
+{
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	height: 18px;
+	/*Aqui el width no funciona, por eso se pone en codigo*/
+}
+
+.font10
+{
+	font-size: 10px;
+}
+
+.Alerta
+{
+	background-color: #FF0000;
+	background-attachment: inherit;
+	text-decoration: underline overline;
+	font-weight: bold;
+	font-style: italic;
+	color: #FFFFFF;
+}
+
+.BatzFont
+{
+	font-family: 'Batz Font';
+	font-size: large;
+}
+
+/*************************************************************/
+.ContactarCon
+{
+	margin: 4px 0px 0px 0px;
+}
+	.ContactarCon li
+{
+	display: inline;
+	margin-right: 10px;
+	padding: 3px;
+	border: 1px solid lightgray;
+}
+		.ContactarCon li:hover
+		{
+			background-color: lightgray;
+		}
+/*************************************************************/

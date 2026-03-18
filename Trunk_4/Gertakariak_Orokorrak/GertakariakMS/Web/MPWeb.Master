@@ -1,0 +1,128 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPWeb.master.vb" Inherits="GertakariakMSWeb_Raiz.MPWeb" %>
+
+<%@ Register Src="Controles/AccionesPendientes.ascx" TagName="AccionesPendientes" TagPrefix="ControlUsuario" %>
+<%@ Register Src="Controles/PanelCargandoDatos.ascx" TagName="PanelCargandoDatos" TagPrefix="PanelCargandoDatos" %>
+
+<%--HTML 4.01--%>
+<%--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">--%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%--HTML5--%>
+<%--<!DOCTYPE html>--%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title>Batz S. Koop.</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+	<!--Forzar la cabecera de compatibilidad a la mas alta posible -------->
+	<%--<meta http-equiv="X-UA-Compatible" content="IE=edge" />--%>
+	<!-------------------------------------------------------------------->
+	<!--Forzamos el refresco de la pagian antes de que caduque la sesion (20 min = 1200 seg) -------->
+	<meta http-equiv="refresh" content="1195" />
+	<link id="linkCSS" rel="stylesheet" type="text/css" runat="server" />
+	<%--<link href="App_Themes/Tema1/MenuBatz.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/style.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/AjaxControlToolKit.css" type="text/css" rel="Stylesheet" />
+	<link href="App_Themes/Tema1/ControlesWeb/DetailsView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/ControlesWeb/GridView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/ControlesWeb/FormView.css" rel="stylesheet" type="text/css" />
+	<link href="App_Themes/Tema1/ControlesBatz/PanelCargandoDatos.css" rel="stylesheet" type="text/css" />--%>
+	<asp:ContentPlaceHolder ID="cphHEAD" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<asp:ScriptManager ID="ToolkitScriptManager_MPWeb" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="True">
+			<Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-3.7.1.min.js" />
+			</Scripts>
+		</asp:ScriptManager>
+		<div>
+			<asp:HyperLink runat="server" ID="lnkIntranet" NavigateUrl="\HomeIntranet" CssClass="cabApp" ToolTip="Ir a la página principal de la intranet" />
+			<table style="width: 100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="cabeceraIzquierda">
+						<asp:Literal ID="ltlUsuario" runat="server" Text="usuarioConectado"></asp:Literal>:
+					<asp:Label ID="lblUsuario" runat="server"></asp:Label>
+					</td>
+					<td class="cabeceraDerecha">
+						<asp:Literal ID="ltlFechaActual" runat="server"></asp:Literal>
+					</td>
+				</tr>
+			</table>
+			<div id="MenuContenedor" runat="server">
+				<table style="width: 100%">
+					<tr>
+						<td style="width: 15px">
+							<asp:Image ID="Image1" runat="server" ImageUrl="~/App_Themes/Tema1/Imagenes/Logo.png" />
+						</td>
+						<td style="width: auto;">
+							<asp:Menu runat="server" ID="MenuMaster" SkinID="MenuHorizontal">
+								<Items>
+									<asp:MenuItem Text="Inicio" ToolTip="Página de Inicio" NavigateUrl="~/Default.aspx" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif" />
+									<asp:MenuItem Text="nuevaIncidencia" ToolTip="nuevaIncidencia" Value="Nuevo" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif" />
+									<asp:MenuItem Text="mantenimiento" ToolTip="mantenimiento" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif">
+										<asp:MenuItem Text="Caracteristicas" ToolTip="Caracteristicas" NavigateUrl="~/Mantenimiento/Caracteristicas/Inicio.aspx" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif" />
+										<asp:MenuItem Text="Usuarios" ToolTip="Usuarios" NavigateUrl="~/Mantenimiento/Roles/Perfiles.aspx" ImageUrl="~/App_Themes/Batz/Imagenes/bullet_hl.gif" />
+									</asp:MenuItem>
+								</Items>
+							</asp:Menu>
+						</td>
+						<td>&nbsp;&nbsp;&nbsp;
+						<asp:DropDownList ID="ddlIdioma" runat="server" AutoPostBack="True" Visible="false">
+							<asp:ListItem Value="es-ES" Text="Castellano" />
+							<asp:ListItem Value="eu-ES" Text="Euskara" />
+							<asp:ListItem Value="en-GB" Text="English" />
+						</asp:DropDownList>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="contenido1">
+				<table width="100%">
+					<tr>
+						<td align="left">
+							<asp:UpdatePanel ID="upMensaje" runat="server" UpdateMode="Conditional">
+								<ContentTemplate>
+									<asp:Panel runat="server" ID="pnlMensaje" CssClass="MensajeError">
+										<asp:Image ID="imgMensaje" runat="server" ImageAlign="AbsMiddle" />
+										<asp:Label ID="lblMensaje" runat="server"></asp:Label>
+									</asp:Panel>
+								</ContentTemplate>
+							</asp:UpdatePanel>
+						</td>
+						<td align="right">
+							<asp:UpdatePanel ID="upAccionesDia" runat="server" RenderMode="Inline" UpdateMode="Conditional">
+								<ContentTemplate>
+									<ControlUsuario:AccionesPendientes ID="cuAccionesPendientes" runat="server" />
+								</ContentTemplate>
+							</asp:UpdatePanel>
+						</td>
+					</tr>
+				</table>
+				<div id="contenido2">
+					<asp:UpdatePanel ID="upContenido" runat="server">
+						<ContentTemplate>							
+							<asp:SiteMapPath ID="SiteMapPath" runat="server" SkinID="SiteMapPath" SiteMapProvider="WebSiteMap" ParentLevelsDisplayed="3" />
+						</ContentTemplate>
+					</asp:UpdatePanel>
+					<%--<uc:SiteMapPath ID="uc_smpKaPlan" runat="server" />--%>
+					<asp:ContentPlaceHolder ID="cp" runat="server">
+					</asp:ContentPlaceHolder>
+				</div>
+			</div>
+			<div id="pie">
+				<asp:ContentPlaceHolder ID="cphPie" runat="server">
+					<asp:Literal ID="Literal1" runat="server" Text="encasodeteneralgunproblema contactarcon"></asp:Literal>
+					<%--<a href="mailto:jmsanchez@batz.es">JOSE MARIA SANCHEZ MIGUEL</a>--%>
+					<asp:BulletedList ID="blContactos" runat="server" DisplayMode="HyperLink" Target="_blank" CssClass="ContactarCon">
+						<asp:ListItem Value="mailto:jmsanchez@batz.es" Text="JOSE MARIA SANCHEZ MIGUEL" />
+						<asp:ListItem Value="http://intranet2.batz.es/homeintranet/cargacontenido.aspx?enlace=/helpdesk&tituloapp=Helpdesk" Text="HelpDesk" />
+					</asp:BulletedList>
+				</asp:ContentPlaceHolder>
+			</div>
+		</div>
+		<PanelCargandoDatos:PanelCargandoDatos ID="PanelCargandoDatos1" runat="server" />
+		<ascx:Mensajes runat="server" ID="ascx_Mensajes" />
+	</form>
+</body>
+</html>

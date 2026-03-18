@@ -1,0 +1,48 @@
+﻿.Panel_CollapsiblePanelExtender
+{
+	font-size:13px;
+	cursor: pointer;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+.ListSearchExtenderPrompt
+{
+	font-style:italic;
+	color:Gray;
+	background-color:white;
+}
+.TextBoxWatermarkExtender
+{
+	font-style:italic;
+	color:Gray;
+}
+
+/******************************************************************/
+/* AutoCompleteExtender *******************************************/
+/******************************************************************/
+.CompletionListCssClass
+{
+    width: auto !important; /*Con IE7 sale scroll horizontal.*/ 
+    max-height: 9300px;
+    margin-left: 0px; margin-top: 1px;
+    padding: 1px; 
+    border: 1px solid #C0C0C0;
+    background-color: #CEE7FF;
+    text-align: left;
+    overflow: auto;
+}
+
+.CompletionListItemCssClass, .CompletionListHighlightedItemCssClass
+{
+    margin: 1px;
+    border: 1px solid #C0C0C0;
+    list-style-type: none;
+}
+
+.CompletionListHighlightedItemCssClass
+{
+    background-color: #FFFF00;
+}
+/******************************************************************/

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0AC0D0A-01A5-4182-BF49-B748FF3D1775}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SolicitudesSistemasLib</RootNamespace>
+    <AssemblyName>SolicitudesSistemasLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SolicitudesSistemasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SolicitudesSistemasLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BonoSis\BonoSisBLL.vb" />
+    <Compile Include="BLL\Brain\BrainBLL.vb" />
+    <Compile Include="BLL\Brain\BusquedaJsonBLL.vb" />
+    <Compile Include="BLL\PlantasBLL.vb" />
+    <Compile Include="BLL\GrupoProductoBLL.vb" />
+    <Compile Include="BLL\TypeBLL.vb" />
+    <Compile Include="BLL\TiposReferenciaVentaBLL.vb" />
+    <Compile Include="BLL\SolicitudesBLL.vb" />
+    <Compile Include="BLL\ReferenciaFinalVentaBLL.vb" />
+    <Compile Include="BLL\PTKSis\ProyectosPTKSisBLL.vb" />
+    <Compile Include="BLL\ProductoBLL.vb" />
+    <Compile Include="BLL\TransmissionModeBLL.vb" />
+    <Compile Include="BLL\DrivingHandBLL.vb" />
+    <Compile Include="BLL\PerfilesUsuarioBLL.vb" />
+    <Compile Include="BLL\UsuariosBLL.vb" />
+    <Compile Include="DAL\BonoSis\BonoSisDAL.vb" />
+    <Compile Include="DAL\Brain\BrainDAL.vb" />
+    <Compile Include="DAL\Brain\BusquedaJsonDAL.vb" />
+    <Compile Include="DAL\GrupoProductoDAL.vb" />
+    <Compile Include="DAL\TypeDAL.vb" />
+    <Compile Include="DAL\PlantasDAL.vb" />
+    <Compile Include="DAL\TiposReferenciaVentaDAL.vb" />
+    <Compile Include="DAL\SolicitudesDAL.vb" />
+    <Compile Include="DAL\ReferenciaFinalVentaDAL.vb" />
+    <Compile Include="DAL\PTKSis\ProyectosPTKSisDAL.vb" />
+    <Compile Include="DAL\ProductoDAL.vb" />
+    <Compile Include="DAL\TransmissionModeDAL.vb" />
+    <Compile Include="DAL\DrivingHandDAL.vb" />
+    <Compile Include="DAL\DALBase.vb" />
+    <Compile Include="DAL\UsuariosDAL.vb" />
+    <Compile Include="ELL\Brain.vb" />
+    <Compile Include="ELL\BusquedaJson.vb" />
+    <Compile Include="ELL\Object.vb" />
+    <Compile Include="ELL\GrupoProducto.vb" />
+    <Compile Include="ELL\ProductoType.vb" />
+    <Compile Include="ELL\Type.vb" />
+    <Compile Include="ELL\Plantas.vb" />
+    <Compile Include="ELL\TiposReferenciaVenta.vb" />
+    <Compile Include="ELL\Email.vb" />
+    <Compile Include="ELL\ReferenciaPlantas.vb" />
+    <Compile Include="ELL\Solicitudes.vb" />
+    <Compile Include="ELL\Proyectos.vb" />
+    <Compile Include="ELL\ReferenciaVenta.vb" />
+    <Compile Include="ELL\Producto.vb" />
+    <Compile Include="ELL\TransmissionMode.vb" />
+    <Compile Include="ELL\DrivingHand.vb" />
+    <Compile Include="ELL\PerfilUsuario.vb" />
+    <Compile Include="ELL\Roles.vb" />
+    <Compile Include="ELL\UsuarioRol.vb" />
+    <Compile Include="ELL\Usuarios.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Memcached\Memcached.vbproj">
+      <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

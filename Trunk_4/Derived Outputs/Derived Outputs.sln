@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DerivedOutputs", "DerivedOutputs\DerivedOutputs.vbproj", "{B41A8FA4-07F0-4D45-87BC-502D0800080F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Troqueleria", "Troqueleria\Troqueleria.vbproj", "{B301EFFB-9823-4DAE-BCAE-A3723252C94F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Batz Text Creator", "Batz Text Creator\Batz Text Creator.vbproj", "{2D689D08-68FA-4B19-B5CE-48DEE43EE375}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpCatiaTest", "FSharpCatiaTest\FSharpCatiaTest.fsproj", "{52A7AF68-5669-4A8A-9B98-CEDC19DF20FF}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DerivedOutputsSistemas", "DerivedOutputsSistemas\DerivedOutputsSistemas.fsproj", "{3ACEC623-37D4-4DA4-A828-D451E123858F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DerivedOutputsSupervisor", "DerivedOutputsSupervisor\DerivedOutputsSupervisor.vbproj", "{FC2C1FDE-3CC2-4553-A593-616BF21D3846}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DerivedOutputsRequeue", "DerivedOutputsRequeue\DerivedOutputsRequeue.vbproj", "{7F33FCB8-5996-42EF-953A-B8F70A07BE41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B41A8FA4-07F0-4D45-87BC-502D0800080F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41A8FA4-07F0-4D45-87BC-502D0800080F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41A8FA4-07F0-4D45-87BC-502D0800080F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41A8FA4-07F0-4D45-87BC-502D0800080F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B301EFFB-9823-4DAE-BCAE-A3723252C94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B301EFFB-9823-4DAE-BCAE-A3723252C94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B301EFFB-9823-4DAE-BCAE-A3723252C94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B301EFFB-9823-4DAE-BCAE-A3723252C94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D689D08-68FA-4B19-B5CE-48DEE43EE375}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{2D689D08-68FA-4B19-B5CE-48DEE43EE375}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{2D689D08-68FA-4B19-B5CE-48DEE43EE375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D689D08-68FA-4B19-B5CE-48DEE43EE375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A7AF68-5669-4A8A-9B98-CEDC19DF20FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A7AF68-5669-4A8A-9B98-CEDC19DF20FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A7AF68-5669-4A8A-9B98-CEDC19DF20FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A7AF68-5669-4A8A-9B98-CEDC19DF20FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACEC623-37D4-4DA4-A828-D451E123858F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACEC623-37D4-4DA4-A828-D451E123858F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACEC623-37D4-4DA4-A828-D451E123858F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACEC623-37D4-4DA4-A828-D451E123858F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2C1FDE-3CC2-4553-A593-616BF21D3846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2C1FDE-3CC2-4553-A593-616BF21D3846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2C1FDE-3CC2-4553-A593-616BF21D3846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2C1FDE-3CC2-4553-A593-616BF21D3846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F33FCB8-5996-42EF-953A-B8F70A07BE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F33FCB8-5996-42EF-953A-B8F70A07BE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F33FCB8-5996-42EF-953A-B8F70A07BE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F33FCB8-5996-42EF-953A-B8F70A07BE41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

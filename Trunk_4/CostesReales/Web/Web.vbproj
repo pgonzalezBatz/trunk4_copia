@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6CF8B136-3929-4F78-8E49-771E0638860D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CostesReales</RootNamespace>
+    <AssemblyName>CostesReales</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CostesReales.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CostesReales.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CCGastosMOD.aspx" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="InventarioAjusteManual.aspx" />
+    <Content Include="AltaRPGenerico.aspx" />
+    <Content Include="LanzarJob.aspx" />
+    <Content Include="RepartoActivosAmortizaciones.aspx" />
+    <Content Include="CCGastosPorVenta.aspx" />
+    <Content Include="CCGastosMOI.aspx" />
+    <Content Include="CCGastosPorNegocio.aspx" />
+    <Content Include="Maquinas.aspx" />
+    <Content Include="App_Data\log4netConfig.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <Content Include="Content\css\bootstrap-grid.css.map" />
+    <Content Include="Content\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\js\bootstrap.js.map" />
+    <Content Include="Content\js\bootstrap.min.js.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Files\inventario.csv" />
+    <None Include="App_Data\log4netConfig.Debug.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="App_Data\log4netConfig.Release.config">
+      <DependentUpon>log4netConfig.config</DependentUpon>
+      <IsTransformFile>true</IsTransformFile>
+    </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\css\bootstrap-grid.css" />
+    <Content Include="Content\css\bootstrap-grid.min.css" />
+    <Content Include="Content\css\bootstrap-reboot.css" />
+    <Content Include="Content\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\img\actualizar24.png" />
+    <Content Include="Content\img\cancelar24.png" />
+    <Content Include="Content\img\editar24.png" />
+    <Content Include="Content\img\eliminar24.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\js\bootstrap.bundle.js" />
+    <Content Include="Content\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-3.6.0.min.js" />
+    <Content Include="RepartosMOI.aspx" />
+    <Content Include="DiferenciaInventario.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HorasSerial.aspx" />
+    <Content Include="Lantegis.aspx" />
+    <Content Include="ListadoMaquinas.aspx" />
+    <Content Include="PeriodoCierre.aspx" />
+    <Content Include="PermisoDenegado.aspx" />
+    <Content Include="PorcentajeDepartamento.aspx" />
+    <Content Include="PorcentajeETTReubicados.aspx" />
+    <Content Include="RPGenericos.aspx" />
+    <None Include="Scripts\jquery-3.5.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.js" />
+    <Content Include="Scripts\jquery-3.5.1.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCGastosMOD.aspx.designer.vb">
+      <DependentUpon>CCGastosMOD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCGastosMOD.aspx.vb">
+      <DependentUpon>CCGastosMOD.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DataAccess\BLL\CCGastoMODBLL.vb" />
+    <Compile Include="DataAccess\BLL\ComponentBLL.vb" />
+    <Compile Include="DataAccess\BLL\LantegiBLL.vb" />
+    <Compile Include="DataAccess\BLL\ListadoMaquinasBLL.vb" />
+    <Compile Include="DataAccess\BLL\PorcentajeDepartamentoBLL.vb" />
+    <Compile Include="DataAccess\BLL\PorcentajeETTReubicadosBLL.vb" />
+    <Compile Include="DataAccess\BLL\PorcentajePorProcesoDepartamentoBLL.vb" />
+    <Compile Include="DataAccess\BLL\ProcesoBLL.vb" />
+    <Compile Include="DataAccess\DAL\CCGastoMODDAL.vb" />
+    <Compile Include="DataAccess\DAL\ComponentDAL.vb" />
+    <Compile Include="DataAccess\DAL\PorcentajeDepartamentoDAL.vb" />
+    <Compile Include="DataAccess\DAL\LantegiDAL.vb" />
+    <Compile Include="DataAccess\DAL\ListadoMaquinasDAL.vb" />
+    <Compile Include="DataAccess\DAL\PorcentajeETTReubicadosDAL.vb" />
+    <Compile Include="DataAccess\DAL\PorcentajePorProcesoDepartamentoDAL.vb" />
+    <Compile Include="DataAccess\DAL\ProcesoDAL.vb" />
+    <Compile Include="DataAccess\DAL\PruebaJobDAL.vb" />
+    <Compile Include="InventarioAjusteManual.aspx.designer.vb">
+      <DependentUpon>InventarioAjusteManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioAjusteManual.aspx.vb">
+      <DependentUpon>InventarioAjusteManual.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AltaRPGenerico.aspx.designer.vb">
+      <DependentUpon>AltaRPGenerico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaRPGenerico.aspx.vb">
+      <DependentUpon>AltaRPGenerico.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LanzarJob.aspx.designer.vb">
+      <DependentUpon>LanzarJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LanzarJob.aspx.vb">
+      <DependentUpon>LanzarJob.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RepartoActivosAmortizaciones.aspx.designer.vb">
+      <DependentUpon>RepartoActivosAmortizaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepartoActivosAmortizaciones.aspx.vb">
+      <DependentUpon>RepartoActivosAmortizaciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CCGastosPorVenta.aspx.designer.vb">
+      <DependentUpon>CCGastosPorVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCGastosPorVenta.aspx.vb">
+      <DependentUpon>CCGastosPorVenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CCGastosMOI.aspx.designer.vb">
+      <DependentUpon>CCGastosMOI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCGastosMOI.aspx.vb">
+      <DependentUpon>CCGastosMOI.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CCGastosPorNegocio.aspx.designer.vb">
+      <DependentUpon>CCGastosPorNegocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCGastosPorNegocio.aspx.vb">
+      <DependentUpon>CCGastosPorNegocio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maquinas.aspx.designer.vb">
+      <DependentUpon>Maquinas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maquinas.aspx.vb">
+      <DependentUpon>Maquinas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\MPCR.Master.designer.vb">
+      <DependentUpon>MPCR.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MPCR.Master.vb">
+      <DependentUpon>MPCR.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccess\BLL\RepartoActivosAmortizacionBLL.vb" />
+    <Compile Include="DataAccess\BLL\CCGastoMOIBLL.vb" />
+    <Compile Include="DataAccess\BLL\CCGastoPorVentaBLL.vb" />
+    <Compile Include="DataAccess\BLL\CCPorNegocioBLL.vb" />
+    <Compile Include="DataAccess\BLL\MaquinaBLL.vb" />
+    <Compile Include="DataAccess\BLL\RepartoMOIBLL.vb" />
+    <Compile Include="DataAccess\BLL\DiferenciaInventarioBLL.vb" />
+    <Compile Include="DataAccess\BLL\HorasSerialBLL.vb" />
+    <Compile Include="DataAccess\BLL\InventarioAjusteManualBLL.vb" />
+    <Compile Include="DataAccess\BLL\PeriodoCierreBLL.vb" />
+    <Compile Include="DataAccess\BLL\PlantaBLL.vb" />
+    <Compile Include="DataAccess\BLL\PorcentajePorProcesoBLL.vb" />
+    <Compile Include="DataAccess\BLL\RPGenericoBLL.vb" />
+    <Compile Include="DataAccess\BLL\UsuarioBLL.vb" />
+    <Compile Include="DataAccess\DAL\RepartoActivosAmortizacionDAL.vb" />
+    <Compile Include="DataAccess\DAL\CCGastoMOIDAL.vb" />
+    <Compile Include="DataAccess\DAL\CCGastoPorVentaDAL.vb" />
+    <Compile Include="DataAccess\DAL\CCPorNegocioDAL.vb" />
+    <Compile Include="DataAccess\DAL\MaquinaDAL.vb" />
+    <Compile Include="DataAccess\DAL\RepartoMOIDAL.vb" />
+    <Compile Include="DataAccess\DAL\DiferenciaInventarioDAL.vb" />
+    <Compile Include="DataAccess\DAL\HorasSerialDAL.vb" />
+    <Compile Include="DataAccess\DAL\InventarioAjusteManualDAL.vb" />
+    <Compile Include="DataAccess\DAL\PeriodoCierreDAL.vb" />
+    <Compile Include="DataAccess\DAL\PlantaDAL.vb" />
+    <Compile Include="DataAccess\DAL\PorcentajePorProcesoDAL.vb" />
+    <Compile Include="DataAccess\DAL\RPGenericoDAL.vb" />
+    <Compile Include="DataAccess\DAL\UsuarioDAL.vb" />
+    <Compile Include="DataAccess\DAL\Utilidades.vb" />
+    <Compile Include="DataAccess\ELL\ParametroELL.vb" />
+    <Compile Include="DataAccess\ELL\UsuarioELL.vb" />
+    <Compile Include="RepartosMOI.aspx.designer.vb">
+      <DependentUpon>RepartosMOI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepartosMOI.aspx.vb">
+      <DependentUpon>RepartosMOI.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DiferenciaInventario.aspx.designer.vb">
+      <DependentUpon>DiferenciaInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiferenciaInventario.aspx.vb">
+      <DependentUpon>DiferenciaInventario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HorasSerial.aspx.designer.vb">
+      <DependentUpon>HorasSerial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HorasSerial.aspx.vb">
+      <DependentUpon>HorasSerial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Lantegis.aspx.designer.vb">
+      <DependentUpon>Lantegis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lantegis.aspx.vb">
+      <DependentUpon>Lantegis.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ListadoMaquinas.aspx.designer.vb">
+      <DependentUpon>ListadoMaquinas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoMaquinas.aspx.vb">
+      <DependentUpon>ListadoMaquinas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="App_Data\PageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PeriodoCierre.aspx.designer.vb">
+      <DependentUpon>PeriodoCierre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodoCierre.aspx.vb">
+      <DependentUpon>PeriodoCierre.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.designer.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PermisoDenegado.aspx.vb">
+      <DependentUpon>PermisoDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PorcentajeDepartamento.aspx.designer.vb">
+      <DependentUpon>PorcentajeDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PorcentajeDepartamento.aspx.vb">
+      <DependentUpon>PorcentajeDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PorcentajeETTReubicados.aspx.designer.vb">
+      <DependentUpon>PorcentajeETTReubicados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PorcentajeETTReubicados.aspx.vb">
+      <DependentUpon>PorcentajeETTReubicados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RPGenericos.aspx.designer.vb">
+      <DependentUpon>RPGenericos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPGenericos.aspx.vb">
+      <DependentUpon>RPGenericos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\MPCR.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.5.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Memcached\Memcached.vbproj">
+      <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
+      <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TraduccionesLib\TraduccionesLib.vbproj">
+      <Project>{c6bcb6d1-678b-4c12-99c3-df57c9c28cae}</Project>
+      <Name>TraduccionesLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44394/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.VisualStudio.SlowCheetah.4.0.30\build\Microsoft.VisualStudio.SlowCheetah.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.SlowCheetah.4.0.30\build\Microsoft.VisualStudio.SlowCheetah.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.SlowCheetah.4.0.30\build\Microsoft.VisualStudio.SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.SlowCheetah.4.0.30\build\Microsoft.VisualStudio.SlowCheetah.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

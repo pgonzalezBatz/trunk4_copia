@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+
+  <Item title= "Inicio" descripcion="Inicio" url="Referencia.aspx" id="" roles="2,12">
+  </Item>
+
+  <Item title="Master tables" descripcion="Master tables" url="" id="" roles="2,12">
+    <Item title="Create Clase Characteristics" descripion="Create Clase Characteristics" url="CrearCharacteristics.aspx?id=1" id="" roles="2,12" >
+    </Item>
+    <Item title="Modify Clase Characteristics" descripion="Modify Clase Characteristics" url="CrearCharacteristics.aspx?id=0" id="" roles="2,12" >
+    </Item>
+
+    <Item title="Create Tipo Characteristics" descripion="Create Tipo Characteristics" url="CrearComponents.aspx?id=1" id="" roles="2,12" >
+    </Item>
+    <Item title="Modify Tipo Characteristics" descripion="Modify Tipo Characteristics" url="CrearComponents.aspx?id=0" id="" roles="2,12" >
+    </Item>
+    
+    <Item title="Create Works" descripion="Create Works" url="CrearWorks.aspx?id=1" id="" roles="2,12" >
+    </Item>
+    <Item title="Modify Works" descripion="Modify Works" url="CrearWorks.aspx?id=0" id="" roles="2,12" >
+    </Item>
+
+
+    
+  </Item>
+
+  <Item title="Proceso Step Caracteristicas" descripcion="Proceso Step Caracteristicas" url="" id="" roles="2,12">
+    <Item title="Create Proceso Step " descripion="Create Proceso Step " url="CrearSteps.aspx?id=1" id="" roles="2,12" >
+    </Item>
+    <Item title="Definir Proceso Step Caracteristicas" descripion="Definir Proceso Step Caracteristicas" url="CrearSteps.aspx?id=0" id="" roles="2,12" >
+    </Item>
+
+  </Item>
+
+  <Item title="Processes" descripcion="Processes" url="" id="" roles="2,12">
+    <Item title="Create Processes" descripion="Create Processes" url="CrearProcess.aspx?id=1" id="" roles="2,12" >
+    </Item>
+    <Item title="Modify Processes" descripion="Modify Processes" url="CrearProcess.aspx?id=0" id="" roles="2,12" >
+    </Item>
+
+  </Item>
+
+    
+ 
+
+  <Item title="Listado" descripcion="Listado" url="" id="" roles="666">
+
+    <Item title="Listado" descripion="Listado" url="./Listados.aspx" id="" roles="666">
+    </Item>
+
+  </Item>
+
+
+
+  <Item title="IGORRE" descripcion="IGORRE" url="" id="" roles="666">
+
+    <Item title="CAMBIAR A otro" descripion="CAMBIAR A otro"   url="EstadoEmpresaDocumento9.aspx" id="" roles="666">
+    </Item>
+
+  </Item>
+
+
+
+  <Item title="Inicio" descripcion="Inicio" url="Default.aspx" id="" roles="22">
+  </Item>
+
+</Root>

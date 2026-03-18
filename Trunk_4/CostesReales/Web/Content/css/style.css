@@ -1,0 +1,127 @@
+﻿table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+table tbody tr:first-child th:first-child {
+    border-top-left-radius: 5px;
+}
+
+table tbody tr:first-child th:last-child {
+    border-top-right-radius: 5px;
+}
+
+table tbody tr:first-child {
+    background-color: #777777;
+    color: white;
+    min-height: 50px;
+}
+
+table tbody tr td {
+    border-color: #ebebeb;
+    border-style: solid;
+    border-width: 1px;
+}
+
+table tbody {
+    border-color: #777777 !important; 
+    border-style: solid;
+    border-width: 1px;
+}
+
+table tbody tr:not(first-child) {
+    min-height: 40px;
+}
+
+table td, table th {
+    padding: 10px
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+        color: #fff;
+        background-color: #286090;
+        border-color: #122b40;
+    }
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.lbl-primary {
+    color: #fff;
+    background-color: #777777;
+    border-color: #777777;
+}
+
+.lbl {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4285;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+ul.nav > li.nav-item > a.nav-link {
+    padding:7px!important;
+    display:flex;
+    align-items:center;
+    /*height:50px;*/
+}
+
+/*ul.nav > li.nav-item {
+    border-style: inset;
+}
+
+ul.nav > li.nav-item:nth-of-type(2n) {
+    border-style: outset;
+}*/
+
+div.container-fluid,
+ul.nav {
+    display:flex;
+    align-items:center;
+}

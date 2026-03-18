@@ -1,0 +1,12 @@
+﻿body{background-image:url("Images/logoBatz.gif"); background-repeat:no-repeat;font-size:10pt;}
+#layout{ margin:40pt 0 0 2pt;border-spacing:0; border-collapse:collapse; }
+#layout tbody td{border:solid 1px black; font-size:8pt;}
+#layout thead th{border:solid 1px black; background-color:#028ed9; color:#fff;}
+#tableHead{margin:4pt 10pt;}
+#tableHead span{width:60pt; font-weight:bold;   margin-left:15pt;}   
+#divHelp{position:absolute; margin:10pt 0 0 400pt;}
+#divHelp img{border:none;}
+@media print{
+    #divHelp{display:none;}
+    #layout{width:98%;}
+}

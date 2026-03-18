@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="BonosSisLib_Matrix_BonosServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zanburu.batz.es:7001/enovia/services/BzServicesBonosService</Value>
+    </Setting>
+    <Setting Name="BonosSisLib_SolicitudCompraWS_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://intranet2.batz.es/SolicitudesCompra/WebService/service.asmx</Value>
+    </Setting>
+    <Setting Name="BonosSisLib_Matrix_PLMV6_BonosServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://plmv6.batz.es:7001/enovia/services/BzServicesBonosService</Value>
+    </Setting>
+    <Setting Name="BonosSisLib_CostCarrierWS_CostCarriersWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://intranet2.batz.es/CostCarriers/webservice/costcarriersws.asmx</Value>
+    </Setting>
+    <Setting Name="BonosSisLib_EnoviaUsers_UsersService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zanburu.batz.es:7001/enovia/services/BzServicesUsers</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

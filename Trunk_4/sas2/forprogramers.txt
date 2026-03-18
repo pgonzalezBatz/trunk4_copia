@@ -1,0 +1,281 @@
+alter table recogida2_of_op add codpuerta number
+alter table recogida2 add codpuerta number
+
+grant select  on gcpuerta to sas
+
+insert into gcpuerta values(8,'LANTEGI 1')
+insert into gcpuerta values(9,'LANTEGI 2')
+insert into gcpuerta values(10,'LANTEGI 3')
+insert into gcpuerta values(11,'LANTEGI 4')
+insert into gcpuerta values(12,'MAQUINAS')
+insert into gcpuerta values(13,'TEMPLE')
+insert into gcpuerta values(14,'CONTROL CALIDAD')
+
+create table viaje_ruta (
+       id    		number not null,
+       id_viaje		number not null,
+       id_empresa	number not null,
+       distancia	number,
+       constraint pk_viaje_ruta primary key(id),
+       constraint fk_vr_viaje foreign key(id_viaje) references viaje(id)
+)
+create sequence viaje_ruta_seq start with 1 increment by 1 nocache
+
+alter table agrupacion add (id_parent number)
+alter table RECOGIDA2 add (observacion_recogida varchar2(300))
+create table horas_extra_diario(
+       fecha		date not null,
+       pedido		number not null,
+       horas		number not null,
+       constraint pk_horas_extra_diaio primary key(fecha, pedido)
+)
+alter table movimientos_taxi add (subcontratado varchar2(50))
+alter table viaje add (fecha_creacion date)
+alter table viaje add (facturar_por_tiempo number)
+create table detalle_taxi(
+	id	number not null,
+	origen	varchar2(50) not null,
+	kilometros number not null,
+	n_puntos_espera number,
+	espera_superior_hora number,
+	festivos number,
+	constraint pk_detalle_taxi primary key(id,origen)
+)
+
+alter table viaje add (de_camino date)
+2013-01-21
+==========
+alter table viaje add (viaje_productivo number)
+alter table viaje add (comentario_proveedor nvarchar2(300))
+alter table viaje add (comentario_almacen nvarchar2(300))
+
+2013-01-07
+==========
+alter table viaje add (id_gctipviaje number)
+grant references,select on gctipviaje to sas
+grant references,select on gctipviajeart to sas
+
+
+create table gctipviaje(
+       id	number not null,
+       nombre	varchar(100) not null,
+       constraint pk_gctipviaje primary key(id)
+       )
+create sequence gctipviaje_seq start with 1 increment by 1 nocache
+insert into gctipviaje values(gctipviaje_seq.nextval,'Taxis')
+insert into gctipviaje values(gctipviaje_seq.nextval,'Grupaje')
+insert into gctipviaje values(gctipviaje_seq.nextval,'Economy express')
+insert into gctipviaje values(gctipviaje_seq.nextval,'Serv. diario')
+insert into gctipviaje values(gctipviaje_seq.nextval,'Mensajeria')
+insert into gctipviaje values(gctipviaje_seq.nextval,'Aereo export')
+insert into gctipviaje values(gctipviaje_seq.nextval,'Aereo import')
+
+
+create table gctipviajeart(
+       id_gctipviaje		number not null,
+       codtip			number not null,
+       codart			varchar2(15) not null,
+       constraint pk_gctipviajeart primary key(id_gctipviaje,codtip),
+       constraint fk_art_gctipviaje foreign key(id_gctipviaje) references gctipviaje(id)
+)
+insert into gctipviajeart values(1,0,'000000000415')
+insert into gctipviajeart values(1,4,'000000041601')
+insert into gctipviajeart values(1,6,'000000041601')
+insert into gctipviajeart values(1,9,'000000000420')
+
+insert into gctipviajeart values(2,0,'000000004153')
+insert into gctipviajeart values(2,4,'000000041602')
+insert into gctipviajeart values(2,6,'000000041602')
+insert into gctipviajeart values(2,9,'000000000420')
+
+insert into gctipviajeart values(3,0,'000000004156')
+insert into gctipviajeart values(3,4,'000000041605')
+insert into gctipviajeart values(3,6,'000000041605')
+insert into gctipviajeart values(3,9,'000000000420')
+
+insert into gctipviajeart values(4,0,'000000004158')
+insert into gctipviajeart values(4,4,'000000041604')
+insert into gctipviajeart values(4,6,'000000041604')
+insert into gctipviajeart values(4,9,'000000000420')
+
+insert into gctipviajeart values(5,0,'000000004159')
+insert into gctipviajeart values(5,4,'000000041603')
+insert into gctipviajeart values(5,6,'000000041603')
+insert into gctipviajeart values(5,9,'000000000420')
+
+insert into gctipviajeart values(6,0,'000000041507')
+insert into gctipviajeart values(6,4,'000000041606')
+insert into gctipviajeart values(6,6,'000000041606')
+insert into gctipviajeart values(6,9,'000000000420')
+
+insert into gctipviajeart values(7,0,'000000041508')
+insert into gctipviajeart values(7,4,'000000041607')
+insert into gctipviajeart values(7,6,'000000041607')
+insert into gctipviajeart values(7,9,'000000000420')
+
+
+2012-07-19
+==========
+alter table viaje add (importe_transporte number)
+
+====
+create table movimientos_taxi(
+       id		number not null,
+       id_empresas	number not null,
+       origen		nvarchar2(300) ,
+       destino		nvarchar2(300),
+       fecha		date not null,
+       observacion		nvarchar2(300),
+       precio		number,
+       numero_pedido	number,
+       constraint pk_movimientos_taxi primary key(id)
+)
+create sequence movimiento_taxi_seq start with 1 increment by 1	nocache
+
+2012-03-19
+==========
+create table pre_movimientos_movimientos(
+       id_pre_movimiento	number,
+       id_movimiento		number,
+       constraint pk_pre_movimientos_movimientos primary key(id_pre_movimiento,id_movimiento),
+       constraint fk_pre_mov_pre foreign key(id_pre_movimiento) references pre_movimientos(id),
+       constraint fk_pre_mov_mov foreign key(id_movimiento) references movimiento_material(id)
+)
+create table pre_movimientos(
+       id			number not null,
+       numord		number not null,
+       numope		number not null,
+       marca		varchar2(12) not null,
+       id_proveedor		number	,
+       observ		nvarchar2(300),
+       id_sab_creador	number not null,
+       constraint pk_pre_movimientos primary key(id),
+       constraint fk_pre_mov_usuarios foreign key(id_sab_creador) references sab.usuarios(id)
+)
+create sequence pre_mov_seq start with 1 increment by 1	
+2012-02-03
+==========
+1.- alter table viaje_albaran2 add (tipo varchar(1))
+2.- alter table viaje_albaran2 drop constraint pk_viaje_albaran2
+3.- alter table viaje_albaran2 drop constraint fk_viaje_albaran2
+4.- update viaje_albaran2 set tipo='A'
+5.- alter table viaje_albaran2 rename column id_albaran to id_doc
+6.- alter table viaje_albaran2 add constraint pk_viaje_albaran2 primary key (id_viaje,id_doc,tipo)
+7.- alter table viaje_albaran2 add constraint fk_viaje_albaran2_viaje foreign key (id_viaje) references viaje(id )
+
+create table recogida2 (
+       id				number not null,
+       id_empresa_recogida   		number not null,
+       id_empresa_entrega		number not null,
+       fecha				date,
+       id_sab_creador			number not null,
+       observaciones			varchar(300),
+       constraint pk_recogida primary key (id),
+       constraint fk_recogida2_usuarios foreign key(id_sab_creador) references sab.usuarios(id)
+)
+create table recogida2_of_op(
+       id_recogida			number not null,
+       numord				number not null,
+       numope				number not null,
+       peso				number not null,
+       constraint pk_recogida2_of_op primary key(id_recogida,numord,numope),
+       constraint fk_recogida2_of_op_recogida2 foreign key (id_recogida) references recogida2(id)       
+)
+create sequence recogida2_seq start with 1 increment by 1	
+       
+2011-11-24
+==========
+alter table movimientos_material add (empresa_salida number)
+update movimiento_material mm 
+set empresa_salida=(
+	select a2.empresa_salida
+	from 	movimiento_material mm2 inner join agrupacion_movimiento ag on mm2.id=ag.id_movimiento inner join 
+		agrupacion_albaran2 aa on ag.id_agrupacion=aa.id_agrupacion inner join albaran2 a2 on a2.id=aa.id_albaran
+	where mm.id=mm2.id
+	group by mm2.id,a2.empresa_salida)
+-- Execute this after talking to Robert about making sure every movement is from Batz
+update movimiento_material set empresa_salida=1 where empresa_salida is null
+alter table albaran2 drop column empresa_salida
+2011-10-17
+==========
+create table roles(
+       id_sab	number not null,
+       role	number not null,
+       constraint pk_roles primary key (id_sab)
+)
+insert into roles values(58474,7)       
+insert into roles values(57066,3)       
+insert into roles values(34,7)       
+insert into roles values(59914,3)       
+insert into roles values(58706,3)       
+2011-07-05
+==========
+
+create table agrupacion_movimiento(
+       id_agrupacion	number,
+       id_movimiento	number,
+       constraint pk_agrupacion_movimiento primary key (id_agrupacion,id_movimiento),
+       constraint fk_agrup_mov_mov foreign key (id_movimiento) references movimiento_material(id)
+)
+create table agrupacion (
+	id	number,
+	peso	number,
+	constraint pk_agrupacion primary key (id)
+)
+
+grant references,select on mbtooling.cpcabec to sasmbtooling
+grant references,select on xbat.cpcabec to sas
+grant references,select on scpedlin to sasmbtooling
+grant references,select on sab.empresas to sasmbtooling
+grant references,select on sab.usuarios  to sas
+grant references on xbat.helbide  to sas
+
+create sequence viaje_seq start with 1 increment by 1	
+create sequence albaran2_seq start with 1 increment by 1	
+create sequence agrupacion_seq start with 1 increment by 1
+create sequence movimiento_material_seq start with 1 increment by 1
+
+create table viaje(
+       id			number not null,
+       id_transportista		varchar2(10),
+       salida			date,
+       matricula		varchar2(20),
+       matricula2       	varchar2(20),
+       importe_transporte	number,
+       pedido_transporte 	number,
+       constraint pk_viaje primary key (id)
+)
+create table viaje_albaran2(
+       id_viaje		number not null,
+       id_albaran	number not null,
+       constraint pk_viaje_albaran2 primary key (id_viaje,id_albaran),
+       constraint fk_viaje_albaran2 foreign key (id_albaran) references albaran2(id)
+)
+create table albaran2(
+	id		number not null,
+	observaciones	varchar(200),
+	id_helbide	number,
+	empresa_salida  number,
+	constraint pk_albaran2 primary key (id)
+)
+create table agrupacion_albaran2 (
+	id_albaran	number not null,
+	id_agrupacion	number	not null,		
+	constraint pk_agrupacion_albaran2 primary key (id_albaran, id_agrupacion),
+	constraint fk_agrupacion_albaran2 foreign key (id_albaran) references albaran2(id)
+)
+
+create table movimiento_material(
+	id		number not null,
+	numord 		number not null,
+	numope		number not null,
+	marca		varchar(11) not null,
+	id_empresa	number not null,
+	fecha_entrega	date,
+	cantidad		number not null,
+	id_creador	number not null,
+	observacion	varchar(200),
+	constraint pk_movimiento_material primary key (id),
+ constraint fk_movimiento_material_creador foreign key (id_creador) references sab.usuarios(id)
+)
+

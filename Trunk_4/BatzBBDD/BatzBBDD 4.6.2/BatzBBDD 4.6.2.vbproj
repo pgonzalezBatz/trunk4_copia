@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2CE331C0-5EF3-4642-90C2-A9FC31D2F83E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BatzBBDD</RootNamespace>
+    <AssemblyName>BatzBBDD</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Soluciones VS2010\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BatzBBDD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BatzBBDD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Extranet|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release_Extranet\</OutputPath>
+    <DocumentationFile>BatzBBDD.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Extranet|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug_Extranet\</OutputPath>
+    <DocumentationFile>BatzBBDD.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Transactions" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Funciones.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Oracle\Gertakariak\Gertakariak.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gertakariak.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle\XBAT\ASSET.vb">
+      <DependentUpon>Prisma.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle\XBAT\Prisma.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prisma.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle\XBAT\Prisma.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prisma.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle\XBAT\Prisma.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prisma.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="SQL_Server\Epsilon\CATEGORIAS.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\COD_TRA.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\CONVENIOS.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\Epsilon.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Epsilon.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\Epsilon.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Epsilon.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\Epsilon.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\NIV_ORG.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\ORDEN.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\PERSONAS.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\PUES_TRAB.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL_Server\Epsilon\TRABAJADORES.vb">
+      <DependentUpon>Epsilon.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BatzBBDD.cd" />
+    <None Include="DB2\Brain.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Oracle\Gertakariak\Gertakariak.edmx.diagram">
+      <DependentUpon>Gertakariak.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Oracle\XBAT\Prisma.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Prisma.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Oracle\XBAT\Prisma.edmx.diagram">
+      <DependentUpon>Prisma.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="SQL_Server\Epsilon\Epsilon.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Epsilon.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="SQL_Server\Epsilon\Epsilon.edmx.diagram">
+      <DependentUpon>Epsilon.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB2\BLL\" />
+    <Folder Include="DB2\DAL\" />
+    <Folder Include="DB2\ELL\" />
+    <Folder Include="OLEDB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Oracle\Gertakariak\Gertakariak.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Gertakariak.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Oracle\XBAT\Prisma.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Prisma.Context.vb</LastGenOutput>
+      <DependentUpon>Prisma.edmx</DependentUpon>
+    </Content>
+    <Content Include="Oracle\XBAT\Prisma.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Prisma.vb</LastGenOutput>
+      <DependentUpon>Prisma.edmx</DependentUpon>
+    </Content>
+    <Content Include="SQL_Server\Epsilon\Epsilon.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Epsilon.Context.vb</LastGenOutput>
+      <DependentUpon>Epsilon.edmx</DependentUpon>
+    </Content>
+    <Content Include="SQL_Server\Epsilon\Epsilon.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Epsilon.vb</LastGenOutput>
+      <DependentUpon>Epsilon.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

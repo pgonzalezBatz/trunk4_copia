@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEA40E08-BF9A-4C0A-B566-8EC8D51C6D5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CostCarriersLib</RootNamespace>
+    <AssemblyName>CostCarriersLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CostCarriersLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CostCarriersLib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=3.0.2.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\log4net.3.0.2\lib\net462\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Memcached, Version=4.2013.1.17, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Memcached.2.0.0\lib\net48\Memcached.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.23.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.23.6.0\lib\net472\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SABLib, Version=4.2013.1.17, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\Sablib.5.2.0\lib\net48\SABLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Codigo_Compartido\NugetPackages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Trunk_46\SolicitudesInversion\SolicitudesInversionLib\BLL\ActivosBLL.vb">
+      <Link>BLL\Inversiones\ActivosBLL.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Trunk_46\SolicitudesInversion\SolicitudesInversionLib\DAL\ActivosDAL.vb">
+      <Link>DAL\Inversiones\ActivosDAL.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Trunk_46\SolicitudesInversion\SolicitudesInversionLib\ELL\Activo.vb">
+      <Link>ELL\Inversiones\Activo.vb</Link>
+    </Compile>
+    <Compile Include="BLL\Bonos\CostGroupBonosBLL.vb" />
+    <Compile Include="BLL\Bonos\MiembrosBLL.vb" />
+    <Compile Include="BLL\Bonos\EstadosBonosBLL.vb" />
+    <Compile Include="BLL\Bonos\ProyectosPtksisBLL.vb" />
+    <Compile Include="BLL\BRAIN\CCProductionPlantBLL.vb" />
+    <Compile Include="BLL\BRAIN\CCMetadataYearBLL.vb" />
+    <Compile Include="BLL\BRAIN\CCMetadataBLL.vb" />
+    <Compile Include="BLL\BRAIN\CostCarriersBLL.vb" />
+    <Compile Include="BLL\CostCarrier\CabecerasCostCarrierBLL.vb" />
+    <Compile Include="BLL\CostCarrier\CostsGroupBLL.vb" />
+    <Compile Include="BLL\CostCarrier\EstadosBLL.vb" />
+    <Compile Include="BLL\CostCarrier\Validacion\HistoricosEstadoLineaBLL.vb" />
+    <Compile Include="BLL\CostCarrier\Validacion\FlujosAprobacionBLL.vb" />
+    <Compile Include="BLL\CostCarrier\Validacion\ValidacionesInfoAdicionalBLL.vb" />
+    <Compile Include="BLL\CostCarrier\Validacion\ValidacionesLineaBLL.vb" />
+    <Compile Include="BLL\CostCarrier\Validacion\ValidacionesAñoBLL.vb" />
+    <Compile Include="BLL\CostCarrier\Validacion\ValidacionesBLL.vb" />
+    <Compile Include="BLL\CostCarrier\ValoresStepBLL.vb" />
+    <Compile Include="BLL\CostCarrier\PlantasBLL.vb" />
+    <Compile Include="BLL\CostCarrier\StepsBLL.vb" />
+    <Compile Include="BLL\Facturacion\HistoricosEstadoFacturacionBLL.vb" />
+    <Compile Include="BLL\Facturacion\LineasPedidoBLL.vb" />
+    <Compile Include="BLL\Facturacion\PedidosBLL.vb" />
+    <Compile Include="BLL\Inversiones\CodigosPresupuestoBLL.vb" />
+    <Compile Include="BLL\Navision\CostCarriersBLL.vb" />
+    <Compile Include="BLL\ProjectsInfoBLL.vb" />
+    <Compile Include="BLL\PlantasACargarBLL.vb" />
+    <Compile Include="BLL\Plantilla\CostsGroupOTBLL.vb" />
+    <Compile Include="BLL\Plantilla\CostsGroupPlantillaBLL.vb" />
+    <Compile Include="BLL\Plantilla\EstadosPlantillaBLL.vb" />
+    <Compile Include="BLL\EstadosProyectoBLL.vb" />
+    <Compile Include="BLL\OrigenesDatosStepBLL.vb" />
+    <Compile Include="BLL\Plantilla\PlantasPlantillaBLL.vb" />
+    <Compile Include="BLL\Plantilla\PlantillasBLL.vb" />
+    <Compile Include="BLL\Bonos\ProductosPtksisBLL.vb" />
+    <Compile Include="BLL\ProductosBLL.vb" />
+    <Compile Include="BLL\PlantasOfertaBLL.vb" />
+    <Compile Include="BLL\ProjectsAffectedBLL.vb" />
+    <Compile Include="BLL\VariablesFormulaBLL.vb" />
+    <Compile Include="BLL\ProyectosBLL.vb" />
+    <Compile Include="BLL\Plantilla\StepsPlantillaBLL.vb" />
+    <Compile Include="BLL\TiposProyectoBLL.vb" />
+    <Compile Include="BLL\UsuariosRolBLL.vb" />
+    <Compile Include="BLL\XBAT\ComonBLL.vb" />
+    <Compile Include="DAL\Bonos\EstadosBonosDAL.vb" />
+    <Compile Include="DAL\Bonos\ProductosPtksisDAL.vb" />
+    <Compile Include="DAL\Bonos\ProyectosPtksisDAL.vb" />
+    <Compile Include="DAL\BRAIN\CCProductionPlantDAL.vb" />
+    <Compile Include="DAL\BRAIN\CCMetadataYearDAL.vb" />
+    <Compile Include="DAL\BRAIN\CostCarriersDAL.vb" />
+    <Compile Include="DAL\BRAIN\CCMetadataDAL.vb" />
+    <Compile Include="DAL\CostCarrier\CabecerasCostCarrierDAL.vb" />
+    <Compile Include="DAL\CostCarrier\CostsGroupDAL.vb" />
+    <Compile Include="DAL\CostCarrier\EstadosDAL.vb" />
+    <Compile Include="DAL\CostCarrier\Validacion\HistoricosEstadoLineaDAL.vb" />
+    <Compile Include="DAL\CostCarrier\Validacion\ValidacionesAñoDAL.vb" />
+    <Compile Include="DAL\CostCarrier\Validacion\FlujosAprobacionDAL.vb" />
+    <Compile Include="DAL\CostCarrier\Validacion\ValidacionesInfoAdicionalDAL.vb" />
+    <Compile Include="DAL\CostCarrier\Validacion\ValidacionesLineaDAL.vb" />
+    <Compile Include="DAL\CostCarrier\Validacion\ValidacionesDAL.vb" />
+    <Compile Include="DAL\CostCarrier\ValoresStepDAL.vb" />
+    <Compile Include="DAL\CostCarrier\PlantasDAL.vb" />
+    <Compile Include="DAL\Facturacion\HistoricosEstadoFacturacionDAL.vb" />
+    <Compile Include="DAL\Facturacion\LineasPedidoDAL.vb" />
+    <Compile Include="DAL\Facturacion\PedidosDAL.vb" />
+    <Compile Include="DAL\Inversiones\CodigosPresupuestoDAL.vb" />
+    <Compile Include="DAL\Navison\CostCarriersDAL.vb" />
+    <Compile Include="DAL\Plantilla\CostsGroupOTDAL.vb" />
+    <Compile Include="DAL\VariablesFormulaDAL.vb" />
+    <Compile Include="DAL\CostCarrier\StepsDAL.vb" />
+    <Compile Include="DAL\Plantilla\StepsPlantillaDAL.vb" />
+    <Compile Include="DAL\DALBase.vb" />
+    <Compile Include="DAL\Plantilla\EstadosPlantillaDAL.vb" />
+    <Compile Include="DAL\Plantilla\CostsGroupPlantillaDAL.vb" />
+    <Compile Include="DAL\Plantilla\PlantasPlantillaDAL.vb" />
+    <Compile Include="DAL\EstadosProyectoDAL.vb" />
+    <Compile Include="DAL\OrigenesDatosStepDAL.vb" />
+    <Compile Include="DAL\TiposProyectoDAL.vb" />
+    <Compile Include="DAL\Plantilla\PlantillasDAL.vb" />
+    <Compile Include="DAL\UsuariosRolDAL.vb" />
+    <Compile Include="DAL\XBAT\ComonDAL.vb" />
+    <Compile Include="ELL\Bonos\EstadoBonos.vb" />
+    <Compile Include="ELL\Bonos\Miembro.vb" />
+    <Compile Include="ELL\Bonos\ProductoPtksis.vb" />
+    <Compile Include="ELL\Bonos\ProyectoPtksis.vb" />
+    <Compile Include="ELL\BRAIN\CCMetadataYear.vb" />
+    <Compile Include="ELL\BRAIN\CCMetadata.vb" />
+    <Compile Include="ELL\BRAIN\CCProductionPlant.vb" />
+    <Compile Include="ELL\BRAIN\CostCarrier.vb" />
+    <Compile Include="ELL\CostCarrier\Columna.vb" />
+    <Compile Include="ELL\CostCarrier\CostGroup.vb" />
+    <Compile Include="ELL\CostCarrier\Facturacion\LineaPedido.vb" />
+    <Compile Include="ELL\CostCarrier\Facturacion\HistoricoEstadoFacturacion.vb" />
+    <Compile Include="ELL\CostCarrier\Facturacion\Pedido.vb" />
+    <Compile Include="ELL\CostCarrier\Validacion\FlujoAprobacion.vb" />
+    <Compile Include="ELL\CostCarrier\Validacion\HistoricoEstadoLinea.vb" />
+    <Compile Include="ELL\CostCarrier\Validacion\ValidacionInfoAdicional.vb" />
+    <Compile Include="ELL\CostCarrier\Validacion\ValidacionAño.vb" />
+    <Compile Include="ELL\CostCarrier\Validacion\ValidacionLinea.vb" />
+    <Compile Include="ELL\CostCarrier\Validacion\Validacion.vb" />
+    <Compile Include="ELL\CostCarrier\ValorStep.vb" />
+    <Compile Include="ELL\Inversiones\CodigoPrespuesto.vb" />
+    <Compile Include="ELL\OfertaTecnica\StepOferta.vb" />
+    <Compile Include="ELL\Gerente.vb" />
+    <Compile Include="ELL\ProductManager.vb" />
+    <Compile Include="ELL\ProjectAffected.vb" />
+    <Compile Include="ELL\ProyectoHijo.vb" />
+    <Compile Include="ELL\ProjectInfo.vb" />
+    <Compile Include="ELL\PlantaACargar.vb" />
+    <Compile Include="ELL\PlantaOferta.vb" />
+    <Compile Include="ELL\Plantilla\CostGroupOT.vb" />
+    <Compile Include="ELL\Plantilla\CostGroupPlantilla.vb" />
+    <Compile Include="ELL\CostCarrier\Estado.vb" />
+    <Compile Include="ELL\OrigenDatosStep.vb" />
+    <Compile Include="ELL\CostCarrier\CabeceraCostCarrier.vb" />
+    <Compile Include="ELL\CostCarrier\Planta.vb" />
+    <Compile Include="ELL\Producto.vb" />
+    <Compile Include="ELL\Rol.vb" />
+    <Compile Include="ELL\VariableFormula.vb" />
+    <Compile Include="ELL\Proyecto.vb" />
+    <Compile Include="ELL\CostCarrier\Step.vb" />
+    <Compile Include="ELL\Plantilla\StepPlantilla.vb" />
+    <Compile Include="ELL\TipoProyecto.vb" />
+    <Compile Include="ELL\EstadoProyecto.vb" />
+    <Compile Include="ELL\Plantilla\EstadoPlantilla.vb" />
+    <Compile Include="ELL\Plantilla\PlantaPlantilla.vb" />
+    <Compile Include="ELL\Plantilla\Plantilla.vb" />
+    <Compile Include="ELL\UsuarioRol.vb" />
+    <Compile Include="ELL\XBAT\Comon.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\ServicioBonos\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicioOfertaTecnica\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web References\ServicioBonos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicioBonos\ServicioBonos.wsdl" />
+    <None Include="Web References\ServicioOfertaTecnica\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicioOfertaTecnica\ServiceCostCarriers.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://intranet2.batz.es/BonosSis/Publico/ServicioBonos.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioBonos\</RelPath>
+      <UpdateFromURL>https://intranet2.batz.es/BonosSis/Publico/ServicioBonos.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CostCarriersLib_ServicioBonos_ServicioBonos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://intranet2.batz.es/OfertaTecsis/Publico/ServiceCostCarriers.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioOfertaTecnica\</RelPath>
+      <UpdateFromURL>https://intranet2.batz.es/OfertaTecsis/Publico/ServiceCostCarriers.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CostCarriersLib_ServicioOfertaTecnica_ServiceCostCarriers</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ServicioBonos\ServicioBonos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ServicioOfertaTecnica\ServiceCostCarriers.disco" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

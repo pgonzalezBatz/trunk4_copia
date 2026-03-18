@@ -1,0 +1,118 @@
+﻿
+/*#region menu1*/
+
+.navbar div div .navbar-brand {
+    float: none!important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media all and (max-width:767px) {
+    .navbar-nav > li > a {
+        padding: 0px 15px;
+        line-height: 20px;
+        font-variant: small-caps;
+        font-size: 20px;
+    }
+    a > .itemTitle {
+        font-size: 18px;
+    }
+}
+
+@media all and (min-width:767px) {
+    .navbar-nav > .miniicon {
+        margin: 0px !important;
+    }
+}
+
+a:hover {
+    text-decoration:none!important;
+}
+
+.glyphicon {    
+    text-align:center;
+}
+.navbar-collapse > .nav > li {
+    margin: 6px 0px;
+}
+
+.nombreUser > a {
+    color:#1a3d5b;
+    font-weight:600;
+    font-size:15px;
+}
+/*#endregion menu1*/
+
+
+/*#region panel icons*/
+.text-uncenter {
+    text-align: left;
+}
+  
+img.resize {
+    height:auto;
+    width:30px;
+    max-height:30px;
+}
+
+.container > .panel > .panel-heading, .container > .panel > .panel-heading a {
+    background-color: #337ab7;
+    color: #f0f0f0!important;
+    font-size: 22px;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+.resizeTarj {
+    height: 48px;
+    width: auto;    
+}
+
+.panel-heading {
+     height: 45px; 
+     border-bottom: 0px;
+}
+
+.hidden-xs .panel {
+    margin:2px;
+}
+
+.hidden-xs > div {
+    padding:2px;
+}
+
+.anchorRecurso {
+    display:table!important;
+}
+
+.labelRecurso {
+    display:table-cell;
+    vertical-align:middle;
+}
+/*#endregion panel icons*/
+
+
+
+.panel-title > a:hover {
+    text-shadow: 0.5px 0.5px #cfe2f2, -2px -2px #193a58;
+}
+
+.panel-body > div > div:hover > .panel {
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.34);  
+    margin-bottom: 6px;  
+    margin-top: -2px;
+    margin-left: -2px;
+    margin-right: 2px;
+    /*transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;*/
+}
+
+.panel-body > div > div > .panel:hover a {
+        color: #23527c;
+}
+
+.text-uncenter:hover > div > a {
+        color: #23527c;
+}

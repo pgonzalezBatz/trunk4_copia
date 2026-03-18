@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Selling part numbers" descripcion="Requests" url="" id="" roles="2,21,1,245,265">
+    <Item title="New request" descripion="Add selling part numbers" url="~\Paginas\Solicitudes\ReferenciaFinalVenta.aspx" id="" roles="2,1,245,265" />
+    <Item title="Process requests" descripion="Process requests" url="~\Paginas\Solicitudes\TramitarSolicitudes.aspx" id="" roles="2,21">
+      <Item title="Pending processing" descripion="Processing of pending requests" url="~\Paginas\Solicitudes\TramitarSolicitudes.aspx" id="" roles="2,21" />
+      <Item title="Processed" descripion="Historical of processed requests" url="~\Paginas\Solicitudes\HistoricoTramitadas.aspx" id="" roles="2,21" />
+    </Item>
+    <Item title="See requests" descripion="See requests" url="~\Paginas\Solicitudes\VerSolicitudes.aspx" id="" roles="2,1,265" />
+  </Item>
+  <Item title="Validations" descripcion="Validation of requests" url="~\Paginas\Solicitudes\Validaciones.aspx" id="" roles="2,7,21,245,265"></Item>    
+  <Item title="Administration" descripcion="Administration" url="" id="" roles="2,21">
+    <Item title="Products" descripion="Products maintenance" url="~\Paginas\Administracion\Producto.aspx" id="" roles="2,21"></Item>
+    <Item title="Types" descripion="Types maintenance" url="~\Paginas\Administracion\Types.aspx" id="" roles="2,21"></Item>
+    <Item title="Transmission Mode" descripion="Transmission Mode maintenance" url="~\Paginas\Administracion\TransmissionMode.aspx" id="" roles="2,21"></Item>
+    <Item title="Selling part number types" descripion="Selling part number types" url="~\Paginas\Administracion\TiposReferenciaVenta.aspx" id="" roles="2,21"></Item>
+    <Item title="Users and roles" descripion="Selling part number types" url="~\Paginas\Administracion\RolesUsuarios.aspx" id="" roles="2,21"></Item>
+  </Item>  
+</Root>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:impl="http://bzServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://bzServices" targetNamespace="http://bzServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://bzServices">
+      <xsd:element name="getIdPlantaSabUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIdPlantaSabUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getIdPlantaSabUserReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserState">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in0" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserStateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getUserStateReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getIdPlantaSabUserRequest">
+    <wsdl:part name="parameters" element="intf:getIdPlantaSabUser" />
+  </wsdl:message>
+  <wsdl:message name="getIdPlantaSabUserResponse">
+    <wsdl:part name="parameters" element="intf:getIdPlantaSabUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserStateRequest">
+    <wsdl:part name="parameters" element="intf:getUserState" />
+  </wsdl:message>
+  <wsdl:message name="getUserStateResponse">
+    <wsdl:part name="parameters" element="intf:getUserStateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Users">
+    <wsdl:operation name="getIdPlantaSabUser">
+      <wsdl:input name="getIdPlantaSabUserRequest" message="intf:getIdPlantaSabUserRequest" />
+      <wsdl:output name="getIdPlantaSabUserResponse" message="intf:getIdPlantaSabUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserState">
+      <wsdl:input name="getUserStateRequest" message="intf:getUserStateRequest" />
+      <wsdl:output name="getUserStateResponse" message="intf:getUserStateResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BzServicesUsersSoapBinding" type="intf:Users">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getIdPlantaSabUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIdPlantaSabUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIdPlantaSabUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserState">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUserStateRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getUserStateResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsersService">
+    <wsdl:port name="BzServicesUsers" binding="intf:BzServicesUsersSoapBinding">
+      <wsdlsoap:address location="http://zanburu.batz.es:7001/enovia/services/BzServicesUsers" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

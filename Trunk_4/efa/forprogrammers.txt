@@ -1,0 +1,71 @@
+alter table componente_modelo add(network_path varchar2(300))
+create table componente(
+       id	number not null,
+       nombre 	varchar(50) not null,
+       serie	varchar(50) not null,
+       fecha_anulacion	    date,
+       constraint pk_componente primary key (id)
+)
+create table componente_modelo(
+       id_componente	number not null,
+       id		number not null,
+       pn		varchar(100),
+       descripcion	varchar(100),
+       n_elementos	number not null,
+	fecha_anulacion	date,
+       constraint pk_componente_modelo primary key (id),
+       constraint fk_cp_componente foreign key (id_componente) references componente(id)
+)
+
+create sequence seq_componente start with 1 increment by 1    nocache
+create sequence seq_componente_modelo start with 1 increment by 1    nocache
+
+alter table RECURSOS_EXCEPCIONALES add(fecha date)
+
+2012-02-16
+==========
+create table grupos_alarma(
+       nombre_grupo	varchar(25) not null,
+       max_dias		number
+)
+create table recursos_excepcionales(
+       nombre_grupo	varchar(25) not null,
+       id_recurso	varchar(25)
+)      
+grant select,references on recursos_excepcionales  to telefonia
+grant select,references on grupos_alarma to telefonia
+2011-07-06
+==========
+alter table recursos add(obsoleto date)
+2011-04-02
+=========
+grant select on usuarios  to baliabidef
+2011-01-24
+==========
+alter table grupos  add(imagen blob)
+
+
+2011-01-17
+==========
+create table grupos (
+       nombre		     varchar(25) not null,
+       constraint pk_grupos  primary key (nombre)
+)
+create table recursos(
+       id		varchar(25) not null,
+       nombre_grupo	varchar(25) not null,
+       descripcion	varchar(200),
+       id_planta	number not null,
+       constraint pk_recursos primary key (id,nombre_grupo),
+       constraint fk_recursos_grupos foreign key (nombre_grupo) references grupos(nombre)
+)
+create table registros (
+       id_sab 	      number not null,
+       nombre_grupo   varchar(25) not null,
+       id_recurso     varchar(25) not null,
+       fecha_coger    date not null,
+       fecha_dejar    date,
+       constraint pk_registros primary key (id_sab,nombre_grupo,id_recurso,fecha_coger),
+       constraint fk_registros_grupos foreign key (nombre_grupo) references grupos(nombre),
+       constraint fk_registros_recursos foreign key (id_recurso,nombre_grupo) references recursos(id,nombre_grupo)
+)      

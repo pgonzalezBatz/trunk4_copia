@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="08b5188cbd97438eab90adf6c9eb2133" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="Model.CERTIFICADO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CONTIENE" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FOTOS" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PESOVARILLAS" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SOLDADORESINFORME" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPOSOLDADURA" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VALORESSOLDADURA" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ABARCA" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.INFORME_PROVEEDOR" Width="1.5" PointX="3.375" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.USUARIOS" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.INFORMES" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.GCLINPED" Width="1.5" PointX="7.375" PointY="6.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

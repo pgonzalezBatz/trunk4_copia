@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Default.aspx" title="Listado"  description="Filtro">
+		<siteMapNode url="~/Incidencia/Detalle.aspx" title="Incidencia"  description="Detalle" >
+			<siteMapNode url="~/Incidencia/Mantenimiento/DatosGenerales.aspx" title="Datos Generales"  description="Datos Generales" />
+			<siteMapNode url="~/Incidencia/Mantenimiento/Accion.aspx" title="Accion"  description="Accion" />
+			<siteMapNode url="~/Incidencia/Mantenimiento/Observaciones.aspx" title="Observaciones"  description="Observaciones" />
+			<siteMapNode url="~/Incidencia/Mantenimiento/Documento.aspx" title="Documento"  description="Documento Adjunto" />
+		</siteMapNode>
+		<siteMapNode url="~/Mantenimiento/Caracteristicas/Inicio.aspx" title="Caracteristicas"  description="Listado" >
+			<siteMapNode url="~/Mantenimiento/Caracteristicas/Detalle.aspx" title="Detalle"  description="Caracteristicas" />
+		</siteMapNode>
+		<siteMapNode url="~/Mantenimiento/Roles/Perfiles.aspx" title="Perfiles"  description="Roles" >
+			<siteMapNode url="~/Mantenimiento/Roles/SelectorUsuarios.aspx" title="Selector"  description="Selector de usuarios" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>

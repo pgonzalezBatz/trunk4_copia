@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Default.aspx" title="Listado"  description="Listado y Filtro de incidencias">
+		<siteMapNode url="~/Informe/Detalle.aspx" title="Detalle"  description="Detalle">
+			<siteMapNode url="~/Informe/Formulario.aspx" title="Nueva Incidencia"  description="Nueva Incidencia" />
+			<siteMapNode url="~/Informe/EstadoAfectado.aspx" title="Estado"  description="Estado Afectado" />
+      <siteMapNode url="~/Informe/EnviarCorreo.aspx" title="Envio de Correo"  description="Confirmacion de avisos por correo" />
+      <!--<siteMapNode url="~/ParteAccidente/Detalle.aspx" title="Parte de Accidente"  description="Parte de Accidente" />-->
+		</siteMapNode>
+		<siteMapNode url="~/Mantenimiento/Usuarios/Listado.aspx" title="Usuarios"  description="Gestion de Usuarios" />
+    <siteMapNode url="~/Mantenimiento/ListadoNotificaciones.aspx" title="Notificaciones"  description="Notificaciones" />
+    <siteMapNode url="~/Guber/IndiceFecuencia.aspx" title="Cruz Verde"  description="Cruz Verde" />
+	</siteMapNode>
+</siteMap>

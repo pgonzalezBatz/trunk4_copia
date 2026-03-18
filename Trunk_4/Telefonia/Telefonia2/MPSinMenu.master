@@ -1,0 +1,29 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPSinMenu.master.vb" Inherits="Telefonia.MPSinMenu" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Batz S. Coop.</title>    
+	<link href="App_Themes/Tema1/estilo.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ajax:ToolkitScriptManager ID="ScriptManager1" runat="server" />        
+        <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server" />        
+        <div class="separador"></div>   
+        <div class="separador"></div> 
+        <div class="linea">
+            <div class="principal">          
+                <div class="linea">
+                    <div id="contenido">
+                        <br /><asp:contentplaceholder id="cp" runat="server" /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separador"></div>
+        <div class="linea">   
+   </div>
+ </form>
+</body>
+</html>

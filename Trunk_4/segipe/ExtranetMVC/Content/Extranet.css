@@ -1,0 +1,36 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}
+table{border-spacing:0}
+address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}
+strong{font-weight:bold;}
+li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:baseline}
+sub{vertical-align:baseline}
+body {	font-family: verdana, helvetica, arial, sans-serif;	font-size: 9px;	margin:0;}
+h3{color:#28424f;font-weight:bold; font-size:1.5em;margin:0;}
+#incluyeTodo {	position:relative;	margin:0 auto 0 auto; 	width:1002px;	min-height:500px;	vertical-align: top;	padding-top:10px;	background-color: #FFF;}
+ul#menutop{background-color:#fff; height:2em;padding:0;background-color:#8facbc; margin:0;}
+form fieldset legend{font-weight:bold;}
+#menutop {float:left;width:100%}
+#menutop li{float:left;width:16.4%;list-style:none; background-color:#8facbc; text-align:center;border:1px solid #28424f;}
+#menutop li.selected{background-color:#FFF;border-bottom:0;}
+#menutop li a{text-decoration:none; color:#FFF; font-weight:bold; font-size:1.4em; width:100%;}
+#menutop li.selected a{color:#28424f;}
+.topleft{position:absolute;right:0;}
+.topleft a{color:#28424f;font-weight:bold; font-size:1.5em;}
+.table1{width:100%;background-color:#033356; border-spacing:1px;}
+.table1 thead th{background-color:#d6dfe4; color:#28424f;}
+.table1 tbody td{background-color:#fff;}
+.table1 tbody input{font-size:inherit;}
+.table1 tbody form table{border-spacing:0;}
+.cabecera tbody td{padding:0.8em;}
+.ph1{float:left;width:22%;}
+.ph2{float:left;width:63%;}
+.ph3{float:left;width:15%;}
+.ph2 table {border:1px solid #000;border-spacing:0px;}
+.ph2 table td{border-bottom:1px solid #000;}
+.ph2 input[type=text]{width:86%;}
+.mark1{color:Red; font-weight:bold;}
+.summarypedido{font-size:1.2em; margin:1em 0;}
+.table1 tfoot th{font-size:1.5em; font-weight:bold;}

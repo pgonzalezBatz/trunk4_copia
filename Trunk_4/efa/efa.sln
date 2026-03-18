@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "web", "web\web.vbproj", "{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ControlDevoluciones", "ControlDevoluciones\ControlDevoluciones.vbproj", "{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		GertakariakMS|Any CPU = GertakariakMS|Any CPU
+		Istriku_Debug|Any CPU = Istriku_Debug|Any CPU
+		Istriku_Release|Any CPU = Istriku_Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74731FA4-5CD9-42BB-B27F-ACA37E28DDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.GertakariakMS|Any CPU.ActiveCfg = Release|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.GertakariakMS|Any CPU.Build.0 = Release|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Istriku_Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Istriku_Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Istriku_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Istriku_Release|Any CPU.Build.0 = Release|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B8C8A7-6C5E-4DF2-A91D-ADFDC315639E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

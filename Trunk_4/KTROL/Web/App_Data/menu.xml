@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item title="Selección de referencia y operación" descripcion="Selección de referencia y operación" url="~\Paginas\Publico\SeleccionRefOp.aspx" id="" roles="1,2,3,4">    
+  </Item>
+  <Item title="Históricos" descripcion="Históricos" url="" id="" roles="1,3,4">
+    <Item title="Visualizar por pantalla" descripcion="Mostrar históricos filtrados por pantalla" url="~\Paginas\Calidad\HistoricosPantalla.aspx" id="" roles="1,3,4" />
+    <Item title="Visualizar por informe" descripcion="Mostrar históricos filtrados en Informe" url="~\Paginas\Calidad\HistoricosInforme.aspx" id="" roles="1,3,4" />
+    <Item title="Editar controles y características" descripcion="Editar controles y características históricas" url="~\Paginas\Calidad\ModificarCaracteristicas.aspx" id="" roles="1,3,4" />
+  </Item>
+  <Item title="Administracion" descripcion="Administracion" url="~\Paginas\Administracion\Departamentos.aspx" id="" roles="1">
+    <Item title="Departamentos" descripcion="Departamentos" url="~\Paginas\Administracion\Departamentos.aspx" id="" roles="1"></Item>
+    <Item title="Usuarios" descripcion="Usuarios" url="~\Paginas\Administracion\Usuarios.aspx" id="" roles="1"></Item>
+    <Item title="Relación KaPlan/Prisma" descripcion="Hacer relaciones entre el código de operación de Kaplan y Prisma" url="~\Paginas\Administracion\OperacionKaplanPrisma.aspx" id="" roles="1"></Item>
+  </Item>
+</Root>
+

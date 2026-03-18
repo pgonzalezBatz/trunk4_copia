@@ -1,0 +1,51 @@
+﻿.Panel_CollapsiblePanelExtender
+{
+	font-size:13px;
+	cursor: hand;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+.ListSearchExtenderPrompt
+{
+	font-style:italic;
+	color:Gray;
+	background-color:white;
+}
+.TextBoxWatermarkExtender
+{
+	font-style:italic;
+	color:Gray;
+}
+
+.modalBackground {
+	background-color: Gray;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+
+.modalBackground2 {
+	background-color: Gray;
+	filter: alpha(opacity=25);
+	opacity: 0.25;
+}
+
+.updateProgress
+{
+	border-width: 1px;
+	border-style: solid;
+	background-color: #FFFFFF;
+	position: absolute;
+	width: 180px;
+	height: 65px;
+}
+
+.modalBox {
+	background-color : #f5f5f5;
+	border-width: 1px;
+	border-style: solid;
+	border-color: Black;
+	padding: 3px;
+}

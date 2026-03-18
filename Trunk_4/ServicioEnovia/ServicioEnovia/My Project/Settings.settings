@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServicioEnovia_EnoviaService_bzWebServicesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://arranoatx.batz.es:7001/enovia/services/BzWebServices</Value>
+    </Setting>
+    <Setting Name="ServicioEnovia_PTKservice_OfakService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.121:7001/ematrix/services/OfakService</Value>
+    </Setting>
+    <Setting Name="ServicioEnovia_EnoviaDesarrollo_bzWebServicesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://zunbizanba.batz.es:7001/enovia/services/BzWebServices</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

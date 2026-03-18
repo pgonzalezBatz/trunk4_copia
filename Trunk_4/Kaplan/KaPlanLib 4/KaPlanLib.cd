@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KaPlanLib.Funciones">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Funciones.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KaPlanLib.BLL.LinqComponent">
+    <Position X="4.75" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="KaPlanLib.BLL.LinqComponent.whereResumen">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\LinqComponent.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="KaPlanLib.BLL.LinqComponent.plantas" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\LinqComponent.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="KaPlanLib.BLL.LinqComponent.Perfiles">
+        <TypeIdentifier>
+          <NewMemberFileName>BLL\LinqComponent.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>nZhJMjNValmDvB76X1vfbYUaY6471KXb6boqmSpy4uA=</HashCode>
+      <FileName>BLL\LinqComponent.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="KaPlanLib.PropiedadesGridView">
+    <Position X="0.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAACAAAABAAACAACAABAAAAAAAAA=</HashCode>
+      <FileName>ELL\ELL_KaPlanLib.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

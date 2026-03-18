@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Los estilos llevan doble llave porque al realizar un string.format daba error -->
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {{
+            font-family: Verdana,Arial,Times New Roman;
+            font-size: 12px;
+        }}
+        p
+        {{
+            margin-bottom: 10px;
+        }}
+        .tabla-formulario 
+        {{
+            border: 1px solid #A8A8A8;
+            padding: 0;
+            margin: 0;
+        }}
+        .tabla-formulario td 
+        {{
+            padding: 5px 5px 5px 5px;
+            vertical-align: top;
+        }}
+        .tabla-formulario th.cabecera 
+        {{
+            font-weight: bold;
+            background-color: #CCCCCC;
+            padding: 5px 5px 5px 5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            text-align: center;
+        }}
+    </style>
+</head>
+<body>
+    <p>The next step of the project <b>{0}</b> has been rejected by <b>{1}</b>:</p>
+    <table class="tabla-formulario">
+        <thead>
+            <tr>
+                <th class="cabecera"><b>Factory</b></th>
+                <th class="cabecera"><b>Status</b></th>
+                <th class="cabecera"><b>Cost group</b></th>
+                <th class="cabecera"><b>Step</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{2}</td>
+                <td>{3}</td>
+                <td>{4}</td>
+                <td>{5}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <p><b>Reason for rejection:</b> {6}</p>
+    <br />
+    <p>Click on this link to enter the aplication <a href="{7}">link</a></p>
+    <br />
+    <p>Thanks</p>
+</body>
+</html>

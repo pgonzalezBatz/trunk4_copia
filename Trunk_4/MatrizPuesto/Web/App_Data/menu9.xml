@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+
+  <Item title= "Inicio" descripcion="Inicio" url="EstadoEmpresaDocumento9.aspx" id="" roles="2,12">
+  </Item>
+  <Item title= "Inicio" descripcion="Inicio" url="EstadoTrabajadorDocumentoResp9.aspx" id="" roles="3">
+  </Item>
+  <Item title= "Estado Trabajador" descripcion="Estado Trabajador" url="EstadoTrabajadorDocumentoMedico.aspx" id="" roles="4">
+  </Item>
+  <Item title= "Estado Trabajador" descripcion="Estado Trabajador" url="EstadoTrabajadorDocumentoRRHH.aspx" id="" roles="5">
+  </Item>
+
+  <Item title="Documentos" descripcion="Documentos" url="" id="" roles="2,12">
+    <Item title="Crear documento" descripion="Crear documento" url="CrearDocumento9.aspx?id=1" id="" roles="2,12" >
+    </Item>
+    <Item title="Modificar documento" descripion="Modificar documento" url="CrearDocumento9.aspx?id=0" id="" roles="2,12" >
+    </Item>
+
+  </Item>
+
+
+  <Item title="Asignación de Documentos" descripcion="Procesos" url="" id="" roles="2,12">
+    <Item title="Asignación de documentos a puestos" descripion="Asignación de documentos a puestos" url="EmpresaDocumento9.aspx" id="" roles="2,12">
+    </Item>
+    <Item title="Matriz de Asignación Trabajadores" descripion="Matriz de Asignación Trabajadores" url="./Matrizasignacion9.aspx" id="" roles="2,12">
+
+    </Item>
+
+
+  </Item>
+
+
+  <Item title="Listados" descripcion="Listados" url="" id="" roles="2,12,3,5">
+
+    <Item title="Ver documentos por puesto" descripion="Ver documentos por puesto" url="./EstadoEmpresaDocumento9.aspx" id="" roles="2,12">
+    </Item>
+
+    <Item title="Ver estado documentos de trabajadores" descripion="Ver estado documentos de trabajadores" url="EstadoTrabajadorDocumento9.aspx" id="" roles="2,12">
+    </Item>
+    <Item title="Ver estado documentos de trabajadores" descripion="Ver estado documentos de trabajadores" url="EstadoTrabajadorDocumentoResp9.aspx" id="" roles="3">
+    </Item>
+    <Item title="Matriz de Trabajadores Formación por Puesto" descripion="Matriz de Trabajadores Formación por Puesto" url="./MatrizFormacion9.aspx" id="" roles="2,12,5">
+    </Item>
+    <Item title="Matriz de Trabajadores Formación" descripion="Matriz de Formación Trabajador" url="./MatrizTrabajador9.aspx" id="" roles="2,12,5">
+    </Item>
+
+
+    <Item title="Matriz de Cursos Profesión" descripion="Matriz de Cursos Profesión" url="./MatrizCurso9.aspx" id="" roles="2,12">
+    </Item>
+    <Item title="Validación Todos Doc. Trabajadores" descripion="Validación Todos Doc. Trabajadores" url="./ValidacionTodosDocTrabajadores9.aspx" id="" roles="2,12">
+    </Item>
+  </Item>
+
+
+
+  <Item title="Mantenimientos" descripcion="Mantenimientos Basicos" url="" id="" roles="2,12">
+
+    <Item title="Roles" descripion="Roles"   url="CrearRoles.aspx" id="" roles="2,12">
+    </Item>
+
+
+  </Item>
+
+
+  <Item title="MEDIO AMBIENTE" descripcion="MEDIO AMBIENTE" url="" id="" roles="12,19">
+
+    <Item title="CAMBIAR A PREVISIÓN" descripion="CAMBIAR A PREVISIÓN"   url="Default.aspx" id="" roles="12,19">
+    </Item>
+
+  </Item>
+
+
+  <Item title="Trabajadores en Festivos" descripion="Trabajadores en Festivos" url="FinSemanaExternoC.aspx" id="" roles="666" >
+  </Item>
+  <Item title="Ver estado documentos de empresas" descripion="Ver estado documentos de empresas" url="./EstadoEmpresaDocumentoC.aspx" id="" roles="21">
+  </Item>
+  <Item title="Ver estado documentos de empresas" descripion="Ver estado documentos de empresas" url="./EstadoEmpresaDocumentoC2.aspx" id="" roles="33">
+  </Item>
+  <Item title="Ver estado documentos de trabajadores" descripion="Ver estado documentos de trabajadores" url="EstadoTrabajadorDocumentoC.aspx" id="" roles="21">
+  </Item>
+  <Item title="Ver estado documentos de trabajadores" descripion="Ver estado documentos de trabajadores" url="EstadoTrabajadorDocumentoC2.aspx" id="" roles="33">
+  </Item>
+  <Item title="Consulta solicitudes" descripion="Consulta de solicitudes" url="CrearSolicitudC.aspx?id=0" id="" roles="21" >
+  </Item>
+
+
+  <Item title="Inicio" descripcion="Inicio" url="ValidacionTrabajadores.aspx" id="" roles="22">
+  </Item>
+
+
+</Root>

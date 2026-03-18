@@ -1,0 +1,203 @@
+﻿.Panel_CollapsiblePanelExtender
+{
+	font-size:13px;
+	cursor: hand;
+	text-align:left;
+	background: #cccccc;
+	color: #000000;
+}
+
+.ListSearchExtenderPrompt
+{
+	font-style:italic;
+	color:Gray;
+	background-color:white;
+}
+.TextBoxWatermarkExtender
+{
+	font-style:italic;
+	color:Gray;
+}
+
+/******************************************************************/
+/* AutoCompleteExtender *******************************************/
+/******************************************************************/
+.CompletionListCssClass
+{
+    width: auto !important; /*Con IE7 sale scroll horizontal.*/ 
+    max-height: 300px;
+    margin-left: 0px; margin-top: 1px;
+    padding: 1px; 
+    border: 1px solid #C0C0C0;
+    background-color: #CEE7FF;
+    text-align: left;
+    overflow: auto;
+}
+
+.CompletionListItemCssClass, .CompletionListHighlightedItemCssClass
+{
+    margin: 1px;
+    border: 1px solid #C0C0C0;
+    list-style-type: none;
+}
+
+.CompletionListHighlightedItemCssClass
+{
+    background-color: #FFFF00;
+}
+
+/*Tamaño grande*/
+.CompletionListCssClassGrande
+{
+    width: auto !important; /*Con IE7 sale scroll horizontal.*/ 
+    max-height: 300px;
+    margin-left: 0px; margin-top: 1px;
+    padding: 1px; 
+    /*border: 1px solid #C0C0C0;*/
+    background-color: #CEE7FF;
+    text-align: left;
+    overflow: auto;
+    font-size: 18px;
+}
+
+.CompletionListItemCssClassGrande, .CompletionListHighlightedItemCssClassGrande
+{
+    margin: 1px;
+    /*border: 1px solid #C0C0C0;*/
+    list-style-type: none;
+}
+
+.CompletionListHighlightedItemCssClassGrande
+{
+    background-color: #FFFF00;
+}
+/******************************************************************/
+
+
+/******************************************************************/
+/****************TAB CONTAINER*************************************/
+/******************************************************************/
+
+/*Header*/
+
+.Tab .ajax__tab_header
+{
+    color: #4682b4;
+    font-family:Calibri;
+    /*font-size: 14px;*/
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    margin-left: 0px;
+}
+
+/*Body*/
+
+.Tab .ajax__tab_body
+{
+    /*border:1px solid #b4cbdf;*/
+    border:1px solid rgb(78,134,181);
+    padding-top:0px;
+    width:98%;
+}
+
+/*Tab Active*/
+.Tab .ajax__tab_active .ajax__tab_tab
+{
+    color: #ffffff;
+    background:url("./IconosAjaxControl/TabExtender/tab_active.gif") repeat-x;
+    height:20px;
+}
+
+.Tab .ajax__tab_active .ajax__tab_inner
+{
+    color: #ffffff;
+    background:url("./IconosAjaxControl/TabExtender/tab_left_active.gif") no-repeat left;
+    padding-left:10px;
+}
+
+.Tab .ajax__tab_active .ajax__tab_outer
+
+{
+    color: #ffffff;
+    background:url("./IconosAjaxControl/TabExtender/tab_right_active.gif") no-repeat right;
+    padding-right:6px;
+}
+
+/*Tab Hover*/
+
+.Tab .ajax__tab_hover .ajax__tab_tab
+{
+    color: #000000;
+    background:url("./IconosAjaxControl/TabExtender/tab_hover.gif") repeat-x;
+    height:20px;
+}
+
+.Tab .ajax__tab_hover .ajax__tab_inner
+{
+    color: #000000;
+    background:url("./IconosAjaxControl/TabExtender/tab_left_hover.gif") no-repeat left;
+    padding-left:10px;
+}
+
+.Tab .ajax__tab_hover .ajax__tab_outer
+{
+    color: #000000;
+    background:url("./IconosAjaxControl/TabExtender/tab_right_hover.gif") no-repeat right;
+    padding-right:6px;
+}
+
+/*Tab Inactive*/
+
+.Tab .ajax__tab_tab
+{
+    color: #666666;
+    background:url("./IconosAjaxControl/TabExtender/tab_Inactive.gif") repeat-x;
+    height:20px;
+}
+
+.Tab .ajax__tab_inner
+{
+    color: #666666;
+    background:url("./IconosAjaxControl/TabExtender/tab_left_inactive.gif") no-repeat left;
+    padding-left:10px;
+}
+
+.Tab .ajax__tab_outer
+{
+    color: #666666;
+    background:url("./IconosAjaxControl/TabExtender/tab_right_inactive.gif") no-repeat right;
+    padding-right:6px;
+    margin-right: 2px;
+}
+
+/****************ASYNC FILE UPLOAD*****************/
+
+.AFU
+{
+ position: relative;
+ float: left;
+ clear: both;
+ top: 0px;
+ padding-left: 0px;
+ padding-right: 0px;
+ /*width: 200px;*/
+ border:thick;
+ margin:0px;
+ background: url("./IconosAjaxControl/AsyncFileUpload/addFile.png") no-repeat 100% 1px;
+}
+
+/*****MODAL POPUP EXTENDER******/
+
+.modalBackground {
+	background-color: Gray;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+.modalBox {
+	background-color : #f5f5f5;
+	border-width: 1px;
+	border-style: solid;
+	border-color: Black;
+	padding: 3px;
+}

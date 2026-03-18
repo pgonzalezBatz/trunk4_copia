@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGertakariak" targetNamespace="http://tempuri.org/dsGertakariak.xsd" xmlns:mstns="http://tempuri.org/dsGertakariak.xsd" xmlns="http://tempuri.org/dsGertakariak.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (MySettings)" PropertyReference="ApplicationSettings.GertakariakLib.My.MySettings.GlobalReference.Default.ConnectionString1" Provider="System.Data.OracleClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString2 (MySettings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.GertakariakLib.My.MySettings.GlobalReference.Default.ConnectionString2" Provider="Oracle.DataAccess.Client" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.GertakariakLib.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.OracleClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGertakariak" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsGertakariak" msprop:Generator_DataSetName="dsGertakariak">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TIPOREPETITIVA" msprop:Generator_UserTableName="TIPOREPETITIVA" msprop:Generator_RowDeletedName="TIPOREPETITIVARowDeleted" msprop:Generator_RowChangedName="TIPOREPETITIVARowChanged" msprop:Generator_RowClassName="TIPOREPETITIVARow" msprop:Generator_RowChangingName="TIPOREPETITIVARowChanging" msprop:Generator_RowEvArgName="TIPOREPETITIVARowChangeEvent" msprop:Generator_RowEvHandlerName="TIPOREPETITIVARowChangeEventHandler" msprop:Generator_TableClassName="TIPOREPETITIVADataTable" msprop:Generator_TableVarName="tableTIPOREPETITIVA" msprop:Generator_RowDeletingName="TIPOREPETITIVARowDeleting" msprop:Generator_TablePropName="TIPOREPETITIVA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="ORDEN" msprop:Generator_UserColumnName="ORDEN" msprop:Generator_ColumnVarNameInTable="columnORDEN" msprop:Generator_ColumnPropNameInRow="ORDEN" msprop:Generator_ColumnPropNameInTable="ORDENColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDFAMILIAREPETITIVA" msprop:Generator_UserColumnName="IDFAMILIAREPETITIVA" msprop:Generator_ColumnVarNameInTable="columnIDFAMILIAREPETITIVA" msprop:Generator_ColumnPropNameInRow="IDFAMILIAREPETITIVA" msprop:Generator_ColumnPropNameInTable="IDFAMILIAREPETITIVAColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FAMILIAREPETITIVA" msprop:Generator_UserTableName="FAMILIAREPETITIVA" msprop:Generator_RowDeletedName="FAMILIAREPETITIVARowDeleted" msprop:Generator_RowChangedName="FAMILIAREPETITIVARowChanged" msprop:Generator_RowClassName="FAMILIAREPETITIVARow" msprop:Generator_RowChangingName="FAMILIAREPETITIVARowChanging" msprop:Generator_RowEvArgName="FAMILIAREPETITIVARowChangeEvent" msprop:Generator_RowEvHandlerName="FAMILIAREPETITIVARowChangeEventHandler" msprop:Generator_TableClassName="FAMILIAREPETITIVADataTable" msprop:Generator_TableVarName="tableFAMILIAREPETITIVA" msprop:Generator_RowDeletingName="FAMILIAREPETITIVARowDeleting" msprop:Generator_TablePropName="FAMILIAREPETITIVA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="ORDEN" msprop:Generator_UserColumnName="ORDEN" msprop:Generator_ColumnVarNameInTable="columnORDEN" msprop:Generator_ColumnPropNameInRow="ORDEN" msprop:Generator_ColumnPropNameInTable="ORDENColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDCLASIFICACIONFAMILIA" msprop:Generator_UserColumnName="IDCLASIFICACIONFAMILIA" msprop:Generator_ColumnVarNameInTable="columnIDCLASIFICACIONFAMILIA" msprop:Generator_ColumnPropNameInRow="IDCLASIFICACIONFAMILIA" msprop:Generator_ColumnPropNameInTable="IDCLASIFICACIONFAMILIAColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GERTAKARIAK_ACCIONES" msprop:Generator_UserTableName="GERTAKARIAK_ACCIONES" msprop:Generator_RowDeletedName="GERTAKARIAK_ACCIONESRowDeleted" msprop:Generator_RowChangedName="GERTAKARIAK_ACCIONESRowChanged" msprop:Generator_RowClassName="GERTAKARIAK_ACCIONESRow" msprop:Generator_RowChangingName="GERTAKARIAK_ACCIONESRowChanging" msprop:Generator_RowEvArgName="GERTAKARIAK_ACCIONESRowChangeEvent" msprop:Generator_RowEvHandlerName="GERTAKARIAK_ACCIONESRowChangeEventHandler" msprop:Generator_TableClassName="GERTAKARIAK_ACCIONESDataTable" msprop:Generator_TableVarName="tableGERTAKARIAK_ACCIONES" msprop:Generator_RowDeletingName="GERTAKARIAK_ACCIONESRowDeleting" msprop:Generator_TablePropName="GERTAKARIAK_ACCIONES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDINCIDENCIA" msprop:Generator_UserColumnName="IDINCIDENCIA" msprop:Generator_ColumnVarNameInTable="columnIDINCIDENCIA" msprop:Generator_ColumnPropNameInRow="IDINCIDENCIA" msprop:Generator_ColumnPropNameInTable="IDINCIDENCIAColumn" type="xs:decimal" />
+              <xs:element name="IDACCION" msprop:Generator_UserColumnName="IDACCION" msprop:Generator_ColumnVarNameInTable="columnIDACCION" msprop:Generator_ColumnPropNameInRow="IDACCION" msprop:Generator_ColumnPropNameInTable="IDACCIONColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ACCIONES" msprop:Generator_UserTableName="ACCIONES" msprop:Generator_RowDeletedName="ACCIONESRowDeleted" msprop:Generator_RowChangedName="ACCIONESRowChanged" msprop:Generator_RowClassName="ACCIONESRow" msprop:Generator_RowChangingName="ACCIONESRowChanging" msprop:Generator_RowEvArgName="ACCIONESRowChangeEvent" msprop:Generator_RowEvHandlerName="ACCIONESRowChangeEventHandler" msprop:Generator_TableClassName="ACCIONESDataTable" msprop:Generator_TableVarName="tableACCIONES" msprop:Generator_RowDeletingName="ACCIONESRowDeleting" msprop:Generator_TablePropName="ACCIONES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTIPOACCION" msprop:Generator_UserColumnName="IDTIPOACCION" msprop:Generator_ColumnVarNameInTable="columnIDTIPOACCION" msprop:Generator_ColumnPropNameInRow="IDTIPOACCION" msprop:Generator_ColumnPropNameInTable="IDTIPOACCIONColumn" type="xs:decimal" />
+              <xs:element name="FECHAINICIO" msprop:Generator_UserColumnName="FECHAINICIO" msprop:Generator_ColumnVarNameInTable="columnFECHAINICIO" msprop:Generator_ColumnPropNameInRow="FECHAINICIO" msprop:Generator_ColumnPropNameInTable="FECHAINICIOColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAFIN" msprop:Generator_UserColumnName="FECHAFIN" msprop:Generator_ColumnVarNameInTable="columnFECHAFIN" msprop:Generator_ColumnPropNameInRow="FECHAFIN" msprop:Generator_ColumnPropNameInTable="FECHAFINColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAPREVISTA" msprop:Generator_UserColumnName="FECHAPREVISTA" msprop:Generator_ColumnVarNameInTable="columnFECHAPREVISTA" msprop:Generator_ColumnPropNameInRow="FECHAPREVISTA" msprop:Generator_ColumnPropNameInTable="FECHAPREVISTAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EFICACIA" msprop:Generator_UserColumnName="EFICACIA" msprop:Generator_ColumnVarNameInTable="columnEFICACIA" msprop:Generator_ColumnPropNameInRow="EFICACIA" msprop:Generator_ColumnPropNameInTable="EFICACIAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ACCIONES_USUARIOS" msprop:Generator_UserTableName="ACCIONES_USUARIOS" msprop:Generator_RowDeletedName="ACCIONES_USUARIOSRowDeleted" msprop:Generator_RowChangedName="ACCIONES_USUARIOSRowChanged" msprop:Generator_RowClassName="ACCIONES_USUARIOSRow" msprop:Generator_RowChangingName="ACCIONES_USUARIOSRowChanging" msprop:Generator_RowEvArgName="ACCIONES_USUARIOSRowChangeEvent" msprop:Generator_RowEvHandlerName="ACCIONES_USUARIOSRowChangeEventHandler" msprop:Generator_TableClassName="ACCIONES_USUARIOSDataTable" msprop:Generator_TableVarName="tableACCIONES_USUARIOS" msprop:Generator_RowDeletingName="ACCIONES_USUARIOSRowDeleting" msprop:Generator_TablePropName="ACCIONES_USUARIOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDACCION" msprop:Generator_UserColumnName="IDACCION" msprop:Generator_ColumnVarNameInTable="columnIDACCION" msprop:Generator_ColumnPropNameInRow="IDACCION" msprop:Generator_ColumnPropNameInTable="IDACCIONColumn" type="xs:decimal" />
+              <xs:element name="IDUSUARIO" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnVarNameInTable="columnIDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUSUARIO" msprop:Generator_ColumnPropNameInTable="IDUSUARIOColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RESPONSABLES_GERTAKARIAK" msprop:Generator_UserTableName="RESPONSABLES_GERTAKARIAK" msprop:Generator_RowDeletedName="RESPONSABLES_GERTAKARIAKRowDeleted" msprop:Generator_RowChangedName="RESPONSABLES_GERTAKARIAKRowChanged" msprop:Generator_RowClassName="RESPONSABLES_GERTAKARIAKRow" msprop:Generator_RowChangingName="RESPONSABLES_GERTAKARIAKRowChanging" msprop:Generator_RowEvArgName="RESPONSABLES_GERTAKARIAKRowChangeEvent" msprop:Generator_RowEvHandlerName="RESPONSABLES_GERTAKARIAKRowChangeEventHandler" msprop:Generator_TableClassName="RESPONSABLES_GERTAKARIAKDataTable" msprop:Generator_TableVarName="tableRESPONSABLES_GERTAKARIAK" msprop:Generator_RowDeletingName="RESPONSABLES_GERTAKARIAKRowDeleting" msprop:Generator_TablePropName="RESPONSABLES_GERTAKARIAK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="IDUSUARIO" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUSUARIO" msprop:Generator_ColumnVarNameInTable="columnIDUSUARIO" msprop:Generator_ColumnPropNameInTable="IDUSUARIOColumn" type="xs:decimal" />
+              <xs:element name="IDINCIDENCIA" msprop:Generator_UserColumnName="IDINCIDENCIA" msprop:Generator_ColumnPropNameInRow="IDINCIDENCIA" msprop:Generator_ColumnVarNameInTable="columnIDINCIDENCIA" msprop:Generator_ColumnPropNameInTable="IDINCIDENCIAColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GERTAKARIAK_CAUSASNC" msprop:Generator_UserTableName="GERTAKARIAK_CAUSASNC" msprop:Generator_RowDeletedName="GERTAKARIAK_CAUSASNCRowDeleted" msprop:Generator_RowChangedName="GERTAKARIAK_CAUSASNCRowChanged" msprop:Generator_RowClassName="GERTAKARIAK_CAUSASNCRow" msprop:Generator_RowChangingName="GERTAKARIAK_CAUSASNCRowChanging" msprop:Generator_RowEvArgName="GERTAKARIAK_CAUSASNCRowChangeEvent" msprop:Generator_RowEvHandlerName="GERTAKARIAK_CAUSASNCRowChangeEventHandler" msprop:Generator_TableClassName="GERTAKARIAK_CAUSASNCDataTable" msprop:Generator_TableVarName="tableGERTAKARIAK_CAUSASNC" msprop:Generator_RowDeletingName="GERTAKARIAK_CAUSASNCRowDeleting" msprop:Generator_TablePropName="GERTAKARIAK_CAUSASNC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDINCIDENCIA" msprop:Generator_UserColumnName="IDINCIDENCIA" msprop:Generator_ColumnPropNameInRow="IDINCIDENCIA" msprop:Generator_ColumnVarNameInTable="columnIDINCIDENCIA" msprop:Generator_ColumnPropNameInTable="IDINCIDENCIAColumn" type="xs:decimal" />
+              <xs:element name="IDCAUSANC" msprop:Generator_UserColumnName="IDCAUSANC" msprop:Generator_ColumnPropNameInRow="IDCAUSANC" msprop:Generator_ColumnVarNameInTable="columnIDCAUSANC" msprop:Generator_ColumnPropNameInTable="IDCAUSANCColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CAUSASNC" msprop:Generator_UserTableName="CAUSASNC" msprop:Generator_RowDeletedName="CAUSASNCRowDeleted" msprop:Generator_RowChangedName="CAUSASNCRowChanged" msprop:Generator_RowClassName="CAUSASNCRow" msprop:Generator_RowChangingName="CAUSASNCRowChanging" msprop:Generator_RowEvArgName="CAUSASNCRowChangeEvent" msprop:Generator_RowEvHandlerName="CAUSASNCRowChangeEventHandler" msprop:Generator_TableClassName="CAUSASNCDataTable" msprop:Generator_TableVarName="tableCAUSASNC" msprop:Generator_RowDeletingName="CAUSASNCRowDeleting" msprop:Generator_TablePropName="CAUSASNC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="ORDEN" msprop:Generator_UserColumnName="ORDEN" msprop:Generator_ColumnVarNameInTable="columnORDEN" msprop:Generator_ColumnPropNameInRow="ORDEN" msprop:Generator_ColumnPropNameInTable="ORDENColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OBSOLETO" msprop:Generator_UserColumnName="OBSOLETO" msprop:Generator_ColumnVarNameInTable="columnOBSOLETO" msprop:Generator_ColumnPropNameInRow="OBSOLETO" msprop:Generator_ColumnPropNameInTable="OBSOLETOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CAUSASNCPROC" msprop:Generator_UserTableName="CAUSASNCPROC" msprop:Generator_RowDeletedName="CAUSASNCPROCRowDeleted" msprop:Generator_RowChangedName="CAUSASNCPROCRowChanged" msprop:Generator_RowClassName="CAUSASNCPROCRow" msprop:Generator_RowChangingName="CAUSASNCPROCRowChanging" msprop:Generator_RowEvArgName="CAUSASNCPROCRowChangeEvent" msprop:Generator_RowEvHandlerName="CAUSASNCPROCRowChangeEventHandler" msprop:Generator_TableClassName="CAUSASNCPROCDataTable" msprop:Generator_TableVarName="tableCAUSASNCPROC" msprop:Generator_RowDeletingName="CAUSASNCPROCRowDeleting" msprop:Generator_TablePropName="CAUSASNCPROC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCAUSA" msprop:Generator_UserColumnName="IDCAUSA" msprop:Generator_ColumnVarNameInTable="columnIDCAUSA" msprop:Generator_ColumnPropNameInRow="IDCAUSA" msprop:Generator_ColumnPropNameInTable="IDCAUSAColumn" type="xs:decimal" />
+              <xs:element name="CODPROC" msprop:Generator_UserColumnName="CODPROC" msprop:Generator_ColumnVarNameInTable="columnCODPROC" msprop:Generator_ColumnPropNameInRow="CODPROC" msprop:Generator_ColumnPropNameInTable="CODPROCColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OFMARCA" msprop:Generator_UserTableName="OFMARCA" msprop:Generator_RowDeletedName="OFMARCARowDeleted" msprop:Generator_TableClassName="OFMARCADataTable" msprop:Generator_RowChangedName="OFMARCARowChanged" msprop:Generator_RowClassName="OFMARCARow" msprop:Generator_RowChangingName="OFMARCARowChanging" msprop:Generator_RowEvArgName="OFMARCARowChangeEvent" msprop:Generator_RowEvHandlerName="OFMARCARowChangeEventHandler" msprop:Generator_TablePropName="OFMARCA" msprop:Generator_TableVarName="tableOFMARCA" msprop:Generator_RowDeletingName="OFMARCARowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDINCIDENCIA" msprop:Generator_UserColumnName="IDINCIDENCIA" msprop:Generator_ColumnPropNameInRow="IDINCIDENCIA" msprop:Generator_ColumnVarNameInTable="columnIDINCIDENCIA" msprop:Generator_ColumnPropNameInTable="IDINCIDENCIAColumn" type="xs:decimal" />
+              <xs:element name="NUMOF" msprop:Generator_UserColumnName="NUMOF" msprop:Generator_ColumnPropNameInRow="NUMOF" msprop:Generator_ColumnVarNameInTable="columnNUMOF" msprop:Generator_ColumnPropNameInTable="NUMOFColumn" type="xs:int" />
+              <xs:element name="OP" msprop:Generator_UserColumnName="OP" msprop:Generator_ColumnPropNameInRow="OP" msprop:Generator_ColumnVarNameInTable="columnOP" msprop:Generator_ColumnPropNameInTable="OPColumn" type="xs:short" />
+              <xs:element name="MARCA" msprop:Generator_UserColumnName="MARCA" msprop:Generator_ColumnPropNameInRow="MARCA" msprop:Generator_ColumnVarNameInTable="columnMARCA" msprop:Generator_ColumnPropNameInTable="MARCAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDOFMARCA" msprop:Generator_UserColumnName="IDOFMARCA" msprop:Generator_ColumnPropNameInRow="IDOFMARCA" msprop:Generator_ColumnVarNameInTable="columnIDOFMARCA" msprop:Generator_ColumnPropNameInTable="IDOFMARCAColumn" type="xs:decimal" />
+              <xs:element name="DENOMINACION" msprop:Generator_UserColumnName="DENOMINACION" msprop:Generator_ColumnPropNameInRow="DENOMINACION" msprop:Generator_ColumnVarNameInTable="columnDENOMINACION" msprop:Generator_ColumnPropNameInTable="DENOMINACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GERTAKARIAK" msprop:Generator_UserTableName="GERTAKARIAK" msprop:Generator_RowDeletedName="GERTAKARIAKRowDeleted" msprop:Generator_TableClassName="GERTAKARIAKDataTable" msprop:Generator_RowChangedName="GERTAKARIAKRowChanged" msprop:Generator_RowClassName="GERTAKARIAKRow" msprop:Generator_RowChangingName="GERTAKARIAKRowChanging" msprop:Generator_RowEvArgName="GERTAKARIAKRowChangeEvent" msprop:Generator_RowEvHandlerName="GERTAKARIAKRowChangeEventHandler" msprop:Generator_TablePropName="GERTAKARIAK" msprop:Generator_TableVarName="tableGERTAKARIAK" msprop:Generator_RowDeletingName="GERTAKARIAKRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="IDREPETITIVA" msprop:Generator_UserColumnName="IDREPETITIVA" msprop:Generator_ColumnPropNameInRow="IDREPETITIVA" msprop:Generator_ColumnVarNameInTable="columnIDREPETITIVA" msprop:Generator_ColumnPropNameInTable="IDREPETITIVAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FECHAAPERTURA" msprop:Generator_UserColumnName="FECHAAPERTURA" msprop:Generator_ColumnPropNameInRow="FECHAAPERTURA" msprop:Generator_ColumnVarNameInTable="columnFECHAAPERTURA" msprop:Generator_ColumnPropNameInTable="FECHAAPERTURAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHACIERRE" msprop:Generator_UserColumnName="FECHACIERRE" msprop:Generator_ColumnPropNameInRow="FECHACIERRE" msprop:Generator_ColumnVarNameInTable="columnFECHACIERRE" msprop:Generator_ColumnPropNameInTable="FECHACIERREColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IDTIPOINCIDENCIA" msprop:Generator_UserColumnName="IDTIPOINCIDENCIA" msprop:Generator_ColumnPropNameInRow="IDTIPOINCIDENCIA" msprop:Generator_ColumnVarNameInTable="columnIDTIPOINCIDENCIA" msprop:Generator_ColumnPropNameInTable="IDTIPOINCIDENCIAColumn" type="xs:decimal" />
+              <xs:element name="REFERENCIACLIENTE" msprop:Generator_UserColumnName="REFERENCIACLIENTE" msprop:Generator_ColumnPropNameInRow="REFERENCIACLIENTE" msprop:Generator_ColumnVarNameInTable="columnREFERENCIACLIENTE" msprop:Generator_ColumnPropNameInTable="REFERENCIACLIENTEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLIENTE" msprop:Generator_UserColumnName="CLIENTE" msprop:Generator_ColumnPropNameInRow="CLIENTE" msprop:Generator_ColumnVarNameInTable="columnCLIENTE" msprop:Generator_ColumnPropNameInTable="CLIENTEColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="DESCRIPCIONPROBLEMA" msprop:Generator_UserColumnName="DESCRIPCIONPROBLEMA" msprop:Generator_ColumnPropNameInRow="DESCRIPCIONPROBLEMA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCIONPROBLEMA" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONPROBLEMAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAZONESNODETECCION" msprop:Generator_UserColumnName="RAZONESNODETECCION" msprop:Generator_ColumnPropNameInRow="RAZONESNODETECCION" msprop:Generator_ColumnVarNameInTable="columnRAZONESNODETECCION" msprop:Generator_ColumnPropNameInTable="RAZONESNODETECCIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TITULO" msprop:Generator_UserColumnName="TITULO" msprop:Generator_ColumnPropNameInRow="TITULO" msprop:Generator_ColumnVarNameInTable="columnTITULO" msprop:Generator_ColumnPropNameInTable="TITULOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAUSAPROBLEMA" msprop:Generator_UserColumnName="CAUSAPROBLEMA" msprop:Generator_ColumnPropNameInRow="CAUSAPROBLEMA" msprop:Generator_ColumnVarNameInTable="columnCAUSAPROBLEMA" msprop:Generator_ColumnPropNameInTable="CAUSAPROBLEMAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDPROVEEDOR" msprop:Generator_UserColumnName="IDPROVEEDOR" msprop:Generator_ColumnPropNameInRow="IDPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnIDPROVEEDOR" msprop:Generator_ColumnPropNameInTable="IDPROVEEDORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTALACORDADO" msprop:Generator_UserColumnName="TOTALACORDADO" msprop:Generator_ColumnPropNameInRow="TOTALACORDADO" msprop:Generator_ColumnVarNameInTable="columnTOTALACORDADO" msprop:Generator_ColumnPropNameInTable="TOTALACORDADOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PROCEDENCIANC" msprop:Generator_UserColumnName="PROCEDENCIANC" msprop:Generator_ColumnPropNameInRow="PROCEDENCIANC" msprop:Generator_ColumnVarNameInTable="columnPROCEDENCIANC" msprop:Generator_ColumnPropNameInTable="PROCEDENCIANCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OBSERVACIONESCOSTE" msprop:Generator_UserColumnName="OBSERVACIONESCOSTE" msprop:Generator_ColumnPropNameInRow="OBSERVACIONESCOSTE" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONESCOSTE" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESCOSTEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMPEDCAB" msprop:Generator_UserColumnName="NUMPEDCAB" msprop:Generator_ColumnPropNameInRow="NUMPEDCAB" msprop:Generator_ColumnVarNameInTable="columnNUMPEDCAB" msprop:Generator_ColumnPropNameInTable="NUMPEDCABColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="COMPENSADO" msprop:Generator_UserColumnName="COMPENSADO" msprop:Generator_ColumnPropNameInRow="COMPENSADO" msprop:Generator_ColumnVarNameInTable="columnCOMPENSADO" msprop:Generator_ColumnPropNameInTable="COMPENSADOColumn" type="xs:short" />
+              <xs:element name="CAPID" msprop:Generator_UserColumnName="CAPID" msprop:Generator_ColumnPropNameInRow="CAPID" msprop:Generator_ColumnVarNameInTable="columnCAPID" msprop:Generator_ColumnPropNameInTable="CAPIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCREADOR" msprop:Generator_UserColumnName="IDCREADOR" msprop:Generator_ColumnPropNameInRow="IDCREADOR" msprop:Generator_ColumnVarNameInTable="columnIDCREADOR" msprop:Generator_ColumnPropNameInTable="IDCREADORColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CODAREA" msprop:Generator_UserColumnName="CODAREA" msprop:Generator_ColumnPropNameInRow="CODAREA" msprop:Generator_ColumnVarNameInTable="columnCODAREA" msprop:Generator_ColumnPropNameInTable="CODAREAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODSECCION" msprop:Generator_UserColumnName="CODSECCION" msprop:Generator_ColumnPropNameInRow="CODSECCION" msprop:Generator_ColumnVarNameInTable="columnCODSECCION" msprop:Generator_ColumnPropNameInTable="CODSECCIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODPROCESO" msprop:Generator_UserColumnName="CODPROCESO" msprop:Generator_ColumnPropNameInRow="CODPROCESO" msprop:Generator_ColumnVarNameInTable="columnCODPROCESO" msprop:Generator_ColumnPropNameInTable="CODPROCESOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LANTEGI" msprop:Generator_UserColumnName="LANTEGI" msprop:Generator_ColumnPropNameInRow="LANTEGI" msprop:Generator_ColumnVarNameInTable="columnLANTEGI" msprop:Generator_ColumnPropNameInTable="LANTEGIColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TIPOREPETITIVA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="FAMILIAREPETITIVA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FAMILIAREPETITIVA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="GERTAKARIAK_ACCIONES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GERTAKARIAK_ACCIONES" />
+      <xs:field xpath="mstns:IDINCIDENCIA" />
+      <xs:field xpath="mstns:IDACCION" />
+    </xs:unique>
+    <xs:unique name="ACCIONES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ACCIONES" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ACCIONES_USUARIOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ACCIONES_USUARIOS" />
+      <xs:field xpath="mstns:IDACCION" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+    </xs:unique>
+    <xs:unique name="RESPONSABLES_GERTAKARIAK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RESPONSABLES_GERTAKARIAK" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="GERTAKARIAK_CAUSASNC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GERTAKARIAK_CAUSASNC" />
+      <xs:field xpath="mstns:IDINCIDENCIA" />
+      <xs:field xpath="mstns:IDCAUSANC" />
+    </xs:unique>
+    <xs:unique name="CAUSASNC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CAUSASNC" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="CAUSASNCPROC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CAUSASNCPROC" />
+      <xs:field xpath="mstns:IDCAUSA" />
+      <xs:field xpath="mstns:CODPROC" />
+    </xs:unique>
+    <xs:unique name="OFMARCA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OFMARCA" />
+      <xs:field xpath="mstns:IDOFMARCA" />
+    </xs:unique>
+    <xs:unique name="GERTAKARIAK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GERTAKARIAK" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="TIPOREPETITIVA_FAMILIAREP_FK1" msdata:parent="FAMILIAREPETITIVA" msdata:child="TIPOREPETITIVA" msdata:parentkey="ID" msdata:childkey="IDFAMILIAREPETITIVA" msprop:Generator_UserRelationName="TIPOREPETITIVA_FAMILIAREP_FK1" msprop:Generator_RelationVarName="relationTIPOREPETITIVA_FAMILIAREP_FK1" msprop:Generator_UserChildTable="TIPOREPETITIVA" msprop:Generator_UserParentTable="FAMILIAREPETITIVA" msprop:Generator_ParentPropName="FAMILIAREPETITIVARow" msprop:Generator_ChildPropName="GetTIPOREPETITIVARows" />
+      <msdata:Relationship name="GERTAKARIAK_ACCIONES_ACCI_FK1" msdata:parent="ACCIONES" msdata:child="GERTAKARIAK_ACCIONES" msdata:parentkey="ID" msdata:childkey="IDACCION" msprop:Generator_UserRelationName="GERTAKARIAK_ACCIONES_ACCI_FK1" msprop:Generator_RelationVarName="relationGERTAKARIAK_ACCIONES_ACCI_FK1" msprop:Generator_UserChildTable="GERTAKARIAK_ACCIONES" msprop:Generator_UserParentTable="ACCIONES" msprop:Generator_ParentPropName="ACCIONESRow" msprop:Generator_ChildPropName="GetGERTAKARIAK_ACCIONESRows" />
+      <msdata:Relationship name="TABLE1_ACCIONES_FK1" msdata:parent="ACCIONES" msdata:child="ACCIONES_USUARIOS" msdata:parentkey="ID" msdata:childkey="IDACCION" msprop:Generator_UserRelationName="TABLE1_ACCIONES_FK1" msprop:Generator_RelationVarName="relationTABLE1_ACCIONES_FK1" msprop:Generator_UserChildTable="ACCIONES_USUARIOS" msprop:Generator_UserParentTable="ACCIONES" msprop:Generator_ParentPropName="ACCIONESRow" msprop:Generator_ChildPropName="GetACCIONES_USUARIOSRows" />
+      <msdata:Relationship name="CAUSASNC_GERTAKARIAK_CAUSASNC" msdata:parent="CAUSASNC" msdata:child="GERTAKARIAK_CAUSASNC" msdata:parentkey="ID" msdata:childkey="IDCAUSANC" msprop:Generator_UserRelationName="CAUSASNC_GERTAKARIAK_CAUSASNC" msprop:Generator_RelationVarName="relationCAUSASNC_GERTAKARIAK_CAUSASNC" msprop:Generator_UserChildTable="GERTAKARIAK_CAUSASNC" msprop:Generator_UserParentTable="CAUSASNC" msprop:Generator_ParentPropName="CAUSASNCRow" msprop:Generator_ChildPropName="GetGERTAKARIAK_CAUSASNCRows" />
+      <msdata:Relationship name="CAUSASNCPROC_CAUSASNC_FK1" msdata:parent="CAUSASNC" msdata:child="CAUSASNCPROC" msdata:parentkey="ID" msdata:childkey="IDCAUSA" msprop:Generator_UserRelationName="CAUSASNCPROC_CAUSASNC_FK1" msprop:Generator_RelationVarName="relationCAUSASNCPROC_CAUSASNC_FK1" msprop:Generator_UserChildTable="CAUSASNCPROC" msprop:Generator_UserParentTable="CAUSASNC" msprop:Generator_ParentPropName="CAUSASNCRow" msprop:Generator_ChildPropName="GetCAUSASNCPROCRows" />
+      <msdata:Relationship name="TIPOREPETITIVA_GERTAKARIAK" msdata:parent="TIPOREPETITIVA" msdata:child="GERTAKARIAK" msdata:parentkey="ID" msdata:childkey="IDREPETITIVA" msprop:Generator_UserRelationName="TIPOREPETITIVA_GERTAKARIAK" msprop:Generator_RelationVarName="relationTIPOREPETITIVA_GERTAKARIAK" msprop:Generator_UserChildTable="GERTAKARIAK" msprop:Generator_UserParentTable="TIPOREPETITIVA" msprop:Generator_ParentPropName="TIPOREPETITIVARow" msprop:Generator_ChildPropName="GetGERTAKARIAKRows" />
+      <msdata:Relationship name="GERTAKARIAK_ACCIONES_GERTAKARIAK" msdata:parent="GERTAKARIAK_ACCIONES" msdata:child="GERTAKARIAK" msdata:parentkey="IDINCIDENCIA" msdata:childkey="ID" msprop:Generator_UserRelationName="GERTAKARIAK_ACCIONES_GERTAKARIAK" msprop:Generator_RelationVarName="relationGERTAKARIAK_ACCIONES_GERTAKARIAK" msprop:Generator_UserChildTable="GERTAKARIAK" msprop:Generator_UserParentTable="GERTAKARIAK_ACCIONES" msprop:Generator_ParentPropName="GERTAKARIAK_ACCIONESRow" msprop:Generator_ChildPropName="GetGERTAKARIAKRows" />
+      <msdata:Relationship name="GERTAKARIAK_RESPONSABLES_GERTAKARIAK" msdata:parent="GERTAKARIAK" msdata:child="RESPONSABLES_GERTAKARIAK" msdata:parentkey="ID" msdata:childkey="IDINCIDENCIA" msprop:Generator_UserRelationName="GERTAKARIAK_RESPONSABLES_GERTAKARIAK" msprop:Generator_RelationVarName="relationGERTAKARIAK_RESPONSABLES_GERTAKARIAK" msprop:Generator_UserChildTable="RESPONSABLES_GERTAKARIAK" msprop:Generator_UserParentTable="GERTAKARIAK" msprop:Generator_ParentPropName="GERTAKARIAKRow" msprop:Generator_ChildPropName="GetRESPONSABLES_GERTAKARIAKRows" />
+      <msdata:Relationship name="GERTAKARIAK_GERTAKARIAK_CAUSASNC" msdata:parent="GERTAKARIAK" msdata:child="GERTAKARIAK_CAUSASNC" msdata:parentkey="ID" msdata:childkey="IDINCIDENCIA" msprop:Generator_UserRelationName="GERTAKARIAK_GERTAKARIAK_CAUSASNC" msprop:Generator_RelationVarName="relationGERTAKARIAK_GERTAKARIAK_CAUSASNC" msprop:Generator_UserChildTable="GERTAKARIAK_CAUSASNC" msprop:Generator_UserParentTable="GERTAKARIAK" msprop:Generator_ParentPropName="GERTAKARIAKRow" msprop:Generator_ChildPropName="GetGERTAKARIAK_CAUSASNCRows" />
+      <msdata:Relationship name="GERTAKARIAK_OFMARCA" msdata:parent="GERTAKARIAK" msdata:child="OFMARCA" msdata:parentkey="ID" msdata:childkey="IDINCIDENCIA" msprop:Generator_UserRelationName="GERTAKARIAK_OFMARCA" msprop:Generator_RelationVarName="relationGERTAKARIAK_OFMARCA" msprop:Generator_UserChildTable="OFMARCA" msprop:Generator_UserParentTable="GERTAKARIAK" msprop:Generator_ParentPropName="GERTAKARIAKRow" msprop:Generator_ChildPropName="GetOFMARCARows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

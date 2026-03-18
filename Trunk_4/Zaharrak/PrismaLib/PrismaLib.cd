@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Las clases &quot;_DAL&quot; y &quot;_ELL&quot; quedan dentro del NameSpace &quot;Entidades&quot; para que al instanciar una clase &quot;BLL&quot; no se muestren sus miembros.">
+    <Position X="0.5" Y="0.5" Height="0.263" Width="7.564" />
+  </Comment>
+  <Class Name="PrismaLib.Entidades.Asset_DAL">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAL\Prisma_DAL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrismaLib.Asset_BLL">
+    <Position X="3.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Prisma_BLL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrismaLib.Funciones">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\Funciones.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrismaLib.Entidades.Asset_ELL">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="PrismaLib.Entidades.Asset_ELL.Planta" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ELL\Prisma_ELL.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAQAAgAAAgAAAAEAAQAAAAoBAAIAAA=</HashCode>
+      <FileName>ELL\Prisma_ELL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
