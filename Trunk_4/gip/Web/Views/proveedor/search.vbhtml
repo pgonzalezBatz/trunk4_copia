@@ -145,7 +145,17 @@ Else
                         <br />
 
                         @Html.ActionLink(h.traducir("Adjuntos"), "listadjunto", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
-                        @If Not IsNothing(ViewData("user")) AndAlso (ViewData("user").n2.tolower.contains("sis") OrElse ViewData("user").idTrabajador = 3164) Then
+                        @Code
+                            Dim currentUser = ViewData("user")
+                            Dim hasSistemaAccess = False
+                            If currentUser IsNot Nothing Then
+                                Dim n2Value = Convert.ToString(currentUser.n2)
+                                Dim idTrabajadorValue As Integer
+                                Integer.TryParse(Convert.ToString(currentUser.idTrabajador), idTrabajadorValue)
+                                hasSistemaAccess = n2Value.ToLower().Contains("sis") OrElse idTrabajadorValue = 3164
+                            End If
+                        End Code
+                        @If hasSistemaAccess Then
                             @Html.Encode(" | ")
                             @Html.ActionLink(h.Traducir("Exportar a plantas sistemas"), "exportsistemas", h.ToRouteValues(Request.QueryString, New With {.id = currentItem.id}))
                         End If
