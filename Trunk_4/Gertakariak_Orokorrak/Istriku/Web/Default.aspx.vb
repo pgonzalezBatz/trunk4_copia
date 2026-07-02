@@ -660,7 +660,7 @@ Partial Public Class _Default
                                        FROM DETECCION D 
                                        INNER JOIN SAB.USUARIOS U ON D.IDUSUARIO = U.ID
                                        WHERE D.IDINCIDENCIA = :ID"
-                Dim result = Memcached.OracleDirectAccess.seleccionar(Of Decimal)(Function(r As OracleDataReader) CDec(r(0)), query2, connection, New OracleParameter("ID", OracleDbType.Int32, Item.ID, ParameterDirection.Input))
+                Dim result As List(Of Decimal) = Memcached.OracleDirectAccess.seleccionar(Of Decimal)(Function(r As OracleDataReader) CDec(r(0)), query2, connection, New OracleParameter("ID", OracleDbType.Int32, Item.ID, ParameterDirection.Input))
                 For Each r In result
                     Item.DETECCION.Add(New BatzBBDD.DETECCION With {.ID = Item.ID, .IDUSUARIO = r})
                 Next
