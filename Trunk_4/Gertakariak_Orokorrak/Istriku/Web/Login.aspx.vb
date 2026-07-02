@@ -29,7 +29,7 @@
     Private Sub imgAceptar_Click(sender As Object, e As ImageClickEventArgs) Handles imgAceptar.Click
         Try
             Dim lg As New SabLib.BLL.LoginComponent
-            Dim TicketTrabajador As SabLib.ELL.Ticket = lg.Login(txtNumTrabajador.Text, SabLib.BLL.Utils.EncriptarPassword(txtClave.Text), 1)
+            Dim TicketTrabajador As SabLib.ELL.Ticket = lg.Login(CInt(txtNumTrabajador.Text), SabLib.BLL.Utils.EncriptarPassword(txtClave.Text), 1)
 
 #If DEBUG Then
             TicketTrabajador = Session("Ticket")

@@ -288,7 +288,7 @@ Public Class LanguageAdministration
 
 #Region "Insert"
 	''' <summary>
-	''' Añade el termino como traducido en el idioma especificado y como no traducido en los demas
+			Dim idiomas As IEnumerator = GetListaDeIdiomasActuales(pathLanguages).GetEnumerator()
 	''' </summary>
 	''' <param name="pathLanguages"></param>
 	''' <param name="idioma"></param>
