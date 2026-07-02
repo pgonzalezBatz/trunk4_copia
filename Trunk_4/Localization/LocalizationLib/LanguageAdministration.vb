@@ -288,7 +288,7 @@ Public Class LanguageAdministration
 
 #Region "Insert"
 	''' <summary>
-	''' Añade el termino como traducido en el idioma especificado y como no traducido en los demas
+			Dim idiomas As System.Collections.IEnumerator = GetListaDeIdiomasActuales(pathLanguages).GetEnumerator()
 	''' </summary>
 	''' <param name="pathLanguages"></param>
 	''' <param name="idioma"></param>
@@ -381,7 +381,7 @@ Public Class LanguageAdministration
 	''' <param name="termino"></param>
 	''' <remarks></remarks>
 	Public Shared Sub DeleteTermino(ByVal pathLanguages As String, ByVal termino As String)
-		Dim idiomas As IEnumerator = GetListaDeIdiomasActuales(pathLanguages).GetEnumerator()
+		Dim idiomas As System.Collections.IEnumerator = GetListaDeIdiomasActuales(pathLanguages).GetEnumerator()
 		While idiomas.MoveNext
 			Dim k As KeyValuePair(Of String, String) = idiomas.Current
 			If Not (k.Key = "es-ES" OrElse k.Key = "eu-ES") Then
