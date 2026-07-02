@@ -143,16 +143,19 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Zaharrak\LocalizationLib\AccesoGenerico.vb">
+    <Compile Include="..\..\..\Codigo_Compartido\localization\AccesoGenerico.vb">
       <Link>AccesoGenerico.vb</Link>
     </Compile>
-    <Compile Include="..\..\Zaharrak\LocalizationLib\Extensiones\ExtensionesItzultzaile.vb">
+    <Compile Include="..\..\..\Codigo_Compartido\localization\Extensiones\ExtensionesItzultzaile.vb">
       <Link>Extensiones\ExtensionesItzultzaile.vb</Link>
     </Compile>
-    <Compile Include="..\..\Zaharrak\LocalizationLib\Extensiones\ExtensionesWebControl.vb">
+    <Compile Include="..\..\..\Codigo_Compartido\localization\Extensiones\ExtensionesWebControl.vb">
       <Link>Extensiones\ExtensionesWebControl.vb</Link>
     </Compile>
-    <Compile Include="..\..\Zaharrak\LocalizationLib\Itzultzaile.vb">
+    <Compile Include="..\..\..\Codigo_Compartido\localization\ImportarExcel.vb">
+      <Link>ImportarExcel.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\Codigo_Compartido\localization\Itzultzaile.vb">
       <Link>Itzultzaile.vb</Link>
     </Compile>
     <Compile Include="LanguageAdministration.vb" />
@@ -220,6 +223,13 @@
     <None Include="Resources\seleccionar.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets" Condition="Exists('..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\Codigo_Compartido\NugetPackages\SlowCheetah.2.5.48\build\SlowCheetah.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

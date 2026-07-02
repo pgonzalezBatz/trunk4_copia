@@ -132,9 +132,6 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\Codigo_Compartido\NugetPackages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="SABLib">
-      <HintPath>..\..\..\..\Automantenimiento\Dll automnto\SABLib.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -724,6 +721,14 @@
     <ProjectReference Include="..\..\..\Memcached\Memcached.vbproj">
       <Project>{1f46e55d-906c-4588-99cc-e81c4b4e373e}</Project>
       <Name>Memcached</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SABLib\SABLib2.vbproj">
+      <Project>{3283dece-6b4e-4009-a3a7-1370e6c0e053}</Project>
+      <Name>SABLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Gertakariak2.0\GertakariakLib\GertakariakLib.vbproj">
+      <Project>{26638d41-3358-4504-bda9-09e509c6b3f7}</Project>
+      <Name>GertakariakLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
